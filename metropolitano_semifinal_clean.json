@@ -1,0 +1,3480 @@
+[
+  {
+    "category": "SEMIFINAL VALS",
+    "scores": [
+      {
+        "Nº": 131,
+        "Nombres": "Tokian - Franco",
+        "scores": {
+          "SAMETBAND": 9,
+          "MARTINEZ": 8.35,
+          "MISSÉ": 8.8,
+          "GALLARDO": 8.55,
+          "COLETTI": 8.55,
+          "CEJAS": 8.8
+        },
+        "PUNTAJE": 52.05,
+        "PROMEDIO": 8.675
+      },
+      {
+        "Nº": 83,
+        "Nombres": "Juanbelz - Barrionuevo",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 8.92,
+          "GALLARDO": 8.62,
+          "COLETTI": 8.5,
+          "CEJAS": 8.55
+        },
+        "PUNTAJE": 51.09,
+        "PROMEDIO": 8.515
+      },
+      {
+        "Nº": 51,
+        "Nombres": "Irrazabal - Torres",
+        "scores": {
+          "SAMETBAND": 8.9,
+          "MARTINEZ": 8.3,
+          "MISSÉ": 8.77,
+          "GALLARDO": 8.45,
+          "COLETTI": 8,
+          "CEJAS": 8.55
+        },
+        "PUNTAJE": 50.97,
+        "PROMEDIO": 8.495
+      },
+      {
+        "Nº": 41,
+        "Nombres": "Figueroa - Gutierrez",
+        "scores": {
+          "SAMETBAND": 8.9,
+          "MARTINEZ": 8.5,
+          "MISSÉ": 7.7,
+          "GALLARDO": 8.55,
+          "COLETTI": 8.45,
+          "CEJAS": 8.85
+        },
+        "PUNTAJE": 50.95,
+        "PROMEDIO": 8.492
+      },
+      {
+        "Nº": 48,
+        "Nombres": "Alfaro - Manzanares",
+        "scores": {
+          "SAMETBAND": 8.85,
+          "MARTINEZ": 7.8,
+          "MISSÉ": 8.73,
+          "GALLARDO": 8.5,
+          "COLETTI": 8.7,
+          "CEJAS": 8.3
+        },
+        "PUNTAJE": 50.88,
+        "PROMEDIO": 8.48
+      },
+      {
+        "Nº": 37,
+        "Nombres": "Teves - Videla",
+        "scores": {
+          "SAMETBAND": 8.65,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 8.9,
+          "GALLARDO": null,
+          "COLETTI": null,
+          "CEJAS": 8.2
+        },
+        "PUNTAJE": 33.85,
+        "PROMEDIO": 8.463
+      },
+      {
+        "Nº": 45,
+        "Nombres": "Rosales - Rosales",
+        "scores": {
+          "SAMETBAND": 8.4,
+          "MARTINEZ": 7.7,
+          "MISSÉ": 8.7,
+          "GALLARDO": 8.46,
+          "COLETTI": 8.8,
+          "CEJAS": 8.7
+        },
+        "PUNTAJE": 50.76,
+        "PROMEDIO": 8.46
+      },
+      {
+        "Nº": 128,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "SAMETBAND": 8.9,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 8.79,
+          "GALLARDO": 8.85,
+          "COLETTI": 8,
+          "CEJAS": 8.2
+        },
+        "PUNTAJE": 50.69,
+        "PROMEDIO": 8.448
+      },
+      {
+        "Nº": 92,
+        "Nombres": "Correa - Sassi",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 7.5,
+          "MISSÉ": 9,
+          "GALLARDO": 8.56,
+          "COLETTI": 8.55,
+          "CEJAS": 8.26
+        },
+        "PUNTAJE": 50.67,
+        "PROMEDIO": 8.445
+      },
+      {
+        "Nº": 56,
+        "Nombres": "Marquez - Silva",
+        "scores": {
+          "SAMETBAND": 8.5,
+          "MARTINEZ": 8,
+          "MISSÉ": 8.97,
+          "GALLARDO": 8.74,
+          "COLETTI": 8.25,
+          "CEJAS": 8.1
+        },
+        "PUNTAJE": 50.56,
+        "PROMEDIO": 8.427
+      },
+      {
+        "Nº": 50,
+        "Nombres": "Aguilar - Deslarmes",
+        "scores": {
+          "SAMETBAND": 8.75,
+          "MARTINEZ": 8.07,
+          "MISSÉ": 7.3,
+          "GALLARDO": 8.85,
+          "COLETTI": 8.9,
+          "CEJAS": 8.6
+        },
+        "PUNTAJE": 50.47,
+        "PROMEDIO": 8.412
+      },
+      {
+        "Nº": 158,
+        "Nombres": "Berrios - Alvarado",
+        "scores": {
+          "SAMETBAND": 8.85,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 7.46,
+          "GALLARDO": 8.69,
+          "COLETTI": 8.6,
+          "CEJAS": 8.65
+        },
+        "PUNTAJE": 50.45,
+        "PROMEDIO": 8.408
+      },
+      {
+        "Nº": 73,
+        "Nombres": "Kaliszuk - Braida",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 9,
+          "GALLARDO": 8.84,
+          "COLETTI": 8.25,
+          "CEJAS": 7.15
+        },
+        "PUNTAJE": 50.24,
+        "PROMEDIO": 8.373
+      },
+      {
+        "Nº": 107,
+        "Nombres": "Petchatnikova - Benitez",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 8.1,
+          "GALLARDO": 8.86,
+          "COLETTI": 8.4,
+          "CEJAS": 8.45
+        },
+        "PUNTAJE": 49.96,
+        "PROMEDIO": 8.327
+      },
+      {
+        "Nº": 28,
+        "Nombres": "Aragon - Samaniego",
+        "scores": {
+          "SAMETBAND": 8.5,
+          "MARTINEZ": 8.15,
+          "MISSÉ": 7.4,
+          "GALLARDO": 8.65,
+          "COLETTI": 8.75,
+          "CEJAS": 8.45
+        },
+        "PUNTAJE": 49.9,
+        "PROMEDIO": 8.317
+      },
+      {
+        "Nº": 146,
+        "Nombres": "Borda - Roman",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 8.76,
+          "GALLARDO": null,
+          "COLETTI": 8.6,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 41.41,
+        "PROMEDIO": 8.282
+      },
+      {
+        "Nº": 140,
+        "Nombres": "Atepaeva - Takhirov",
+        "scores": {
+          "SAMETBAND": null,
+          "MARTINEZ": 7.9,
+          "MISSÉ": 8.85,
+          "GALLARDO": 8.46,
+          "COLETTI": 7.85,
+          "CEJAS": 8.25
+        },
+        "PUNTAJE": 41.31,
+        "PROMEDIO": 8.262
+      },
+      {
+        "Nº": 108,
+        "Nombres": "Tsybrova - Bobkov",
+        "scores": {
+          "SAMETBAND": 8.85,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 7.76,
+          "GALLARDO": 8.45,
+          "COLETTI": 8.1,
+          "CEJAS": 8.3
+        },
+        "PUNTAJE": 49.51,
+        "PROMEDIO": 8.252
+      },
+      {
+        "Nº": 74,
+        "Nombres": "Martinez - Leiva",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.8,
+          "GALLARDO": 8.65,
+          "COLETTI": 8.6,
+          "CEJAS": 7.55
+        },
+        "PUNTAJE": 49.4,
+        "PROMEDIO": 8.233
+      },
+      {
+        "Nº": 133,
+        "Nombres": "Pesci - Martin",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 8.05,
+          "GALLARDO": 8.32,
+          "COLETTI": 8.5,
+          "CEJAS": 8.25
+        },
+        "PUNTAJE": 49.37,
+        "PROMEDIO": 8.228
+      },
+      {
+        "Nº": 71,
+        "Nombres": "Subelza - Morinigo",
+        "scores": {
+          "SAMETBAND": 8.05,
+          "MARTINEZ": 7.85,
+          "MISSÉ": 8.77,
+          "GALLARDO": 8.65,
+          "COLETTI": 7.9,
+          "CEJAS": 8.1
+        },
+        "PUNTAJE": 49.32,
+        "PROMEDIO": 8.22
+      },
+      {
+        "Nº": 47,
+        "Nombres": "Castiñeiras - Cabral",
+        "scores": {
+          "SAMETBAND": 8.05,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 8.63,
+          "GALLARDO": null,
+          "COLETTI": 8.3,
+          "CEJAS": 8.05
+        },
+        "PUNTAJE": 41.08,
+        "PROMEDIO": 8.216
+      },
+      {
+        "Nº": 139,
+        "Nombres": "Mansilla - Tempesti",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 7.7,
+          "MISSÉ": 7.7,
+          "GALLARDO": 8.75,
+          "COLETTI": 8.45,
+          "CEJAS": 8.35
+        },
+        "PUNTAJE": 49.25,
+        "PROMEDIO": 8.208
+      },
+      {
+        "Nº": 147,
+        "Nombres": "Berezina - Maletin",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 7.97,
+          "GALLARDO": 8.79,
+          "COLETTI": 7.75,
+          "CEJAS": 7.75
+        },
+        "PUNTAJE": 49.16,
+        "PROMEDIO": 8.193
+      },
+      {
+        "Nº": 152,
+        "Nombres": "Vybornykh - Astafev",
+        "scores": {
+          "SAMETBAND": 9,
+          "MARTINEZ": 8.3,
+          "MISSÉ": 7.1,
+          "GALLARDO": 8.44,
+          "COLETTI": 8.1,
+          "CEJAS": 8.05
+        },
+        "PUNTAJE": 48.99,
+        "PROMEDIO": 8.165
+      },
+      {
+        "Nº": 154,
+        "Nombres": "Alvarez - Vilca",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 7.77,
+          "MISSÉ": 7.7,
+          "GALLARDO": 8.79,
+          "COLETTI": 8.45,
+          "CEJAS": 8.3
+        },
+        "PUNTAJE": 48.81,
+        "PROMEDIO": 8.135
+      },
+      {
+        "Nº": 106,
+        "Nombres": "Rotili - Bravo",
+        "scores": {
+          "SAMETBAND": 8.4,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 7.56,
+          "GALLARDO": 8.45,
+          "COLETTI": 8.1,
+          "CEJAS": 8.02
+        },
+        "PUNTAJE": 48.48,
+        "PROMEDIO": 8.08
+      },
+      {
+        "Nº": 82,
+        "Nombres": "Peralta - Martinez",
+        "scores": {
+          "SAMETBAND": 8.5,
+          "MARTINEZ": 7.4,
+          "MISSÉ": 7.76,
+          "GALLARDO": 8.36,
+          "COLETTI": 8.4,
+          "CEJAS": 8.05
+        },
+        "PUNTAJE": 48.47,
+        "PROMEDIO": 8.078
+      },
+      {
+        "Nº": 155,
+        "Nombres": "Naisheva - Frolov",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 7.67,
+          "GALLARDO": 8.66,
+          "COLETTI": 7.75,
+          "CEJAS": 7.98
+        },
+        "PUNTAJE": 48.36,
+        "PROMEDIO": 8.06
+      },
+      {
+        "Nº": 72,
+        "Nombres": "Kresta - Churquina",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 7.3,
+          "MISSÉ": 8.3,
+          "GALLARDO": 8.45,
+          "COLETTI": 8.15,
+          "CEJAS": 7.4
+        },
+        "PUNTAJE": 48.3,
+        "PROMEDIO": 8.05
+      },
+      {
+        "Nº": 111,
+        "Nombres": "Gimenez - Valdebenito",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 7.9,
+          "MISSÉ": 7.05,
+          "GALLARDO": 8.46,
+          "COLETTI": 8.15,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 48.21,
+        "PROMEDIO": 8.035
+      },
+      {
+        "Nº": 132,
+        "Nombres": "Veron - Ramirez",
+        "scores": {
+          "SAMETBAND": 7.7,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.57,
+          "GALLARDO": 8.45,
+          "COLETTI": 7.95,
+          "CEJAS": 8.5
+        },
+        "PUNTAJE": 48.17,
+        "PROMEDIO": 8.028
+      },
+      {
+        "Nº": 38,
+        "Nombres": "Selesan - Ramos",
+        "scores": {
+          "SAMETBAND": 8.85,
+          "MARTINEZ": 7.8,
+          "MISSÉ": 7.4,
+          "GALLARDO": 8.84,
+          "COLETTI": 7.35,
+          "CEJAS": 7.85
+        },
+        "PUNTAJE": 48.09,
+        "PROMEDIO": 8.015
+      },
+      {
+        "Nº": 157,
+        "Nombres": "Mileva - Herrera",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 7.37,
+          "GALLARDO": 8.59,
+          "COLETTI": 8.4,
+          "CEJAS": 7.5
+        },
+        "PUNTAJE": 48.06,
+        "PROMEDIO": 8.01
+      },
+      {
+        "Nº": 156,
+        "Nombres": "Marin - Skripkin",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 7.5,
+          "MISSÉ": 7.15,
+          "GALLARDO": 8.35,
+          "COLETTI": 7.8,
+          "CEJAS": 8.5
+        },
+        "PUNTAJE": 48.0,
+        "PROMEDIO": 8.0
+      },
+      {
+        "Nº": 134,
+        "Nombres": "Lettieri - Beron",
+        "scores": {
+          "SAMETBAND": 8.25,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.3,
+          "GALLARDO": 8.46,
+          "COLETTI": 7.85,
+          "CEJAS": 8.1
+        },
+        "PUNTAJE": 47.96,
+        "PROMEDIO": 7.993
+      },
+      {
+        "Nº": 123,
+        "Nombres": "Sanchez - De Dominicis",
+        "scores": {
+          "SAMETBAND": 7.7,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 8.05,
+          "GALLARDO": 8.38,
+          "COLETTI": 8.2,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 47.88,
+        "PROMEDIO": 7.98
+      },
+      {
+        "Nº": 116,
+        "Nombres": "Rocha - Cal",
+        "scores": {
+          "SAMETBAND": 8.85,
+          "MARTINEZ": 7.85,
+          "MISSÉ": 7.1,
+          "GALLARDO": 8.45,
+          "COLETTI": 7.75,
+          "CEJAS": 7.8
+        },
+        "PUNTAJE": 47.8,
+        "PROMEDIO": 7.967
+      },
+      {
+        "Nº": 79,
+        "Nombres": "Serpa - Galarza",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 7.3,
+          "GALLARDO": 8.58,
+          "COLETTI": 8.3,
+          "CEJAS": 7.7
+        },
+        "PUNTAJE": 47.78,
+        "PROMEDIO": 7.963
+      },
+      {
+        "Nº": 130,
+        "Nombres": "Belousova - Panferov",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 8.5,
+          "GALLARDO": 8.75,
+          "COLETTI": 6.9,
+          "CEJAS": 7.25
+        },
+        "PUNTAJE": 47.75,
+        "PROMEDIO": 7.958
+      },
+      {
+        "Nº": 64,
+        "Nombres": "Gomez - Segovia",
+        "scores": {
+          "SAMETBAND": 7.7,
+          "MARTINEZ": 7.85,
+          "MISSÉ": 7.98,
+          "GALLARDO": 8.35,
+          "COLETTI": 7.9,
+          "CEJAS": 7.9
+        },
+        "PUNTAJE": 47.68,
+        "PROMEDIO": 7.947
+      },
+      {
+        "Nº": 138,
+        "Nombres": "Martinucci - Flores",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.7,
+          "GALLARDO": null,
+          "COLETTI": 7.8,
+          "CEJAS": 8.32
+        },
+        "PUNTAJE": 39.62,
+        "PROMEDIO": 7.924
+      },
+      {
+        "Nº": 118,
+        "Nombres": "Medina - Persico",
+        "scores": {
+          "SAMETBAND": 7.6,
+          "MARTINEZ": 8,
+          "MISSÉ": 8.5,
+          "GALLARDO": 7.83,
+          "COLETTI": 8.5,
+          "CEJAS": 7.1
+        },
+        "PUNTAJE": 47.53,
+        "PROMEDIO": 7.922
+      },
+      {
+        "Nº": 9,
+        "Nombres": "Martinez - Orso",
+        "scores": {
+          "SAMETBAND": 8.65,
+          "MARTINEZ": 7.5,
+          "MISSÉ": 7.65,
+          "GALLARDO": 8.52,
+          "COLETTI": 6.75,
+          "CEJAS": null
+        },
+        "PUNTAJE": 39.07,
+        "PROMEDIO": 7.814
+      },
+      {
+        "Nº": 136,
+        "Nombres": "Da Silva - Tardivo",
+        "scores": {
+          "SAMETBAND": 7.85,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 7.32,
+          "GALLARDO": 8.46,
+          "COLETTI": 6.8,
+          "CEJAS": 8.15
+        },
+        "PUNTAJE": 46.78,
+        "PROMEDIO": 7.797
+      },
+      {
+        "Nº": 40,
+        "Nombres": "Schinca - Schell",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 7.15,
+          "GALLARDO": 8.45,
+          "COLETTI": 7.95,
+          "CEJAS": 7.3
+        },
+        "PUNTAJE": 46.7,
+        "PROMEDIO": 7.783
+      },
+      {
+        "Nº": 151,
+        "Nombres": "Novelli - Longo",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 7.5,
+          "MISSÉ": 7.47,
+          "GALLARDO": 8.25,
+          "COLETTI": 7.7,
+          "CEJAS": 7.85
+        },
+        "PUNTAJE": 46.57,
+        "PROMEDIO": 7.762
+      },
+      {
+        "Nº": 114,
+        "Nombres": "Cantarini - Perez",
+        "scores": {
+          "SAMETBAND": 7.7,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 7.3,
+          "GALLARDO": 8.35,
+          "COLETTI": 7.6,
+          "CEJAS": 8
+        },
+        "PUNTAJE": 46.55,
+        "PROMEDIO": 7.758
+      },
+      {
+        "Nº": 159,
+        "Nombres": "Titova - Titov",
+        "scores": {
+          "SAMETBAND": null,
+          "MARTINEZ": 7.5,
+          "MISSÉ": 8.1,
+          "GALLARDO": 8.42,
+          "COLETTI": 7.5,
+          "CEJAS": 7.15
+        },
+        "PUNTAJE": 38.67,
+        "PROMEDIO": 7.734
+      },
+      {
+        "Nº": 160,
+        "Nombres": "Gallardo - Campos",
+        "scores": {
+          "SAMETBAND": 7.85,
+          "MARTINEZ": 7.45,
+          "MISSÉ": 7.2,
+          "GALLARDO": 8.42,
+          "COLETTI": 8.35,
+          "CEJAS": 7.05
+        },
+        "PUNTAJE": 46.32,
+        "PROMEDIO": 7.72
+      },
+      {
+        "Nº": 124,
+        "Nombres": "Iregui - Rojas",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 8.25,
+          "MISSÉ": 7.5,
+          "GALLARDO": 7.82,
+          "COLETTI": 7.8,
+          "CEJAS": 7
+        },
+        "PUNTAJE": 46.17,
+        "PROMEDIO": 7.695
+      }
+    ]
+  },
+  {
+    "category": "SEMIFINAL MILONGA",
+    "scores": [
+      {
+        "Nº": 57,
+        "Nombres": "Colodrero - Cartagena",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.5,
+          "MISSÉ": 8.9,
+          "GALLARDO": null,
+          "COLETTI": 8.8,
+          "CEJAS": null
+        },
+        "PUNTAJE": 35.0,
+        "PROMEDIO": 8.75
+      },
+      {
+        "Nº": 131,
+        "Nombres": "Tokian - Franco",
+        "scores": {
+          "SAMETBAND": 8.9,
+          "MARTINEZ": 8.8,
+          "MISSÉ": 8.56,
+          "GALLARDO": 8.68,
+          "COLETTI": 8.35,
+          "CEJAS": 8.5
+        },
+        "PUNTAJE": 51.79,
+        "PROMEDIO": 8.632
+      },
+      {
+        "Nº": 4,
+        "Nombres": "Pilatti - Romero",
+        "scores": {
+          "SAMETBAND": 8.45,
+          "MARTINEZ": 8.35,
+          "MISSÉ": 9,
+          "GALLARDO": 8.7,
+          "COLETTI": 8.5,
+          "CEJAS": 8.45
+        },
+        "PUNTAJE": 51.45,
+        "PROMEDIO": 8.575
+      },
+      {
+        "Nº": 56,
+        "Nombres": "Marquez - Silva",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 9,
+          "GALLARDO": 8.72,
+          "COLETTI": 8.5,
+          "CEJAS": 8.15
+        },
+        "PUNTAJE": 51.27,
+        "PROMEDIO": 8.545
+      },
+      {
+        "Nº": 128,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "SAMETBAND": 8.9,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 8.77,
+          "GALLARDO": 8.82,
+          "COLETTI": 8.45,
+          "CEJAS": 8.2
+        },
+        "PUNTAJE": 51.24,
+        "PROMEDIO": 8.54
+      },
+      {
+        "Nº": 41,
+        "Nombres": "Figueroa - Gutierrez",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.3,
+          "MISSÉ": 8.3,
+          "GALLARDO": 8.72,
+          "COLETTI": 8.4,
+          "CEJAS": 8.6
+        },
+        "PUNTAJE": 51.12,
+        "PROMEDIO": 8.52
+      },
+      {
+        "Nº": 83,
+        "Nombres": "Juanbelz - Barrionuevo",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 8.5,
+          "MISSÉ": 8.7,
+          "GALLARDO": 8.42,
+          "COLETTI": 8.45,
+          "CEJAS": 8.35
+        },
+        "PUNTAJE": 51.12,
+        "PROMEDIO": 8.52
+      },
+      {
+        "Nº": 47,
+        "Nombres": "Castiñeiras - Cabral",
+        "scores": {
+          "SAMETBAND": 8.4,
+          "MARTINEZ": 8.25,
+          "MISSÉ": 8.87,
+          "GALLARDO": null,
+          "COLETTI": 8.35,
+          "CEJAS": 8.55
+        },
+        "PUNTAJE": 42.42,
+        "PROMEDIO": 8.484
+      },
+      {
+        "Nº": 127,
+        "Nombres": "Parra - Risso",
+        "scores": {
+          "SAMETBAND": 8.9,
+          "MARTINEZ": 8.55,
+          "MISSÉ": 9,
+          "GALLARDO": 8.45,
+          "COLETTI": 7.7,
+          "CEJAS": 8.25
+        },
+        "PUNTAJE": 50.85,
+        "PROMEDIO": 8.475
+      },
+      {
+        "Nº": 73,
+        "Nombres": "Kaliszuk - Braida",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 8.9,
+          "GALLARDO": 8.65,
+          "COLETTI": 8.25,
+          "CEJAS": 8.05
+        },
+        "PUNTAJE": 50.75,
+        "PROMEDIO": 8.458
+      },
+      {
+        "Nº": 45,
+        "Nombres": "Rosales - Rosales",
+        "scores": {
+          "SAMETBAND": 8.4,
+          "MARTINEZ": 7.75,
+          "MISSÉ": 8.96,
+          "GALLARDO": 8.8,
+          "COLETTI": 8.5,
+          "CEJAS": 8.3
+        },
+        "PUNTAJE": 50.71,
+        "PROMEDIO": 8.452
+      },
+      {
+        "Nº": 37,
+        "Nombres": "Teves - Videla",
+        "scores": {
+          "SAMETBAND": 8.85,
+          "MARTINEZ": 7.9,
+          "MISSÉ": 9,
+          "GALLARDO": null,
+          "COLETTI": null,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 33.7,
+        "PROMEDIO": 8.425
+      },
+      {
+        "Nº": 125,
+        "Nombres": "Alzaran - Galvan",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.6,
+          "MISSÉ": 8.75,
+          "GALLARDO": 8.65,
+          "COLETTI": 8.3,
+          "CEJAS": 7.45
+        },
+        "PUNTAJE": 50.55,
+        "PROMEDIO": 8.425
+      },
+      {
+        "Nº": 107,
+        "Nombres": "Petchatnikova - Benitez",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 8.76,
+          "GALLARDO": 8.74,
+          "COLETTI": 8.3,
+          "CEJAS": 8.2
+        },
+        "PUNTAJE": 50.35,
+        "PROMEDIO": 8.392
+      },
+      {
+        "Nº": 140,
+        "Nombres": "Atepaeva - Takhirov",
+        "scores": {
+          "SAMETBAND": null,
+          "MARTINEZ": 7.9,
+          "MISSÉ": 8.97,
+          "GALLARDO": 8.7,
+          "COLETTI": 8.2,
+          "CEJAS": 8.15
+        },
+        "PUNTAJE": 41.92,
+        "PROMEDIO": 8.384
+      },
+      {
+        "Nº": 158,
+        "Nombres": "Berrios - Berrios",
+        "scores": {
+          "SAMETBAND": 8.75,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 8.3,
+          "GALLARDO": 8.56,
+          "COLETTI": 8.25,
+          "CEJAS": 8
+        },
+        "PUNTAJE": 49.91,
+        "PROMEDIO": 8.318
+      },
+      {
+        "Nº": 147,
+        "Nombres": "Berezina - Maletin",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 8.25,
+          "MISSÉ": 8.73,
+          "GALLARDO": 8.75,
+          "COLETTI": 8.25,
+          "CEJAS": 8.1
+        },
+        "PUNTAJE": 49.88,
+        "PROMEDIO": 8.313
+      },
+      {
+        "Nº": 157,
+        "Nombres": "Mileva - Herrera",
+        "scores": {
+          "SAMETBAND": 8.5,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 7.15,
+          "GALLARDO": 8.72,
+          "COLETTI": 8.75,
+          "CEJAS": 8.4
+        },
+        "PUNTAJE": 49.72,
+        "PROMEDIO": 8.287
+      },
+      {
+        "Nº": 38,
+        "Nombres": "Selesan - Ramos",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 8.15,
+          "MISSÉ": 7.8,
+          "GALLARDO": 8.82,
+          "COLETTI": 8.25,
+          "CEJAS": 7.75
+        },
+        "PUNTAJE": 49.47,
+        "PROMEDIO": 8.245
+      },
+      {
+        "Nº": 164,
+        "Nombres": "De Gregorio - Cides",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 7.75,
+          "MISSÉ": 8.56,
+          "GALLARDO": 8.65,
+          "COLETTI": 8.45,
+          "CEJAS": null
+        },
+        "PUNTAJE": 41.21,
+        "PROMEDIO": 8.242
+      },
+      {
+        "Nº": 119,
+        "Nombres": "Santana - Ehijo",
+        "scores": {
+          "SAMETBAND": 8.05,
+          "MARTINEZ": 7.7,
+          "MISSÉ": 8.86,
+          "GALLARDO": 8.69,
+          "COLETTI": 8.1,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 49.35,
+        "PROMEDIO": 8.225
+      },
+      {
+        "Nº": 50,
+        "Nombres": "Aguilar - Deslarmes",
+        "scores": {
+          "SAMETBAND": 8.7,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 7.25,
+          "GALLARDO": 8.79,
+          "COLETTI": 8.6,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 49.24,
+        "PROMEDIO": 8.207
+      },
+      {
+        "Nº": 48,
+        "Nombres": "Alfaro - Manzanares",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8,
+          "MISSÉ": 8.2,
+          "GALLARDO": 8.6,
+          "COLETTI": 8.15,
+          "CEJAS": 8.15
+        },
+        "PUNTAJE": 49.2,
+        "PROMEDIO": 8.2
+      },
+      {
+        "Nº": 59,
+        "Nombres": "Coria - Amarilla",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.75,
+          "MISSÉ": 8.43,
+          "GALLARDO": 8.82,
+          "COLETTI": 8.2,
+          "CEJAS": 7.95
+        },
+        "PUNTAJE": 49.05,
+        "PROMEDIO": 8.175
+      },
+      {
+        "Nº": 63,
+        "Nombres": "Cohen - Choque",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 7.8,
+          "MISSÉ": 8.7,
+          "GALLARDO": 8.65,
+          "COLETTI": 8.05,
+          "CEJAS": 7.75
+        },
+        "PUNTAJE": 49.05,
+        "PROMEDIO": 8.175
+      },
+      {
+        "Nº": 28,
+        "Nombres": "Aragon - Samaniego",
+        "scores": {
+          "SAMETBAND": 8.8,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 7.15,
+          "GALLARDO": 8.72,
+          "COLETTI": 8.4,
+          "CEJAS": 7.7
+        },
+        "PUNTAJE": 48.82,
+        "PROMEDIO": 8.137
+      },
+      {
+        "Nº": 34,
+        "Nombres": "Duarte - Paez",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 7.66,
+          "GALLARDO": 8.69,
+          "COLETTI": 8.15,
+          "CEJAS": 8.05
+        },
+        "PUNTAJE": 48.8,
+        "PROMEDIO": 8.133
+      },
+      {
+        "Nº": 108,
+        "Nombres": "Tsybrova - Bobkov",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8.2,
+          "MISSÉ": 7.9,
+          "GALLARDO": 8.5,
+          "COLETTI": 8.05,
+          "CEJAS": 7.8
+        },
+        "PUNTAJE": 48.55,
+        "PROMEDIO": 8.092
+      },
+      {
+        "Nº": 144,
+        "Nombres": "Mendes - Marolo",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.3,
+          "GALLARDO": 8.75,
+          "COLETTI": 8.45,
+          "CEJAS": 7.9
+        },
+        "PUNTAJE": 48.5,
+        "PROMEDIO": 8.083
+      },
+      {
+        "Nº": 78,
+        "Nombres": "Cafasso - Artunduaga",
+        "scores": {
+          "SAMETBAND": 8.65,
+          "MARTINEZ": 7.8,
+          "MISSÉ": 7.6,
+          "GALLARDO": 8.49,
+          "COLETTI": 8.6,
+          "CEJAS": 7.3
+        },
+        "PUNTAJE": 48.44,
+        "PROMEDIO": 8.073
+      },
+      {
+        "Nº": 53,
+        "Nombres": "Maidana - Beltran",
+        "scores": {
+          "SAMETBAND": 8.05,
+          "MARTINEZ": 7.7,
+          "MISSÉ": 7.6,
+          "GALLARDO": 8.72,
+          "COLETTI": 8,
+          "CEJAS": 8.35
+        },
+        "PUNTAJE": 48.42,
+        "PROMEDIO": 8.07
+      },
+      {
+        "Nº": 118,
+        "Nombres": "Medina - Persico",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 8,
+          "MISSÉ": 8.77,
+          "GALLARDO": 8.42,
+          "COLETTI": 7.4,
+          "CEJAS": 7.85
+        },
+        "PUNTAJE": 48.34,
+        "PROMEDIO": 8.057
+      },
+      {
+        "Nº": 62,
+        "Nombres": "Callen - Oramas",
+        "scores": {
+          "SAMETBAND": 7.95,
+          "MARTINEZ": 7.85,
+          "MISSÉ": 8.7,
+          "GALLARDO": 8.55,
+          "COLETTI": 7.5,
+          "CEJAS": 7.75
+        },
+        "PUNTAJE": 48.3,
+        "PROMEDIO": 8.05
+      },
+      {
+        "Nº": 31,
+        "Nombres": "Valenzuela - Astorga",
+        "scores": {
+          "SAMETBAND": 8.3,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 7.7,
+          "GALLARDO": 8.39,
+          "COLETTI": 8.9,
+          "CEJAS": 7.35
+        },
+        "PUNTAJE": 48.24,
+        "PROMEDIO": 8.04
+      },
+      {
+        "Nº": 134,
+        "Nombres": "Lettieri - Beron",
+        "scores": {
+          "SAMETBAND": 8.4,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.1,
+          "GALLARDO": 8.79,
+          "COLETTI": 8.3,
+          "CEJAS": 7.5
+        },
+        "PUNTAJE": 48.09,
+        "PROMEDIO": 8.015
+      },
+      {
+        "Nº": 136,
+        "Nombres": "Da Silva - Tardivo",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8.1,
+          "MISSÉ": 7.15,
+          "GALLARDO": 8.7,
+          "COLETTI": 7.9,
+          "CEJAS": 8.1
+        },
+        "PUNTAJE": 48.05,
+        "PROMEDIO": 8.008
+      },
+      {
+        "Nº": 65,
+        "Nombres": "Primiterra - Murillo",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 8.1,
+          "GALLARDO": 8.65,
+          "COLETTI": 7.8,
+          "CEJAS": 7.9
+        },
+        "PUNTAJE": 47.85,
+        "PROMEDIO": 7.975
+      },
+      {
+        "Nº": 142,
+        "Nombres": "Jardim - Da Silva",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.75,
+          "MISSÉ": 7.6,
+          "GALLARDO": 8.45,
+          "COLETTI": 8.2,
+          "CEJAS": 7.9
+        },
+        "PUNTAJE": 47.8,
+        "PROMEDIO": 7.967
+      },
+      {
+        "Nº": 132,
+        "Nombres": "Veron - Ramirez",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.9,
+          "MISSÉ": 7.5,
+          "GALLARDO": 8.25,
+          "COLETTI": 7.75,
+          "CEJAS": 8.3
+        },
+        "PUNTAJE": 47.6,
+        "PROMEDIO": 7.933
+      },
+      {
+        "Nº": 154,
+        "Nombres": "Alvarez Vilca",
+        "scores": {
+          "SAMETBAND": 8.1,
+          "MARTINEZ": 8.05,
+          "MISSÉ": 7.1,
+          "GALLARDO": 8.2,
+          "COLETTI": 8.1,
+          "CEJAS": 8
+        },
+        "PUNTAJE": 47.55,
+        "PROMEDIO": 7.925
+      },
+      {
+        "Nº": 84,
+        "Nombres": "Migale - Espinosa",
+        "scores": {
+          "SAMETBAND": 8.5,
+          "MARTINEZ": 7.9,
+          "MISSÉ": 7.1,
+          "GALLARDO": 8.22,
+          "COLETTI": 8.1,
+          "CEJAS": 7.6
+        },
+        "PUNTAJE": 47.42,
+        "PROMEDIO": 7.903
+      },
+      {
+        "Nº": 106,
+        "Nombres": "Rotili - Bravo",
+        "scores": {
+          "SAMETBAND": 7.8,
+          "MARTINEZ": 7.7,
+          "MISSÉ": 8.1,
+          "GALLARDO": 8.35,
+          "COLETTI": 8.35,
+          "CEJAS": 7.1
+        },
+        "PUNTAJE": 47.4,
+        "PROMEDIO": 7.9
+      },
+      {
+        "Nº": 114,
+        "Nombres": "Cantarini - Perez",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 8,
+          "MISSÉ": 8.2,
+          "GALLARDO": 8.35,
+          "COLETTI": 7.25,
+          "CEJAS": 7.7
+        },
+        "PUNTAJE": 47.4,
+        "PROMEDIO": 7.9
+      },
+      {
+        "Nº": 163,
+        "Nombres": "Pozzi - Seliman",
+        "scores": {
+          "SAMETBAND": 8.05,
+          "MARTINEZ": 7.5,
+          "MISSÉ": null,
+          "GALLARDO": 8.2,
+          "COLETTI": 7.75,
+          "CEJAS": 7.85
+        },
+        "PUNTAJE": 39.35,
+        "PROMEDIO": 7.87
+      },
+      {
+        "Nº": 109,
+        "Nombres": "Mazza - Cabezuelo",
+        "scores": {
+          "SAMETBAND": null,
+          "MARTINEZ": 8,
+          "MISSÉ": 7.4,
+          "GALLARDO": 8.62,
+          "COLETTI": 8,
+          "CEJAS": 7.25
+        },
+        "PUNTAJE": 39.27,
+        "PROMEDIO": 7.854
+      },
+      {
+        "Nº": 15,
+        "Nombres": "Terella - Garcia",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.4,
+          "MISSÉ": 7.2,
+          "GALLARDO": 8.58,
+          "COLETTI": 7.9,
+          "CEJAS": 7.7
+        },
+        "PUNTAJE": 46.68,
+        "PROMEDIO": 7.78
+      },
+      {
+        "Nº": 64,
+        "Nombres": "Gomez - Segovia",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.8,
+          "MISSÉ": 7.2,
+          "GALLARDO": 7.98,
+          "COLETTI": 7.85,
+          "CEJAS": 7.85
+        },
+        "PUNTAJE": 46.58,
+        "PROMEDIO": 7.763
+      },
+      {
+        "Nº": 39,
+        "Nombres": "Montes - Andrade",
+        "scores": {
+          "SAMETBAND": 7.85,
+          "MARTINEZ": 7.95,
+          "MISSÉ": 7.27,
+          "GALLARDO": 8.4,
+          "COLETTI": 8,
+          "CEJAS": 7.05
+        },
+        "PUNTAJE": 46.52,
+        "PROMEDIO": 7.753
+      },
+      {
+        "Nº": 165,
+        "Nombres": "Gutierrez - Argañaraz",
+        "scores": {
+          "SAMETBAND": 7.7,
+          "MARTINEZ": 7.5,
+          "MISSÉ": 7.1,
+          "GALLARDO": 8.35,
+          "COLETTI": 7.75,
+          "CEJAS": 8
+        },
+        "PUNTAJE": 46.4,
+        "PROMEDIO": 7.733
+      },
+      {
+        "Nº": 167,
+        "Nombres": "Rodriguez - Sarazola",
+        "scores": {
+          "SAMETBAND": 7.9,
+          "MARTINEZ": 7.6,
+          "MISSÉ": 7.15,
+          "GALLARDO": 8.22,
+          "COLETTI": 7.85,
+          "CEJAS": 7.6
+        },
+        "PUNTAJE": 46.32,
+        "PROMEDIO": 7.72
+      },
+      {
+        "Nº": 162,
+        "Nombres": "Cabrera - Vallejos",
+        "scores": {
+          "SAMETBAND": 7.2,
+          "MARTINEZ": 7.6,
+          "MISSÉ": null,
+          "GALLARDO": 8.64,
+          "COLETTI": 7.8,
+          "CEJAS": 7.15
+        },
+        "PUNTAJE": 38.39,
+        "PROMEDIO": 7.678
+      },
+      {
+        "Nº": 161,
+        "Nombres": "Pucheu - Le Vanic",
+        "scores": {
+          "SAMETBAND": 7.75,
+          "MARTINEZ": 7.8,
+          "MISSÉ": 7.2,
+          "GALLARDO": 8.42,
+          "COLETTI": 7.4,
+          "CEJAS": 7.25
+        },
+        "PUNTAJE": 45.82,
+        "PROMEDIO": 7.637
+      },
+      {
+        "Nº": 122,
+        "Nombres": "Seminskaia - Arakelian",
+        "scores": {
+          "ROSSI": null,
+          "ZUCARINNO": null,
+          "PANDOLFI": 9,
+          "PAEZ": 8.8,
+          "QUIROGA": 8.9,
+          "FERNANDEZ": 8.8
+        },
+        "PUNTAJE": 35.5,
+        "PROMEDIO": 8.875
+      },
+      {
+        "Nº": 107,
+        "Nombres": "Petchatnikova - Benitez",
+        "scores": {
+          "ROSSI": 8.7,
+          "ZUCARINNO": 8.9,
+          "PANDOLFI": 8.6,
+          "PAEZ": 8.5,
+          "QUIROGA": 8.75,
+          "FERNANDEZ": 8.85
+        },
+        "PUNTAJE": 52.3,
+        "PROMEDIO": 8.717
+      },
+      {
+        "Nº": 108,
+        "Nombres": "Tsybrova - Bobkov",
+        "scores": {
+          "ROSSI": 8.55,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 8.5,
+          "PAEZ": 8.8,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.7
+        },
+        "PUNTAJE": 50.95,
+        "PROMEDIO": 8.492
+      },
+      {
+        "Nº": 133,
+        "Nombres": "Pesci - Martin",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 8.9,
+          "PANDOLFI": 8.5,
+          "PAEZ": 8.15,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.8
+        },
+        "PUNTAJE": 42.45,
+        "PROMEDIO": 8.49
+      },
+      {
+        "Nº": 140,
+        "Nombres": "Atepaeva - Takhirov",
+        "scores": {
+          "ROSSI": null,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8.8,
+          "PAEZ": 8.5,
+          "QUIROGA": 8.65,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 42.45,
+        "PROMEDIO": 8.49
+      },
+      {
+        "Nº": 128,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "ROSSI": 8.8,
+          "ZUCARINNO": 8.8,
+          "PANDOLFI": 8.9,
+          "PAEZ": 7.9,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.18
+        },
+        "PUNTAJE": 50.68,
+        "PROMEDIO": 8.447
+      },
+      {
+        "Nº": 125,
+        "Nombres": "Alzaran - Galvan",
+        "scores": {
+          "ROSSI": 8.7,
+          "ZUCARINNO": 8.4,
+          "PANDOLFI": 8.45,
+          "PAEZ": 8.11,
+          "QUIROGA": 8.2,
+          "FERNANDEZ": 8.65
+        },
+        "PUNTAJE": 50.51,
+        "PROMEDIO": 8.418
+      },
+      {
+        "Nº": 142,
+        "Nombres": "Jardim - Da Silva",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": null,
+          "PANDOLFI": 8.4,
+          "PAEZ": 8.1,
+          "QUIROGA": 8.3,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 41.75,
+        "PROMEDIO": 8.35
+      },
+      {
+        "Nº": 131,
+        "Nombres": "Tokian - Franco",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 8.2,
+          "PANDOLFI": 8.4,
+          "PAEZ": 8.25,
+          "QUIROGA": 8.15,
+          "FERNANDEZ": 8.95
+        },
+        "PUNTAJE": 50.05,
+        "PROMEDIO": 8.342
+      },
+      {
+        "Nº": 114,
+        "Nombres": "Cantarini - Perez",
+        "scores": {
+          "ROSSI": 7.85,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 8.7,
+          "PAEZ": 8.79,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.38
+        },
+        "PUNTAJE": 50.02,
+        "PROMEDIO": 8.337
+      },
+      {
+        "Nº": 134,
+        "Nombres": "Lettieri - Beron",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 8.6,
+          "PANDOLFI": 8.35,
+          "PAEZ": 8.2,
+          "QUIROGA": 7.95,
+          "FERNANDEZ": 8.25
+        },
+        "PUNTAJE": 49.95,
+        "PROMEDIO": 8.325
+      },
+      {
+        "Nº": 116,
+        "Nombres": "Rocha - Cal",
+        "scores": {
+          "ROSSI": 7.4,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8.8,
+          "PAEZ": 8.6,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.89
+        },
+        "PUNTAJE": 49.89,
+        "PROMEDIO": 8.315
+      },
+      {
+        "Nº": 111,
+        "Nombres": "Gimenez - Valdebenito",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 8.2,
+          "PANDOLFI": 8.1,
+          "PAEZ": 7.98,
+          "QUIROGA": 8.05,
+          "FERNANDEZ": 8.65
+        },
+        "PUNTAJE": 49.58,
+        "PROMEDIO": 8.263
+      },
+      {
+        "Nº": 106,
+        "Nombres": "Rotili - Bravo",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 8.4,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 49.5,
+        "PROMEDIO": 8.25
+      },
+      {
+        "Nº": 115,
+        "Nombres": "Zampieri - Paulino",
+        "scores": {
+          "ROSSI": 7.15,
+          "ZUCARINNO": 8.5,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.7,
+          "QUIROGA": 8.4,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 49.3,
+        "PROMEDIO": 8.217
+      },
+      {
+        "Nº": 124,
+        "Nombres": "Iregui - Rojas",
+        "scores": {
+          "ROSSI": 7.4,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 8.7,
+          "PAEZ": 7.95,
+          "QUIROGA": 7.95,
+          "FERNANDEZ": 8.76
+        },
+        "PUNTAJE": 49.06,
+        "PROMEDIO": 8.177
+      },
+      {
+        "Nº": 138,
+        "Nombres": "Martinucci - Flores",
+        "scores": {
+          "ROSSI": 8.5,
+          "ZUCARINNO": null,
+          "PANDOLFI": 8.4,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 40.85,
+        "PROMEDIO": 8.17
+      },
+      {
+        "Nº": 132,
+        "Nombres": "Veron - Ramirez",
+        "scores": {
+          "ROSSI": 8.05,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.35,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.75
+        },
+        "PUNTAJE": 48.95,
+        "PROMEDIO": 8.158
+      },
+      {
+        "Nº": 123,
+        "Nombres": "Sanchez - De Dominicis",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 8.75
+        },
+        "PUNTAJE": 48.85,
+        "PROMEDIO": 8.142
+      },
+      {
+        "Nº": 139,
+        "Nombres": "Mansilla - Tempestti",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.2,
+          "PAEZ": 7.99,
+          "QUIROGA": 8.05,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 48.84,
+        "PROMEDIO": 8.14
+      },
+      {
+        "Nº": 110,
+        "Nombres": "Bachini - Etcheverry",
+        "scores": {
+          "ROSSI": 7.7,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 7.9,
+          "PAEZ": 8.7,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 40.7,
+        "PROMEDIO": 8.14
+      },
+      {
+        "Nº": 144,
+        "Nombres": "Mendez - Marolo",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 8.45,
+          "PAEZ": 8.2,
+          "QUIROGA": 8.05,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 48.7,
+        "PROMEDIO": 8.117
+      },
+      {
+        "Nº": 145,
+        "Nombres": "Valdez - Azorin",
+        "scores": {
+          "ROSSI": 8.45,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.88,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.18
+        },
+        "PUNTAJE": 48.61,
+        "PROMEDIO": 8.102
+      },
+      {
+        "Nº": 113,
+        "Nombres": "Virga - Monzon",
+        "scores": {
+          "ROSSI": 7.75,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.55,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 48.55,
+        "PROMEDIO": 8.092
+      },
+      {
+        "Nº": 147,
+        "Nombres": "Berezina - Maletin",
+        "scores": {
+          "ROSSI": 7.2,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": null,
+          "PAEZ": 8.15,
+          "QUIROGA": 8.2,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 40.45,
+        "PROMEDIO": 8.09
+      },
+      {
+        "Nº": 146,
+        "Nombres": "Borda - Roman",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 7.95,
+          "PAEZ": 7.75,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 48.5,
+        "PROMEDIO": 8.083
+      },
+      {
+        "Nº": 137,
+        "Nombres": "Mendez - Moure",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8,
+          "PAEZ": 8.16,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.75
+        },
+        "PUNTAJE": 40.41,
+        "PROMEDIO": 8.082
+      },
+      {
+        "Nº": 130,
+        "Nombres": "Belousova - Panferov",
+        "scores": {
+          "ROSSI": null,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 8,
+          "PAEZ": 7.99,
+          "QUIROGA": 8.6,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 40.39,
+        "PROMEDIO": 8.078
+      },
+      {
+        "Nº": 109,
+        "Nombres": "Mazza - Cabezuelo",
+        "scores": {
+          "ROSSI": 8.4,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 8,
+          "PAEZ": 7.99,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 48.44,
+        "PROMEDIO": 8.073
+      },
+      {
+        "Nº": 150,
+        "Nombres": "Grasso - Quevedo",
+        "scores": {
+          "ROSSI": 8.4,
+          "ZUCARINNO": 7.6,
+          "PANDOLFI": 8.1,
+          "PAEZ": 7.9,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.25
+        },
+        "PUNTAJE": 48.25,
+        "PROMEDIO": 8.042
+      },
+      {
+        "Nº": 127,
+        "Nombres": "Parra - Risso",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 8.35,
+          "PAEZ": 8.15,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 48.2,
+        "PROMEDIO": 8.033
+      },
+      {
+        "Nº": 118,
+        "Nombres": "Medina - Persico",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 7.6,
+          "PANDOLFI": 8,
+          "PAEZ": 7.88,
+          "QUIROGA": 8.05,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 48.13,
+        "PROMEDIO": 8.022
+      },
+      {
+        "Nº": 129,
+        "Nombres": "Sarmiento - Bon",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8.1,
+          "PAEZ": 7.95,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 48.05,
+        "PROMEDIO": 8.008
+      },
+      {
+        "Nº": 149,
+        "Nombres": "Mendez - Caro",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": null,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.8,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.55
+        },
+        "PUNTAJE": 39.95,
+        "PROMEDIO": 7.99
+      },
+      {
+        "Nº": 141,
+        "Nombres": "Castillo - Abraham",
+        "scores": {
+          "ROSSI": 8.2,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 8.1,
+          "PAEZ": 8.16,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 47.86,
+        "PROMEDIO": 7.977
+      },
+      {
+        "Nº": 112,
+        "Nombres": "Saavedra - Sepulveda",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8,
+          "PAEZ": 7.89,
+          "QUIROGA": 7.85,
+          "FERNANDEZ": 8.05
+        },
+        "PUNTAJE": 47.79,
+        "PROMEDIO": 7.965
+      },
+      {
+        "Nº": 135,
+        "Nombres": "Mendez - Zamin",
+        "scores": {
+          "ROSSI": 7.55,
+          "ZUCARINNO": 7.6,
+          "PANDOLFI": 7.9,
+          "PAEZ": 8.25,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 47.6,
+        "PROMEDIO": 7.933
+      },
+      {
+        "Nº": 143,
+        "Nombres": "Carrizo - Pereyra",
+        "scores": {
+          "ROSSI": 7.55,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8,
+          "PAEZ": 7.99,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 39.64,
+        "PROMEDIO": 7.928
+      },
+      {
+        "Nº": 126,
+        "Nombres": "Couto - Argamonte",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.6,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.85,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 47.45,
+        "PROMEDIO": 7.908
+      },
+      {
+        "Nº": 121,
+        "Nombres": "Barahona - Buroz",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 7.8,
+          "PAEZ": 7.7,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 47.0,
+        "PROMEDIO": 7.833
+      },
+      {
+        "Nº": 119,
+        "Nombres": "Santana - Ehijo",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 7.3,
+          "PAEZ": 7.99,
+          "QUIROGA": 8.2,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 46.79,
+        "PROMEDIO": 7.798
+      },
+      {
+        "Nº": 120,
+        "Nombres": "Chignac - Guerra",
+        "scores": {
+          "ROSSI": 7.35,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 7.4,
+          "PAEZ": 7.8,
+          "QUIROGA": 7.65,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 46.25,
+        "PROMEDIO": 7.708
+      },
+      {
+        "Nº": 148,
+        "Nombres": "Carrion - Aragon",
+        "scores": {
+          "ROSSI": 7.15,
+          "ZUCARINNO": 7.4,
+          "PANDOLFI": 7.8,
+          "PAEZ": 7.7,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 46.15,
+        "PROMEDIO": 7.692
+      },
+      {
+        "Nº": 117,
+        "Nombres": "Furlong - Mezinski",
+        "scores": {
+          "ROSSI": 7.2,
+          "ZUCARINNO": 7.4,
+          "PANDOLFI": 7.5,
+          "PAEZ": 7.1,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 45.1,
+        "PROMEDIO": 7.517
+      },
+      {
+        "Nº": 90,
+        "Nombres": "Mashkovich - Mashkovich",
+        "scores": {
+          "ROSSI": 8.9,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.8,
+          "QUIROGA": 8.5,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 50.2,
+        "PROMEDIO": 8.367
+      },
+      {
+        "Nº": 100,
+        "Nombres": "Corsisky - Palleyro",
+        "scores": {
+          "ROSSI": 8.95,
+          "ZUCARINNO": 8.2,
+          "PANDOLFI": 8.4,
+          "PAEZ": 8.1,
+          "QUIROGA": 8.05,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 49.85,
+        "PROMEDIO": 8.308
+      },
+      {
+        "Nº": 105,
+        "Nombres": "Poggi - Tejeda",
+        "scores": {
+          "ROSSI": 8.8,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.99,
+          "QUIROGA": 8.15,
+          "FERNANDEZ": 8.98
+        },
+        "PUNTAJE": 49.72,
+        "PROMEDIO": 8.287
+      },
+      {
+        "Nº": 92,
+        "Nombres": "Correa - Sassi",
+        "scores": {
+          "ROSSI": 8.9,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 7.9,
+          "PAEZ": 8,
+          "QUIROGA": 7.5,
+          "FERNANDEZ": 8.25
+        },
+        "PUNTAJE": 48.85,
+        "PROMEDIO": 8.142
+      },
+      {
+        "Nº": 88,
+        "Nombres": "Ruiz - Couto",
+        "scores": {
+          "ROSSI": 8.75,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.4,
+          "QUIROGA": 8.6,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 48.75,
+        "PROMEDIO": 8.125
+      },
+      {
+        "Nº": 99,
+        "Nombres": "Del Bosque - Abdala",
+        "scores": {
+          "ROSSI": 7.8,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.85,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.12
+        },
+        "PUNTAJE": 48.27,
+        "PROMEDIO": 8.045
+      },
+      {
+        "Nº": 89,
+        "Nombres": "Pergiacomi - Durso",
+        "scores": {
+          "ROSSI": 8.05,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 7.8,
+          "PAEZ": 8.1,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 48.25,
+        "PROMEDIO": 8.042
+      },
+      {
+        "Nº": 98,
+        "Nombres": "Sosa - Bologna",
+        "scores": {
+          "ROSSI": 8.7,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 8.35,
+          "PAEZ": 7.8,
+          "QUIROGA": 7.75,
+          "FERNANDEZ": 8.25
+        },
+        "PUNTAJE": 48.15,
+        "PROMEDIO": 8.025
+      },
+      {
+        "Nº": 94,
+        "Nombres": "Martynova - Balan",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8,
+          "PAEZ": 7.89,
+          "QUIROGA": 7.75,
+          "FERNANDEZ": 8.45
+        },
+        "PUNTAJE": 48.09,
+        "PROMEDIO": 8.015
+      },
+      {
+        "Nº": 103,
+        "Nombres": "Gamietea - Sasso",
+        "scores": {
+          "ROSSI": 8.2,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8,
+          "PAEZ": 7.75,
+          "QUIROGA": 7.65,
+          "FERNANDEZ": 8
+        },
+        "PUNTAJE": 47.7,
+        "PROMEDIO": 7.95
+      },
+      {
+        "Nº": 91,
+        "Nombres": "Lugones - Pluchinotta",
+        "scores": {
+          "ROSSI": 8.2,
+          "ZUCARINNO": 7.4,
+          "PANDOLFI": 7.8,
+          "PAEZ": 7.5,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 7.98
+        },
+        "PUNTAJE": 46.78,
+        "PROMEDIO": 7.797
+      },
+      {
+        "Nº": 96,
+        "Nombres": "Centurion - Rizzo",
+        "scores": {
+          "ROSSI": 7.3,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 8.1,
+          "PAEZ": 7.99,
+          "QUIROGA": 7.65,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 46.49,
+        "PROMEDIO": 7.748
+      },
+      {
+        "Nº": 95,
+        "Nombres": "Mateo - Di Biase",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 7.7,
+          "PAEZ": 7.7,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.32
+        },
+        "PUNTAJE": 46.32,
+        "PROMEDIO": 7.72
+      },
+      {
+        "Nº": 104,
+        "Nombres": "Modzelewska - Machnik",
+        "scores": {
+          "ROSSI": 8.5,
+          "ZUCARINNO": 7,
+          "PANDOLFI": 7.3,
+          "PAEZ": 7.15,
+          "QUIROGA": 7.45,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 45.6,
+        "PROMEDIO": 7.6
+      },
+      {
+        "Nº": 93,
+        "Nombres": "Cisneros - Cuevas",
+        "scores": {
+          "ROSSI": 7.4,
+          "ZUCARINNO": 7.2,
+          "PANDOLFI": 7.8,
+          "PAEZ": 7.6,
+          "QUIROGA": null,
+          "FERNANDEZ": 8
+        },
+        "PUNTAJE": 38.0,
+        "PROMEDIO": 7.6
+      },
+      {
+        "Nº": 101,
+        "Nombres": "Whitner - Achili",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 7.1,
+          "PANDOLFI": 7.2,
+          "PAEZ": 7.85,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.05
+        },
+        "PUNTAJE": 45.4,
+        "PROMEDIO": 7.567
+      },
+      {
+        "Nº": 102,
+        "Nombres": "Romero - Fuentes",
+        "scores": {
+          "ROSSI": 7.4,
+          "ZUCARINNO": 7.4,
+          "PANDOLFI": 7,
+          "PAEZ": 7.3,
+          "QUIROGA": 7.5,
+          "FERNANDEZ": 7.9
+        },
+        "PUNTAJE": 44.5,
+        "PROMEDIO": 7.417
+      },
+      {
+        "Nº": 97,
+        "Nombres": "Riusech - Martinez",
+        "scores": {
+          "ROSSI": 7.4,
+          "ZUCARINNO": 7.2,
+          "PANDOLFI": 7,
+          "PAEZ": 7.5,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 7.6
+        },
+        "PUNTAJE": 44.4,
+        "PROMEDIO": 7.4
+      }
+    ]
+  },
+  {
+    "category": "TANGO DE PISTA SENIOR",
+    "scores": [
+      {
+        "Nº": 4,
+        "Nombres": "Pilatti - Romero",
+        "scores": {
+          "ROSSI": 7.8,
+          "ZUCARINNO": 8.8,
+          "PANDOLFI": 9,
+          "PAEZ": 8.7,
+          "QUIROGA": 8.9,
+          "FERNANDEZ": 8.98
+        },
+        "PUNTAJE": 52.18,
+        "PROMEDIO": 8.697
+      },
+      {
+        "Nº": 9,
+        "Nombres": "Martinez - Orso",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 8.5,
+          "PAEZ": 8.6,
+          "QUIROGA": 8.7,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 50.5,
+        "PROMEDIO": 8.417
+      },
+      {
+        "Nº": 19,
+        "Nombres": "Fassio - Barrios",
+        "scores": {
+          "ROSSI": 8.2,
+          "ZUCARINNO": 8.9,
+          "PANDOLFI": 8.1,
+          "PAEZ": null,
+          "QUIROGA": 7.75,
+          "FERNANDEZ": 8.8
+        },
+        "PUNTAJE": 41.75,
+        "PROMEDIO": 8.35
+      },
+      {
+        "Nº": 17,
+        "Nombres": "Del Valle - Montes de\nOca",
+        "scores": {
+          "ROSSI": 7.75,
+          "ZUCARINNO": 8.4,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.95,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.7
+        },
+        "PUNTAJE": 49.2,
+        "PROMEDIO": 8.2
+      },
+      {
+        "Nº": 24,
+        "Nombres": "Sottile - Martin",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 8.6,
+          "PAEZ": 7.3,
+          "QUIROGA": 8.3,
+          "FERNANDEZ": 8.89
+        },
+        "PUNTAJE": 48.99,
+        "PROMEDIO": 8.165
+      },
+      {
+        "Nº": 15,
+        "Nombres": "Terella - Garcia",
+        "scores": {
+          "ROSSI": 7.45,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8,
+          "PAEZ": 8.05,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.75
+        },
+        "PUNTAJE": 48.15,
+        "PROMEDIO": 8.025
+      },
+      {
+        "Nº": 20,
+        "Nombres": "Tateossian - Pouchulu",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 8.7,
+          "PANDOLFI": 8,
+          "PAEZ": 7.05,
+          "QUIROGA": 8.65,
+          "FERNANDEZ": 7.4
+        },
+        "PUNTAJE": 48.1,
+        "PROMEDIO": 8.017
+      },
+      {
+        "Nº": 18,
+        "Nombres": "Salinas - Lozano",
+        "scores": {
+          "ROSSI": 7.45,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8.2,
+          "PAEZ": 7.7,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 47.75,
+        "PROMEDIO": 7.958
+      },
+      {
+        "Nº": 10,
+        "Nombres": "Di Francisco - Encina",
+        "scores": {
+          "ROSSI": 7.85,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8,
+          "PAEZ": 7.05,
+          "QUIROGA": 8.4,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 47.3,
+        "PROMEDIO": 7.883
+      },
+      {
+        "Nº": 1,
+        "Nombres": "Rebolini - Guerrieri",
+        "scores": {
+          "ROSSI": 7.1,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.5,
+          "QUIROGA": 8.6,
+          "FERNANDEZ": 8.7
+        },
+        "PUNTAJE": 47.1,
+        "PROMEDIO": 7.85
+      },
+      {
+        "Nº": 11,
+        "Nombres": "Zuccoli - Benegas",
+        "scores": {
+          "ROSSI": 8,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.8,
+          "PAEZ": 7.02,
+          "QUIROGA": 7.4,
+          "FERNANDEZ": 7.9
+        },
+        "PUNTAJE": 46.92,
+        "PROMEDIO": 7.82
+      },
+      {
+        "Nº": 27,
+        "Nombres": "Prado - Lafuente",
+        "scores": {
+          "ROSSI": 8.05,
+          "ZUCARINNO": 8.5,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.11,
+          "QUIROGA": 7.5,
+          "FERNANDEZ": 7.2
+        },
+        "PUNTAJE": 46.86,
+        "PROMEDIO": 7.81
+      },
+      {
+        "Nº": 16,
+        "Nombres": "Sampayo - Olguin",
+        "scores": {
+          "ROSSI": 7.3,
+          "ZUCARINNO": 7.6,
+          "PANDOLFI": 7.3,
+          "PAEZ": 7.9,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.95
+        },
+        "PUNTAJE": 39.05,
+        "PROMEDIO": 7.81
+      },
+      {
+        "Nº": 14,
+        "Nombres": "Cano - Avila",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 7.2,
+          "PAEZ": 8.1,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 46.4,
+        "PROMEDIO": 7.733
+      },
+      {
+        "Nº": 7,
+        "Nombres": "Narbondo - Fernandez",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 7.4,
+          "PAEZ": 8.1,
+          "QUIROGA": 7.4,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 46.0,
+        "PROMEDIO": 7.667
+      },
+      {
+        "Nº": 21,
+        "Nombres": "Zanotta - Fridman",
+        "scores": {
+          "ROSSI": 8.25,
+          "ZUCARINNO": 7,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.1,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 7.85
+        },
+        "PUNTAJE": 46.0,
+        "PROMEDIO": 7.667
+      },
+      {
+        "Nº": 22,
+        "Nombres": "Hernandez - Hualde",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 7.1,
+          "PANDOLFI": 7.6,
+          "PAEZ": 7.01,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 45.91,
+        "PROMEDIO": 7.652
+      },
+      {
+        "Nº": 12,
+        "Nombres": "Contarbio - Davalos",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 7.5,
+          "PAEZ": 7.15,
+          "QUIROGA": null,
+          "FERNANDEZ": 8
+        },
+        "PUNTAJE": 38.25,
+        "PROMEDIO": 7.65
+      },
+      {
+        "Nº": 13,
+        "Nombres": "Litas - Gordillo",
+        "scores": {
+          "ROSSI": 7.55,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 7.8,
+          "PAEZ": 7.01,
+          "QUIROGA": 7.45,
+          "FERNANDEZ": 7.6
+        },
+        "PUNTAJE": 45.51,
+        "PROMEDIO": 7.585
+      },
+      {
+        "Nº": 8,
+        "Nombres": "Medaglia - Roch",
+        "scores": {
+          "ROSSI": 7.2,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 7.5,
+          "PAEZ": 7.1,
+          "QUIROGA": 7.35,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 45.4,
+        "PROMEDIO": 7.567
+      },
+      {
+        "Nº": 3,
+        "Nombres": "Asnicar - Pacheco",
+        "scores": {
+          "ROSSI": 6.7,
+          "ZUCARINNO": 7.2,
+          "PANDOLFI": 8,
+          "PAEZ": 7.55,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 45.2,
+        "PROMEDIO": 7.533
+      },
+      {
+        "Nº": 26,
+        "Nombres": "Hijano - Aleman",
+        "scores": {
+          "ROSSI": 7.75,
+          "ZUCARINNO": 6.9,
+          "PANDOLFI": 7.3,
+          "PAEZ": 7.25,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 7.7
+        },
+        "PUNTAJE": 44.5,
+        "PROMEDIO": 7.417
+      },
+      {
+        "Nº": 6,
+        "Nombres": "Battista - Battista",
+        "scores": {
+          "ROSSI": 6.8,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 7.2,
+          "PAEZ": 6.85,
+          "QUIROGA": 7.5,
+          "FERNANDEZ": 7.6
+        },
+        "PUNTAJE": 43.95,
+        "PROMEDIO": 7.325
+      },
+      {
+        "Nº": 25,
+        "Nombres": "Flores - Monasterio",
+        "scores": {
+          "ROSSI": 7.95,
+          "ZUCARINNO": 6.5,
+          "PANDOLFI": 7.2,
+          "PAEZ": 6.9,
+          "QUIROGA": 8,
+          "FERNANDEZ": 7
+        },
+        "PUNTAJE": 43.55,
+        "PROMEDIO": 7.258
+      },
+      {
+        "Nº": 2,
+        "Nombres": "Perez - Mora",
+        "scores": {
+          "ROSSI": 6.75,
+          "ZUCARINNO": 7.1,
+          "PANDOLFI": 7.1,
+          "PAEZ": 7.2,
+          "QUIROGA": 7.95,
+          "FERNANDEZ": 7.4
+        },
+        "PUNTAJE": 43.5,
+        "PROMEDIO": 7.25
+      },
+      {
+        "Nº": 23,
+        "Nombres": "Forte - Balatti",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 6.5,
+          "PANDOLFI": 7,
+          "PAEZ": 7.12,
+          "QUIROGA": 7.4,
+          "FERNANDEZ": 7.3
+        },
+        "PUNTAJE": 42.82,
+        "PROMEDIO": 7.137
+      }
+    ]
+  },
+  {
+    "category": "TANGO DE PISTA ADULT",
+    "scores": [
+      {
+        "Nº": 37,
+        "Nombres": "Teves - Videla",
+        "scores": {
+          "ROSSI": 8.95,
+          "ZUCARINNO": 8.8,
+          "PANDOLFI": 9,
+          "PAEZ": 8.1,
+          "QUIROGA": 8.3,
+          "FERNANDEZ": 9
+        },
+        "PUNTAJE": 52.15,
+        "PROMEDIO": 8.692
+      },
+      {
+        "Nº": 41,
+        "Nombres": "Figueroa - Gutierrez",
+        "scores": {
+          "ROSSI": 8.95,
+          "ZUCARINNO": 8.9,
+          "PANDOLFI": 8.5,
+          "PAEZ": 8.05,
+          "QUIROGA": null,
+          "FERNANDEZ": 9
+        },
+        "PUNTAJE": 43.4,
+        "PROMEDIO": 8.68
+      },
+      {
+        "Nº": 50,
+        "Nombres": "Aguilar - Deslarmes",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 8.8,
+          "PANDOLFI": 9,
+          "PAEZ": 8.6,
+          "QUIROGA": 8.35,
+          "FERNANDEZ": 8.85
+        },
+        "PUNTAJE": 51.9,
+        "PROMEDIO": 8.65
+      },
+      {
+        "Nº": 48,
+        "Nombres": "Alfaro - Manzanares",
+        "scores": {
+          "ROSSI": 8.9,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 9,
+          "PAEZ": 8.7,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.88
+        },
+        "PUNTAJE": 51.78,
+        "PROMEDIO": 8.63
+      },
+      {
+        "Nº": 73,
+        "Nombres": "Kaliszuk - Braida",
+        "scores": {
+          "ROSSI": 8.7,
+          "ZUCARINNO": 8.4,
+          "PANDOLFI": 8.9,
+          "PAEZ": 8.5,
+          "QUIROGA": 8.3,
+          "FERNANDEZ": 8.89
+        },
+        "PUNTAJE": 51.69,
+        "PROMEDIO": 8.615
+      },
+      {
+        "Nº": 83,
+        "Nombres": "Juanbelz - Barrionuevo",
+        "scores": {
+          "ROSSI": 8.8,
+          "ZUCARINNO": null,
+          "PANDOLFI": 8.9,
+          "PAEZ": 8.5,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 42.7,
+        "PROMEDIO": 8.54
+      },
+      {
+        "Nº": 47,
+        "Nombres": "Castiñeiras - Cabral",
+        "scores": {
+          "ROSSI": 8.8,
+          "ZUCARINNO": null,
+          "PANDOLFI": 8.1,
+          "PAEZ": 8.6,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.65
+        },
+        "PUNTAJE": 34.15,
+        "PROMEDIO": 8.538
+      },
+      {
+        "Nº": 45,
+        "Nombres": "Rosales - Rosales",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 8.5,
+          "PANDOLFI": 8.9,
+          "PAEZ": 8.5,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 51.2,
+        "PROMEDIO": 8.533
+      },
+      {
+        "Nº": 51,
+        "Nombres": "Irrazabal - Torres",
+        "scores": {
+          "ROSSI": 8.65,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 9,
+          "PAEZ": 8.5,
+          "QUIROGA": 8.2,
+          "FERNANDEZ": 8.9
+        },
+        "PUNTAJE": 50.95,
+        "PROMEDIO": 8.492
+      },
+      {
+        "Nº": 28,
+        "Nombres": "Aragon - Samaniego",
+        "scores": {
+          "ROSSI": 8.2,
+          "ZUCARINNO": 8.9,
+          "PANDOLFI": 9,
+          "PAEZ": 7.35,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.8
+        },
+        "PUNTAJE": 42.25,
+        "PROMEDIO": 8.45
+      },
+      {
+        "Nº": 56,
+        "Nombres": "Marquez - Silva",
+        "scores": {
+          "ROSSI": 8.95,
+          "ZUCARINNO": null,
+          "PANDOLFI": 8.6,
+          "PAEZ": 8.1,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.45
+        },
+        "PUNTAJE": 41.9,
+        "PROMEDIO": 8.38
+      },
+      {
+        "Nº": 58,
+        "Nombres": "Leonardelli - Salvi",
+        "scores": {
+          "ROSSI": 7.2,
+          "ZUCARINNO": null,
+          "PANDOLFI": 8.6,
+          "PAEZ": 8.8,
+          "QUIROGA": 8.3,
+          "FERNANDEZ": 8.78
+        },
+        "PUNTAJE": 41.68,
+        "PROMEDIO": 8.336
+      },
+      {
+        "Nº": 70,
+        "Nombres": "Santos - Capparelli",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8.8,
+          "PAEZ": 8.44,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.65
+        },
+        "PUNTAJE": 49.99,
+        "PROMEDIO": 8.332
+      },
+      {
+        "Nº": 78,
+        "Nombres": "Cafasso - Artunduaga",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8.7,
+          "PAEZ": 8.3,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.25
+        },
+        "PUNTAJE": 41.65,
+        "PROMEDIO": 8.33
+      },
+      {
+        "Nº": 63,
+        "Nombres": "Cohen - Choque",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 8.7,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.6,
+          "QUIROGA": 8.05,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 49.85,
+        "PROMEDIO": 8.308
+      },
+      {
+        "Nº": 38,
+        "Nombres": "Selesan - Ramos",
+        "scores": {
+          "ROSSI": 8.6,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8.4,
+          "PAEZ": 8.1,
+          "QUIROGA": 7.95,
+          "FERNANDEZ": 8.8
+        },
+        "PUNTAJE": 49.75,
+        "PROMEDIO": 8.292
+      },
+      {
+        "Nº": 79,
+        "Nombres": "Serpa - Galarza",
+        "scores": {
+          "ROSSI": 8.4,
+          "ZUCARINNO": 8.2,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.15,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.65
+        },
+        "PUNTAJE": 49.6,
+        "PROMEDIO": 8.267
+      },
+      {
+        "Nº": 64,
+        "Nombres": "Gomez - Segovia",
+        "scores": {
+          "ROSSI": 8.5,
+          "ZUCARINNO": 8.4,
+          "PANDOLFI": 8.4,
+          "PAEZ": 8.15,
+          "QUIROGA": 7.65,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 49.6,
+        "PROMEDIO": 8.267
+      },
+      {
+        "Nº": 43,
+        "Nombres": "Corna - Cayesse",
+        "scores": {
+          "ROSSI": 8.95,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 8,
+          "PAEZ": 7.95,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 41.25,
+        "PROMEDIO": 8.25
+      },
+      {
+        "Nº": 80,
+        "Nombres": "Pereyra - Rodriguez",
+        "scores": {
+          "ROSSI": 8.8,
+          "ZUCARINNO": 8.2,
+          "PANDOLFI": 8.1,
+          "PAEZ": 8.25,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.55
+        },
+        "PUNTAJE": 49.5,
+        "PROMEDIO": 8.25
+      },
+      {
+        "Nº": 34,
+        "Nombres": "Duarte - Paez",
+        "scores": {
+          "ROSSI": 8.1,
+          "ZUCARINNO": 8.7,
+          "PANDOLFI": 8,
+          "PAEZ": 8.2,
+          "QUIROGA": 7.95,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 49.45,
+        "PROMEDIO": 8.242
+      },
+      {
+        "Nº": 55,
+        "Nombres": "Napolitano - Vera",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 8.2,
+          "PANDOLFI": 8.5,
+          "PAEZ": 8.15,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 49.45,
+        "PROMEDIO": 8.242
+      },
+      {
+        "Nº": 57,
+        "Nombres": "Colodrero - Cartagena",
+        "scores": {
+          "ROSSI": 8.65,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 8,
+          "PAEZ": 8.05,
+          "QUIROGA": 7.9,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 49.2,
+        "PROMEDIO": 8.2
+      },
+      {
+        "Nº": 69,
+        "Nombres": "Deluchi - Caricchio",
+        "scores": {
+          "ROSSI": 8.05,
+          "ZUCARINNO": null,
+          "PANDOLFI": null,
+          "PAEZ": 8.3,
+          "QUIROGA": 7.85,
+          "FERNANDEZ": 8.55
+        },
+        "PUNTAJE": 32.75,
+        "PROMEDIO": 8.188
+      },
+      {
+        "Nº": 40,
+        "Nombres": "Schinca - Schell",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.8,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 48.9,
+        "PROMEDIO": 8.15
+      },
+      {
+        "Nº": 42,
+        "Nombres": "Torres - Almiron",
+        "scores": {
+          "ROSSI": 7.55,
+          "ZUCARINNO": 8.3,
+          "PANDOLFI": 7.9,
+          "PAEZ": 8.4,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.85
+        },
+        "PUNTAJE": 48.8,
+        "PROMEDIO": 8.133
+      },
+      {
+        "Nº": 74,
+        "Nombres": "Martinez - Leiva",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.4,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.65,
+          "FERNANDEZ": 8.55
+        },
+        "PUNTAJE": 48.6,
+        "PROMEDIO": 8.1
+      },
+      {
+        "Nº": 82,
+        "Nombres": "Peralta - Martinez",
+        "scores": {
+          "ROSSI": 8.25,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.25,
+          "PAEZ": 8,
+          "QUIROGA": 7.85,
+          "FERNANDEZ": 8.45
+        },
+        "PUNTAJE": 48.6,
+        "PROMEDIO": 8.1
+      },
+      {
+        "Nº": 59,
+        "Nombres": "Coria - Amarilla",
+        "scores": {
+          "ROSSI": 7.3,
+          "ZUCARINNO": 8.5,
+          "PANDOLFI": 8.1,
+          "PAEZ": 8.06,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.45
+        },
+        "PUNTAJE": 40.41,
+        "PROMEDIO": 8.082
+      },
+      {
+        "Nº": 52,
+        "Nombres": "Victoria - Lopez",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 8.4,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": null
+        },
+        "PUNTAJE": 40.3,
+        "PROMEDIO": 8.06
+      },
+      {
+        "Nº": 31,
+        "Nombres": "Valenzuela - Astorga",
+        "scores": {
+          "ROSSI": 8,
+          "ZUCARINNO": 7.1,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.8,
+          "QUIROGA": 8.2,
+          "FERNANDEZ": 8.9
+        },
+        "PUNTAJE": 48.3,
+        "PROMEDIO": 8.05
+      },
+      {
+        "Nº": 62,
+        "Nombres": "Callen - Oramas",
+        "scores": {
+          "ROSSI": 8.4,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.8,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 48.1,
+        "PROMEDIO": 8.017
+      },
+      {
+        "Nº": 81,
+        "Nombres": "Ruiz - Ochoa",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.06,
+          "QUIROGA": 7.75,
+          "FERNANDEZ": 8.18
+        },
+        "PUNTAJE": 48.09,
+        "PROMEDIO": 8.015
+      },
+      {
+        "Nº": 49,
+        "Nombres": "Qin - Vazquez",
+        "scores": {
+          "ROSSI": 7.8,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8.8,
+          "PAEZ": 7.7,
+          "QUIROGA": 7.85,
+          "FERNANDEZ": 8
+        },
+        "PUNTAJE": 48.05,
+        "PROMEDIO": 8.008
+      },
+      {
+        "Nº": 72,
+        "Nombres": "Kresta - Churquina",
+        "scores": {
+          "ROSSI": 7.35,
+          "ZUCARINNO": 8.5,
+          "PANDOLFI": 8.1,
+          "PAEZ": 8,
+          "QUIROGA": 7.75,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 48.0,
+        "PROMEDIO": 8.0
+      },
+      {
+        "Nº": 35,
+        "Nombres": "Cala - Borquez",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.8,
+          "QUIROGA": 7.3,
+          "FERNANDEZ": 8.55
+        },
+        "PUNTAJE": 47.95,
+        "PROMEDIO": 7.992
+      },
+      {
+        "Nº": 76,
+        "Nombres": "Clozza - Correa",
+        "scores": {
+          "ROSSI": 7.15,
+          "ZUCARINNO": 8.1,
+          "PANDOLFI": 8.2,
+          "PAEZ": 8.25,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 47.9,
+        "PROMEDIO": 7.983
+      },
+      {
+        "Nº": 44,
+        "Nombres": "Carrion - Corro",
+        "scores": {
+          "ROSSI": 7.7,
+          "ZUCARINNO": 7.8,
+          "PANDOLFI": 8.2,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 47.8,
+        "PROMEDIO": 7.967
+      },
+      {
+        "Nº": 46,
+        "Nombres": "Calgaro - Flores",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 9,
+          "PAEZ": 7.85,
+          "QUIROGA": 7.35,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 47.8,
+        "PROMEDIO": 7.967
+      },
+      {
+        "Nº": 61,
+        "Nombres": "Suarez - Carabajal",
+        "scores": {
+          "ROSSI": 8.3,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 8.5,
+          "PAEZ": 7.99,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.1
+        },
+        "PUNTAJE": 47.79,
+        "PROMEDIO": 7.965
+      },
+      {
+        "Nº": 32,
+        "Nombres": "Camia - Vega",
+        "scores": {
+          "ROSSI": 7.9,
+          "ZUCARINNO": 7.4,
+          "PANDOLFI": 8.4,
+          "PAEZ": 8.05,
+          "QUIROGA": 7.35,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 47.7,
+        "PROMEDIO": 7.95
+      },
+      {
+        "Nº": 71,
+        "Nombres": "Subelza - Morinigo",
+        "scores": {
+          "ROSSI": 7.3,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8.3,
+          "PAEZ": 7.99,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 39.64,
+        "PROMEDIO": 7.928
+      },
+      {
+        "Nº": 65,
+        "Nombres": "Primiterra - Murillo",
+        "scores": {
+          "ROSSI": 8.45,
+          "ZUCARINNO": 7,
+          "PANDOLFI": null,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.85,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 39.6,
+        "PROMEDIO": 7.92
+      },
+      {
+        "Nº": 77,
+        "Nombres": "Alegre - Caliva",
+        "scores": {
+          "ROSSI": 7.1,
+          "ZUCARINNO": 8,
+          "PANDOLFI": 7.9,
+          "PAEZ": 8.01,
+          "QUIROGA": 8.1,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 47.46,
+        "PROMEDIO": 7.91
+      },
+      {
+        "Nº": 33,
+        "Nombres": "Casanova - Marquez",
+        "scores": {
+          "ROSSI": 7.7,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 7.8,
+          "PAEZ": 8.1,
+          "QUIROGA": 7.8,
+          "FERNANDEZ": 8.7
+        },
+        "PUNTAJE": 47.4,
+        "PROMEDIO": 7.9
+      },
+      {
+        "Nº": 36,
+        "Nombres": "Souza - Campero",
+        "scores": {
+          "ROSSI": 8.25,
+          "ZUCARINNO": 7.9,
+          "PANDOLFI": 8.1,
+          "PAEZ": 7.05,
+          "QUIROGA": 7.4,
+          "FERNANDEZ": 8.6
+        },
+        "PUNTAJE": 47.3,
+        "PROMEDIO": 7.883
+      },
+      {
+        "Nº": 75,
+        "Nombres": "Brest - Robin",
+        "scores": {
+          "ROSSI": 7.25,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 8.5,
+          "PAEZ": 8.15,
+          "QUIROGA": 7.55,
+          "FERNANDEZ": 8.05
+        },
+        "PUNTAJE": 47.2,
+        "PROMEDIO": 7.867
+      },
+      {
+        "Nº": 85,
+        "Nombres": "Arrieta - Ibañez",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.7,
+          "PANDOLFI": 8,
+          "PAEZ": 8.1,
+          "QUIROGA": 7.7,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 47.15,
+        "PROMEDIO": 7.858
+      },
+      {
+        "Nº": 30,
+        "Nombres": "Sueldo - Gavalda",
+        "scores": {
+          "ROSSI": 8.4,
+          "ZUCARINNO": 7.2,
+          "PANDOLFI": 8,
+          "PAEZ": 7,
+          "QUIROGA": null,
+          "FERNANDEZ": 8.65
+        },
+        "PUNTAJE": 39.25,
+        "PROMEDIO": 7.85
+      },
+      {
+        "Nº": 67,
+        "Nombres": "Deluchi - Trinidad",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.2,
+          "PANDOLFI": 7.9,
+          "PAEZ": 8.2,
+          "QUIROGA": 8,
+          "FERNANDEZ": 8.15
+        },
+        "PUNTAJE": 46.95,
+        "PROMEDIO": 7.825
+      },
+      {
+        "Nº": 87,
+        "Nombres": "Rizonelli - Martinez",
+        "scores": {
+          "ROSSI": 7.6,
+          "ZUCARINNO": 7.3,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.99,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.3
+        },
+        "PUNTAJE": 46.69,
+        "PROMEDIO": 7.782
+      },
+      {
+        "Nº": 53,
+        "Nombres": "Maidana - Beltran",
+        "scores": {
+          "ROSSI": 7.5,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.8,
+          "QUIROGA": 7.6,
+          "FERNANDEZ": 8.35
+        },
+        "PUNTAJE": 46.65,
+        "PROMEDIO": 7.775
+      },
+      {
+        "Nº": 84,
+        "Nombres": "Migale - Espinoza",
+        "scores": {
+          "ROSSI": 7.45,
+          "ZUCARINNO": 7.5,
+          "PANDOLFI": 7.95,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.65,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 46.65,
+        "PROMEDIO": 7.775
+      },
+      {
+        "Nº": 39,
+        "Nombres": "Montes - Andrade",
+        "scores": {
+          "ROSSI": 7.2,
+          "ZUCARINNO": 7.6,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.9,
+          "QUIROGA": 7.3,
+          "FERNANDEZ": 8.5
+        },
+        "PUNTAJE": 46.4,
+        "PROMEDIO": 7.733
+      },
+      {
+        "Nº": 66,
+        "Nombres": "Grimaldi - Frete",
+        "scores": {
+          "ROSSI": 7.4,
+          "ZUCARINNO": 7.1,
+          "PANDOLFI": 8,
+          "PAEZ": 8.05,
+          "QUIROGA": 7.45,
+          "FERNANDEZ": 8.2
+        },
+        "PUNTAJE": 46.2,
+        "PROMEDIO": 7.7
+      },
+      {
+        "Nº": 29,
+        "Nombres": "Galan - Cobatti",
+        "scores": {
+          "ROSSI": 7.8,
+          "ZUCARINNO": 7,
+          "PANDOLFI": 7.9,
+          "PAEZ": 7.01,
+          "QUIROGA": 7.2,
+          "FERNANDEZ": 8.4
+        },
+        "PUNTAJE": 45.31,
+        "PROMEDIO": 7.552
+      }
+    ]
+  }
+]

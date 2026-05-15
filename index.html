@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>METRO RADAR - Metropolitano 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        tango: {
+                            DEFAULT: '#e11d48',
+                            dark: '#0a0a0a',
+                            gold: '#fbbf24'
+                        }
+                    },
+                    boxShadow: {
+                        'neon-rose': '0 0 15px -3px rgba(225, 29, 72, 0.4), 0 0 6px -2px rgba(225, 29, 72, 0.2)',
+                        'neon-amber': '0 0 15px -3px rgba(251, 191, 36, 0.4), 0 0 6px -2px rgba(251, 191, 36, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            overscroll-behavior: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .neon-text-rose {
+            text-shadow: 0 0 10px rgba(225, 29, 72, 0.5);
+        }
+        .neon-text-amber {
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+    </style>
+</head>
+<body class="text-zinc-300 font-sans min-h-screen pb-20 selection:bg-rose-500/30">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 glass px-4 py-3 flex justify-between items-center shadow-2xl">
+        <div class="flex flex-col">
+            <span class="text-rose-600 font-bold text-lg tracking-tighter leading-none neon-text-rose">METRO RADAR</span>
+            <div class="h-0.5 w-8 bg-amber-500 mt-0.5 shadow-[0_0_8px_rgba(251,191,36,0.6)]"></div>
+        </div>
+        <button id="category-trigger" class="flex-1 px-4 text-center truncate font-bold text-white text-sm">
+            <span id="current-category-name" class="hover:text-rose-400 transition-colors">Loading...</span>
+        </button>
+        <button id="settings-btn" class="p-2 text-zinc-400 hover:text-white transition-colors active:scale-90">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+    </header>
+
+    <!-- Category Tabs -->
+    <div id="category-tabs" class="flex overflow-x-auto no-scrollbar gap-2 px-4 py-3 sticky top-[52px] z-40 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
+        <!-- Tabs injected by JS -->
+    </div>
+
+    <main class="px-4 mt-4 space-y-6">
+        
+        <!-- Couple Header Card -->
+        <section id="couple-card" class="glass rounded-2xl p-5 relative overflow-hidden active:scale-[0.98] transition-transform shadow-neon-rose">
+            <div class="flex justify-between items-start mb-2">
+                <span id="couple-number" class="text-5xl font-black text-rose-600/10 absolute -top-2 -right-2 italic">--</span>
+                <div class="z-10">
+                    <h2 id="couple-names" class="text-2xl font-bold text-white leading-tight mb-1">Loading Couples...</h2>
+                    <p class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
+                        Selected Couple
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex items-end justify-between mt-6">
+                <div class="flex flex-col">
+                    <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-tighter">Promedio Final</span>
+                    <span id="couple-promedio" class="text-4xl font-black text-amber-500 leading-none neon-text-amber">0.000</span>
+                </div>
+                <button id="change-couple-btn" class="bg-rose-600 text-white text-[10px] font-black px-6 py-3 rounded-full shadow-lg shadow-rose-900/40 active:scale-95 transition-transform uppercase tracking-wider">
+                    CHANGE COUPLE
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Content Tabs -->
+        <div class="flex bg-zinc-900/80 p-1 rounded-2xl border border-white/5">
+            <button id="tab-radar" class="flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg">RADAR ANALYSIS</button>
+            <button id="tab-judges" class="flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500">JUDGES BREAKDOWN</button>
+        </div>
+
+        <!-- Tab 1: Radar Analysis -->
+        <div id="content-radar" class="space-y-6">
+            <div class="glass rounded-3xl p-5 shadow-inner">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em]">Couple vs Judges</h3>
+                    <div id="benchmark-chips" class="flex gap-1.5 p-1 bg-black/40 rounded-lg border border-white/5">
+                        <button data-bench="mean" class="text-[9px] px-3 py-1.5 rounded-md bg-amber-500 text-black font-black transition-all">MEAN</button>
+                        <button data-bench="min" class="text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all">MIN</button>
+                        <button data-bench="max" class="text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all">MAX</button>
+                    </div>
+                </div>
+                <div class="aspect-square w-full relative">
+                    <canvas id="radar-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Raw Scores Table -->
+            <div class="glass rounded-2xl overflow-hidden border border-white/5">
+                <table class="w-full text-left text-xs">
+                    <thead class="bg-white/5">
+                        <tr>
+                            <th class="p-4 font-black text-zinc-500 uppercase tracking-widest">Judge</th>
+                            <th class="p-4 font-black text-zinc-500 uppercase tracking-widest">Score</th>
+                            <th id="bench-header" class="p-4 font-black text-zinc-500 uppercase tracking-widest text-right">Mean</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scores-table-body">
+                        <!-- Rows injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tab 2: Judges Breakdown -->
+        <div id="content-judges" class="hidden grid grid-cols-2 gap-4 pb-12">
+            <!-- Judge cards injected by JS -->
+        </div>
+
+    </main>
+
+    <!-- Bottom Sheet Modal -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-md z-[100] hidden opacity-0 transition-opacity duration-300">
+        <div id="modal-content" class="fixed bottom-0 left-0 right-0 bg-[#0a0a0a] rounded-t-[2.5rem] border-t border-white/10 p-8 transform translate-y-full transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) max-h-[92vh] overflow-hidden flex flex-col">
+            <div class="w-12 h-1.5 bg-zinc-800 rounded-full mx-auto mb-8 shrink-0"></div>
+            <div id="modal-body" class="overflow-y-auto no-scrollbar flex-1"></div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // State
+        let data = [];
+        let state = {
+            category: "TANGO DE PISTA ADULT",
+            couple: null,
+            benchmark: 'mean', // mean, min, max
+            tab: 'radar',
+            benchmarks: {},
+            showNullsAsZero: false
+        };
+
+        let radarChart = null;
+
+        // Dom Elements
+        const currentCategoryEl = document.getElementById('current-category-name');
+        const categoryTabsEl = document.getElementById('category-tabs');
+        const coupleNumberEl = document.getElementById('couple-number');
+        const coupleNamesEl = document.getElementById('couple-names');
+        const couplePromedioEl = document.getElementById('couple-promedio');
+        const scoresTableBody = document.getElementById('scores-table-body');
+        const benchHeader = document.getElementById('bench-header');
+        const contentRadar = document.getElementById('content-radar');
+        const contentJudges = document.getElementById('content-judges');
+        const tabRadarBtn = document.getElementById('tab-radar');
+        const tabJudgesBtn = document.getElementById('tab-judges');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const modalContent = document.getElementById('modal-content');
+        const modalBody = document.getElementById('modal-body');
+
+        // Initial Load
+        async function init() {
+            try {
+                const response = await fetch('./metropolitano_semifinal_clean.json');
+                data = await response.json();
+                
+                renderCategoryTabs();
+                selectCategory(state.category);
+                
+                setupEventListeners();
+            } catch (err) {
+                console.error("Failed to load data:", err);
+                currentCategoryEl.innerText = "Error loading data";
+            }
+        }
+
+        function setupEventListeners() {
+            tabRadarBtn.onclick = () => switchTab('radar');
+            tabJudgesBtn.onclick = () => switchTab('judges');
+            
+            document.getElementById('change-couple-btn').onclick = openCoupleSelector;
+            document.getElementById('category-trigger').onclick = openCategorySelector;
+            document.getElementById('settings-btn').onclick = openSettings;
+            
+            document.querySelectorAll('#benchmark-chips button').forEach(btn => {
+                btn.onclick = () => {
+                    setBenchmark(btn.dataset.bench);
+                };
+            });
+
+            modalOverlay.onclick = (e) => {
+                if (e.target === modalOverlay) closeModal();
+            };
+        }
+
+        function renderCategoryTabs() {
+            categoryTabsEl.innerHTML = '';
+            data.forEach(cat => {
+                const pill = document.createElement('button');
+                pill.className = `whitespace-nowrap px-6 py-2.5 rounded-full text-[10px] font-black transition-all duration-300 tracking-wider ${
+                    cat.category === state.category 
+                    ? 'bg-rose-600 text-white shadow-neon-rose scale-105' 
+                    : 'bg-zinc-900 text-zinc-500 border border-white/5'
+                }`;
+                pill.innerText = cat.category;
+                pill.onclick = () => selectCategory(cat.category);
+                categoryTabsEl.appendChild(pill);
+            });
+        }
+
+        function selectCategory(catName) {
+            state.category = catName;
+            currentCategoryEl.innerText = catName;
+            
+            computeBenchmarks(catName);
+            
+            const catData = data.find(c => c.category === catName);
+            const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
+            state.couple = couples[0];
+            
+            renderCategoryTabs();
+            updateUI();
+            closeModal();
+        }
+
+        function computeBenchmarks(catName) {
+            const catData = data.find(c => c.category === catName);
+            const judges = Object.keys(catData.scores[0].scores);
+            
+            state.benchmarks = {};
+            judges.forEach(j => {
+                const vals = catData.scores
+                    .map(c => c.scores[j])
+                    .filter(v => v !== null);
+                
+                state.benchmarks[j] = {
+                    mean: vals.length ? (vals.reduce((a, b) => a + b, 0) / vals.length) : 0,
+                    min: vals.length ? Math.min(...vals) : 0,
+                    max: vals.length ? Math.max(...vals) : 0,
+                    all: vals
+                };
+            });
+        }
+
+        function updateUI() {
+            if (!state.couple) return;
+
+            coupleNumberEl.innerText = state.couple.Nº;
+            coupleNamesEl.innerText = state.couple.Nombres;
+            couplePromedioEl.innerText = state.couple.PROMEDIO.toFixed(3);
+            
+            renderRadar();
+            renderTable();
+            renderJudges();
+        }
+
+        function setBenchmark(b) {
+            state.benchmark = b;
+            document.querySelectorAll('#benchmark-chips button').forEach(btn => {
+                if (btn.dataset.bench === b) {
+                    btn.className = 'text-[9px] px-3 py-1.5 rounded-md bg-amber-500 text-black font-black transition-all';
+                } else {
+                    btn.className = 'text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all';
+                }
+            });
+            benchHeader.innerText = b.charAt(0).toUpperCase() + b.slice(1);
+            renderRadar();
+            renderTable();
+        }
+
+        function switchTab(t) {
+            state.tab = t;
+            if (t === 'radar') {
+                tabRadarBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg';
+                tabJudgesBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500';
+                contentRadar.classList.remove('hidden');
+                contentJudges.classList.add('hidden');
+            } else {
+                tabJudgesBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg';
+                tabRadarBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500';
+                contentJudges.classList.remove('hidden');
+                contentRadar.classList.add('hidden');
+                renderJudges();
+            }
+        }
+
+        function renderRadar() {
+            const ctx = document.getElementById('radar-chart').getContext('2d');
+            const judges = Object.keys(state.couple.scores);
+            const coupleData = judges.map(j => {
+                const val = state.couple.scores[j];
+                return (val === null && !state.showNullsAsZero) ? null : (val || 0);
+            });
+            const benchData = judges.map(j => state.benchmarks[j][state.benchmark]);
+
+            if (radarChart) radarChart.destroy();
+
+            radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: judges,
+                    datasets: [
+                        {
+                            label: 'Couple',
+                            data: coupleData,
+                            fill: true,
+                            backgroundColor: 'rgba(225, 29, 72, 0.35)',
+                            borderColor: '#e11d48',
+                            pointBackgroundColor: '#e11d48',
+                            pointBorderColor: '#fff',
+                            pointBorderWidth: 2,
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                            borderWidth: 3
+                        },
+                        {
+                            label: state.benchmark.toUpperCase(),
+                            data: benchData,
+                            fill: false,
+                            borderColor: '#fbbf24',
+                            borderDash: [6, 4],
+                            pointBackgroundColor: '#fbbf24',
+                            pointRadius: 2,
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 10,
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                            angleLines: { color: 'rgba(255, 255, 255, 0.15)' },
+                            pointLabels: {
+                                color: '#71717a',
+                                font: { size: 11, weight: '900', family: 'system-ui' },
+                                padding: 15
+                            },
+                            ticks: { display: false, stepSize: 2.5 }
+                        }
+                    },
+                    plugins: { legend: { display: false } },
+                    animation: { duration: 1000, easing: 'easeOutQuart' }
+                }
+            });
+        }
+
+        function renderTable() {
+            scoresTableBody.innerHTML = '';
+            Object.keys(state.couple.scores).forEach(j => {
+                const score = state.couple.scores[j];
+                const tr = document.createElement('tr');
+                tr.className = 'border-t border-white/5 group active:bg-white/5 transition-colors';
+                tr.innerHTML = `
+                    <td class="p-4 font-bold text-zinc-400 group-active:text-white">${j}</td>
+                    <td class="p-4 font-black text-lg ${score === null ? 'text-zinc-700 italic' : 'text-rose-500 neon-text-rose'}">
+                        ${score === null ? 'Abst.' : score.toFixed(2)}
+                    </td>
+                    <td class="p-4 text-right font-black text-amber-500/60 group-active:text-amber-400 transition-colors">
+                        ${state.benchmarks[j][state.benchmark].toFixed(2)}
+                    </td>
+                `;
+                scoresTableBody.appendChild(tr);
+            });
+        }
+
+        function renderJudges() {
+            contentJudges.innerHTML = '';
+            Object.keys(state.benchmarks).forEach(j => {
+                const b = state.benchmarks[j];
+                const card = document.createElement('div');
+                card.className = 'glass rounded-2xl p-4 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-neon-rose/10';
+                card.innerHTML = `
+                    <h4 class="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-3 flex justify-between items-center">
+                        ${j}
+                        <span class="w-1.5 h-1.5 rounded-full bg-zinc-800"></span>
+                    </h4>
+                    <div class="space-y-3">
+                        <div class="flex flex-col">
+                            <span class="text-[8px] uppercase text-zinc-600 font-black tracking-tighter leading-none mb-1">Judge Average</span>
+                            <span class="text-xl font-black text-white neon-text-rose">${b.mean.toFixed(2)}</span>
+                        </div>
+                        <div class="flex gap-4 border-t border-white/5 pt-2">
+                            <div class="flex flex-col">
+                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">Min</span>
+                                <span class="text-xs font-black text-zinc-400">${b.min.toFixed(1)}</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">Max</span>
+                                <span class="text-xs font-black text-zinc-400">${b.max.toFixed(1)}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                card.onclick = () => openJudgeHistogram(j);
+                contentJudges.appendChild(card);
+            });
+        }
+
+        // Modals
+        function openModal(content) {
+            modalBody.innerHTML = content;
+            modalOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                modalOverlay.classList.remove('opacity-0');
+                modalContent.classList.remove('translate-y-full');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalOverlay.classList.add('opacity-0');
+            modalContent.classList.add('translate-y-full');
+            setTimeout(() => {
+                modalOverlay.classList.add('hidden');
+            }, 500);
+        }
+
+        function openCoupleSelector() {
+            const catData = data.find(c => c.category === state.category);
+            const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
+            
+            let html = `
+                <div class="sticky top-0 bg-[#0a0a0a] pb-6 z-10">
+                    <h3 class="text-2xl font-black text-white mb-6 tracking-tight">Browse Couples</h3>
+                    <div class="relative">
+                        <input type="text" id="couple-search" placeholder="Search by name or number..." class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-rose-600 focus:ring-1 focus:ring-rose-600 transition-all placeholder:text-zinc-600 font-bold text-sm">
+                        <div class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="couple-list" class="space-y-3 pb-8">
+                    ${couples.map((c, i) => `
+                        <button onclick="selectCoupleByNumber(${c.Nº})" class="w-full flex items-center justify-between p-5 glass rounded-2xl text-left active:bg-rose-600 transition-all group active:scale-95">
+                            <div class="flex items-center gap-4">
+                                <span class="text-[10px] font-black w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center border border-white/5 group-active:bg-white/20">
+                                    ${i + 1}
+                                </span>
+                                <div>
+                                    <span class="text-[9px] font-black text-rose-500 uppercase tracking-widest group-active:text-white/80">Nº ${c.Nº}</span>
+                                    <div class="text-white font-black text-base group-active:text-white">${c.Nombres}</div>
+                                </div>
+                            </div>
+                            <div class="text-amber-500 font-black text-lg group-active:text-white neon-text-amber">${c.PROMEDIO.toFixed(3)}</div>
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+            openModal(html);
+            
+            document.getElementById('couple-search').oninput = (e) => {
+                const term = e.target.value.toLowerCase();
+                document.querySelectorAll('#couple-list button').forEach(btn => {
+                    const text = btn.innerText.toLowerCase();
+                    btn.classList.toggle('hidden', !text.includes(term));
+                });
+            };
+        }
+
+        window.selectCoupleByNumber = (num) => {
+            const catData = data.find(c => c.category === state.category);
+            state.couple = catData.scores.find(c => c.Nº === num);
+            updateUI();
+            closeModal();
+        };
+
+        function openCategorySelector() {
+            let html = `
+                <h3 class="text-2xl font-black text-white mb-8 tracking-tight">Select Category</h3>
+                <div class="space-y-3 pb-8">
+                    ${data.map(cat => `
+                        <button onclick="selectCategory('${cat.category}')" class="w-full p-6 glass rounded-2xl text-left font-black transition-all active:scale-95 ${cat.category === state.category ? 'bg-rose-600 text-white shadow-neon-rose' : 'text-zinc-400'}">
+                            ${cat.category}
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+            openModal(html);
+        }
+
+        function openSettings() {
+            let html = `
+                <h3 class="text-2xl font-black text-white mb-8 tracking-tight">Settings</h3>
+                <div class="space-y-6 pb-8">
+                    <div class="flex items-center justify-between p-6 glass rounded-2xl">
+                        <div>
+                            <div class="font-black text-white mb-1">Show Nulls as 0</div>
+                            <div class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">Treat abstentions as zero in charts</div>
+                        </div>
+                        <button id="toggle-nulls" class="w-12 h-6 rounded-full transition-all relative ${state.showNullsAsZero ? 'bg-rose-600' : 'bg-zinc-800'}">
+                            <div class="w-4 h-4 bg-white rounded-full absolute top-1 transition-all ${state.showNullsAsZero ? 'right-1' : 'left-1'}"></div>
+                        </button>
+                    </div>
+                    
+                    <div class="p-6 glass rounded-2xl">
+                        <div class="font-black text-white mb-4">Benchmark Mode</div>
+                        <div class="flex gap-2">
+                            ${['mean', 'min', 'max'].map(b => `
+                                <button onclick="setBenchmark('${b}'); closeModal();" class="flex-1 py-3 rounded-xl font-black text-xs uppercase transition-all ${state.benchmark === b ? 'bg-amber-500 text-black shadow-neon-amber' : 'bg-zinc-900 text-zinc-500'}">
+                                    ${b}
+                                </button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 text-center">
+                        <div class="text-[10px] font-black text-zinc-700 uppercase tracking-[0.3em] mb-2">Metropolitano 2026</div>
+                        <div class="text-[8px] text-zinc-800 font-bold uppercase tracking-widest">v1.0.0 • Built for Dancers</div>
+                    </div>
+                </div>
+            `;
+            openModal(html);
+            
+            document.getElementById('toggle-nulls').onclick = () => {
+                state.showNullsAsZero = !state.showNullsAsZero;
+                openSettings();
+                updateUI();
+            };
+        }
+
+        function openJudgeHistogram(judge) {
+            const b = state.benchmarks[judge];
+            const html = `
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-2xl font-black text-white tracking-tight">${judge}</h3>
+                    <span class="text-[10px] font-black bg-rose-600/20 text-rose-500 px-3 py-1 rounded-full uppercase tracking-widest">Scoring Spread</span>
+                </div>
+                <p class="text-[9px] text-zinc-500 mb-8 uppercase font-black tracking-[0.2em]">${state.category}</p>
+                
+                <div class="w-full mb-8 glass rounded-3xl p-4">
+                    <div class="aspect-[1.5/1] w-full">
+                        <canvas id="histogram-chart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4 pb-8">
+                    <div class="glass p-5 rounded-2xl flex flex-col justify-center shadow-lg">
+                        <span class="text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-1 leading-none">Global Avg</span>
+                        <div class="text-3xl font-black text-rose-500 neon-text-rose">${b.mean.toFixed(2)}</div>
+                    </div>
+                    <div class="glass p-5 rounded-2xl flex flex-col justify-center shadow-lg">
+                        <span class="text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-1 leading-none">Total couples</span>
+                        <div class="text-3xl font-black text-amber-500 neon-text-amber">${b.all.length}</div>
+                    </div>
+                </div>
+            `;
+            openModal(html);
+            
+            setTimeout(() => {
+                const ctx = document.getElementById('histogram-chart').getContext('2d');
+                const bins = {};
+                for (let i = 0; i <= 10; i += 0.5) bins[i.toFixed(1)] = 0;
+                
+                b.all.forEach(v => {
+                    const bin = (Math.floor(v * 2) / 2).toFixed(1);
+                    bins[bin] = (bins[bin] || 0) + 1;
+                });
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(bins),
+                        datasets: [{
+                            data: Object.values(bins),
+                            backgroundColor: 'rgba(225, 29, 72, 0.8)',
+                            hoverBackgroundColor: '#e11d48',
+                            borderRadius: 6,
+                            barPercentage: 0.8
+                        }]
+                    },
+                    options: {
+                        plugins: { 
+                            legend: { display: false },
+                            annotation: {
+                                annotations: {
+                                    line1: {
+                                        type: 'line',
+                                        xMin: (b.mean * 2).toFixed(0), // Approx index in 0.5 bins
+                                        xMax: (b.mean * 2).toFixed(0),
+                                        borderColor: '#fbbf24',
+                                        borderWidth: 2,
+                                        borderDash: [4, 4],
+                                        label: {
+                                            display: true,
+                                            content: 'MEAN',
+                                            position: 'start',
+                                            backgroundColor: '#fbbf24',
+                                            color: '#000',
+                                            font: { size: 8, weight: 'black' }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { 
+                                grid: { display: false }, 
+                                ticks: { 
+                                    color: '#52525b', 
+                                    font: { size: 9, weight: 'bold' },
+                                    callback: function(val, index) {
+                                        return index % 4 === 0 ? this.getLabelForValue(val) : '';
+                                    }
+                                } 
+                            },
+                            y: { 
+                                grid: { color: 'rgba(255,255,255,0.03)' }, 
+                                ticks: { color: '#52525b', font: { size: 9, weight: 'bold' } } 
+                            }
+                        },
+                        animation: { duration: 1200, easing: 'easeOutElastic' }
+                    }
+                });
+            }, 100);
+        }
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>
