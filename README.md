@@ -14,6 +14,9 @@ A sleek, mobile-first data visualization tool for the Metropolitano 2026 Tango S
 - **Tango Noir Aesthetic**: A modern, high-contrast dark theme with neon accents inspired by the energy of the dance floor.
 - **Instant Interaction**: Zero build steps. Data is processed in-memory for lightning-fast switching between couples and categories.
 
+## 🔗 Live Demo
+[**View the Metropolitano 2026 Radar Analysis**](https://argent0.github.io/metropolitano2026/)
+
 ## 🚀 Getting Started
 
 Since this is a fully static project, there is no installation required.
