@@ -47,7 +47,12 @@
         .glass {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-light {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -667,6 +672,7 @@
         // Modals
         function openModal(content) {
             modalBody.innerHTML = content;
+            modalBody.scrollTop = 0;
             modalOverlay.classList.remove('hidden');
             setTimeout(() => {
                 modalOverlay.classList.remove('opacity-0');
@@ -698,7 +704,7 @@
                 </div>
                 <div id="couple-list" class="space-y-3 pb-8">
                     ${couples.map((c, i) => `
-                        <button onclick="selectCoupleByNumber(${c.Nº})" class="w-full flex items-center justify-between p-5 glass rounded-2xl text-left active:bg-rose-600 transition-all group active:scale-95">
+                        <button onclick="selectCoupleByNumber(${c.Nº})" class="w-full flex items-center justify-between p-5 glass-light rounded-2xl text-left active:bg-rose-600 transition-all group active:scale-95">
                             <div class="flex items-center gap-4">
                                 <span class="text-[10px] font-black w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center border border-white/5 group-active:bg-white/20">
                                     ${i + 1}
@@ -711,16 +717,27 @@
                             <div class="text-amber-500 font-black text-lg group-active:text-white neon-text-amber">${c.PROMEDIO.toFixed(3)}</div>
                         </button>
                     `).join('')}
+                    <div id="search-empty" class="hidden py-12 text-center">
+                        <div class="text-zinc-700 font-black text-xs uppercase tracking-[0.3em]">No results</div>
+                    </div>
                 </div>
             `;
             openModal(html);
             
-            document.getElementById('couple-search').oninput = (e) => {
+            const searchInput = document.getElementById('couple-search');
+            const listItems = document.querySelectorAll('#couple-list button');
+            const emptyState = document.getElementById('search-empty');
+
+            searchInput.oninput = (e) => {
                 const term = e.target.value.toLowerCase();
-                document.querySelectorAll('#couple-list button').forEach(btn => {
+                let visibleCount = 0;
+                listItems.forEach(btn => {
                     const text = btn.innerText.toLowerCase();
-                    btn.classList.toggle('hidden', !text.includes(term));
+                    const isVisible = text.includes(term);
+                    btn.classList.toggle('hidden', !isVisible);
+                    if (isVisible) visibleCount++;
                 });
+                emptyState.classList.toggle('hidden', visibleCount > 0);
             };
         }
 
@@ -736,7 +753,7 @@
                 <h3 class="text-2xl font-black text-white mb-8 tracking-tight">${t('select_category')}</h3>
                 <div class="space-y-3 pb-8">
                     ${data.map(cat => `
-                        <button onclick="selectCategory('${cat.category}')" class="w-full p-6 glass rounded-2xl text-left font-black transition-all active:scale-95 ${cat.category === state.category ? 'bg-rose-600 text-white shadow-neon-rose' : 'text-zinc-400'}">
+                        <button onclick="selectCategory('${cat.category}')" class="w-full p-6 glass-light rounded-2xl text-left font-black transition-all active:scale-95 ${cat.category === state.category ? 'bg-rose-600 text-white shadow-neon-rose' : 'text-zinc-400'}">
                             ${cat.category}
                         </button>
                     `).join('')}
@@ -749,7 +766,7 @@
             let html = `
                 <h3 class="text-2xl font-black text-white mb-8 tracking-tight">${t('settings')}</h3>
                 <div class="space-y-6 pb-8">
-                    <div class="flex items-center justify-between p-6 glass rounded-2xl">
+                    <div class="flex items-center justify-between p-6 glass-light rounded-2xl">
                         <div>
                             <div class="font-black text-white mb-1">${t('show_nulls')}</div>
                             <div class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">${t('show_nulls_desc')}</div>
@@ -759,7 +776,7 @@
                         </button>
                     </div>
                     
-                    <div class="p-6 glass rounded-2xl">
+                    <div class="p-6 glass-light rounded-2xl">
                         <div class="font-black text-white mb-4">${t('benchmark_mode')}</div>
                         <div class="flex gap-2">
                             ${['mean', 'min', 'max'].map(b => `
@@ -770,7 +787,7 @@
                         </div>
                     </div>
 
-                    <div class="p-6 glass rounded-2xl flex items-center justify-between">
+                    <div class="p-6 glass-light rounded-2xl flex items-center justify-between">
                         <div class="font-black text-white">Language / Idioma</div>
                         <div class="flex gap-2">
                             <button onclick="changeLanguage('en')" class="px-4 py-2 rounded-xl font-black text-xs uppercase transition-all ${state.lang === 'en' ? 'bg-rose-600 text-white' : 'bg-zinc-900 text-zinc-500'}">EN</button>
