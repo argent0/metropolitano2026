@@ -607,8 +607,9 @@
                                 annotations: {
                                     line1: {
                                         type: 'line',
-                                        xMin: (b.mean * 2).toFixed(0), // Approx index in 0.5 bins
-                                        xMax: (b.mean * 2).toFixed(0),
+                                        xScaleID: 'x',
+                                        xMin: b.mean * 2,
+                                        xMax: b.mean * 2,
                                         borderColor: '#fbbf24',
                                         borderWidth: 2,
                                         borderDash: [4, 4],
