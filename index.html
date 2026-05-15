@@ -7,6 +7,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#0a0a0a">
     <title>METRO RADAR - Metropolitano 2026</title>
+    
+    <!-- Social Meta Tags -->
+    <meta property="og:title" content="METRO RADAR - Metropolitano 2026">
+    <meta property="og:description" content="Visualizer for Metropolitano 2026 Semifinals Scores. Check out the radar analysis!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aner.github.io/metropolitano2026/">
+    <meta name="twitter:card" content="summary_large_image">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
@@ -67,9 +75,14 @@
         <button id="category-trigger" class="flex-1 px-4 text-center truncate font-bold text-white text-sm">
             <span id="current-category-name" class="hover:text-rose-400 transition-colors">Loading...</span>
         </button>
-        <button id="settings-btn" class="p-2 text-zinc-400 hover:text-white transition-colors active:scale-90">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-        </button>
+        <div class="flex items-center gap-1">
+            <button id="share-btn-top" class="p-2 text-zinc-400 hover:text-rose-500 transition-colors active:scale-90" title="Share View">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </button>
+            <button id="settings-btn" class="p-2 text-zinc-400 hover:text-white transition-colors active:scale-90">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1-1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+        </div>
     </header>
 
     <!-- Category Tabs -->
@@ -97,9 +110,14 @@
                     <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-tighter">Promedio Final</span>
                     <span id="couple-promedio" class="text-4xl font-black text-amber-500 leading-none neon-text-amber">0.000</span>
                 </div>
-                <button id="change-couple-btn" class="bg-rose-600 text-white text-[10px] font-black px-6 py-3 rounded-full shadow-lg shadow-rose-900/40 active:scale-95 transition-transform uppercase tracking-wider">
-                    CHANGE COUPLE
-                </button>
+                <div class="flex gap-2">
+                    <button id="share-couple-btn" class="bg-zinc-900 text-white p-3 rounded-full border border-white/10 active:scale-95 transition-transform" title="Share Couple">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    </button>
+                    <button id="change-couple-btn" class="bg-rose-600 text-white text-[10px] font-black px-6 py-3 rounded-full shadow-lg shadow-rose-900/40 active:scale-95 transition-transform uppercase tracking-wider">
+                        CHANGE COUPLE
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -114,10 +132,15 @@
             <div class="glass rounded-3xl p-5 shadow-inner">
                 <div class="flex justify-between items-center mb-6">
                     <h3 class="text-[10px] font-black text-zinc-500 uppercase tracking-[0.2em]">Couple vs Judges</h3>
-                    <div id="benchmark-chips" class="flex gap-1.5 p-1 bg-black/40 rounded-lg border border-white/5">
-                        <button data-bench="mean" class="text-[9px] px-3 py-1.5 rounded-md bg-amber-500 text-black font-black transition-all">MEAN</button>
-                        <button data-bench="min" class="text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all">MIN</button>
-                        <button data-bench="max" class="text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all">MAX</button>
+                    <div class="flex items-center gap-2">
+                        <button id="share-radar-btn" class="p-2 text-zinc-500 hover:text-rose-500 transition-colors" title="Share Radar Chart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </button>
+                        <div id="benchmark-chips" class="flex gap-1.5 p-1 bg-black/40 rounded-lg border border-white/5">
+                            <button data-bench="mean" class="text-[9px] px-3 py-1.5 rounded-md bg-amber-500 text-black font-black transition-all">MEAN</button>
+                            <button data-bench="min" class="text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all">MIN</button>
+                            <button data-bench="max" class="text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all">MAX</button>
+                        </div>
                     </div>
                 </div>
                 <div class="aspect-square w-full relative">
@@ -194,8 +217,9 @@
                 const response = await fetch('./metropolitano_semifinal_clean.json');
                 data = await response.json();
                 
+                loadFromURL();
                 renderCategoryTabs();
-                selectCategory(state.category);
+                selectCategory(state.category, true);
                 
                 setupEventListeners();
             } catch (err) {
@@ -212,6 +236,10 @@
             document.getElementById('category-trigger').onclick = openCategorySelector;
             document.getElementById('settings-btn').onclick = openSettings;
             
+            document.getElementById('share-btn-top').onclick = shareView;
+            document.getElementById('share-couple-btn').onclick = shareView;
+            document.getElementById('share-radar-btn').onclick = shareChart;
+
             document.querySelectorAll('#benchmark-chips button').forEach(btn => {
                 btn.onclick = () => {
                     setBenchmark(btn.dataset.bench);
@@ -238,15 +266,17 @@
             });
         }
 
-        function selectCategory(catName) {
+        function selectCategory(catName, skipCoupleSelection = false) {
             state.category = catName;
             currentCategoryEl.innerText = catName;
             
             computeBenchmarks(catName);
             
-            const catData = data.find(c => c.category === catName);
-            const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
-            state.couple = couples[0];
+            if (!skipCoupleSelection || !state.couple) {
+                const catData = data.find(c => c.category === catName);
+                const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
+                state.couple = couples[0];
+            }
             
             renderCategoryTabs();
             updateUI();
@@ -282,6 +312,101 @@
             renderRadar();
             renderTable();
             renderJudges();
+            updateURL();
+        }
+
+        // URL Sync
+        function updateURL() {
+            if (!state.couple) return;
+            const params = new URLSearchParams(window.location.search);
+            params.set('cat', state.category);
+            params.set('n', state.couple.Nº);
+            window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+        }
+
+        function loadFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            const num = parseInt(params.get('n'));
+            
+            if (cat && data.find(c => c.category === cat)) {
+                state.category = cat;
+            }
+            
+            const catData = data.find(c => c.category === state.category);
+            if (catData && num) {
+                const couple = catData.scores.find(c => c.Nº === num);
+                if (couple) state.couple = couple;
+            }
+        }
+
+        // Sharing
+        async function shareView() {
+            const text = `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'METRO RADAR',
+                        text: text,
+                        url: url,
+                    });
+                } catch (err) {
+                    if (err.name !== 'AbortError') console.error('Error sharing:', err);
+                }
+            } else {
+                const shareUrl = `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`;
+                window.open(shareUrl, '_blank');
+            }
+        }
+
+        async function shareChart() {
+            const canvas = document.getElementById('radar-chart');
+            const dataUrl = canvas.toDataURL('image/png');
+            const blob = await (await fetch(dataUrl)).blob();
+            const file = new File([blob], `metro-radar-${state.couple.Nº}.png`, { type: 'image/png' });
+
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                try {
+                    await navigator.share({
+                        files: [file],
+                        title: 'METRO RADAR Analysis',
+                        text: `Radar analysis for ${state.couple.Nombres} (${state.category})`
+                    });
+                } catch (err) {
+                    if (err.name !== 'AbortError') console.error('Error sharing file:', err);
+                }
+            } else {
+                const link = document.createElement('a');
+                link.download = `metro-radar-${state.couple.Nº}.png`;
+                link.href = dataUrl;
+                link.click();
+            }
+        }
+
+        async function shareHistogram(judge) {
+            const canvas = document.getElementById('histogram-chart');
+            const dataUrl = canvas.toDataURL('image/png');
+            const blob = await (await fetch(dataUrl)).blob();
+            const file = new File([blob], `metro-histogram-${judge}.png`, { type: 'image/png' });
+
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                try {
+                    await navigator.share({
+                        files: [file],
+                        title: `Judge ${judge} Scoring`,
+                        text: `Scoring distribution for ${judge} in ${state.category}`
+                    });
+                } catch (err) {
+                    if (err.name !== 'AbortError') console.error('Error sharing file:', err);
+                }
+            } else {
+                const link = document.createElement('a');
+                link.download = `metro-histogram-${judge}.png`;
+                link.href = dataUrl;
+                link.click();
+            }
         }
 
         function setBenchmark(b) {
@@ -555,7 +680,12 @@
             const html = `
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="text-2xl font-black text-white tracking-tight">${judge}</h3>
-                    <span class="text-[10px] font-black bg-rose-600/20 text-rose-500 px-3 py-1 rounded-full uppercase tracking-widest">Scoring Spread</span>
+                    <div class="flex items-center gap-2">
+                        <button id="share-histogram-btn" class="p-2 text-zinc-500 hover:text-rose-500 transition-colors" title="Share Histogram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                        </button>
+                        <span class="text-[10px] font-black bg-rose-600/20 text-rose-500 px-3 py-1 rounded-full uppercase tracking-widest">Scoring Spread</span>
+                    </div>
                 </div>
                 <p class="text-[9px] text-zinc-500 mb-8 uppercase font-black tracking-[0.2em]">${state.category}</p>
                 
@@ -577,6 +707,8 @@
                 </div>
             `;
             openModal(html);
+            
+            document.getElementById('share-histogram-btn').onclick = () => shareHistogram(judge);
             
             setTimeout(() => {
                 const ctx = document.getElementById('histogram-chart').getContext('2d');

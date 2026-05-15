@@ -25,7 +25,12 @@ The application is built as a fully static site, optimized for deployment on Git
 - **Score Distribution**: Interactive histograms showing how judges distribute points, helping users identify "tough" or "generous" scoring patterns.
 - **Mean Overlay**: A dashed benchmark line within the histogram to instantly locate the judge's center of gravity.
 
-### 3.3. Mobile-First Navigation
+### 3.3. Shareable Insights & Deep Linking
+- **Web Share API**: Integrated one-tap sharing for WhatsApp, Instagram Stories, and other social platforms.
+- **Image Export**: Native ability to export Radar charts and Judge Histograms as PNG files for visual sharing.
+- **URL Synchronization**: Real-time URL state management using `URLSearchParams` and `window.history.replaceState`. This allows users to share direct links to specific couples and categories.
+
+### 3.4. Mobile-First Navigation
 - **Sticky Header**: Persistent branding and category selector for easy context switching.
 - **Horizontal Category Tabs**: Quick-scroll pill navigation for the 4 main competition categories.
 - **Bottom-Sheet Modals**: Instagram-style selectors for couples and settings, keeping navigation within thumb-reach.
@@ -42,9 +47,9 @@ The application is built as a fully static site, optimized for deployment on Git
 - **Zero Build Step**: Pure ES6+ JavaScript ensures maximum compatibility and simplicity for the static hosting environment.
 
 ## 6. Future Roadmap
-- **Social Sharing**: One-tap "Download Radar Image" for Instagram Stories.
 - **Historical Comparison**: Comparative view between 2025 and 2026 scores.
 - **PWA Enhancements**: Full offline support via Service Workers.
+- **Interactive Tutorials**: Micro-onboarding for new users to explain the radar axes.
 
 ---
 **Date**: Friday, May 15, 2026  
