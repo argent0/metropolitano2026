@@ -182,9 +182,79 @@
 
     <!-- Script -->
     <script>
+        const TRANSLATIONS = {
+            en: {
+                loading: "Loading...",
+                selected_couple: "Selected Couple",
+                final_average: "Final Average",
+                change_couple: "CHANGE COUPLE",
+                radar_analysis: "RADAR ANALYSIS",
+                judges_breakdown: "JUDGES BREAKDOWN",
+                couple_vs_judges: "Couple vs Judges",
+                mean: "MEAN",
+                min: "MIN",
+                max: "MAX",
+                judge: "Judge",
+                score: "Score",
+                abstention: "Abst.",
+                browse_couples: "Browse Couples",
+                search_placeholder: "Search by name or number...",
+                select_category: "Select Category",
+                settings: "Settings",
+                show_nulls: "Show Nulls as 0",
+                show_nulls_desc: "Treat abstentions as zero in charts",
+                benchmark_mode: "Benchmark Mode",
+                built_for_dancers: "Built for Dancers",
+                scoring_spread: "Scoring Spread",
+                global_avg: "Global Avg",
+                total_couples: "Total couples",
+                share_view: "Share View",
+                share_couple: "Share Couple",
+                share_radar: "Share Radar Chart",
+                share_histogram: "Share Histogram",
+                judge_average: "Judge Average",
+                couple: "Couple",
+                error_loading: "Error loading data"
+            },
+            es: {
+                loading: "Cargando...",
+                selected_couple: "Pareja Seleccionada",
+                final_average: "Promedio Final",
+                change_couple: "CAMBIAR PAREJA",
+                radar_analysis: "ANÁLISIS RADAR",
+                judges_breakdown: "DESGLOSE JURADOS",
+                couple_vs_judges: "Pareja vs Jurados",
+                mean: "PROMEDIO",
+                min: "MÍN",
+                max: "MÁX",
+                judge: "Jurado",
+                score: "Puntaje",
+                abstention: "Abst.",
+                browse_couples: "Buscar Parejas",
+                search_placeholder: "Buscar por nombre o número...",
+                select_category: "Seleccionar Categoría",
+                settings: "Ajustes",
+                show_nulls: "Ver Nulos como 0",
+                show_nulls_desc: "Tratar abstenciones como cero en gráficos",
+                benchmark_mode: "Modo Comparativa",
+                built_for_dancers: "Hecho para Bailarines",
+                scoring_spread: "Distribución de Puntajes",
+                global_avg: "Promedio Global",
+                total_couples: "Total de parejas",
+                share_view: "Compartir Vista",
+                share_couple: "Compartir Pareja",
+                share_radar: "Compartir Radar",
+                share_histogram: "Compartir Histograma",
+                judge_average: "Promedio Jurado",
+                couple: "Pareja",
+                error_loading: "Error al cargar los datos"
+            }
+        };
+
         // State
         let data = [];
         let state = {
+            lang: navigator.language.startsWith('es') ? 'es' : 'en',
             category: "TANGO DE PISTA ADULT",
             couple: null,
             benchmark: 'mean', // mean, min, max
@@ -192,6 +262,10 @@
             benchmarks: {},
             showNullsAsZero: false
         };
+
+        function t(key) {
+            return TRANSLATIONS[state.lang][key] || key;
+        }
 
         let radarChart = null;
 
@@ -213,6 +287,9 @@
 
         // Initial Load
         async function init() {
+            document.documentElement.lang = state.lang;
+            applyTranslations();
+
             try {
                 const response = await fetch('./metropolitano_semifinal_clean.json');
                 data = await response.json();
@@ -224,8 +301,35 @@
                 setupEventListeners();
             } catch (err) {
                 console.error("Failed to load data:", err);
-                currentCategoryEl.innerText = "Error loading data";
+                currentCategoryEl.innerText = t('error_loading');
             }
+        }
+
+        function applyTranslations() {
+            document.getElementById('current-category-name').innerText = t('loading');
+            document.querySelector('#couple-card p').innerHTML = `
+                <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
+                ${t('selected_couple')}
+            `;
+            document.querySelector('#couple-card .flex-col span').innerText = t('final_average');
+            document.getElementById('change-couple-btn').innerText = t('change_couple');
+            document.getElementById('tab-radar').innerText = t('radar_analysis');
+            document.getElementById('tab-judges').innerText = t('judges_breakdown');
+            document.querySelector('#content-radar h3').innerText = t('couple_vs_judges');
+            
+            const benchButtons = document.querySelectorAll('#benchmark-chips button');
+            benchButtons[0].innerText = t('mean');
+            benchButtons[1].innerText = t('min');
+            benchButtons[2].innerText = t('max');
+
+            const tableHeaders = document.querySelectorAll('table thead th');
+            tableHeaders[0].innerText = t('judge');
+            tableHeaders[1].innerText = t('score');
+            tableHeaders[2].innerText = t(state.benchmark);
+
+            document.getElementById('share-btn-top').title = t('share_view');
+            document.getElementById('share-couple-btn').title = t('share_couple');
+            document.getElementById('share-radar-btn').title = t('share_radar');
         }
 
         function setupEventListeners() {
@@ -342,7 +446,9 @@
 
         // Sharing
         async function shareView() {
-            const text = `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
+            const text = state.lang === 'es' 
+                ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${state.category} en METRO RADAR! 💃🕺`
+                : `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
             const url = window.location.href;
             
             if (navigator.share) {
@@ -372,7 +478,9 @@
                     await navigator.share({
                         files: [file],
                         title: 'METRO RADAR Analysis',
-                        text: `Radar analysis for ${state.couple.Nombres} (${state.category})`
+                        text: state.lang === 'es'
+                            ? `Análisis de radar para ${state.couple.Nombres} (${state.category})`
+                            : `Radar analysis for ${state.couple.Nombres} (${state.category})`
                     });
                 } catch (err) {
                     if (err.name !== 'AbortError') console.error('Error sharing file:', err);
@@ -396,7 +504,9 @@
                     await navigator.share({
                         files: [file],
                         title: `Judge ${judge} Scoring`,
-                        text: `Scoring distribution for ${judge} in ${state.category}`
+                        text: state.lang === 'es'
+                            ? `Distribución de puntajes para ${judge} en ${state.category}`
+                            : `Scoring distribution for ${judge} in ${state.category}`
                     });
                 } catch (err) {
                     if (err.name !== 'AbortError') console.error('Error sharing file:', err);
@@ -418,7 +528,7 @@
                     btn.className = 'text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all';
                 }
             });
-            benchHeader.innerText = b.charAt(0).toUpperCase() + b.slice(1);
+            benchHeader.innerText = t(b);
             renderRadar();
             renderTable();
         }
@@ -456,7 +566,7 @@
                     labels: judges,
                     datasets: [
                         {
-                            label: 'Couple',
+                            label: t('couple'),
                             data: coupleData,
                             fill: true,
                             backgroundColor: 'rgba(225, 29, 72, 0.35)',
@@ -469,7 +579,7 @@
                             borderWidth: 3
                         },
                         {
-                            label: state.benchmark.toUpperCase(),
+                            label: t(state.benchmark),
                             data: benchData,
                             fill: false,
                             borderColor: '#fbbf24',
@@ -511,7 +621,7 @@
                 tr.innerHTML = `
                     <td class="p-4 font-bold text-zinc-400 group-active:text-white">${j}</td>
                     <td class="p-4 font-black text-lg ${score === null ? 'text-zinc-700 italic' : 'text-rose-500 neon-text-rose'}">
-                        ${score === null ? 'Abst.' : score.toFixed(2)}
+                        ${score === null ? t('abstention') : score.toFixed(2)}
                     </td>
                     <td class="p-4 text-right font-black text-amber-500/60 group-active:text-amber-400 transition-colors">
                         ${state.benchmarks[j][state.benchmark].toFixed(2)}
@@ -534,16 +644,16 @@
                     </h4>
                     <div class="space-y-3">
                         <div class="flex flex-col">
-                            <span class="text-[8px] uppercase text-zinc-600 font-black tracking-tighter leading-none mb-1">Judge Average</span>
+                            <span class="text-[8px] uppercase text-zinc-600 font-black tracking-tighter leading-none mb-1">${t('judge_average')}</span>
                             <span class="text-xl font-black text-white neon-text-rose">${b.mean.toFixed(2)}</span>
                         </div>
                         <div class="flex gap-4 border-t border-white/5 pt-2">
                             <div class="flex flex-col">
-                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">Min</span>
+                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">${t('min')}</span>
                                 <span class="text-xs font-black text-zinc-400">${b.min.toFixed(1)}</span>
                             </div>
                             <div class="flex flex-col">
-                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">Max</span>
+                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">${t('max')}</span>
                                 <span class="text-xs font-black text-zinc-400">${b.max.toFixed(1)}</span>
                             </div>
                         </div>
@@ -578,9 +688,9 @@
             
             let html = `
                 <div class="sticky top-0 bg-[#0a0a0a] pb-6 z-10">
-                    <h3 class="text-2xl font-black text-white mb-6 tracking-tight">Browse Couples</h3>
+                    <h3 class="text-2xl font-black text-white mb-6 tracking-tight">${t('browse_couples')}</h3>
                     <div class="relative">
-                        <input type="text" id="couple-search" placeholder="Search by name or number..." class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-rose-600 focus:ring-1 focus:ring-rose-600 transition-all placeholder:text-zinc-600 font-bold text-sm">
+                        <input type="text" id="couple-search" placeholder="${t('search_placeholder')}" class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-rose-600 focus:ring-1 focus:ring-rose-600 transition-all placeholder:text-zinc-600 font-bold text-sm">
                         <div class="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-600">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                         </div>
@@ -623,7 +733,7 @@
 
         function openCategorySelector() {
             let html = `
-                <h3 class="text-2xl font-black text-white mb-8 tracking-tight">Select Category</h3>
+                <h3 class="text-2xl font-black text-white mb-8 tracking-tight">${t('select_category')}</h3>
                 <div class="space-y-3 pb-8">
                     ${data.map(cat => `
                         <button onclick="selectCategory('${cat.category}')" class="w-full p-6 glass rounded-2xl text-left font-black transition-all active:scale-95 ${cat.category === state.category ? 'bg-rose-600 text-white shadow-neon-rose' : 'text-zinc-400'}">
@@ -637,12 +747,12 @@
 
         function openSettings() {
             let html = `
-                <h3 class="text-2xl font-black text-white mb-8 tracking-tight">Settings</h3>
+                <h3 class="text-2xl font-black text-white mb-8 tracking-tight">${t('settings')}</h3>
                 <div class="space-y-6 pb-8">
                     <div class="flex items-center justify-between p-6 glass rounded-2xl">
                         <div>
-                            <div class="font-black text-white mb-1">Show Nulls as 0</div>
-                            <div class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">Treat abstentions as zero in charts</div>
+                            <div class="font-black text-white mb-1">${t('show_nulls')}</div>
+                            <div class="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">${t('show_nulls_desc')}</div>
                         </div>
                         <button id="toggle-nulls" class="w-12 h-6 rounded-full transition-all relative ${state.showNullsAsZero ? 'bg-rose-600' : 'bg-zinc-800'}">
                             <div class="w-4 h-4 bg-white rounded-full absolute top-1 transition-all ${state.showNullsAsZero ? 'right-1' : 'left-1'}"></div>
@@ -650,19 +760,27 @@
                     </div>
                     
                     <div class="p-6 glass rounded-2xl">
-                        <div class="font-black text-white mb-4">Benchmark Mode</div>
+                        <div class="font-black text-white mb-4">${t('benchmark_mode')}</div>
                         <div class="flex gap-2">
                             ${['mean', 'min', 'max'].map(b => `
                                 <button onclick="setBenchmark('${b}'); closeModal();" class="flex-1 py-3 rounded-xl font-black text-xs uppercase transition-all ${state.benchmark === b ? 'bg-amber-500 text-black shadow-neon-amber' : 'bg-zinc-900 text-zinc-500'}">
-                                    ${b}
+                                    ${t(b)}
                                 </button>
                             `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="p-6 glass rounded-2xl flex items-center justify-between">
+                        <div class="font-black text-white">Language / Idioma</div>
+                        <div class="flex gap-2">
+                            <button onclick="changeLanguage('en')" class="px-4 py-2 rounded-xl font-black text-xs uppercase transition-all ${state.lang === 'en' ? 'bg-rose-600 text-white' : 'bg-zinc-900 text-zinc-500'}">EN</button>
+                            <button onclick="changeLanguage('es')" class="px-4 py-2 rounded-xl font-black text-xs uppercase transition-all ${state.lang === 'es' ? 'bg-rose-600 text-white' : 'bg-zinc-900 text-zinc-500'}">ES</button>
                         </div>
                     </div>
                     
                     <div class="p-6 text-center">
                         <div class="text-[10px] font-black text-zinc-700 uppercase tracking-[0.3em] mb-2">Metropolitano 2026</div>
-                        <div class="text-[8px] text-zinc-800 font-bold uppercase tracking-widest">v1.0.0 • Built for Dancers</div>
+                        <div class="text-[8px] text-zinc-800 font-bold uppercase tracking-widest">v1.0.0 • ${t('built_for_dancers')}</div>
                     </div>
                 </div>
             `;
@@ -675,16 +793,24 @@
             };
         }
 
+        window.changeLanguage = (lang) => {
+            state.lang = lang;
+            document.documentElement.lang = lang;
+            applyTranslations();
+            updateUI();
+            openSettings(); // Refresh settings modal
+        };
+
         function openJudgeHistogram(judge) {
             const b = state.benchmarks[judge];
             const html = `
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="text-2xl font-black text-white tracking-tight">${judge}</h3>
                     <div class="flex items-center gap-2">
-                        <button id="share-histogram-btn" class="p-2 text-zinc-500 hover:text-rose-500 transition-colors" title="Share Histogram">
+                        <button id="share-histogram-btn" class="p-2 text-zinc-500 hover:text-rose-500 transition-colors" title="${t('share_histogram')}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
                         </button>
-                        <span class="text-[10px] font-black bg-rose-600/20 text-rose-500 px-3 py-1 rounded-full uppercase tracking-widest">Scoring Spread</span>
+                        <span class="text-[10px] font-black bg-rose-600/20 text-rose-500 px-3 py-1 rounded-full uppercase tracking-widest">${t('scoring_spread')}</span>
                     </div>
                 </div>
                 <p class="text-[9px] text-zinc-500 mb-8 uppercase font-black tracking-[0.2em]">${state.category}</p>
@@ -697,11 +823,11 @@
                 
                 <div class="grid grid-cols-2 gap-4 pb-8">
                     <div class="glass p-5 rounded-2xl flex flex-col justify-center shadow-lg">
-                        <span class="text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-1 leading-none">Global Avg</span>
+                        <span class="text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-1 leading-none">${t('global_avg')}</span>
                         <div class="text-3xl font-black text-rose-500 neon-text-rose">${b.mean.toFixed(2)}</div>
                     </div>
                     <div class="glass p-5 rounded-2xl flex flex-col justify-center shadow-lg">
-                        <span class="text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-1 leading-none">Total couples</span>
+                        <span class="text-[8px] font-black text-zinc-600 uppercase tracking-widest mb-1 leading-none">${t('total_couples')}</span>
                         <div class="text-3xl font-black text-amber-500 neon-text-amber">${b.all.length}</div>
                     </div>
                 </div>
@@ -747,7 +873,7 @@
                                         borderDash: [4, 4],
                                         label: {
                                             display: true,
-                                            content: 'MEAN',
+                                            content: t('mean'),
                                             position: 'start',
                                             backgroundColor: '#fbbf24',
                                             color: '#000',

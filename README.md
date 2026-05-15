@@ -12,6 +12,7 @@ A sleek, mobile-first data visualization tool for the Metropolitano 2026 Tango S
 - **Judge Distribution**: Dive deep into how individual judges score the field with interactive histograms.
 - **Shareable Insights**: One-tap sharing to WhatsApp, Instagram Stories, and more. Export charts as images directly from the app.
 - **Deep Linking**: URLs automatically sync with your current view. Share a specific couple or category simply by copying the link.
+- **Localization**: Full support for English and Spanish (Argentinian). Automatically detects device language with manual override in settings.
 - **Searchable Selectors**: Quickly find any couple by name or number across all 4 major categories.
 - **Tango Noir Aesthetic**: A modern, high-contrast dark theme with neon accents inspired by the energy of the dance floor.
 - **Instant Interaction**: Zero build steps. Data is processed in-memory for lightning-fast switching between couples and categories.
