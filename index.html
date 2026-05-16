@@ -1109,18 +1109,55 @@
                     : `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
             }
             const url = window.location.href;
-            
+
+            // === Generate radar image (reused logic from shareChart) ===
+            let imageFile = null;
+            try {
+                let canvas;
+                if (state.comparisonMode === 'overlay') {
+                    canvas = radarCanvas;
+                } else if (state.comparisonMode === 'side-by-side') {
+                    canvas = document.getElementById('radar-multi-0');
+                } else {
+                    canvas = radarCanvas;
+                }
+
+                if (canvas) {
+                    const dataUrl = canvas.toDataURL('image/png');
+                    const blob = await (await fetch(dataUrl)).blob();
+                    let filename;
+                    if (state.comparisonMode === 'overlay') {
+                        filename = `metro-comparison-${state.selectedCouples.map(c => c.Nº).join('-')}.png`;
+                    } else if (state.comparisonMode === 'side-by-side') {
+                        filename = `metro-comparison-side-by-side.png`;
+                    } else {
+                        filename = `metro-radar-${state.couple?.Nº || 'view'}.png`;
+                    }
+                    imageFile = new File([blob], filename, { type: 'image/png' });
+                }
+            } catch (e) {
+                console.warn('Could not generate chart image for sharing:', e);
+            }
+
+            // === Share with image if possible ===
             if (navigator.share) {
                 try {
-                    await navigator.share({
+                    const shareData = {
                         title: 'METRO RADAR',
                         text: text,
-                        url: url,
-                    });
+                        url: url
+                    };
+
+                    if (imageFile && navigator.canShare && navigator.canShare({ files: [imageFile] })) {
+                        shareData.files = [imageFile];
+                    }
+
+                    await navigator.share(shareData);
                 } catch (err) {
                     if (err.name !== 'AbortError') console.error('Error sharing:', err);
                 }
             } else {
+                // Fallback: WhatsApp link (image not supported)
                 const shareUrl = `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`;
                 window.open(shareUrl, '_blank');
             }
