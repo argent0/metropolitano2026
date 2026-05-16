@@ -65,10 +65,18 @@ The visualizer provides three benchmark modes:
 
 These help dancers and fans understand not just the raw score, but the *context* of each judge's scoring behavior.
 
-### Statistical Outliers
-The app uses **Z-score analysis** (threshold of 1.8) to identify scores that are statistically unusual for a specific judge:
-- **Emerald Green (Favorable)**: Scores significantly higher than the judge's typical range.
-- **Vibrant Orange (Disfavorable)**: Scores significantly lower than the judge's typical range.
+### Statistical Outliers & Bias Analysis
+The app uses advanced statistical methods to identify unusual scoring patterns:
+
+- **Outlier Detection**: Uses **Z-score analysis** (threshold of 1.8) to identify scores that are statistically unusual for a specific judge:
+  - **Emerald Green (Favorable)**: Scores significantly higher than the judge's typical range.
+  - **Vibrant Orange (Disfavorable)**: Scores significantly lower than the judge's typical range.
+
+- **Loved ❤️ and Bombed 💣 Couples**: This deeper analysis identifies couples where a judge's score is BOTH an outlier for themselves AND deviates significantly from the rest of the panel (Delta > 0.8 points).
+  - **Loved**: A judge "fell in love" with a couple that the rest of the panel viewed more conservatively.
+  - **Bombed**: A judge "penalized" a couple that the rest of the panel viewed more favorably.
+
+These metrics help identify polarizing performances and unique judging perspectives.
 
 ## 📜 License
 

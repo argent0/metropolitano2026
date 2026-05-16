@@ -153,6 +153,7 @@
         <div class="flex bg-zinc-900/80 p-1 rounded-2xl border border-white/5">
             <button id="tab-radar" class="flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg">RADAR ANALYSIS</button>
             <button id="tab-judges" class="flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500">JUDGES BREAKDOWN</button>
+            <button id="tab-bias" class="flex-1 py-3 text-[10px] md:text-xs font-black rounded-xl transition-all duration-300 text-zinc-500">BIAS ANALYSIS</button>
         </div>
 
         <!-- Tab 1: Radar Analysis -->
@@ -206,6 +207,23 @@
         <!-- Tab 2: Judges Breakdown -->
         <div id="content-judges" class="hidden grid grid-cols-2 gap-4 pb-12">
             <!-- Judge cards injected by JS -->
+        </div>
+
+        <!-- Tab 3: Bias Analysis -->
+        <div id="content-bias" class="hidden space-y-8 pb-20">
+            <div class="glass rounded-2xl p-6">
+                <h3 id="bias-title" class="text-lg font-black text-white mb-2">Judge Bias Analysis</h3>
+                <p id="bias-desc" class="text-xs text-zinc-500 leading-relaxed">
+                    This analysis identifies couples that a judge scored unusually high (❤️ Loved) or unusually low (💣 Bombed) compared to their own scoring habits AND the rest of the panel. 
+                    <br><br>
+                    <span class="text-emerald-500 font-bold">Loved:</span> Score is >1.8 standard deviations from judge's mean AND >0.8 points above panel average.
+                    <br>
+                    <span class="text-orange-500 font-bold">Bombed:</span> Score is &lt;1.8 standard deviations from judge's mean AND >0.8 points below panel average.
+                </p>
+            </div>
+            <div id="bias-analysis-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- populated by JS -->
+            </div>
         </div>
 
     </main>
@@ -275,7 +293,14 @@
                 outlier_msg: "Outlier score (z > 1.8 from judge’s average)",
                 favorable: "Favorable",
                 disfavorable: "Disfavorable",
-                outlier: "Outlier"
+                outlier: "Outlier",
+                loved_couples: "Loved Couples",
+                bombed_couples: "Bombed Couples",
+                no_biases: "No strong biases detected for this judge.",
+                vs_panel: "vs panel",
+                bias_analysis: "BIAS ANALYSIS",
+                bias_title: "Judge Bias Analysis",
+                bias_desc: "This analysis identifies couples that a judge scored unusually high (❤️ Loved) or unusually low (💣 Bombed) compared to their own scoring habits AND the rest of the panel.<br><br><span class='text-emerald-500 font-bold'>Loved:</span> Score is >1.8 standard deviations from judge's mean AND >0.8 points above panel average.<br><span class='text-orange-500 font-bold'>Bombed:</span> Score is <1.8 standard deviations from judge's mean AND >0.8 points below panel average."
             },
             es: {
                 loading: "Cargando...",
@@ -331,7 +356,14 @@
                 outlier_msg: "Puntaje atípico (z > 1.8 del promedio del jurado)",
                 favorable: "Favorable",
                 disfavorable: "Desfavorable",
-                outlier: "Atípico"
+                outlier: "Atípico",
+                loved_couples: "Parejas Amadas",
+                bombed_couples: "Parejas Bombardeadas",
+                no_biases: "No se detectaron sesgos fuertes para este jurado.",
+                vs_panel: "vs panel",
+                bias_analysis: "ANÁLISIS DE SESGO",
+                bias_title: "Análisis de Sesgos del Jurado",
+                bias_desc: "Este análisis identifica parejas a las que un jurado calificó inusualmente alto (❤️ Loved) o inusualmente bajo (💣 Bombed) en comparación con sus propios hábitos de calificación Y con el resto del panel.<br><br><span class='text-emerald-500 font-bold'>Amadas:</span> Puntaje >1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por encima del promedio del panel.<br><span class='text-orange-500 font-bold'>Bombardeadas:</span> Puntaje <1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por debajo del promedio del panel."
             }
         };
 
@@ -344,9 +376,16 @@
             benchmark: 'mean', // mean, min, max
             tab: 'radar',
             benchmarks: {},
+            biasData: {}, // { judgeName: { loved: [], bombed: [] } }
             showNullsAsZero: false,
             comparisonMode: null, // null | 'overlay' | 'side-by-side'
             selectedCouples: [] // array of couple objects
+        };
+
+        const BIAS_CONFIG = {
+            OUTLIER_THRESHOLD: 1.8,   // same as existing Z-score threshold
+            DELTA_THRESHOLD: 0.8,     // points on the 0-10 scale (tunable)
+            MIN_OTHER_JUDGES: 3       // minimum valid other scores required for delta
         };
 
         function t(key) {
@@ -364,8 +403,10 @@
         const scoresTableBody = document.getElementById('scores-table-body');
         const contentRadar = document.getElementById('content-radar');
         const contentJudges = document.getElementById('content-judges');
+        const contentBias = document.getElementById('content-bias');
         const tabRadarBtn = document.getElementById('tab-radar');
         const tabJudgesBtn = document.getElementById('tab-judges');
+        const tabBiasBtn = document.getElementById('tab-bias');
         const modalOverlay = document.getElementById('modal-overlay');
         const modalContent = document.getElementById('modal-content');
         const modalBody = document.getElementById('modal-body');
@@ -408,7 +449,11 @@
             document.getElementById('change-couple-btn').innerText = t('change_couple');
             document.getElementById('tab-radar').innerText = t('radar_analysis');
             document.getElementById('tab-judges').innerText = t('judges_breakdown');
+            document.getElementById('tab-bias').innerText = t('bias_analysis');
             document.querySelector('#content-radar h3').innerText = t('couple_vs_judges');
+            
+            if (document.getElementById('bias-title')) document.getElementById('bias-title').innerText = t('bias_title');
+            if (document.getElementById('bias-desc')) document.getElementById('bias-desc').innerHTML = t('bias_desc');
             
             document.getElementById('btn-overlay').innerText = t('overlay').toUpperCase();
             document.getElementById('btn-side-by-side').innerText = t('side_by_side').toUpperCase();
@@ -427,6 +472,7 @@
         function setupEventListeners() {
             tabRadarBtn.onclick = () => switchTab('radar');
             tabJudgesBtn.onclick = () => switchTab('judges');
+            tabBiasBtn.onclick = () => switchTab('bias');
             
             document.getElementById('change-couple-btn').onclick = openCoupleSelector;
             document.getElementById('compare-btn').onclick = openMultiCompareModal;
@@ -471,13 +517,23 @@
         }
 
         function selectCategory(catName, skipCoupleSelection = false) {
+            const isNewCategory = state.category !== catName;
+            if (isNewCategory) {
+                state.selectedCouples = [];
+                state.comparisonMode = null;
+                comparisonBar.classList.add('hidden');
+            }
+
             state.category = catName;
             currentCategoryEl.innerText = catName;
             
             computeBenchmarks(catName);
             
-            if (!skipCoupleSelection || !state.couple) {
-                const catData = data.find(c => c.category === catName);
+            const catData = data.find(c => c.category === catName);
+            const judges = Object.keys(state.benchmarks);
+            state.biasData = computeJudgeBias(catData.scores, judges);
+            
+            if (!skipCoupleSelection || !state.couple || isNewCategory) {
                 const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
                 state.couple = couples[0];
             }
@@ -489,13 +545,18 @@
 
         function computeBenchmarks(catName) {
             const catData = data.find(c => c.category === catName);
-            const judges = Object.keys(catData.scores[0].scores);
+            
+            const judgesSet = new Set();
+            catData.scores.forEach(c => {
+                Object.keys(c.scores).forEach(j => judgesSet.add(j));
+            });
+            const judges = Array.from(judgesSet);
             
             state.benchmarks = {};
             judges.forEach(j => {
                 const vals = catData.scores
                     .map(c => c.scores[j])
-                    .filter(v => v !== null);
+                    .filter(v => v !== null && typeof v === "number");
                 
                 state.benchmarks[j] = {
                     mean: vals.length ? (vals.reduce((a, b) => a + b, 0) / vals.length) : 0,
@@ -538,6 +599,14 @@
             return Math.sqrt(variance);
         }
 
+        function getCoupleBias(couple, judge) {
+            const bias = state.biasData[judge];
+            if (!bias) return null;
+            if (bias.loved.some(e => e.coupleN === couple.Nº)) return 'loved';
+            if (bias.bombed.some(e => e.coupleN === couple.Nº)) return 'bombed';
+            return null;
+        }
+
         /**
          * Consensus: most frequent score after rounding to nearest 0.5
          * Returns {value: number, count: number} or null
@@ -556,6 +625,63 @@
                 }
             });
             return { value: modeValue, count: maxCount };
+        }
+
+        /**
+         * computeJudgeBias(couplesData, judgesList)
+         * @param {Array} couplesData - the "scores" array from a category
+         * @param {Array} judgesList - array of judge names for this category
+         * @returns {Object} { judgeName: { loved: [...], bombed: [...] } }
+         */
+        function computeJudgeBias(couplesData, judgesList) {
+            const result = {};
+            judgesList.forEach(judge => {
+                result[judge] = { loved: [], bombed: [] };
+                const judgeBench = state.benchmarks[judge];
+                if (!judgeBench || typeof judgeBench.mean === 'undefined' || !judgeBench.stdDev) return;
+
+                couplesData.forEach(couple => {
+                    const score = couple.scores[judge];
+                    if (score === null) return;
+
+                    // Intra-judge Z-score
+                    const zSelf = (score - judgeBench.mean) / judgeBench.stdDev;
+
+                    // Inter-judge deviation
+                    const otherScores = judgesList
+                        .filter(j => j !== judge)
+                        .map(j => couple.scores[j])
+                        .filter(s => s !== null && typeof s === 'number');
+
+                    if (otherScores.length < BIAS_CONFIG.MIN_OTHER_JUDGES) return;
+
+                    const otherMean = otherScores.length > 2 
+                        ? calculateMedian(otherScores) // robust if >2
+                        : (otherScores.reduce((a, b) => a + b, 0) / otherScores.length);
+                    
+                    const delta = score - otherMean;
+
+                    const entry = {
+                        coupleN: couple.Nº,
+                        coupleName: couple.Nombres,
+                        score: score,
+                        zSelf: parseFloat(zSelf.toFixed(2)),
+                        delta: parseFloat(delta.toFixed(2)),
+                        otherMean: parseFloat(otherMean.toFixed(2))
+                    };
+
+                    if (zSelf > BIAS_CONFIG.OUTLIER_THRESHOLD && delta > BIAS_CONFIG.DELTA_THRESHOLD) {
+                        result[judge].loved.push(entry);
+                    } else if (zSelf < -BIAS_CONFIG.OUTLIER_THRESHOLD && delta < -BIAS_CONFIG.DELTA_THRESHOLD) {
+                        result[judge].bombed.push(entry);
+                    }
+                });
+
+                // Sort by |delta| descending
+                result[judge].loved.sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+                result[judge].bombed.sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta));
+            });
+            return result;
         }
 
         /**
@@ -582,6 +708,7 @@
             } else {
                 renderSingleView();
             }
+            if (state.tab === 'bias') renderBiasAnalysis();
             updateURL();
         }
 
@@ -843,23 +970,30 @@
             `).join('');
         }
 
-        function getRadarData(couple) {
-            const judges = Object.keys(couple.scores);
-            return judges.map(j => {
+        function getRadarData(couple, targetJudges) {
+            return targetJudges.map(j => {
                 const val = couple.scores[j];
-                return (val === null && !state.showNullsAsZero) ? null : (val || 0);
+                if (val === undefined || val === null) {
+                    return state.showNullsAsZero ? 0 : null;
+                }
+                return val;
             });
         }
 
         function renderOverlayRadar() {
             const ctx = radarCanvas.getContext('2d');
-            const judges = Object.keys(state.selectedCouples[0].scores);
+            
+            const judgesSet = new Set();
+            state.selectedCouples.forEach(c => {
+                Object.keys(c.scores).forEach(j => judgesSet.add(j));
+            });
+            const judges = Array.from(judgesSet);
             
             const datasets = state.selectedCouples.map((c, i) => {
                 const outlierTypes = getOutlierTypes(c, judges);
                 return {
                     label: `Nº ${c.Nº}`,
-                    data: getRadarData(c),
+                    data: getRadarData(c, judges),
                     fill: true,
                     backgroundColor: getCoupleColor(i) + '33',
                     borderColor: getCoupleColor(i),
@@ -879,7 +1013,7 @@
             // Add benchmark
             datasets.push({
                 label: t(state.benchmark),
-                data: judges.map(j => state.benchmarks[j][state.benchmark]),
+                data: judges.map(j => (state.benchmarks[j] && state.benchmarks[j][state.benchmark]) ? state.benchmarks[j][state.benchmark] : 0),
                 fill: false,
                 borderColor: '#fbbf24',
                 borderDash: [6, 4],
@@ -937,8 +1071,14 @@
 
         function renderSideBySideRadars() {
             multiRadarGrid.innerHTML = '';
-            const judges = Object.keys(state.selectedCouples[0].scores);
-            const benchData = judges.map(j => state.benchmarks[j][state.benchmark]);
+            
+            const judgesSet = new Set();
+            state.selectedCouples.forEach(c => {
+                Object.keys(c.scores).forEach(j => judgesSet.add(j));
+            });
+            const judges = Array.from(judgesSet);
+
+            const benchData = judges.map(j => (state.benchmarks[j] && state.benchmarks[j][state.benchmark]) ? state.benchmarks[j][state.benchmark] : 0);
 
             let globalAllOutlierTypes = [];
 
@@ -993,7 +1133,7 @@
                         datasets: [
                             {
                                 label: `Nº ${c.Nº}`,
-                                data: getRadarData(c),
+                                data: getRadarData(c, judges),
                                 fill: true,
                                 backgroundColor: getCoupleColor(i) + '22',
                                 borderColor: getCoupleColor(i),
@@ -1024,7 +1164,17 @@
                                 min: 0, max: 10, beginAtZero: true,
                                 grid: { color: 'rgba(255, 255, 255, 0.05)' },
                                 angleLines: { display: true, color: 'rgba(255, 255, 255, 0.05)' },
-                                pointLabels: { display: true, font: { size: 8, weight: '900' }, color: '#52525b' },
+                                pointLabels: { 
+                                    display: true, 
+                                    font: { size: 8, weight: '900' }, 
+                                    color: '#52525b',
+                                    callback: (label) => {
+                                        const bias = getCoupleBias(c, label);
+                                        if (bias === 'loved') return label + ' ❤️';
+                                        if (bias === 'bombed') return label + ' 💣';
+                                        return label;
+                                    }
+                                },
                                 ticks: { display: false, stepSize: 5 }
                             }
                         },
@@ -1250,28 +1400,29 @@
 
         function switchTab(t) {
             state.tab = t;
-            if (t === 'radar') {
-                tabRadarBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg';
-                tabJudgesBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500';
-                contentRadar.classList.remove('hidden');
-                contentJudges.classList.add('hidden');
-            } else {
-                tabJudgesBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg';
-                tabRadarBtn.className = 'flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500';
-                contentJudges.classList.remove('hidden');
-                contentRadar.classList.add('hidden');
-                renderJudges();
-            }
+            const buttons = [tabRadarBtn, tabJudgesBtn, tabBiasBtn];
+            const contents = [contentRadar, contentJudges, contentBias];
+            const ids = ['radar', 'judges', 'bias'];
+
+            ids.forEach((id, i) => {
+                if (t === id) {
+                    buttons[i].className = 'flex-1 py-3 text-[10px] md:text-xs font-black rounded-xl transition-all duration-300 bg-rose-600 text-white shadow-lg';
+                    contents[i].classList.remove('hidden');
+                } else {
+                    buttons[i].className = 'flex-1 py-3 text-[10px] md:text-xs font-black rounded-xl transition-all duration-300 text-zinc-500';
+                    contents[i].classList.add('hidden');
+                }
+            });
+
+            if (t === 'judges') renderJudges();
+            if (t === 'bias') renderBiasAnalysis();
         }
 
         function renderRadar() {
             const ctx = document.getElementById('radar-chart').getContext('2d');
             const judges = Object.keys(state.couple.scores);
-            const coupleData = judges.map(j => {
-                const val = state.couple.scores[j];
-                return (val === null && !state.showNullsAsZero) ? null : (val || 0);
-            });
-            const benchData = judges.map(j => state.benchmarks[j][state.benchmark]);
+            const coupleData = getRadarData(state.couple, judges);
+            const benchData = judges.map(j => (state.benchmarks[j] && state.benchmarks[j][state.benchmark]) ? state.benchmarks[j][state.benchmark] : 0);
             
             const outlierTypes = getOutlierTypes(state.couple, judges);
 
@@ -1321,7 +1472,13 @@
                             pointLabels: {
                                 color: '#71717a',
                                 font: { size: 11, weight: '900', family: 'system-ui' },
-                                padding: 15
+                                padding: 15,
+                                callback: (label) => {
+                                    const bias = getCoupleBias(state.couple, label);
+                                    if (bias === 'loved') return label + ' ❤️';
+                                    if (bias === 'bombed') return label + ' 💣';
+                                    return label;
+                                }
                             },
                             ticks: { display: false, stepSize: 2.5 }
                         }
@@ -1415,7 +1572,13 @@
 
             // Update Body
             scoresTableBody.innerHTML = '';
-            const judges = Object.keys(couples[0].scores);
+            
+            const judgesSet = new Set();
+            couples.forEach(c => {
+                Object.keys(c.scores).forEach(j => judgesSet.add(j));
+            });
+            const judges = Array.from(judgesSet);
+
             judges.forEach(j => {
                 const tr = document.createElement('tr');
                 tr.className = 'border-t border-white/5 group active:bg-white/5 transition-colors';
@@ -1424,20 +1587,24 @@
                 
                 couples.forEach((c, i) => {
                     const score = c.scores[j];
+                    const bias = getCoupleBias(c, j);
+                    const emoji = bias === 'loved' ? ' ❤️' : bias === 'bombed' ? ' 💣' : '';
+                    
                     const color = isComparison ? getCoupleColor(i) : null;
                     const colorClass = !isComparison ? 'text-rose-500 neon-text-rose' : '';
                     const style = color ? `style="color: ${color}; text-shadow: 0 0 10px ${color}80"` : '';
                     
                     rowHtml += `
                         <td class="p-4 font-black text-lg text-center ${score === null ? 'text-zinc-700 italic' : colorClass}" ${score !== null ? style : ''}>
-                            ${score === null ? t('abstention') : score.toFixed(2)}
+                            ${score === null ? t('abstention') : score.toFixed(2)}<span class="text-xs ml-1">${emoji}</span>
                         </td>
                     `;
                 });
 
+                const benchVal = (state.benchmarks[j] && state.benchmarks[j][state.benchmark]) ? state.benchmarks[j][state.benchmark].toFixed(2) : '—';
                 rowHtml += `
                     <td class="p-4 text-right font-black text-amber-500/60 group-active:text-amber-400 transition-colors">
-                        ${state.benchmarks[j][state.benchmark].toFixed(2)}
+                        ${benchVal}
                     </td>
                 `;
                 tr.innerHTML = rowHtml;
@@ -1447,35 +1614,182 @@
 
         function renderJudges() {
             contentJudges.innerHTML = '';
+            // Change to 1 column on mobile, 2 on desktop if needed, but the cards will be complex now
+            contentJudges.className = "grid grid-cols-1 md:grid-cols-2 gap-4 pb-12";
+
             Object.keys(state.benchmarks).forEach(j => {
                 const b = state.benchmarks[j];
+                const bias = state.biasData[j] || { loved: [], bombed: [] };
+                
                 const card = document.createElement('div');
-                card.className = 'glass rounded-2xl p-4 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-neon-rose/10';
-                card.innerHTML = `
-                    <h4 class="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-3 flex justify-between items-center">
-                        ${j}
-                        <span class="w-1.5 h-1.5 rounded-full bg-zinc-800"></span>
-                    </h4>
-                    <div class="space-y-3">
+                card.className = 'glass rounded-2xl p-4 transition-all duration-300 shadow-lg hover:shadow-neon-rose/10 flex flex-col gap-4';
+                
+                const lovedHtml = bias.loved.length > 0 ? bias.loved.map(entry => `
+                    <li class="flex items-center justify-between p-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10 cursor-pointer active:scale-[0.98] transition-all" onclick="event.stopPropagation(); window.selectCoupleByNumber(${entry.coupleN})">
                         <div class="flex flex-col">
-                            <span class="text-[8px] uppercase text-zinc-600 font-black tracking-tighter leading-none mb-1">${t('judge_average')}</span>
-                            <span class="text-xl font-black text-white neon-text-rose">${b.mean.toFixed(2)}</span>
+                            <span class="text-[9px] font-black text-emerald-500">Nº ${entry.coupleN}</span>
+                            <span class="text-[11px] font-bold text-white truncate max-w-[120px]">${entry.coupleName}</span>
                         </div>
-                        <div class="flex gap-4 border-t border-white/5 pt-2">
+                        <div class="flex flex-col items-end">
+                            <span class="text-sm font-black text-emerald-500">${entry.score.toFixed(1)}</span>
+                            <span class="text-[8px] font-bold text-emerald-600/80">+${entry.delta.toFixed(1)} ${t('vs_panel')}</span>
+                        </div>
+                    </li>
+                `).join('') : `<p class="text-[10px] text-zinc-600 italic px-2">${t('no_biases')}</p>`;
+
+                const bombedHtml = bias.bombed.length > 0 ? bias.bombed.map(entry => `
+                    <li class="flex items-center justify-between p-2 rounded-lg bg-orange-500/5 border border-orange-500/10 cursor-pointer active:scale-[0.98] transition-all" onclick="event.stopPropagation(); window.selectCoupleByNumber(${entry.coupleN})">
+                        <div class="flex flex-col">
+                            <span class="text-[9px] font-black text-orange-500">Nº ${entry.coupleN}</span>
+                            <span class="text-[11px] font-bold text-white truncate max-w-[120px]">${entry.coupleName}</span>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <span class="text-sm font-black text-orange-500">${entry.score.toFixed(1)}</span>
+                            <span class="text-[8px] font-bold text-orange-600/80">${entry.delta.toFixed(1)} ${t('vs_panel')}</span>
+                        </div>
+                    </li>
+                `).join('') : `<p class="text-[10px] text-zinc-600 italic px-2">${t('no_biases')}</p>`;
+
+                card.innerHTML = `
+                    <div class="cursor-pointer" onclick="openJudgeHistogram('${j}')">
+                        <h4 class="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-3 flex justify-between items-center">
+                            ${j}
+                            <span class="w-1.5 h-1.5 rounded-full bg-zinc-800"></span>
+                        </h4>
+                        <div class="flex justify-between items-end">
                             <div class="flex flex-col">
-                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">${t('min')}</span>
-                                <span class="text-xs font-black text-zinc-400">${b.min.toFixed(1)}</span>
+                                <span class="text-[8px] uppercase text-zinc-600 font-black tracking-tighter leading-none mb-1">${t('judge_average')}</span>
+                                <span class="text-xl font-black text-white neon-text-rose">${b.mean.toFixed(2)}</span>
                             </div>
-                            <div class="flex flex-col">
-                                <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">${t('max')}</span>
-                                <span class="text-xs font-black text-zinc-400">${b.max.toFixed(1)}</span>
+                            <div class="flex gap-4">
+                                <div class="flex flex-col items-end">
+                                    <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">${t('min')}</span>
+                                    <span class="text-xs font-black text-zinc-400">${b.min.toFixed(1)}</span>
+                                </div>
+                                <div class="flex flex-col items-end">
+                                    <span class="text-[7px] uppercase text-zinc-600 font-bold leading-none mb-1">${t('max')}</span>
+                                    <span class="text-xs font-black text-zinc-400">${b.max.toFixed(1)}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="space-y-2 border-t border-white/5 pt-4">
+                        <details class="group">
+                            <summary class="list-none cursor-pointer flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-zinc-400 hover:text-emerald-500 transition-colors">
+                                <span class="flex items-center gap-2">❤️ ${t('loved_couples')} <span class="bg-emerald-500/20 text-emerald-500 px-1.5 rounded-md text-[8px]">${bias.loved.length}</span></span>
+                                <svg class="w-3 h-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <ul class="mt-3 space-y-2">
+                                ${lovedHtml}
+                            </ul>
+                        </details>
+
+                        <details class="group">
+                            <summary class="list-none cursor-pointer flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-zinc-400 hover:text-orange-500 transition-colors">
+                                <span class="flex items-center gap-2">💣 ${t('bombed_couples')} <span class="bg-orange-500/20 text-orange-500 px-1.5 rounded-md text-[8px]">${bias.bombed.length}</span></span>
+                                <svg class="w-3 h-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <ul class="mt-3 space-y-2">
+                                ${bombedHtml}
+                            </ul>
+                        </details>
+                    </div>
                 `;
-                card.onclick = () => openJudgeHistogram(j);
                 contentJudges.appendChild(card);
             });
+        }
+
+        function renderBiasAnalysis() {
+            const grid = document.getElementById('bias-analysis-grid');
+            grid.innerHTML = '';
+            
+            Object.keys(state.biasData).forEach(j => {
+                const bias = state.biasData[j];
+                if (bias.loved.length === 0 && bias.bombed.length === 0) return;
+
+                const card = document.createElement('div');
+                card.className = 'glass rounded-3xl p-6 flex flex-col gap-6';
+                
+                let html = `
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-lg font-black text-white">${j}</h4>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-black bg-emerald-500/20 text-emerald-500 px-3 py-1 rounded-full">❤️ ${bias.loved.length}</span>
+                            <span class="text-[10px] font-black bg-orange-500/20 text-orange-500 px-3 py-1 rounded-full">💣 ${bias.bombed.length}</span>
+                        </div>
+                    </div>
+                `;
+
+                if (bias.loved.length > 0) {
+                    html += `
+                        <div class="space-y-4">
+                            <h5 class="text-[10px] font-black text-emerald-500 uppercase tracking-widest flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                ${t('loved_couples')}
+                            </h5>
+                            <div class="grid grid-cols-1 gap-2">
+                                ${bias.loved.map(e => `
+                                    <div class="flex items-center justify-between p-3 glass-light rounded-xl cursor-pointer hover:bg-emerald-500/5 transition-colors" onclick="window.selectCoupleByNumber(${e.coupleN})">
+                                        <div class="flex flex-col">
+                                            <span class="text-[8px] font-black text-rose-500 uppercase">Nº ${e.coupleN}</span>
+                                            <span class="text-xs font-bold text-white">${e.coupleName}</span>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="flex flex-col items-end">
+                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">${t('score')}</span>
+                                                <span class="text-sm font-black text-emerald-500">${e.score.toFixed(1)}</span>
+                                            </div>
+                                            <div class="flex flex-col items-end border-l border-white/5 pl-4">
+                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">Delta</span>
+                                                <span class="text-sm font-black text-emerald-600">+${e.delta.toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (bias.bombed.length > 0) {
+                    html += `
+                        <div class="space-y-4">
+                            <h5 class="text-[10px] font-black text-orange-500 uppercase tracking-widest flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                                ${t('bombed_couples')}
+                            </h5>
+                            <div class="grid grid-cols-1 gap-2">
+                                ${bias.bombed.map(e => `
+                                    <div class="flex items-center justify-between p-3 glass-light rounded-xl cursor-pointer hover:bg-orange-500/5 transition-colors" onclick="window.selectCoupleByNumber(${e.coupleN})">
+                                        <div class="flex flex-col">
+                                            <span class="text-[8px] font-black text-rose-500 uppercase">Nº ${e.coupleN}</span>
+                                            <span class="text-xs font-bold text-white">${e.coupleName}</span>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <div class="flex flex-col items-end">
+                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">${t('score')}</span>
+                                                <span class="text-sm font-black text-orange-500">${e.score.toFixed(1)}</span>
+                                            </div>
+                                            <div class="flex flex-col items-end border-l border-white/5 pl-4">
+                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">Delta</span>
+                                                <span class="text-sm font-black text-orange-600">${e.delta.toFixed(2)}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                card.innerHTML = html;
+                grid.appendChild(card);
+            });
+
+            if (grid.innerHTML === '') {
+                grid.innerHTML = `<div class="col-span-full py-20 text-center text-zinc-600 font-black uppercase tracking-[0.3em]">${t('no_biases')}</div>`;
+            }
         }
 
         // Modals
