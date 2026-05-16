@@ -127,6 +127,10 @@
                     </button>
                 </div>
             </div>
+
+            <div id="couple-stats" class="hidden mt-6 grid grid-cols-3 gap-3 text-center text-sm">
+                <!-- populated by JS -->
+            </div>
         </section>
 
         <!-- Active Comparison Bar (Sticky) -->
@@ -260,7 +264,18 @@
                 share_histogram: "Share Histogram",
                 judge_average: "Judge Average",
                 couple: "Couple",
-                error_loading: "Error loading data"
+                error_loading: "Error loading data",
+                median: "Median",
+                stdDev: "Std Dev",
+                consensus: "Consensus",
+                consistency: "Consistency",
+                high: "High",
+                medium: "Medium",
+                low: "Low",
+                outlier_msg: "Outlier score (z > 1.8 from judge’s average)",
+                favorable: "Favorable",
+                disfavorable: "Disfavorable",
+                outlier: "Outlier"
             },
             es: {
                 loading: "Cargando...",
@@ -305,7 +320,18 @@
                 share_histogram: "Compartir Histograma",
                 judge_average: "Promedio Jurado",
                 couple: "Pareja",
-                error_loading: "Error al cargar los datos"
+                error_loading: "Error al cargar los datos",
+                median: "Mediana",
+                stdDev: "Desv. Est.",
+                consensus: "Consenso",
+                consistency: "Consistencia",
+                high: "Alta",
+                medium: "Media",
+                low: "Baja",
+                outlier_msg: "Puntaje atípico (z > 1.8 del promedio del jurado)",
+                favorable: "Favorable",
+                disfavorable: "Desfavorable",
+                outlier: "Atípico"
             }
         };
 
@@ -481,8 +507,78 @@
                     mean: vals.length ? (vals.reduce((a, b) => a + b, 0) / vals.length) : 0,
                     min: vals.length ? Math.min(...vals) : 0,
                     max: vals.length ? Math.max(...vals) : 0,
-                    all: vals
+                    all: vals,
+                    median: calculateMedian(vals),
+                    stdDev: calculateStdDev(vals),
+                    consensus: calculateConsensus(vals)
                 };
+            });
+        }
+
+        /**
+         * Returns array of non-null numeric scores for a couple
+         */
+        function getValidScores(couple) {
+            return Object.values(couple.scores).filter(s => s !== null && typeof s === 'number');
+        }
+
+        /**
+         * Median of an array of numbers (handles even/odd length)
+         */
+        function calculateMedian(numbers) {
+            if (numbers.length === 0) return null;
+            const sorted = [...numbers].sort((a, b) => a - b);
+            const mid = Math.floor(sorted.length / 2);
+            return sorted.length % 2 !== 0 
+                ? sorted[mid] 
+                : (sorted[mid - 1] + sorted[mid]) / 2;
+        }
+
+        /**
+         * Sample standard deviation (divide by n-1)
+         */
+        function calculateStdDev(numbers) {
+            if (numbers.length < 2) return null;
+            const mean = numbers.reduce((a, b) => a + b, 0) / numbers.length;
+            const variance = numbers.reduce((acc, val) => acc + Math.pow(val - mean, 2), 0) / (numbers.length - 1);
+            return Math.sqrt(variance);
+        }
+
+        /**
+         * Consensus: most frequent score after rounding to nearest 0.5
+         * Returns {value: number, count: number} or null
+         */
+        function calculateConsensus(numbers) {
+            if (numbers.length === 0) return null;
+            const rounded = numbers.map(n => Math.round(n * 2) / 2); // round to 0.5
+            const freq = {};
+            rounded.forEach(r => freq[r] = (freq[r] || 0) + 1);
+            let maxCount = 0;
+            let modeValue = null;
+            Object.keys(freq).forEach(key => {
+                if (freq[key] > maxCount) {
+                    maxCount = freq[key];
+                    modeValue = parseFloat(key);
+                }
+            });
+            return { value: modeValue, count: maxCount };
+        }
+
+        /**
+         * Returns array of outlier types (same length as judges)
+         * Returns 'favorable', 'disfavorable', or null
+         * Uses judge's benchmarks (mean + stdDev) + z-score threshold of 1.8
+         */
+        function getOutlierTypes(couple, judges) {
+            return judges.map(judge => {
+                const score = couple.scores[judge];
+                if (score === null || !state.benchmarks[judge] || !state.benchmarks[judge].stdDev) return null;
+                const diff = score - state.benchmarks[judge].mean;
+                const z = Math.abs(diff) / state.benchmarks[judge].stdDev;
+                if (z > 1.8) {
+                    return diff > 0 ? 'favorable' : 'disfavorable';
+                }
+                return null;
             });
         }
 
@@ -514,9 +610,43 @@
             `;
             document.querySelector('#couple-card .flex-col span').innerText = t('final_average');
             
+            renderCoupleStats(state.couple);
             renderRadar();
             renderTable();
             renderJudges();
+        }
+
+        function renderCoupleStats(couple, targetId = 'couple-stats') {
+            const el = document.getElementById(targetId);
+            if (!el) return;
+
+            const valid = getValidScores(couple);
+            const median = calculateMedian(valid);
+            const stdDev = calculateStdDev(valid);
+            const consensus = calculateConsensus(valid);
+
+            const consistencyKey = stdDev === null ? 'N/A' : 
+                stdDev < 0.3 ? 'high' : stdDev < 0.6 ? 'medium' : 'low';
+            const consistencyLabel = stdDev === null ? 'N/A' : t(consistencyKey);
+
+            const html = `
+                <div class="bg-zinc-900/70 rounded-lg p-3">
+                    <div class="text-amber-400 text-[10px] font-black uppercase tracking-widest mb-1">${t('median')}</div>
+                    <div class="text-xl font-black text-white">${median ? median.toFixed(2) : '—'}</div>
+                </div>
+                <div class="bg-zinc-900/70 rounded-lg p-3">
+                    <div class="text-amber-400 text-[10px] font-black uppercase tracking-widest mb-1">${t('stdDev')}</div>
+                    <div class="text-xl font-black text-white">${stdDev ? stdDev.toFixed(2) : '—'}</div>
+                    <div class="text-[8px] text-zinc-500 font-bold uppercase mt-1">${t('consistency')}: <span class="${consistencyKey === 'high' ? 'text-emerald-500' : consistencyKey === 'medium' ? 'text-amber-500' : 'text-rose-500'} font-black">${consistencyLabel}</span></div>
+                </div>
+                <div class="bg-zinc-900/70 rounded-lg p-3">
+                    <div class="text-amber-400 text-[10px] font-black uppercase tracking-widest mb-1">${t('consensus')}</div>
+                    <div class="text-xl font-black text-white">${consensus ? `${consensus.value} <span class="text-xs font-normal text-zinc-400">(${consensus.count})</span>` : '—'}</div>
+                </div>
+            `;
+
+            el.innerHTML = html;
+            el.classList.remove('hidden');
         }
 
         // Comparison Logic
@@ -661,6 +791,7 @@
         function renderComparison() {
             destroyAllCharts();
             comparisonBar.classList.remove('hidden');
+            document.getElementById('couple-stats').classList.add('hidden');
             renderComparisonPills();
             renderComparisonLegend();
 
@@ -730,18 +861,26 @@
             const ctx = radarCanvas.getContext('2d');
             const judges = Object.keys(state.selectedCouples[0].scores);
             
-            const datasets = state.selectedCouples.map((c, i) => ({
-                label: `Nº ${c.Nº}`,
-                data: getRadarData(c),
-                fill: true,
-                backgroundColor: getCoupleColor(i) + '33',
-                borderColor: getCoupleColor(i),
-                pointBackgroundColor: getCoupleColor(i),
-                pointBorderColor: '#fff',
-                pointBorderWidth: 1.5,
-                pointRadius: 3,
-                borderWidth: 3
-            }));
+            const datasets = state.selectedCouples.map((c, i) => {
+                const outlierTypes = getOutlierTypes(c, judges);
+                return {
+                    label: `Nº ${c.Nº}`,
+                    data: getRadarData(c),
+                    fill: true,
+                    backgroundColor: getCoupleColor(i) + '33',
+                    borderColor: getCoupleColor(i),
+                    pointBackgroundColor: judges.map((_, ji) => 
+                        outlierTypes[ji] === 'favorable' ? '#10b981' : 
+                        outlierTypes[ji] === 'disfavorable' ? '#f97316' : getCoupleColor(i)
+                    ),
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: judges.map((_, ji) => outlierTypes[ji] ? 3 : 1.5),
+                    pointRadius: judges.map((_, ji) => outlierTypes[ji] ? 6 : 3),
+                    pointHoverRadius: judges.map((_, ji) => outlierTypes[ji] ? 8 : 5),
+                    borderWidth: 3,
+                    outlierTypes: outlierTypes // Store for tooltip
+                };
+            });
 
             // Add benchmark
             datasets.push({
@@ -752,6 +891,13 @@
                 borderDash: [6, 4],
                 pointRadius: 0,
                 borderWidth: 2
+            });
+
+            let allOutlierTypes = [];
+            datasets.forEach(ds => {
+                if (ds.outlierTypes) {
+                    ds.outlierTypes.forEach(t => { if (t) allOutlierTypes.push(t); });
+                }
             });
 
             radarChart = new Chart(ctx, {
@@ -771,10 +917,28 @@
                             ticks: { display: false, stepSize: 2.5 }
                         }
                     },
-                    plugins: { legend: { display: false } },
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => {
+                                    const ds = context.dataset;
+                                    const score = context.raw;
+                                    let label = `${ds.label}: ${score !== null ? score.toFixed(2) : 'N/A'}`;
+                                    if (ds.outlierTypes && ds.outlierTypes[context.dataIndex]) {
+                                        const type = ds.outlierTypes[context.dataIndex];
+                                        label += type === 'favorable' ? ` (${t('favorable').toUpperCase()})` : ` (${t('disfavorable').toUpperCase()})`;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
                     animation: { duration: 800 }
                 }
             });
+
+            renderOutlierLegend(allOutlierTypes);
         }
 
         function renderSideBySideRadars() {
@@ -782,7 +946,12 @@
             const judges = Object.keys(state.selectedCouples[0].scores);
             const benchData = judges.map(j => state.benchmarks[j][state.benchmark]);
 
+            let globalAllOutlierTypes = [];
+
             state.selectedCouples.forEach((c, i) => {
+                const outlierTypes = getOutlierTypes(c, judges);
+                outlierTypes.forEach(t => { if (t) globalAllOutlierTypes.push(t); });
+
                 const container = document.createElement('div');
                 container.className = 'glass rounded-3xl p-4 flex flex-col items-center';
                 container.innerHTML = `
@@ -793,9 +962,34 @@
                     <div class="aspect-square w-full">
                         <canvas id="radar-multi-${i}"></canvas>
                     </div>
-                    <div class="mt-2 text-[8px] font-bold text-zinc-500 text-center uppercase truncate w-full">${c.Nombres}</div>
+                    <div class="mt-2 text-[8px] font-bold text-zinc-500 text-center uppercase truncate w-full mb-3">${c.Nombres}</div>
+                    <div id="couple-stats-multi-${i}" class="grid grid-cols-3 gap-1 w-full text-[8px]">
+                        <!-- populated below -->
+                    </div>
                 `;
                 multiRadarGrid.appendChild(container);
+
+                // Populate mini stats
+                const miniStatsEl = document.getElementById(`couple-stats-multi-${i}`);
+                const valid = getValidScores(c);
+                const median = calculateMedian(valid);
+                const stdDev = calculateStdDev(valid);
+                const consensus = calculateConsensus(valid);
+                
+                miniStatsEl.innerHTML = `
+                    <div class="bg-black/40 rounded p-1.5 text-center">
+                        <div class="text-zinc-500 uppercase font-bold mb-0.5" style="font-size: 6px;">${t('median')}</div>
+                        <div class="text-white font-black">${median ? median.toFixed(1) : '—'}</div>
+                    </div>
+                    <div class="bg-black/40 rounded p-1.5 text-center">
+                        <div class="text-zinc-500 uppercase font-bold mb-0.5" style="font-size: 6px;">${t('stdDev')}</div>
+                        <div class="text-white font-black">${stdDev ? stdDev.toFixed(1) : '—'}</div>
+                    </div>
+                    <div class="bg-black/40 rounded p-1.5 text-center">
+                        <div class="text-zinc-500 uppercase font-bold mb-0.5" style="font-size: 6px;">${t('consensus')}</div>
+                        <div class="text-white font-black">${consensus ? consensus.value : '—'}</div>
+                    </div>
+                `;
 
                 const ctx = document.getElementById(`radar-multi-${i}`).getContext('2d');
                 const chart = new Chart(ctx, {
@@ -809,8 +1003,15 @@
                                 fill: true,
                                 backgroundColor: getCoupleColor(i) + '22',
                                 borderColor: getCoupleColor(i),
-                                pointRadius: 2,
-                                borderWidth: 2
+                                pointBackgroundColor: judges.map((_, ji) => 
+                                    outlierTypes[ji] === 'favorable' ? '#10b981' : 
+                                    outlierTypes[ji] === 'disfavorable' ? '#f97316' : getCoupleColor(i)
+                                ),
+                                pointBorderColor: '#fff',
+                                pointBorderWidth: judges.map((_, ji) => outlierTypes[ji] ? 2 : 1),
+                                pointRadius: judges.map((_, ji) => outlierTypes[ji] ? 4 : 2),
+                                borderWidth: 2,
+                                outlierTypes: outlierTypes
                             },
                             {
                                 label: t(state.benchmark),
@@ -833,12 +1034,30 @@
                                 ticks: { display: false, stepSize: 5 }
                             }
                         },
-                        plugins: { legend: { display: false } },
+                        plugins: { 
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: (context) => {
+                                        const ds = context.dataset;
+                                        const score = context.raw;
+                                        let label = `${ds.label}: ${score !== null ? score.toFixed(2) : 'N/A'}`;
+                                        if (ds.outlierTypes && ds.outlierTypes[context.dataIndex]) {
+                                            const type = ds.outlierTypes[context.dataIndex];
+                                            label += type === 'favorable' ? ` (${t('favorable').toUpperCase()})` : ` (${t('disfavorable').toUpperCase()})`;
+                                        }
+                                        return label;
+                                    }
+                                }
+                            }
+                        },
                         animation: { duration: 600 }
                     }
                 });
                 multiCharts.push(chart);
             });
+
+            renderOutlierLegend(globalAllOutlierTypes);
         }
 
         // URL Sync
@@ -1023,6 +1242,8 @@
                 return (val === null && !state.showNullsAsZero) ? null : (val || 0);
             });
             const benchData = judges.map(j => state.benchmarks[j][state.benchmark]);
+            
+            const outlierTypes = getOutlierTypes(state.couple, judges);
 
             if (radarChart) radarChart.destroy();
 
@@ -1037,11 +1258,14 @@
                             fill: true,
                             backgroundColor: 'rgba(225, 29, 72, 0.35)',
                             borderColor: '#e11d48',
-                            pointBackgroundColor: '#e11d48',
+                            pointBackgroundColor: judges.map((_, i) => 
+                                outlierTypes[i] === 'favorable' ? '#10b981' : 
+                                outlierTypes[i] === 'disfavorable' ? '#f97316' : '#e11d48'
+                            ),
                             pointBorderColor: '#fff',
-                            pointBorderWidth: 2,
-                            pointRadius: 4,
-                            pointHoverRadius: 6,
+                            pointBorderWidth: judges.map((_, i) => outlierTypes[i] ? 3 : 2),
+                            pointRadius: judges.map((_, i) => outlierTypes[i] ? 7 : 4),
+                            pointHoverRadius: judges.map((_, i) => outlierTypes[i] ? 9 : 6),
                             borderWidth: 3
                         },
                         {
@@ -1072,10 +1296,62 @@
                             ticks: { display: false, stepSize: 2.5 }
                         }
                     },
-                    plugins: { legend: { display: false } },
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => {
+                                    const score = context.raw;
+                                    const type = outlierTypes[context.dataIndex];
+                                    let label = `${context.dataset.label}: ${score !== null ? score.toFixed(2) : 'N/A'}`;
+                                    if (context.datasetIndex === 0 && type) {
+                                        label += type === 'favorable' ? ` (${t('favorable').toUpperCase()})` : ` (${t('disfavorable').toUpperCase()})`;
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
                     animation: { duration: 1000, easing: 'easeOutQuart' }
                 }
             });
+
+            // Update outlier legend visibility
+            renderOutlierLegend(outlierTypes.filter(t => t !== null));
+        }
+
+        function renderOutlierLegend(types) {
+            let legendEl = document.getElementById('outlier-legend');
+            if (!legendEl) {
+                legendEl = document.createElement('div');
+                legendEl.id = 'outlier-legend';
+                legendEl.className = 'flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[10px] mt-4 font-black uppercase tracking-widest';
+                radarCanvas.parentNode.appendChild(legendEl);
+            }
+            
+            const hasFavorable = types.includes('favorable');
+            const hasDisfavorable = types.includes('disfavorable');
+            
+            let html = '';
+            if (hasFavorable) {
+                html += `
+                    <div class="flex items-center gap-2 text-emerald-500">
+                        <span class="inline-block w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span>
+                        <span>${t('favorable')} ${t('outlier')}</span>
+                    </div>
+                `;
+            }
+            if (hasDisfavorable) {
+                html += `
+                    <div class="flex items-center gap-2 text-orange-500">
+                        <span class="inline-block w-3 h-3 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.6)]"></span>
+                        <span>${t('disfavorable')} ${t('outlier')}</span>
+                    </div>
+                `;
+            }
+            
+            legendEl.innerHTML = html;
+            legendEl.classList.toggle('hidden', types.length === 0);
         }
 
         function renderTable() {

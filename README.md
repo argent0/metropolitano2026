@@ -9,7 +9,9 @@ A sleek, mobile-first data visualization tool for the Metropolitano 2026 Tango S
 ## ✨ Features
 
 - **Couple vs. Judges Radar**: Compare any couple's performance against category benchmarks (Mean, Min, or Max).
-- **Multi-Couple Comparison**: Compare 2–4 couples simultaneously with Overlay or Side-by-Side views.
+- **Statistical Extras**: View Median, Standard Deviation (Consistency), and Consensus (mode) for every couple.
+- **Outlier Highlighting**: Automatically detect and visually distinguish "Favorable" (above average) and "Disfavorable" (below average) scores that deviate significantly from a judge's typical distribution.
+- **Multi-Couple Comparison**: Compare 2–4 couples simultaneously with Overlay or Side-by-Side views, including mini-stats and cross-comparison outlier detection.
 - **Judge Distribution**: Dive deep into how individual judges score the field with interactive histograms.
 - **Shareable Insights**: One-tap sharing to WhatsApp, Instagram Stories, and more. Export charts as images directly from the app.
 - **Deep Linking**: URLs automatically sync with your current view. Share a specific couple, category, or comparison simply by copying the link.
@@ -61,6 +63,11 @@ The visualizer provides three benchmark modes:
 - **MAX**: The highest score given by that judge.
 
 These help dancers and fans understand not just the raw score, but the *context* of each judge's scoring behavior.
+
+### Statistical Outliers
+The app uses **Z-score analysis** (threshold of 1.8) to identify scores that are statistically unusual for a specific judge:
+- **Emerald Green (Favorable)**: Scores significantly higher than the judge's typical range.
+- **Vibrant Orange (Disfavorable)**: Scores significantly lower than the judge's typical range.
 
 ## 📜 License
 
