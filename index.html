@@ -362,7 +362,6 @@
         const coupleNamesEl = document.getElementById('couple-names');
         const couplePromedioEl = document.getElementById('couple-promedio');
         const scoresTableBody = document.getElementById('scores-table-body');
-        const benchHeader = document.getElementById('bench-header');
         const contentRadar = document.getElementById('content-radar');
         const contentJudges = document.getElementById('content-judges');
         const tabRadarBtn = document.getElementById('tab-radar');
@@ -419,11 +418,6 @@
             benchButtons[0].innerText = t('mean');
             benchButtons[1].innerText = t('min');
             benchButtons[2].innerText = t('max');
-
-            const tableHeaders = document.querySelectorAll('table thead th');
-            tableHeaders[0].innerText = t('judge');
-            tableHeaders[1].innerText = t('score');
-            tableHeaders[2].innerText = t(state.benchmark);
 
             document.getElementById('share-btn-top').title = t('share_view');
             document.getElementById('share-couple-btn').title = t('share_couple');
@@ -1214,7 +1208,6 @@
                     btn.className = 'text-[9px] px-3 py-1.5 rounded-md text-zinc-500 font-black hover:bg-white/5 transition-all';
                 }
             });
-            benchHeader.innerText = t(b);
             updateUI();
         }
 
@@ -1355,20 +1348,62 @@
         }
 
         function renderTable() {
+            const isComparison = state.selectedCouples.length >= 2;
+            const couples = isComparison ? state.selectedCouples : [state.couple];
+            
+            if (!couples[0]) return;
+
+            // Update Header
+            const tableHead = document.querySelector('table thead');
+            let headHtml = `
+                <tr class="bg-white/5">
+                    <th class="p-4 font-black text-zinc-500 uppercase tracking-widest">${t('judge')}</th>
+            `;
+            
+            couples.forEach((c, i) => {
+                const label = isComparison ? `Nº ${c.Nº}` : t('score');
+                const color = isComparison ? getCoupleColor(i) : '';
+                headHtml += `
+                    <th class="p-4 font-black text-zinc-500 uppercase tracking-widest text-center" ${color ? `style="color: ${color}"` : ''}>
+                        ${label}
+                    </th>
+                `;
+            });
+
+            headHtml += `
+                    <th id="bench-header" class="p-4 font-black text-zinc-500 uppercase tracking-widest text-right">${t(state.benchmark)}</th>
+                </tr>
+            `;
+            tableHead.innerHTML = headHtml;
+
+            // Update Body
             scoresTableBody.innerHTML = '';
-            Object.keys(state.couple.scores).forEach(j => {
-                const score = state.couple.scores[j];
+            const judges = Object.keys(couples[0].scores);
+            judges.forEach(j => {
                 const tr = document.createElement('tr');
                 tr.className = 'border-t border-white/5 group active:bg-white/5 transition-colors';
-                tr.innerHTML = `
-                    <td class="p-4 font-bold text-zinc-400 group-active:text-white">${j}</td>
-                    <td class="p-4 font-black text-lg ${score === null ? 'text-zinc-700 italic' : 'text-rose-500 neon-text-rose'}">
-                        ${score === null ? t('abstention') : score.toFixed(2)}
-                    </td>
+                
+                let rowHtml = `<td class="p-4 font-bold text-zinc-400 group-active:text-white">${j}</td>`;
+                
+                couples.forEach((c, i) => {
+                    const score = c.scores[j];
+                    const color = isComparison ? getCoupleColor(i) : null;
+                    const colorClass = !isComparison ? 'text-rose-500 neon-text-rose' : '';
+                    const style = color ? `style="color: ${color}; text-shadow: 0 0 10px ${color}80"` : '';
+                    
+                    rowHtml += `
+                        <td class="p-4 font-black text-lg text-center ${score === null ? 'text-zinc-700 italic' : colorClass}" ${score !== null ? style : ''}>
+                            ${score === null ? t('abstention') : score.toFixed(2)}
+                        </td>
+                    `;
+                });
+
+                rowHtml += `
                     <td class="p-4 text-right font-black text-amber-500/60 group-active:text-amber-400 transition-colors">
                         ${state.benchmarks[j][state.benchmark].toFixed(2)}
                     </td>
                 `;
+                tr.innerHTML = rowHtml;
                 scoresTableBody.appendChild(tr);
             });
         }
