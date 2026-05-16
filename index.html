@@ -231,6 +231,9 @@
                 side_by_side: "Side by Side",
                 exit_comparison: "Exit Comparison",
                 remove: "Remove",
+                comparing_couples: "Comparing Couples",
+                comparison_mode: "Comparison Mode",
+                avg_range: "Average Range",
                 radar_analysis: "RADAR ANALYSIS",
                 judges_breakdown: "JUDGES BREAKDOWN",
                 couple_vs_judges: "Couple vs Judges",
@@ -273,6 +276,9 @@
                 side_by_side: "En paralelo",
                 exit_comparison: "Salir",
                 remove: "Quitar",
+                comparing_couples: "Comparando Parejas",
+                comparison_mode: "Modo Comparativa",
+                avg_range: "Rango de Promedios",
                 radar_analysis: "ANÁLISIS RADAR",
                 judges_breakdown: "DESGLOSE JURADOS",
                 couple_vs_judges: "Pareja vs Jurados",
@@ -500,6 +506,13 @@
             coupleNumberEl.innerText = state.couple.Nº;
             coupleNamesEl.innerText = state.couple.Nombres;
             couplePromedioEl.innerText = state.couple.PROMEDIO.toFixed(3);
+            couplePromedioEl.className = "text-4xl font-black text-amber-500 leading-none neon-text-amber";
+            
+            document.querySelector('#couple-card p').innerHTML = `
+                <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
+                ${t('selected_couple')}
+            `;
+            document.querySelector('#couple-card .flex-col span').innerText = t('final_average');
             
             renderRadar();
             renderTable();
@@ -650,6 +663,21 @@
             comparisonBar.classList.remove('hidden');
             renderComparisonPills();
             renderComparisonLegend();
+
+            // Update Couple Card for Comparison
+            coupleNumberEl.innerText = state.selectedCouples.length;
+            coupleNamesEl.innerText = t('comparing_couples');
+            document.querySelector('#couple-card p').innerHTML = `
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                ${t('comparison_mode')}
+            `;
+            document.querySelector('#couple-card .flex-col span').innerText = t('avg_range');
+            
+            const averages = state.selectedCouples.map(c => c.PROMEDIO);
+            const minAvg = Math.min(...averages).toFixed(3);
+            const maxAvg = Math.max(...averages).toFixed(3);
+            couplePromedioEl.innerText = `${minAvg} - ${maxAvg}`;
+            couplePromedioEl.className = "text-2xl font-black text-amber-500 leading-none neon-text-amber mt-2";
 
             // Update mode buttons
             document.getElementById('btn-overlay').className = `text-[9px] px-3 py-1.5 rounded-lg transition-all ${state.comparisonMode === 'overlay' ? 'bg-rose-600 text-white font-black' : 'text-zinc-500 font-black'}`;
