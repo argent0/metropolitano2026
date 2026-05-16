@@ -664,6 +664,9 @@
                 multiRadarGrid.classList.remove('hidden');
                 renderSideBySideRadars();
             }
+            
+            renderTable();
+            renderJudges();
         }
 
         function renderComparisonPills() {
@@ -965,8 +968,7 @@
                 }
             });
             benchHeader.innerText = t(b);
-            renderRadar();
-            renderTable();
+            updateUI();
         }
 
         function switchTab(t) {

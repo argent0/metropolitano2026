@@ -36,6 +36,7 @@ Implemented a comprehensive comparison engine that allows users to select and vi
 
 ## Technical Details
 - **Chart.js Optimization**: Implemented a `destroyAllCharts()` helper to prevent memory leaks and canvas collisions when switching between view modes.
+- **Unified UI Updates**: Refactored `setBenchmark` and other settings to route through `updateUI()`. This ensures that changing benchmarks (Mean, Min, Max) or display settings (Show Nulls) correctly refreshes both single-couple and multi-couple comparison views without losing the current selection state.
 - **Color Palette**: Curated a neon-inspired accessible palette:
     - Rose (`#e11d48`)
     - Cyan (`#06b6d4`)
