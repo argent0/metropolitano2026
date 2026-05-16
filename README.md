@@ -9,9 +9,10 @@ A sleek, mobile-first data visualization tool for the Metropolitano 2026 Tango S
 ## ✨ Features
 
 - **Couple vs. Judges Radar**: Compare any couple's performance against category benchmarks (Mean, Min, or Max).
+- **Multi-Couple Comparison**: Compare 2–4 couples simultaneously with Overlay or Side-by-Side views.
 - **Judge Distribution**: Dive deep into how individual judges score the field with interactive histograms.
 - **Shareable Insights**: One-tap sharing to WhatsApp, Instagram Stories, and more. Export charts as images directly from the app.
-- **Deep Linking**: URLs automatically sync with your current view. Share a specific couple or category simply by copying the link.
+- **Deep Linking**: URLs automatically sync with your current view. Share a specific couple, category, or comparison simply by copying the link.
 - **Localization**: Full support for English and Spanish (Argentinian). Automatically detects device language with manual override in settings.
 - **Searchable Selectors**: Quickly find any couple by name or number across all 4 major categories.
 - **Tango Noir Aesthetic**: A modern, high-contrast dark theme with neon accents inspired by the energy of the dance floor.
@@ -47,7 +48,8 @@ metropolitano2026/
 ├── index.html                           # Main application
 ├── metropolitano_semifinal_clean.json   # Source data
 ├── reports/
-│   └── first-version.md                 # Technical implementation report
+│   ├── first-version.md                 # Technical implementation report
+│   └── comparison-view.md               # Multi-couple comparison implementation
 └── README.md                            # You are here
 ```
 

@@ -119,12 +119,31 @@
                     <button id="share-couple-btn" class="bg-zinc-900 text-white p-3 rounded-full border border-white/10 active:scale-95 transition-transform" title="Share Couple">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
                     </button>
+                    <button id="compare-btn" class="bg-zinc-900 text-white text-[10px] font-black px-6 py-3 rounded-full border border-white/10 active:scale-95 transition-transform uppercase tracking-wider">
+                        COMPARE
+                    </button>
                     <button id="change-couple-btn" class="bg-rose-600 text-white text-[10px] font-black px-6 py-3 rounded-full shadow-lg shadow-rose-900/40 active:scale-95 transition-transform uppercase tracking-wider">
                         CHANGE COUPLE
                     </button>
                 </div>
             </div>
         </section>
+
+        <!-- Active Comparison Bar (Sticky) -->
+        <div id="comparison-bar" class="hidden sticky top-[108px] z-30 glass border-y border-white/5 px-4 py-3 flex flex-col gap-3 shadow-xl">
+            <div id="comparison-pills" class="flex flex-wrap gap-2">
+                <!-- Pills injected by JS -->
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="flex bg-black/40 p-1 rounded-xl border border-white/5">
+                    <button id="btn-overlay" class="text-[9px] px-3 py-1.5 rounded-lg bg-rose-600 text-white font-black transition-all">OVERLAY</button>
+                    <button id="btn-side-by-side" class="text-[9px] px-3 py-1.5 rounded-lg text-zinc-500 font-black transition-all">SIDE-BY-SIDE</button>
+                </div>
+                <button id="exit-comparison-btn" class="text-[9px] font-black text-rose-500 uppercase tracking-widest px-4 py-2 hover:bg-rose-500/10 rounded-lg transition-colors">
+                    EXIT COMPARISON
+                </button>
+            </div>
+        </div>
 
         <!-- Main Content Tabs -->
         <div class="flex bg-zinc-900/80 p-1 rounded-2xl border border-white/5">
@@ -150,6 +169,16 @@
                 </div>
                 <div class="aspect-square w-full relative">
                     <canvas id="radar-chart"></canvas>
+                </div>
+                
+                <!-- Side-by-Side Grid -->
+                <div id="multi-radar-grid" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Canvases injected by JS -->
+                </div>
+
+                <!-- Legend -->
+                <div id="radar-legend" class="mt-6 flex flex-wrap gap-4 justify-center">
+                    <!-- Legend items injected by JS -->
                 </div>
             </div>
 
@@ -193,6 +222,15 @@
                 selected_couple: "Selected Couple",
                 final_average: "Final Average",
                 change_couple: "CHANGE COUPLE",
+                compare: "COMPARE",
+                select_compare: "Select couples to compare (2-4)",
+                clear: "Clear",
+                confirm: "Confirm",
+                cancel: "Cancel",
+                overlay: "Overlay",
+                side_by_side: "Side by Side",
+                exit_comparison: "Exit Comparison",
+                remove: "Remove",
                 radar_analysis: "RADAR ANALYSIS",
                 judges_breakdown: "JUDGES BREAKDOWN",
                 couple_vs_judges: "Couple vs Judges",
@@ -226,6 +264,15 @@
                 selected_couple: "Pareja Seleccionada",
                 final_average: "Promedio Final",
                 change_couple: "CAMBIAR PAREJA",
+                compare: "COMPARAR",
+                select_compare: "Seleccionar parejas (2-4)",
+                clear: "Limpiar",
+                confirm: "Confirmar",
+                cancel: "Cancelar",
+                overlay: "Superpuesto",
+                side_by_side: "En paralelo",
+                exit_comparison: "Salir",
+                remove: "Quitar",
                 radar_analysis: "ANÁLISIS RADAR",
                 judges_breakdown: "DESGLOSE JURADOS",
                 couple_vs_judges: "Pareja vs Jurados",
@@ -265,7 +312,9 @@
             benchmark: 'mean', // mean, min, max
             tab: 'radar',
             benchmarks: {},
-            showNullsAsZero: false
+            showNullsAsZero: false,
+            comparisonMode: null, // null | 'overlay' | 'side-by-side'
+            selectedCouples: [] // array of couple objects
         };
 
         function t(key) {
@@ -289,6 +338,13 @@
         const modalOverlay = document.getElementById('modal-overlay');
         const modalContent = document.getElementById('modal-content');
         const modalBody = document.getElementById('modal-body');
+        const comparisonBar = document.getElementById('comparison-bar');
+        const comparisonPills = document.getElementById('comparison-pills');
+        const multiRadarGrid = document.getElementById('multi-radar-grid');
+        const radarCanvas = document.getElementById('radar-chart');
+        const radarLegend = document.getElementById('radar-legend');
+        
+        let multiCharts = [];
 
         // Initial Load
         async function init() {
@@ -317,11 +373,16 @@
                 ${t('selected_couple')}
             `;
             document.querySelector('#couple-card .flex-col span').innerText = t('final_average');
+            document.getElementById('compare-btn').innerText = t('compare');
             document.getElementById('change-couple-btn').innerText = t('change_couple');
             document.getElementById('tab-radar').innerText = t('radar_analysis');
             document.getElementById('tab-judges').innerText = t('judges_breakdown');
             document.querySelector('#content-radar h3').innerText = t('couple_vs_judges');
             
+            document.getElementById('btn-overlay').innerText = t('overlay').toUpperCase();
+            document.getElementById('btn-side-by-side').innerText = t('side_by_side').toUpperCase();
+            document.getElementById('exit-comparison-btn').innerText = t('exit_comparison').toUpperCase();
+
             const benchButtons = document.querySelectorAll('#benchmark-chips button');
             benchButtons[0].innerText = t('mean');
             benchButtons[1].innerText = t('min');
@@ -342,12 +403,17 @@
             tabJudgesBtn.onclick = () => switchTab('judges');
             
             document.getElementById('change-couple-btn').onclick = openCoupleSelector;
+            document.getElementById('compare-btn').onclick = openMultiCompareModal;
             document.getElementById('category-trigger').onclick = openCategorySelector;
             document.getElementById('settings-btn').onclick = openSettings;
             
             document.getElementById('share-btn-top').onclick = shareView;
             document.getElementById('share-couple-btn').onclick = shareView;
             document.getElementById('share-radar-btn').onclick = shareChart;
+
+            document.getElementById('btn-overlay').onclick = () => setComparisonMode('overlay');
+            document.getElementById('btn-side-by-side').onclick = () => setComparisonMode('side-by-side');
+            document.getElementById('exit-comparison-btn').onclick = exitComparison;
 
             document.querySelectorAll('#benchmark-chips button').forEach(btn => {
                 btn.onclick = () => {
@@ -370,7 +436,10 @@
                     : 'bg-zinc-900 text-zinc-500 border border-white/5'
                 }`;
                 pill.innerText = cat.category;
-                pill.onclick = () => selectCategory(cat.category);
+                pill.onclick = () => {
+                    if (state.comparisonMode) exitComparison();
+                    selectCategory(cat.category);
+                };
                 categoryTabsEl.appendChild(pill);
             });
         }
@@ -412,8 +481,22 @@
         }
 
         function updateUI() {
+            if (state.selectedCouples.length >= 2) {
+                renderComparison();
+            } else {
+                renderSingleView();
+            }
+            updateURL();
+        }
+
+        function renderSingleView() {
             if (!state.couple) return;
 
+            comparisonBar.classList.add('hidden');
+            radarCanvas.classList.remove('hidden');
+            multiRadarGrid.classList.add('hidden');
+            radarLegend.innerHTML = '';
+            
             coupleNumberEl.innerText = state.couple.Nº;
             coupleNamesEl.innerText = state.couple.Nombres;
             couplePromedioEl.innerText = state.couple.PROMEDIO.toFixed(3);
@@ -421,15 +504,325 @@
             renderRadar();
             renderTable();
             renderJudges();
-            updateURL();
+        }
+
+        // Comparison Logic
+        function openMultiCompareModal() {
+            const catData = data.find(c => c.category === state.category);
+            const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
+            
+            let tempSelection = [...state.selectedCouples];
+            if (tempSelection.length === 0 && state.couple) {
+                tempSelection.push(state.couple);
+            }
+
+            const renderModalContent = () => {
+                let html = `
+                    <div class="sticky top-0 bg-[#0a0a0a] pb-6 z-10">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-black text-white tracking-tight">${t('select_compare')}</h3>
+                            <span class="text-xs font-bold text-rose-500">${tempSelection.length} / 4</span>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="compare-search" placeholder="${t('search_placeholder')}" class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-rose-600 transition-all placeholder:text-zinc-600 font-bold text-sm">
+                        </div>
+                    </div>
+                    <div id="compare-list" class="space-y-2 pb-24">
+                        ${couples.map((c, i) => {
+                            const isSelected = tempSelection.some(sc => sc.Nº === c.Nº);
+                            const isDisabled = !isSelected && tempSelection.length >= 4;
+                            return `
+                                <div class="w-full flex items-center justify-between p-4 glass-light rounded-2xl ${isDisabled ? 'opacity-40 grayscale' : 'active:scale-[0.98] cursor-pointer'}" 
+                                     ${isDisabled ? '' : `onclick="window.toggleInTempSelection(${c.Nº})"`}>
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ${isSelected ? 'bg-rose-600 border-rose-600' : 'border-white/10 bg-black/20'}">
+                                            ${isSelected ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+                                        </div>
+                                        <div>
+                                            <span class="text-[8px] font-black text-rose-500 uppercase tracking-widest">Nº ${c.Nº}</span>
+                                            <div class="text-white font-bold text-sm leading-tight">${c.Nombres}</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-amber-500 font-black text-sm">${c.PROMEDIO.toFixed(3)}</div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    <div class="fixed bottom-0 left-0 right-0 p-8 glass border-t border-white/10 flex gap-3">
+                        <button onclick="window.clearTempSelection()" class="flex-1 py-4 rounded-2xl font-black text-xs uppercase bg-zinc-900 text-zinc-500 border border-white/5">${t('clear')}</button>
+                        <button onclick="window.confirmComparison()" class="flex-[2] py-4 rounded-2xl font-black text-xs uppercase bg-rose-600 text-white shadow-lg shadow-rose-900/40">${t('confirm')}</button>
+                    </div>
+                `;
+                modalBody.innerHTML = html;
+
+                const searchInput = document.getElementById('compare-search');
+                const listItems = document.querySelectorAll('#compare-list > div');
+                searchInput.oninput = (e) => {
+                    const term = e.target.value.toLowerCase();
+                    listItems.forEach(item => {
+                        const text = item.innerText.toLowerCase();
+                        item.classList.toggle('hidden', !text.includes(term));
+                    });
+                };
+            };
+
+            window.toggleInTempSelection = (num) => {
+                const index = tempSelection.findIndex(c => c.Nº === num);
+                if (index > -1) {
+                    tempSelection.splice(index, 1);
+                } else if (tempSelection.length < 4) {
+                    tempSelection.push(couples.find(c => c.Nº === num));
+                }
+                renderModalContent();
+            };
+
+            window.clearTempSelection = () => {
+                tempSelection = [];
+                renderModalContent();
+            };
+
+            window.confirmComparison = () => {
+                if (tempSelection.length >= 2) {
+                    state.selectedCouples = [...tempSelection];
+                    state.comparisonMode = state.comparisonMode || 'overlay';
+                    updateUI();
+                    closeModal();
+                } else if (tempSelection.length === 1) {
+                    state.couple = tempSelection[0];
+                    state.selectedCouples = [];
+                    state.comparisonMode = null;
+                    updateUI();
+                    closeModal();
+                } else {
+                    closeModal();
+                }
+            };
+
+            openModal('');
+            renderModalContent();
+        }
+
+        function setComparisonMode(mode) {
+            state.comparisonMode = mode;
+            updateUI();
+        }
+
+        function exitComparison() {
+            state.comparisonMode = null;
+            state.selectedCouples = [];
+            updateUI();
+        }
+
+        function removeFromComparison(num) {
+            state.selectedCouples = state.selectedCouples.filter(c => c.Nº !== num);
+            if (state.selectedCouples.length < 2) {
+                if (state.selectedCouples.length === 1) {
+                    state.couple = state.selectedCouples[0];
+                }
+                exitComparison();
+            } else {
+                updateUI();
+            }
+        }
+
+        function getCoupleColor(index) {
+            const colors = [
+                '#e11d48', // rose
+                '#06b6d4', // cyan
+                '#8b5cf6', // violet
+                '#f59e0b', // amber
+                '#10b981', // emerald
+            ];
+            return colors[index % colors.length];
+        }
+
+        function destroyAllCharts() {
+            if (radarChart) {
+                radarChart.destroy();
+                radarChart = null;
+            }
+            multiCharts.forEach(chart => chart.destroy());
+            multiCharts = [];
+        }
+
+        function renderComparison() {
+            destroyAllCharts();
+            comparisonBar.classList.remove('hidden');
+            renderComparisonPills();
+            renderComparisonLegend();
+
+            // Update mode buttons
+            document.getElementById('btn-overlay').className = `text-[9px] px-3 py-1.5 rounded-lg transition-all ${state.comparisonMode === 'overlay' ? 'bg-rose-600 text-white font-black' : 'text-zinc-500 font-black'}`;
+            document.getElementById('btn-side-by-side').className = `text-[9px] px-3 py-1.5 rounded-lg transition-all ${state.comparisonMode === 'side-by-side' ? 'bg-rose-600 text-white font-black' : 'text-zinc-500 font-black'}`;
+
+            if (state.comparisonMode === 'overlay') {
+                radarCanvas.classList.remove('hidden');
+                multiRadarGrid.classList.add('hidden');
+                renderOverlayRadar();
+            } else {
+                radarCanvas.classList.add('hidden');
+                multiRadarGrid.classList.remove('hidden');
+                renderSideBySideRadars();
+            }
+        }
+
+        function renderComparisonPills() {
+            comparisonPills.innerHTML = state.selectedCouples.map((c, i) => `
+                <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
+                    <span class="w-2 h-2 rounded-full" style="background-color: ${getCoupleColor(i)}"></span>
+                    <span class="text-[10px] font-black text-white">Nº ${c.Nº}</span>
+                    <button onclick="removeFromComparison(${c.Nº})" class="text-zinc-500 hover:text-rose-500 transition-colors">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function renderComparisonLegend() {
+            radarLegend.innerHTML = state.selectedCouples.map((c, i) => `
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-sm" style="background-color: ${getCoupleColor(i)}"></span>
+                    <span class="text-[10px] font-black text-zinc-400">${c.Nombres} (Nº ${c.Nº})</span>
+                </div>
+            `).join('');
+        }
+
+        function getRadarData(couple) {
+            const judges = Object.keys(couple.scores);
+            return judges.map(j => {
+                const val = couple.scores[j];
+                return (val === null && !state.showNullsAsZero) ? null : (val || 0);
+            });
+        }
+
+        function renderOverlayRadar() {
+            const ctx = radarCanvas.getContext('2d');
+            const judges = Object.keys(state.selectedCouples[0].scores);
+            
+            const datasets = state.selectedCouples.map((c, i) => ({
+                label: `Nº ${c.Nº}`,
+                data: getRadarData(c),
+                fill: true,
+                backgroundColor: getCoupleColor(i) + '33',
+                borderColor: getCoupleColor(i),
+                pointBackgroundColor: getCoupleColor(i),
+                pointBorderColor: '#fff',
+                pointBorderWidth: 1.5,
+                pointRadius: 3,
+                borderWidth: 3
+            }));
+
+            // Add benchmark
+            datasets.push({
+                label: t(state.benchmark),
+                data: judges.map(j => state.benchmarks[j][state.benchmark]),
+                fill: false,
+                borderColor: '#fbbf24',
+                borderDash: [6, 4],
+                pointRadius: 0,
+                borderWidth: 2
+            });
+
+            radarChart = new Chart(ctx, {
+                type: 'radar',
+                data: { labels: judges, datasets },
+                options: {
+                    scales: {
+                        r: {
+                            min: 0, max: 10, beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                            angleLines: { color: 'rgba(255, 255, 255, 0.15)' },
+                            pointLabels: {
+                                color: '#71717a',
+                                font: { size: 10, weight: '900' },
+                                padding: 10
+                            },
+                            ticks: { display: false, stepSize: 2.5 }
+                        }
+                    },
+                    plugins: { legend: { display: false } },
+                    animation: { duration: 800 }
+                }
+            });
+        }
+
+        function renderSideBySideRadars() {
+            multiRadarGrid.innerHTML = '';
+            const judges = Object.keys(state.selectedCouples[0].scores);
+            const benchData = judges.map(j => state.benchmarks[j][state.benchmark]);
+
+            state.selectedCouples.forEach((c, i) => {
+                const container = document.createElement('div');
+                container.className = 'glass rounded-3xl p-4 flex flex-col items-center';
+                container.innerHTML = `
+                    <div class="w-full flex justify-between items-center mb-2 px-2">
+                        <span class="text-[10px] font-black text-white">Nº ${c.Nº}</span>
+                        <span class="text-[10px] font-black text-amber-500">${c.PROMEDIO.toFixed(3)}</span>
+                    </div>
+                    <div class="aspect-square w-full">
+                        <canvas id="radar-multi-${i}"></canvas>
+                    </div>
+                    <div class="mt-2 text-[8px] font-bold text-zinc-500 text-center uppercase truncate w-full">${c.Nombres}</div>
+                `;
+                multiRadarGrid.appendChild(container);
+
+                const ctx = document.getElementById(`radar-multi-${i}`).getContext('2d');
+                const chart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: judges,
+                        datasets: [
+                            {
+                                label: `Nº ${c.Nº}`,
+                                data: getRadarData(c),
+                                fill: true,
+                                backgroundColor: getCoupleColor(i) + '22',
+                                borderColor: getCoupleColor(i),
+                                pointRadius: 2,
+                                borderWidth: 2
+                            },
+                            {
+                                label: t(state.benchmark),
+                                data: benchData,
+                                fill: false,
+                                borderColor: '#fbbf24',
+                                borderDash: [4, 4],
+                                pointRadius: 0,
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            r: {
+                                min: 0, max: 10, beginAtZero: true,
+                                grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                                angleLines: { display: true, color: 'rgba(255, 255, 255, 0.05)' },
+                                pointLabels: { display: true, font: { size: 8, weight: '900' }, color: '#52525b' },
+                                ticks: { display: false, stepSize: 5 }
+                            }
+                        },
+                        plugins: { legend: { display: false } },
+                        animation: { duration: 600 }
+                    }
+                });
+                multiCharts.push(chart);
+            });
         }
 
         // URL Sync
         function updateURL() {
-            if (!state.couple) return;
             const params = new URLSearchParams(window.location.search);
             params.set('cat', state.category);
-            params.set('n', state.couple.Nº);
+            
+            if (state.selectedCouples.length >= 2) {
+                params.set('couples', state.selectedCouples.map(c => c.Nº).join(','));
+                params.delete('n');
+            } else if (state.couple) {
+                params.set('n', state.couple.Nº);
+                params.delete('couples');
+            }
+            
             window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
         }
 
@@ -437,23 +830,40 @@
             const params = new URLSearchParams(window.location.search);
             const cat = params.get('cat');
             const num = parseInt(params.get('n'));
+            const couplesParam = params.get('couples');
             
             if (cat && data.find(c => c.category === cat)) {
                 state.category = cat;
             }
             
             const catData = data.find(c => c.category === state.category);
-            if (catData && num) {
-                const couple = catData.scores.find(c => c.Nº === num);
-                if (couple) state.couple = couple;
+            if (catData) {
+                if (couplesParam) {
+                    const nums = couplesParam.split(',').map(n => parseInt(n));
+                    state.selectedCouples = catData.scores.filter(c => nums.includes(c.Nº));
+                    if (state.selectedCouples.length >= 2) {
+                        state.comparisonMode = 'overlay';
+                    }
+                } else if (num) {
+                    const couple = catData.scores.find(c => c.Nº === num);
+                    if (couple) state.couple = couple;
+                }
             }
         }
 
         // Sharing
         async function shareView() {
-            const text = state.lang === 'es' 
-                ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${state.category} en METRO RADAR! 💃🕺`
-                : `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
+            let text;
+            if (state.selectedCouples.length >= 2) {
+                const names = state.selectedCouples.map(c => c.Nombres).join(' vs ');
+                text = state.lang === 'es'
+                    ? `¡Mirá la comparación de ${names} en ${state.category} en METRO RADAR! 💃🕺`
+                    : `Check out the comparison between ${names} in ${state.category} at METRO RADAR! 💃🕺`;
+            } else {
+                text = state.lang === 'es' 
+                    ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${state.category} en METRO RADAR! 💃🕺`
+                    : `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
+            }
             const url = window.location.href;
             
             if (navigator.share) {
@@ -473,26 +883,47 @@
         }
 
         async function shareChart() {
-            const canvas = document.getElementById('radar-chart');
+            let canvas;
+            let filename;
+            let shareText;
+
+            if (state.comparisonMode === 'overlay') {
+                canvas = radarCanvas;
+                filename = `metro-comparison-${state.selectedCouples.map(c => c.Nº).join('-')}.png`;
+                shareText = state.lang === 'es'
+                    ? `Comparativa de radar (${state.category})`
+                    : `Radar comparison (${state.category})`;
+            } else if (state.comparisonMode === 'side-by-side') {
+                // In side-by-side, we might just share the first one or alert
+                // For now, let's just use the first canvas as a fallback or alert the user
+                canvas = document.getElementById('radar-multi-0');
+                filename = `metro-comparison-side-by-side.png`;
+                shareText = `Side-by-side comparison (${state.category})`;
+            } else {
+                canvas = radarCanvas;
+                filename = `metro-radar-${state.couple.Nº}.png`;
+                shareText = state.lang === 'es'
+                    ? `Análisis de radar para ${state.couple.Nombres} (${state.category})`
+                    : `Radar analysis for ${state.couple.Nombres} (${state.category})`;
+            }
+
             const dataUrl = canvas.toDataURL('image/png');
             const blob = await (await fetch(dataUrl)).blob();
-            const file = new File([blob], `metro-radar-${state.couple.Nº}.png`, { type: 'image/png' });
+            const file = new File([blob], filename, { type: 'image/png' });
 
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 try {
                     await navigator.share({
                         files: [file],
                         title: 'METRO RADAR Analysis',
-                        text: state.lang === 'es'
-                            ? `Análisis de radar para ${state.couple.Nombres} (${state.category})`
-                            : `Radar analysis for ${state.couple.Nombres} (${state.category})`
+                        text: shareText
                     });
                 } catch (err) {
                     if (err.name !== 'AbortError') console.error('Error sharing file:', err);
                 }
             } else {
                 const link = document.createElement('a');
-                link.download = `metro-radar-${state.couple.Nº}.png`;
+                link.download = filename;
                 link.href = dataUrl;
                 link.click();
             }
