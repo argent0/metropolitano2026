@@ -74,7 +74,10 @@
     <!-- Sticky Header -->
     <header class="sticky top-0 z-50 glass px-4 py-3 flex justify-between items-center shadow-2xl">
         <div class="flex flex-col">
-            <span class="text-rose-600 font-bold text-lg tracking-tighter leading-none neon-text-rose">METRO RADAR</span>
+            <div class="flex items-center gap-2">
+                <span class="text-rose-600 font-bold text-lg tracking-tighter leading-none neon-text-rose">METRO RADAR</span>
+                <span id="round-badge" class="text-[8px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest hidden"></span>
+            </div>
             <div class="h-0.5 w-8 bg-amber-500 mt-0.5 shadow-[0_0_8px_rgba(251,191,36,0.6)]"></div>
         </div>
         <button id="category-trigger" class="flex-1 px-4 text-center truncate font-bold text-white text-sm">
@@ -89,6 +92,14 @@
             </button>
         </div>
     </header>
+
+    <!-- Round Selector -->
+    <div class="px-4 pt-4">
+        <div id="round-selector" class="flex bg-zinc-900/80 p-1 rounded-2xl border border-white/5">
+            <button id="round-semifinals" class="flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500">SEMIFINALS</button>
+            <button id="round-finals" class="flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 text-zinc-500">FINALS</button>
+        </div>
+    </div>
 
     <!-- Category Tabs -->
     <div id="category-tabs" class="flex overflow-x-auto no-scrollbar gap-2 px-4 py-3 sticky top-[52px] z-40 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/5">
@@ -241,6 +252,8 @@
         const TRANSLATIONS = {
             en: {
                 loading: "Loading...",
+                semifinals: "SEMIFINALS",
+                finals: "FINALES",
                 selected_couple: "Selected Couple",
                 final_average: "Final Average",
                 change_couple: "CHANGE COUPLE",
@@ -304,6 +317,8 @@
             },
             es: {
                 loading: "Cargando...",
+                semifinals: "SEMIFINALES",
+                finals: "FINALES",
                 selected_couple: "Pareja Seleccionada",
                 final_average: "Promedio Final",
                 change_couple: "CAMBIAR PAREJA",
@@ -368,9 +383,17 @@
         };
 
         // State
-        let data = [];
+        const dataStore = {
+            semifinals: null,
+            finals: null,
+            getCurrentData() {
+                return this[state.round];
+            }
+        };
+
         let state = {
             lang: navigator.language.startsWith('es') ? 'es' : 'en',
+            round: 'finals', // semifinals | finals
             category: "TANGO DE PISTA ADULT",
             couple: null,
             benchmark: 'mean', // mean, min, max
@@ -397,6 +420,9 @@
         // Dom Elements
         const currentCategoryEl = document.getElementById('current-category-name');
         const categoryTabsEl = document.getElementById('category-tabs');
+        const roundSemifinalsBtn = document.getElementById('round-semifinals');
+        const roundFinalsBtn = document.getElementById('round-finals');
+        const roundBadgeEl = document.getElementById('round-badge');
         const coupleNumberEl = document.getElementById('couple-number');
         const coupleNamesEl = document.getElementById('couple-names');
         const couplePromedioEl = document.getElementById('couple-promedio');
@@ -424,10 +450,16 @@
             applyTranslations();
 
             try {
-                const response = await fetch('./metropolitano_semifinal_clean.json');
-                data = await response.json();
+                const [semiRes, finalRes] = await Promise.all([
+                    fetch('./metropolitano_semifinal_clean.json'),
+                    fetch('./metropolitano_final_clean.json')
+                ]);
+                
+                dataStore.semifinals = await semiRes.json();
+                dataStore.finals = await finalRes.json();
                 
                 loadFromURL();
+                updateRoundUI();
                 renderCategoryTabs();
                 selectCategory(state.category, true);
                 
@@ -474,6 +506,9 @@
             tabJudgesBtn.onclick = () => switchTab('judges');
             tabBiasBtn.onclick = () => switchTab('bias');
             
+            roundSemifinalsBtn.onclick = () => switchRound('semifinals');
+            roundFinalsBtn.onclick = () => switchRound('finals');
+
             document.getElementById('change-couple-btn').onclick = openCoupleSelector;
             document.getElementById('compare-btn').onclick = openMultiCompareModal;
             document.getElementById('category-trigger').onclick = openCategorySelector;
@@ -498,9 +533,46 @@
             };
         }
 
+        function switchRound(round) {
+            if (state.round === round) return;
+            state.round = round;
+            
+            const currentData = dataStore.getCurrentData();
+            // Default category for the round
+            state.category = round === 'finals' ? "TANGO DE PISTA ADULT" : currentData[0].category;
+            
+            // If default category not found in currentData, pick first one
+            if (!currentData.find(c => c.category === state.category)) {
+                state.category = currentData[0].category;
+            }
+
+            state.selectedCouples = [];
+            state.comparisonMode = null;
+            state.couple = null; // force re-selection of top couple
+
+            updateRoundUI();
+            renderCategoryTabs();
+            selectCategory(state.category);
+        }
+
+        function updateRoundUI() {
+            const isSemi = state.round === 'semifinals';
+            const isFinal = state.round === 'finals';
+
+            roundSemifinalsBtn.innerText = t('semifinals');
+            roundFinalsBtn.innerText = t('finals');
+
+            roundSemifinalsBtn.className = `flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 ${isSemi ? 'bg-zinc-100 text-black shadow-lg' : 'text-zinc-500'}`;
+            roundFinalsBtn.className = `flex-1 py-3 text-xs font-black rounded-xl transition-all duration-300 ${isFinal ? 'bg-amber-500 text-black shadow-lg shadow-amber-900/20' : 'text-zinc-500'}`;
+
+            roundBadgeEl.innerText = t(state.round);
+            roundBadgeEl.className = `text-[8px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest ${isFinal ? 'bg-amber-500 text-black' : 'bg-zinc-700 text-zinc-300'}`;
+            roundBadgeEl.classList.remove('hidden');
+        }
+
         function renderCategoryTabs() {
             categoryTabsEl.innerHTML = '';
-            data.forEach(cat => {
+            dataStore.getCurrentData().forEach(cat => {
                 const pill = document.createElement('button');
                 pill.className = `whitespace-nowrap px-6 py-2.5 rounded-full text-[10px] font-black transition-all duration-300 tracking-wider ${
                     cat.category === state.category 
@@ -529,7 +601,7 @@
             
             computeBenchmarks(catName);
             
-            const catData = data.find(c => c.category === catName);
+            const catData = dataStore.getCurrentData().find(c => c.category === catName);
             const judges = Object.keys(state.benchmarks);
             state.biasData = computeJudgeBias(catData.scores, judges);
             
@@ -544,7 +616,7 @@
         }
 
         function computeBenchmarks(catName) {
-            const catData = data.find(c => c.category === catName);
+            const catData = dataStore.getCurrentData().find(c => c.category === catName);
             
             const judgesSet = new Set();
             catData.scores.forEach(c => {
@@ -772,7 +844,7 @@
 
         // Comparison Logic
         function openMultiCompareModal() {
-            const catData = data.find(c => c.category === state.category);
+            const catData = dataStore.getCurrentData().find(c => c.category === state.category);
             const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
             
             let tempSelection = [...state.selectedCouples];
@@ -1207,6 +1279,7 @@
         // URL Sync
         function updateURL() {
             const params = new URLSearchParams(window.location.search);
+            params.set('round', state.round);
             params.set('cat', state.category);
             
             if (state.selectedCouples.length >= 2) {
@@ -1222,15 +1295,25 @@
 
         function loadFromURL() {
             const params = new URLSearchParams(window.location.search);
+            const round = params.get('round');
             const cat = params.get('cat');
             const num = parseInt(params.get('n'));
             const couplesParam = params.get('couples');
             
-            if (cat && data.find(c => c.category === cat)) {
+            if (round === 'semifinals' || round === 'finals') {
+                state.round = round;
+            }
+
+            const currentData = dataStore.getCurrentData();
+            if (cat && currentData && currentData.find(c => c.category === cat)) {
                 state.category = cat;
+            } else if (state.round === 'finals') {
+                state.category = "TANGO DE PISTA ADULT";
+            } else if (currentData && currentData.length > 0) {
+                state.category = currentData[0].category;
             }
             
-            const catData = data.find(c => c.category === state.category);
+            const catData = currentData ? currentData.find(c => c.category === state.category) : null;
             if (catData) {
                 if (couplesParam) {
                     const nums = couplesParam.split(',').map(n => parseInt(n));
@@ -1812,7 +1895,7 @@
         }
 
         function openCoupleSelector() {
-            const catData = data.find(c => c.category === state.category);
+            const catData = dataStore.getCurrentData().find(c => c.category === state.category);
             const couples = [...catData.scores].sort((a, b) => b.PROMEDIO - a.PROMEDIO);
             
             let html = `
@@ -1865,7 +1948,7 @@
         }
 
         window.selectCoupleByNumber = (num) => {
-            const catData = data.find(c => c.category === state.category);
+            const catData = dataStore.getCurrentData().find(c => c.category === state.category);
             state.couple = catData.scores.find(c => c.Nº === num);
             updateUI();
             closeModal();
@@ -1875,7 +1958,7 @@
             let html = `
                 <h3 class="text-2xl font-black text-white mb-8 tracking-tight">${t('select_category')}</h3>
                 <div class="space-y-3 pb-8">
-                    ${data.map(cat => `
+                    ${dataStore.getCurrentData().map(cat => `
                         <button onclick="selectCategory('${cat.category}')" class="w-full p-6 glass-light rounded-2xl text-left font-black transition-all active:scale-95 ${cat.category === state.category ? 'bg-rose-600 text-white shadow-neon-rose' : 'text-zinc-400'}">
                             ${cat.category}
                         </button>
