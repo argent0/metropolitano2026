@@ -1,0 +1,862 @@
+[
+  {
+    "category": "TANGO DE PISTA SENIOR",
+    "scores": [
+      {
+        "Nº": 140,
+        "Nombres": "Pilatti - Romero",
+        "scores": {
+          "DE LA ROSA": 9.83,
+          "HOEFFNER": 9.99,
+          "CANCELA": 9.7,
+          "BALMACEDA": 9.22,
+          "RODRIGUEZ": 9.95,
+          "DE LA CRUZ": 9.33
+        },
+        "PUNTAJE": 10,
+        "PROMEDIO": 68.02
+      },
+      {
+        "Nº": 148,
+        "Nombres": "Di Francisco - Encina",
+        "scores": {
+          "DE LA ROSA": 9.5,
+          "HOEFFNER": 9.95,
+          "CANCELA": 8.35,
+          "BALMACEDA": 9.8,
+          "RODRIGUEZ": 9.9,
+          "DE LA CRUZ": 9.93
+        },
+        "PUNTAJE": 8.63,
+        "PROMEDIO": 66.06
+      },
+      {
+        "Nº": 144,
+        "Nombres": "Sottile - Martin",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.9,
+          "CANCELA": 9.5,
+          "BALMACEDA": 9,
+          "RODRIGUEZ": 9.65,
+          "DE LA CRUZ": 8.75
+        },
+        "PUNTAJE": 9.69,
+        "PROMEDIO": 65.59
+      },
+      {
+        "Nº": 141,
+        "Nombres": "Martinez - Orso",
+        "scores": {
+          "DE LA ROSA": 9.5,
+          "HOEFFNER": 9.65,
+          "CANCELA": 8.7,
+          "BALMACEDA": 9.44,
+          "RODRIGUEZ": 9.3,
+          "DE LA CRUZ": 8.41
+        },
+        "PUNTAJE": 9.75,
+        "PROMEDIO": 64.75
+      },
+      {
+        "Nº": 143,
+        "Nombres": "Del Valle - Montes de\nOca",
+        "scores": {
+          "DE LA ROSA": 9.35,
+          "HOEFFNER": 9.8,
+          "CANCELA": 8.8,
+          "BALMACEDA": 8.9,
+          "RODRIGUEZ": 8.45,
+          "DE LA CRUZ": 9.48
+        },
+        "PUNTAJE": 9.78,
+        "PROMEDIO": 64.56
+      },
+      {
+        "Nº": 145,
+        "Nombres": "Terella - Garcia",
+        "scores": {
+          "DE LA ROSA": 8.95,
+          "HOEFFNER": 9.75,
+          "CANCELA": 9.65,
+          "BALMACEDA": null,
+          "RODRIGUEZ": 8.5,
+          "DE LA CRUZ": 9.01
+        },
+        "PUNTAJE": null,
+        "PROMEDIO": 45.86
+      },
+      {
+        "Nº": 147,
+        "Nombres": "Salinas - Lozano",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.65,
+          "CANCELA": 8.2,
+          "BALMACEDA": 9.26,
+          "RODRIGUEZ": 9.87,
+          "DE LA CRUZ": 9.16
+        },
+        "PUNTAJE": 8.6,
+        "PROMEDIO": 63.84
+      },
+      {
+        "Nº": 146,
+        "Nombres": "Tateossian - Pouchulu",
+        "scores": {
+          "DE LA ROSA": 8.79,
+          "HOEFFNER": 9.5,
+          "CANCELA": 8.1,
+          "BALMACEDA": 9.25,
+          "RODRIGUEZ": 9.85,
+          "DE LA CRUZ": 9.57
+        },
+        "PUNTAJE": 8.5,
+        "PROMEDIO": 63.56
+      },
+      {
+        "Nº": 142,
+        "Nombres": "Fassio - Barrios",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.6,
+          "CANCELA": 8.4,
+          "BALMACEDA": 9.1,
+          "RODRIGUEZ": 8.9,
+          "DE LA CRUZ": 8.55
+        },
+        "PUNTAJE": 9.8,
+        "PROMEDIO": 63.35
+      },
+      {
+        "Nº": 149,
+        "Nombres": "Rebolini - Guerrieri",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.65,
+          "CANCELA": 8.15,
+          "BALMACEDA": 9.4,
+          "RODRIGUEZ": 8.65,
+          "DE LA CRUZ": 8.3
+        },
+        "PUNTAJE": 8.65,
+        "PROMEDIO": 61.8
+      }
+    ]
+  },
+  {
+    "category": "TANGO DE PISTA ADULT",
+    "scores": [
+      {
+        "Nº": 151,
+        "Nombres": "Figueroa - Gutierrez",
+        "scores": {
+          "DE LA ROSA": 9.8,
+          "HOEFFNER": 9.99,
+          "CANCELA": 9.65,
+          "BALMACEDA": 9.45,
+          "RODRIGUEZ": 9.87,
+          "DE LA CRUZ": 9.38
+        },
+        "PUNTAJE": 9.5,
+        "PROMEDIO": 67.64
+      },
+      {
+        "Nº": 154,
+        "Nombres": "Kaliszuk - Braida",
+        "scores": {
+          "DE LA ROSA": 9.85,
+          "HOEFFNER": 9.9,
+          "CANCELA": 9.45,
+          "BALMACEDA": 9.1,
+          "RODRIGUEZ": 9.9,
+          "DE LA CRUZ": 9.38
+        },
+        "PUNTAJE": 9.8,
+        "PROMEDIO": 67.38
+      },
+      {
+        "Nº": 157,
+        "Nombres": "Rosales - Rosales",
+        "scores": {
+          "DE LA ROSA": 9.7,
+          "HOEFFNER": 9.7,
+          "CANCELA": 9.55,
+          "BALMACEDA": 9.3,
+          "RODRIGUEZ": 9.83,
+          "DE LA CRUZ": 9.35
+        },
+        "PUNTAJE": 9.85,
+        "PROMEDIO": 67.28
+      },
+      {
+        "Nº": 150,
+        "Nombres": "Teves - Videla",
+        "scores": {
+          "DE LA ROSA": 9.35,
+          "HOEFFNER": 9.85,
+          "CANCELA": 8.95,
+          "BALMACEDA": 9.5,
+          "RODRIGUEZ": 9.7,
+          "DE LA CRUZ": 9.86
+        },
+        "PUNTAJE": 10,
+        "PROMEDIO": 67.21
+      },
+      {
+        "Nº": 156,
+        "Nombres": "Castiñeiras - Cabral",
+        "scores": {
+          "DE LA ROSA": 9.65,
+          "HOEFFNER": 9.7,
+          "CANCELA": 9.2,
+          "BALMACEDA": 9.7,
+          "RODRIGUEZ": 9.75,
+          "DE LA CRUZ": 9.36
+        },
+        "PUNTAJE": 9.72,
+        "PROMEDIO": 67.08
+      },
+      {
+        "Nº": 153,
+        "Nombres": "Alfaro - Manzanares",
+        "scores": {
+          "DE LA ROSA": 9.35,
+          "HOEFFNER": 9.85,
+          "CANCELA": 9.6,
+          "BALMACEDA": 9.55,
+          "RODRIGUEZ": 9.45,
+          "DE LA CRUZ": 9.36
+        },
+        "PUNTAJE": 9.85,
+        "PROMEDIO": 67.01
+      },
+      {
+        "Nº": 155,
+        "Nombres": "Juanbelz - Barrionuevo",
+        "scores": {
+          "DE LA ROSA": 9.65,
+          "HOEFFNER": 9.95,
+          "CANCELA": 9.35,
+          "BALMACEDA": 9.3,
+          "RODRIGUEZ": 9.45,
+          "DE LA CRUZ": 9.5
+        },
+        "PUNTAJE": 9.7,
+        "PROMEDIO": 66.9
+      },
+      {
+        "Nº": 159,
+        "Nombres": "Aragon - Samaniego",
+        "scores": {
+          "DE LA ROSA": 9.85,
+          "HOEFFNER": 9.75,
+          "CANCELA": 8.8,
+          "BALMACEDA": null,
+          "RODRIGUEZ": 9.68,
+          "DE LA CRUZ": 9.2
+        },
+        "PUNTAJE": 9,
+        "PROMEDIO": 56.28
+      },
+      {
+        "Nº": 158,
+        "Nombres": "Irrazabal - Torres",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": null,
+          "CANCELA": 8.75,
+          "BALMACEDA": 9.33,
+          "RODRIGUEZ": 9.95,
+          "DE LA CRUZ": 9.96
+        },
+        "PUNTAJE": 9.02,
+        "PROMEDIO": 56.11
+      },
+      {
+        "Nº": 152,
+        "Nombres": "Aguilar - Deslarmes",
+        "scores": {
+          "DE LA ROSA": 8.1,
+          "HOEFFNER": 9.8,
+          "CANCELA": 8.85,
+          "BALMACEDA": null,
+          "RODRIGUEZ": 9.85,
+          "DE LA CRUZ": null
+        },
+        "PUNTAJE": 9.7,
+        "PROMEDIO": 46.3
+      }
+    ]
+  },
+  {
+    "category": "SEMIFINAL MILONGA",
+    "scores": [
+      {
+        "Nº": 171,
+        "Nombres": "Petchatnikova - Benitez",
+        "scores": {
+          "DE LA ROSA": 9.25,
+          "HOEFFNER": 9.9,
+          "CANCELA": 9.4,
+          "BALMACEDA": 9.9,
+          "RODRIGUEZ": 9.7,
+          "DE LA CRUZ": 9.4
+        },
+        "PUNTAJE": 9.7,
+        "PROMEDIO": 67.25
+      },
+      {
+        "Nº": 177,
+        "Nombres": "Jardim - Da Silva",
+        "scores": {
+          "DE LA ROSA": 9.6,
+          "HOEFFNER": 9.7,
+          "CANCELA": 9.3,
+          "BALMACEDA": 9.3,
+          "RODRIGUEZ": 9.75,
+          "DE LA CRUZ": 9.83
+        },
+        "PUNTAJE": 9.48,
+        "PROMEDIO": 66.96
+      },
+      {
+        "Nº": 173,
+        "Nombres": "Pesci - Martin",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.9,
+          "CANCELA": 9.55,
+          "BALMACEDA": 9.4,
+          "RODRIGUEZ": 9.87,
+          "DE LA CRUZ": 9.8
+        },
+        "PUNTAJE": 9.38,
+        "PROMEDIO": 66.9
+      },
+      {
+        "Nº": 170,
+        "Nombres": "Seminskaia - Arakelian",
+        "scores": {
+          "DE LA ROSA": null,
+          "HOEFFNER": 9.95,
+          "CANCELA": 8.95,
+          "BALMACEDA": 9.15,
+          "RODRIGUEZ": 9.98,
+          "DE LA CRUZ": 9.88
+        },
+        "PUNTAJE": 9.4,
+        "PROMEDIO": 57.31
+      },
+      {
+        "Nº": 176,
+        "Nombres": "Alzaran - Galvan",
+        "scores": {
+          "DE LA ROSA": 9.2,
+          "HOEFFNER": 9.75,
+          "CANCELA": 9.45,
+          "BALMACEDA": 9.6,
+          "RODRIGUEZ": 9.77,
+          "DE LA CRUZ": 9.38
+        },
+        "PUNTAJE": 9.36,
+        "PROMEDIO": 66.51
+      },
+      {
+        "Nº": 178,
+        "Nombres": "Tokian - Franco",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.85,
+          "CANCELA": 8.9,
+          "BALMACEDA": null,
+          "RODRIGUEZ": 9.5,
+          "DE LA CRUZ": 9.83
+        },
+        "PUNTAJE": 9.6,
+        "PROMEDIO": 56.78
+      },
+      {
+        "Nº": 172,
+        "Nombres": "Tsybrova - Bobkov",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.8,
+          "CANCELA": 8.85,
+          "BALMACEDA": 9.7,
+          "RODRIGUEZ": 9.35,
+          "DE LA CRUZ": 9.42
+        },
+        "PUNTAJE": 9.96,
+        "PROMEDIO": 66.08
+      },
+      {
+        "Nº": 175,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.99,
+          "CANCELA": 8.8,
+          "BALMACEDA": 9.44,
+          "RODRIGUEZ": 9.95,
+          "DE LA CRUZ": 9.45
+        },
+        "PUNTAJE": 9.35,
+        "PROMEDIO": 66.08
+      },
+      {
+        "Nº": 174,
+        "Nombres": "Atepaeva - Takhirov",
+        "scores": {
+          "DE LA ROSA": 9.55,
+          "HOEFFNER": 9.7,
+          "CANCELA": 8.75,
+          "BALMACEDA": 9.3,
+          "RODRIGUEZ": 9.45,
+          "DE LA CRUZ": 9.15
+        },
+        "PUNTAJE": 9.6,
+        "PROMEDIO": 65.5
+      },
+      {
+        "Nº": 179,
+        "Nombres": "Cantarini - Perez",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.65,
+          "CANCELA": 9.35,
+          "BALMACEDA": 9.1,
+          "RODRIGUEZ": 9.6,
+          "DE LA CRUZ": 9.12
+        },
+        "PUNTAJE": 8.8,
+        "PROMEDIO": 64.62
+      },
+      {
+        "Nº": 161,
+        "Nombres": "Corsisky - Palleyro",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.95,
+          "CANCELA": 9.4,
+          "BALMACEDA": 9.55,
+          "RODRIGUEZ": 9.95,
+          "DE LA CRUZ": 9.85
+        },
+        "PUNTAJE": 9.96,
+        "PROMEDIO": 67.76
+      },
+      {
+        "Nº": 164,
+        "Nombres": "Ruiz - Couto",
+        "scores": {
+          "DE LA ROSA": 9.7,
+          "HOEFFNER": 9.45,
+          "CANCELA": 9.15,
+          "BALMACEDA": 9.38,
+          "RODRIGUEZ": 9.98,
+          "DE LA CRUZ": 9.5
+        },
+        "PUNTAJE": 9.97,
+        "PROMEDIO": 67.13
+      },
+      {
+        "Nº": 166,
+        "Nombres": "Pergiacomi - Durso",
+        "scores": {
+          "DE LA ROSA": 9.8,
+          "HOEFFNER": 9.5,
+          "CANCELA": 8.95,
+          "BALMACEDA": 9.75,
+          "RODRIGUEZ": 9.87,
+          "DE LA CRUZ": 9.58
+        },
+        "PUNTAJE": 9.2,
+        "PROMEDIO": 66.65
+      },
+      {
+        "Nº": 163,
+        "Nombres": "Correa - Sassi",
+        "scores": {
+          "DE LA ROSA": 9.75,
+          "HOEFFNER": 9.9,
+          "CANCELA": 8.85,
+          "BALMACEDA": 9.47,
+          "RODRIGUEZ": 9.55,
+          "DE LA CRUZ": 9.62
+        },
+        "PUNTAJE": 9.5,
+        "PROMEDIO": 66.64
+      },
+      {
+        "Nº": 162,
+        "Nombres": "Poggi - Tejeda",
+        "scores": {
+          "DE LA ROSA": 9.65,
+          "HOEFFNER": 9.85,
+          "CANCELA": 8.7,
+          "BALMACEDA": 9.48,
+          "RODRIGUEZ": 9.9,
+          "DE LA CRUZ": 9.75
+        },
+        "PUNTAJE": 9.3,
+        "PROMEDIO": 66.63
+      },
+      {
+        "Nº": 165,
+        "Nombres": "Del Bosque - Abdala",
+        "scores": {
+          "DE LA ROSA": 9.5,
+          "HOEFFNER": 9.99,
+          "CANCELA": 8.9,
+          "BALMACEDA": 9.52,
+          "RODRIGUEZ": 9.6,
+          "DE LA CRUZ": 9.4
+        },
+        "PUNTAJE": 9.7,
+        "PROMEDIO": 66.61
+      },
+      {
+        "Nº": 168,
+        "Nombres": "Martynova - Balan",
+        "scores": {
+          "DE LA ROSA": null,
+          "HOEFFNER": 9.6,
+          "CANCELA": 9.1,
+          "BALMACEDA": 9.35,
+          "RODRIGUEZ": 9.4,
+          "DE LA CRUZ": 9.62
+        },
+        "PUNTAJE": 9.1,
+        "PROMEDIO": 56.17
+      },
+      {
+        "Nº": 167,
+        "Nombres": "Sosa - Bologna",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.85,
+          "CANCELA": 8.6,
+          "BALMACEDA": 9.4,
+          "RODRIGUEZ": 9.45,
+          "DE LA CRUZ": 9.73
+        },
+        "PUNTAJE": 9.15,
+        "PROMEDIO": 65.28
+      },
+      {
+        "Nº": 160,
+        "Nombres": "Mashkovich - Mashkovich",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.45,
+          "CANCELA": 9.3,
+          "BALMACEDA": 9.3,
+          "RODRIGUEZ": 9.5,
+          "DE LA CRUZ": 9.2
+        },
+        "PUNTAJE": 9.5,
+        "PROMEDIO": 65.25
+      },
+      {
+        "Nº": 169,
+        "Nombres": "Gamietea - Sasso",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.8,
+          "CANCELA": 8.8,
+          "BALMACEDA": 9.4,
+          "RODRIGUEZ": 9.75,
+          "DE LA CRUZ": 9.45
+        },
+        "PUNTAJE": 9,
+        "PROMEDIO": 65.2
+      },
+      {
+        "Nº": 178,
+        "Nombres": "Tokian - Franco",
+        "scores": {
+          "DE LA ROSA": 9.95,
+          "HOEFFNER": 9.9,
+          "CANCELA": 9.7,
+          "BALMACEDA": null,
+          "RODRIGUEZ": 9.7,
+          "DE LA CRUZ": 9.69
+        },
+        "PUNTAJE": 9.8,
+        "PROMEDIO": 58.74
+      },
+      {
+        "Nº": 154,
+        "Nombres": "Kaliszuk - Braida",
+        "scores": {
+          "DE LA ROSA": 9.8,
+          "HOEFFNER": 9.99,
+          "CANCELA": 9.2,
+          "BALMACEDA": 9.5,
+          "RODRIGUEZ": 9.93,
+          "DE LA CRUZ": 9.73
+        },
+        "PUNTAJE": 9.59,
+        "PROMEDIO": 67.74
+      },
+      {
+        "Nº": 175,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "DE LA ROSA": 9.35,
+          "HOEFFNER": 9.8,
+          "CANCELA": 9.65,
+          "BALMACEDA": 9.35,
+          "RODRIGUEZ": 9.95,
+          "DE LA CRUZ": 9.86
+        },
+        "PUNTAJE": 9.7,
+        "PROMEDIO": 67.66
+      },
+      {
+        "Nº": 151,
+        "Nombres": "Figueroa - Gutierrez",
+        "scores": {
+          "DE LA ROSA": 9.7,
+          "HOEFFNER": 9.85,
+          "CANCELA": 9.35,
+          "BALMACEDA": 9.62,
+          "RODRIGUEZ": 9.75,
+          "DE LA CRUZ": 9.44
+        },
+        "PUNTAJE": 9.65,
+        "PROMEDIO": 67.36
+      },
+      {
+        "Nº": 155,
+        "Nombres": "Juanbelz - Barrionuevo",
+        "scores": {
+          "DE LA ROSA": 9.8,
+          "HOEFFNER": 9.8,
+          "CANCELA": 9.25,
+          "BALMACEDA": 9.69,
+          "RODRIGUEZ": 9.5,
+          "DE LA CRUZ": 9.68
+        },
+        "PUNTAJE": 9.6,
+        "PROMEDIO": 67.32
+      },
+      {
+        "Nº": 180,
+        "Nombres": "Marquez - Silva",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.75,
+          "CANCELA": 9.45,
+          "BALMACEDA": 9.2,
+          "RODRIGUEZ": 9.8,
+          "DE LA CRUZ": 9.8
+        },
+        "PUNTAJE": "Abtencion",
+        "PROMEDIO": 57.0
+      },
+      {
+        "Nº": 156,
+        "Nombres": "Castiñeiras - Cabral",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.7,
+          "CANCELA": 9.1,
+          "BALMACEDA": 9.7,
+          "RODRIGUEZ": 9.9,
+          "DE LA CRUZ": 9.25
+        },
+        "PUNTAJE": 9.61,
+        "PROMEDIO": 66.26
+      },
+      {
+        "Nº": 181,
+        "Nombres": "Colodrero - Cartagena",
+        "scores": {
+          "DE LA ROSA": 9.5,
+          "HOEFFNER": 9.85,
+          "CANCELA": 8.7,
+          "BALMACEDA": 9.25,
+          "RODRIGUEZ": 9.45,
+          "DE LA CRUZ": 9.49
+        },
+        "PUNTAJE": 10,
+        "PROMEDIO": 66.24
+      },
+      {
+        "Nº": 140,
+        "Nombres": "Pilatti - Romero",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.65,
+          "CANCELA": 8.6,
+          "BALMACEDA": 9.6,
+          "RODRIGUEZ": 9.98,
+          "DE LA CRUZ": 9.38
+        },
+        "PUNTAJE": 9.59,
+        "PROMEDIO": 65.8
+      },
+      {
+        "Nº": 182,
+        "Nombres": "Parra - Risso",
+        "scores": {
+          "DE LA ROSA": 9.1,
+          "HOEFFNER": 9.65,
+          "CANCELA": 8.95,
+          "BALMACEDA": 9.68,
+          "RODRIGUEZ": 9.35,
+          "DE LA CRUZ": 9.32
+        },
+        "PUNTAJE": 9.4,
+        "PROMEDIO": 65.45
+      }
+    ]
+  },
+  {
+    "category": "SEMIFINAL VALS",
+    "scores": [
+      {
+        "Nº": 151,
+        "Nombres": "Figueroa - Gutierrez",
+        "scores": {
+          "DE LA ROSA": 9.85,
+          "HOEFFNER": 9.99,
+          "CANCELA": 9.35,
+          "BALMACEDA": 9.65,
+          "RODRIGUEZ": 9.78,
+          "DE LA CRUZ": 9.79
+        },
+        "PUNTAJE": 9.9,
+        "PROMEDIO": 68.31
+      },
+      {
+        "Nº": 175,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "DE LA ROSA": 9.8,
+          "HOEFFNER": 9.8,
+          "CANCELA": 9.3,
+          "BALMACEDA": 9.7,
+          "RODRIGUEZ": 9.85,
+          "DE LA CRUZ": 9.79
+        },
+        "PUNTAJE": 9.38,
+        "PROMEDIO": 67.62
+      },
+      {
+        "Nº": 178,
+        "Nombres": "Tokian - Franco",
+        "scores": {
+          "DE LA ROSA": 9.05,
+          "HOEFFNER": 9.75,
+          "CANCELA": 9.45,
+          "BALMACEDA": null,
+          "RODRIGUEZ": 9.9,
+          "DE LA CRUZ": 9.56
+        },
+        "PUNTAJE": 9.95,
+        "PROMEDIO": 57.66
+      },
+      {
+        "Nº": 157,
+        "Nombres": "Rosales - Rosales",
+        "scores": {
+          "DE LA ROSA": 9.3,
+          "HOEFFNER": 9.7,
+          "CANCELA": 9.2,
+          "BALMACEDA": 9.35,
+          "RODRIGUEZ": 9.95,
+          "DE LA CRUZ": 9.75
+        },
+        "PUNTAJE": 9.86,
+        "PROMEDIO": 67.11
+      },
+      {
+        "Nº": 153,
+        "Nombres": "Alfaro - Manzanares",
+        "scores": {
+          "DE LA ROSA": 9.2,
+          "HOEFFNER": 9.95,
+          "CANCELA": 9.1,
+          "BALMACEDA": 9.28,
+          "RODRIGUEZ": 9.7,
+          "DE LA CRUZ": 9.89
+        },
+        "PUNTAJE": 9.85,
+        "PROMEDIO": 66.97
+      },
+      {
+        "Nº": 155,
+        "Nombres": "Juanbelz - Barrionuevo",
+        "scores": {
+          "DE LA ROSA": 9.4,
+          "HOEFFNER": 9.8,
+          "CANCELA": 9.25,
+          "BALMACEDA": 9.8,
+          "RODRIGUEZ": 9.5,
+          "DE LA CRUZ": 9.58
+        },
+        "PUNTAJE": 9.5,
+        "PROMEDIO": 66.83
+      },
+      {
+        "Nº": 158,
+        "Nombres": "Irrazabal - Torres",
+        "scores": {
+          "DE LA ROSA": 9.75,
+          "HOEFFNER": null,
+          "CANCELA": 8.85,
+          "BALMACEDA": 9.42,
+          "RODRIGUEZ": 9.93,
+          "DE LA CRUZ": 9.35
+        },
+        "PUNTAJE": 9.45,
+        "PROMEDIO": 56.75
+      },
+      {
+        "Nº": 150,
+        "Nombres": "Teves - Videla",
+        "scores": {
+          "DE LA ROSA": 9.05,
+          "HOEFFNER": 9.65,
+          "CANCELA": 8.8,
+          "BALMACEDA": 9.5,
+          "RODRIGUEZ": 9.89,
+          "DE LA CRUZ": 9.8
+        },
+        "PUNTAJE": 9.4,
+        "PROMEDIO": 66.09
+      },
+      {
+        "Nº": 180,
+        "Nombres": "Correa - Sassi",
+        "scores": {
+          "DE LA ROSA": 9,
+          "HOEFFNER": 9.75,
+          "CANCELA": 8.9,
+          "BALMACEDA": 9.43,
+          "RODRIGUEZ": 9.75,
+          "DE LA CRUZ": 9.25
+        },
+        "PUNTAJE": null,
+        "PROMEDIO": 56.08
+      },
+      {
+        "Nº": 163,
+        "Nombres": "Myszka - Mendoza",
+        "scores": {
+          "DE LA ROSA": 9.2,
+          "HOEFFNER": 9.5,
+          "CANCELA": 8.75,
+          "BALMACEDA": 9.5,
+          "RODRIGUEZ": 9.35,
+          "DE LA CRUZ": 9.18
+        },
+        "PUNTAJE": 9.35,
+        "PROMEDIO": 64.83
+      }
+    ]
+  }
+]
