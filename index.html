@@ -253,7 +253,7 @@
             en: {
                 loading: "Loading...",
                 semifinals: "SEMIFINALS",
-                finals: "FINALES",
+                finals: "FINALS",
                 selected_couple: "Selected Couple",
                 final_average: "Final Average",
                 change_couple: "CHANGE COUPLE",
@@ -313,7 +313,14 @@
                 vs_panel: "vs panel",
                 bias_analysis: "BIAS ANALYSIS",
                 bias_title: "Judge Bias Analysis",
-                bias_desc: "This analysis identifies couples that a judge scored unusually high (❤️ Loved) or unusually low (💣 Bombed) compared to their own scoring habits AND the rest of the panel.<br><br><span class='text-emerald-500 font-bold'>Loved:</span> Score is >1.8 standard deviations from judge's mean AND >0.8 points above panel average.<br><span class='text-orange-500 font-bold'>Bombed:</span> Score is <1.8 standard deviations from judge's mean AND >0.8 points below panel average."
+                bias_desc: "This analysis identifies couples that a judge scored unusually high (❤️ Loved) or unusually low (💣 Bombed) compared to their own scoring habits AND the rest of the panel.<br><br><span class='text-emerald-500 font-bold'>Loved:</span> Score is >1.8 standard deviations from judge's mean AND >0.8 points above panel average.<br><span class='text-orange-500 font-bold'>Bombed:</span> Score is <1.8 standard deviations from judge's mean AND >0.8 points below panel average.",
+                delta: "Delta",
+                no_results: "No results",
+                // Categories
+                "SEMIFINAL MILONGA": "MILONGA SEMIFINAL",
+                "SEMIFINAL VALS": "VALS SEMIFINAL",
+                "TANGO DE PISTA ADULT": "TANGO DE PISTA ADULT",
+                "TANGO DE PISTA SENIOR": "TANGO DE PISTA SENIOR"
             },
             es: {
                 loading: "Cargando...",
@@ -378,7 +385,14 @@
                 vs_panel: "vs panel",
                 bias_analysis: "ANÁLISIS DE SESGO",
                 bias_title: "Análisis de Sesgos del Jurado",
-                bias_desc: "Este análisis identifica parejas a las que un jurado calificó inusualmente alto (❤️ Loved) o inusualmente bajo (💣 Bombed) en comparación con sus propios hábitos de calificación Y con el resto del panel.<br><br><span class='text-emerald-500 font-bold'>Amadas:</span> Puntaje >1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por encima del promedio del panel.<br><span class='text-orange-500 font-bold'>Bombardeadas:</span> Puntaje <1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por debajo del promedio del panel."
+                bias_desc: "Este análisis identifica parejas a las que un jurado calificó inusualmente alto (❤️ Amadas) o inusualmente bajo (💣 Bombardeadas) en comparación con sus propios hábitos de calificación Y con el resto del panel.<br><br><span class='text-emerald-500 font-bold'>Amadas:</span> Puntaje >1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por encima del promedio del panel.<br><span class='text-orange-500 font-bold'>Bombardeadas:</span> Puntaje <1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por debajo del promedio del panel.",
+                delta: "Delta",
+                no_results: "Sin resultados",
+                // Categories
+                "SEMIFINAL MILONGA": "SEMIFINAL MILONGA",
+                "SEMIFINAL VALS": "SEMIFINAL VALS",
+                "TANGO DE PISTA ADULT": "TANGO DE PISTA ADULTOS",
+                "TANGO DE PISTA SENIOR": "TANGO DE PISTA SENIOR"
             }
         };
 
@@ -471,7 +485,7 @@
         }
 
         function applyTranslations() {
-            document.getElementById('current-category-name').innerText = t('loading');
+            document.getElementById('current-category-name').innerText = state.category ? t(state.category) : t('loading');
             document.querySelector('#couple-card p').innerHTML = `
                 <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
                 ${t('selected_couple')}
@@ -490,6 +504,9 @@
             document.getElementById('btn-overlay').innerText = t('overlay').toUpperCase();
             document.getElementById('btn-side-by-side').innerText = t('side_by_side').toUpperCase();
             document.getElementById('exit-comparison-btn').innerText = t('exit_comparison').toUpperCase();
+
+            document.getElementById('round-semifinals').innerText = t('semifinals');
+            document.getElementById('round-finals').innerText = t('finals');
 
             const benchButtons = document.querySelectorAll('#benchmark-chips button');
             benchButtons[0].innerText = t('mean');
@@ -579,28 +596,27 @@
                     ? 'bg-rose-600 text-white shadow-neon-rose scale-105' 
                     : 'bg-zinc-900 text-zinc-500 border border-white/5'
                 }`;
-                pill.innerText = cat.category;
+                pill.innerText = t(cat.category);
                 pill.onclick = () => {
                     if (state.comparisonMode) exitComparison();
                     selectCategory(cat.category);
                 };
                 categoryTabsEl.appendChild(pill);
-            });
-        }
+                });
+                }
 
-        function selectCategory(catName, skipCoupleSelection = false) {
-            const isNewCategory = state.category !== catName;
-            if (isNewCategory) {
+                function selectCategory(catName, skipCoupleSelection = false) {
+                const isNewCategory = state.category !== catName;
+                if (isNewCategory) {
                 state.selectedCouples = [];
                 state.comparisonMode = null;
                 comparisonBar.classList.add('hidden');
-            }
+                }
 
-            state.category = catName;
-            currentCategoryEl.innerText = catName;
-            
-            computeBenchmarks(catName);
-            
+                state.category = catName;
+                currentCategoryEl.innerText = t(catName);
+
+                computeBenchmarks(catName);            
             const catData = dataStore.getCurrentData().find(c => c.category === catName);
             const judges = Object.keys(state.benchmarks);
             state.biasData = computeJudgeBias(catData.scores, judges);
@@ -1334,12 +1350,12 @@
             if (state.selectedCouples.length >= 2) {
                 const names = state.selectedCouples.map(c => c.Nombres).join(' vs ');
                 text = state.lang === 'es'
-                    ? `¡Mirá la comparación de ${names} en ${state.category} en TANGO RADAR! 💃🕺`
-                    : `Check out the comparison between ${names} in ${state.category} at TANGO RADAR! 💃🕺`;
+                    ? `¡Mirá la comparación de ${names} en ${t(state.category)} en TANGO RADAR! 💃🕺`
+                    : `Check out the comparison between ${names} in ${t(state.category)} at TANGO RADAR! 💃🕺`;
             } else {
                 text = state.lang === 'es' 
-                    ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${state.category} en TANGO RADAR! 💃🕺`
-                    : `Check out the scores for ${state.couple.Nombres} in ${state.category} at TANGO RADAR! 💃🕺`;
+                    ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${t(state.category)} en TANGO RADAR! 💃🕺`
+                    : `Check out the scores for ${state.couple.Nombres} in ${t(state.category)} at TANGO RADAR! 💃🕺`;
             }
             const url = window.location.href;
 
@@ -1405,20 +1421,20 @@
                 canvas = radarCanvas;
                 filename = `tango-comparison-${state.selectedCouples.map(c => c.Nº).join('-')}.png`;
                 shareText = state.lang === 'es'
-                    ? `Comparativa de radar (${state.category})`
-                    : `Radar comparison (${state.category})`;
+                    ? `Comparativa de radar (${t(state.category)})`
+                    : `Radar comparison (${t(state.category)})`;
             } else if (state.comparisonMode === 'side-by-side') {
                 // In side-by-side, we might just share the first one or alert
                 // For now, let's just use the first canvas as a fallback or alert the user
                 canvas = document.getElementById('radar-multi-0');
                 filename = `tango-comparison-side-by-side.png`;
-                shareText = `Side-by-side comparison (${state.category})`;
+                shareText = `Side-by-side comparison (${t(state.category)})`;
             } else {
                 canvas = radarCanvas;
                 filename = `tango-radar-${state.couple.Nº}.png`;
                 shareText = state.lang === 'es'
-                    ? `Análisis de radar para ${state.couple.Nombres} (${state.category})`
-                    : `Radar analysis for ${state.couple.Nombres} (${state.category})`;
+                    ? `Análisis de radar para ${state.couple.Nombres} (${t(state.category)})`
+                    : `Radar analysis for ${state.couple.Nombres} (${t(state.category)})`;
             }
 
             const dataUrl = canvas.toDataURL('image/png');
@@ -1455,8 +1471,8 @@
                         files: [file],
                         title: `Judge ${judge} Scoring`,
                         text: state.lang === 'es'
-                            ? `Distribución de puntajes para ${judge} en ${state.category}`
-                            : `Scoring distribution for ${judge} in ${state.category}`
+                            ? `Distribución de puntajes para ${judge} en ${t(state.category)}`
+                            : `Scoring distribution for ${judge} in ${t(state.category)}`
                     });
                 } catch (err) {
                     if (err.name !== 'AbortError') console.error('Error sharing file:', err);
@@ -1824,7 +1840,7 @@
                                                 <span class="text-sm font-black text-emerald-500">${e.score.toFixed(1)}</span>
                                             </div>
                                             <div class="flex flex-col items-end border-l border-white/5 pl-4">
-                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">Delta</span>
+                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">${t('delta')}</span>
                                                 <span class="text-sm font-black text-emerald-600">+${e.delta.toFixed(2)}</span>
                                             </div>
                                         </div>
@@ -1855,7 +1871,7 @@
                                                 <span class="text-sm font-black text-orange-500">${e.score.toFixed(1)}</span>
                                             </div>
                                             <div class="flex flex-col items-end border-l border-white/5 pl-4">
-                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">Delta</span>
+                                                <span class="text-[8px] font-bold text-zinc-500 uppercase">${t('delta')}</span>
                                                 <span class="text-sm font-black text-orange-600">${e.delta.toFixed(2)}</span>
                                             </div>
                                         </div>
@@ -1924,7 +1940,7 @@
                         </button>
                     `).join('')}
                     <div id="search-empty" class="hidden py-12 text-center">
-                        <div class="text-zinc-700 font-black text-xs uppercase tracking-[0.3em]">No results</div>
+                        <div class="text-zinc-700 font-black text-xs uppercase tracking-[0.3em]">${t('no_results')}</div>
                     </div>
                 </div>
             `;
@@ -1960,7 +1976,7 @@
                 <div class="space-y-3 pb-8">
                     ${dataStore.getCurrentData().map(cat => `
                         <button onclick="selectCategory('${cat.category}')" class="w-full p-6 glass-light rounded-2xl text-left font-black transition-all active:scale-95 ${cat.category === state.category ? 'bg-rose-600 text-white shadow-neon-rose' : 'text-zinc-400'}">
-                            ${cat.category}
+                            ${t(cat.category)}
                         </button>
                     `).join('')}
                 </div>
@@ -2036,8 +2052,8 @@
                         <span class="text-[10px] font-black bg-rose-600/20 text-rose-500 px-3 py-1 rounded-full uppercase tracking-widest">${t('scoring_spread')}</span>
                     </div>
                 </div>
-                <p class="text-[9px] text-zinc-500 mb-8 uppercase font-black tracking-[0.2em]">${state.category}</p>
-                
+                <p class="text-[9px] text-zinc-500 mb-8 uppercase font-black tracking-[0.2em]">${t(state.category)}</p>
+
                 <div class="w-full mb-8 glass rounded-3xl p-4">
                     <div class="aspect-[1.5/1] w-full">
                         <canvas id="histogram-chart"></canvas>
