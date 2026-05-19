@@ -123,8 +123,9 @@
             
             <div class="flex items-end justify-between mt-6">
                 <div class="flex flex-col">
-                    <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-tighter">Promedio Final</span>
+                    <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-tighter" id="promedio-label">Final Average</span>
                     <span id="couple-promedio" class="text-4xl font-black text-amber-500 leading-none neon-text-amber">0.000</span>
+                    <div id="couple-rank-closeness" class="mt-2 flex items-center gap-2"></div>
                 </div>
                 <div class="flex gap-2">
                     <button id="share-couple-btn" class="bg-zinc-900 text-white p-3 rounded-full border border-white/10 active:scale-95 transition-transform" title="Share Couple">
@@ -143,6 +144,9 @@
                 <!-- populated by JS -->
             </div>
         </section>
+
+        <!-- Dancer Insights Card -->
+        <div id="insights-container" class="mt-4"></div>
 
         <!-- Active Comparison Bar (Sticky) -->
         <div id="comparison-bar" class="hidden sticky top-[108px] z-30 glass border-y border-white/5 px-4 py-3 flex flex-col gap-3 shadow-xl">
@@ -316,6 +320,26 @@
                 bias_desc: "This analysis identifies couples that a judge scored unusually high (❤️ Loved) or unusually low (💣 Bombed) compared to their own scoring habits AND the rest of the panel.<br><br><span class='text-emerald-500 font-bold'>Loved:</span> Score is >1.8 standard deviations from judge's mean AND >0.8 points above panel average.<br><span class='text-orange-500 font-bold'>Bombed:</span> Score is <1.8 standard deviations from judge's mean AND >0.8 points below panel average.",
                 delta: "Delta",
                 no_results: "No results",
+                // Your Story
+                yourStory: "Your Story",
+                rankOf: "out of",
+                pointsBehind: "points behind",
+                pointsToLeader: "behind leader",
+                pointsToCutoff: "to cutoff",
+                consistencyVery: "Very consistent",
+                consistencyFairly: "Fairly consistent",
+                consistencyPolarizing: "Polarizing",
+                verdictOneBomb: "One judge really hurt you. Without that score you would jump to approximately {rank}.",
+                verdictPolarizing: "Polarizing performance – some judges loved it, others didn't connect.",
+                verdictStrong: "Strong, clean performance – judges agreed across the board.",
+                verdictStyle: "The panel didn't connect with this style.",
+                verdictDefault: "A solid performance with some variation in judge opinions.",
+                whatIfRemoveWorst: "Remove my worst judge",
+                whatIfReplaceAverage: "Replace bombed score with panel average",
+                simulatedRank: "Simulated rank",
+                undo: "Undo",
+                lovedBy: "Loved by",
+                bombedBy: "Bombed by",
                 // Categories
                 "SEMIFINAL MILONGA": "MILONGA SEMIFINAL",
                 "SEMIFINAL VALS": "VALS SEMIFINAL",
@@ -388,6 +412,26 @@
                 bias_desc: "Este análisis identifica parejas a las que un jurado calificó inusualmente alto (❤️ Amadas) o inusualmente bajo (💣 Bombardeadas) en comparación con sus propios hábitos de calificación Y con el resto del panel.<br><br><span class='text-emerald-500 font-bold'>Amadas:</span> Puntaje >1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por encima del promedio del panel.<br><span class='text-orange-500 font-bold'>Bombardeadas:</span> Puntaje <1.8 desviaciones estándar del promedio del jurado Y >0.8 puntos por debajo del promedio del panel.",
                 delta: "Delta",
                 no_results: "Sin resultados",
+                // Your Story
+                yourStory: "Tu Historia",
+                rankOf: "de",
+                pointsBehind: "puntos detrás",
+                pointsToLeader: "del líder",
+                pointsToCutoff: "del corte",
+                consistencyVery: "Muy consistente",
+                consistencyFairly: "Bastante consistente",
+                consistencyPolarizing: "Polarizante",
+                verdictOneBomb: "Un jurado te perjudicó mucho. Sin ese puntaje subirías al {rank} aproximadamente.",
+                verdictPolarizing: "Rendimiento polarizante: a algunos jurados les encantó, otros no conectaron.",
+                verdictStrong: "Rendimiento sólido y limpio: los jurados coincidieron en general.",
+                verdictStyle: "El panel no conectó con este estilo.",
+                verdictDefault: "Un rendimiento sólido con cierta variación en las opiniones del jurado.",
+                whatIfRemoveWorst: "Quitar mi peor jurado",
+                whatIfReplaceAverage: "Reemplazar bomba con promedio del panel",
+                simulatedRank: "Puesto simulado",
+                undo: "Deshacer",
+                lovedBy: "Amado por",
+                bombedBy: "Bombardeado por",
                 // Categories
                 "SEMIFINAL MILONGA": "SEMIFINAL MILONGA",
                 "SEMIFINAL VALS": "SEMIFINAL VALS",
@@ -416,7 +460,8 @@
             biasData: {}, // { judgeName: { loved: [], bombed: [] } }
             showNullsAsZero: false,
             comparisonMode: null, // null | 'overlay' | 'side-by-side'
-            selectedCouples: [] // array of couple objects
+            selectedCouples: [], // array of couple objects
+            simulation: null // { action: 'remove' | 'average', originalCouple: {}, simulatedCouple: {} }
         };
 
         const BIAS_CONFIG = {
@@ -490,7 +535,10 @@
                 <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
                 ${t('selected_couple')}
             `;
-            document.querySelector('#couple-card .flex-col span').innerText = t('final_average');
+            // Check if promedio-label exists before updating
+            const promedioLabel = document.getElementById('promedio-label');
+            if (promedioLabel && !state.simulation) promedioLabel.innerText = t('final_average');
+            
             document.getElementById('compare-btn').innerText = t('compare');
             document.getElementById('change-couple-btn').innerText = t('change_couple');
             document.getElementById('tab-radar').innerText = t('radar_analysis');
@@ -566,6 +614,7 @@
             state.selectedCouples = [];
             state.comparisonMode = null;
             state.couple = null; // force re-selection of top couple
+            state.simulation = null;
 
             updateRoundUI();
             renderCategoryTabs();
@@ -599,6 +648,7 @@
                 pill.innerText = t(cat.category);
                 pill.onclick = () => {
                     if (state.comparisonMode) exitComparison();
+                    state.simulation = null;
                     selectCategory(cat.category);
                 };
                 categoryTabsEl.appendChild(pill);
@@ -608,11 +658,11 @@
                 function selectCategory(catName, skipCoupleSelection = false) {
                 const isNewCategory = state.category !== catName;
                 if (isNewCategory) {
-                state.selectedCouples = [];
-                state.comparisonMode = null;
-                comparisonBar.classList.add('hidden');
+                    state.selectedCouples = [];
+                    state.comparisonMode = null;
+                    state.simulation = null;
+                    comparisonBar.classList.add('hidden');
                 }
-
                 state.category = catName;
                 currentCategoryEl.innerText = t(catName);
 
@@ -790,6 +840,197 @@
             });
         }
 
+        function getOrdinal(n) {
+            if (state.lang === 'es') return n + 'º';
+            const s = ["th", "st", "nd", "rd"];
+            const v = n % 100;
+            return n + (s[(v - 20) % 10] || s[v] || s[0]);
+        }
+
+        /**
+         * Dancer-centric insights helpers
+         */
+        function computeRankAndCloseness(categoryScores, currentCouple) {
+            const sorted = [...categoryScores]
+                .filter(c => c.PROMEDIO != null)
+                .sort((a, b) => {
+                    if (b.PROMEDIO !== a.PROMEDIO) return b.PROMEDIO - a.PROMEDIO;
+                    return a.Nº - b.Nº; // Stable sort by number
+                });
+            
+            const rank = sorted.findIndex(c => c.Nº === currentCouple.Nº) + 1;
+            const total = sorted.length;
+            
+            const nextCouple = rank > 1 ? sorted[rank - 2] : null;
+            const leader = sorted[0];
+            
+            const cutoffRank = Math.max(12, Math.floor(total * 0.3));
+            const cutoffCouple = sorted[Math.min(cutoffRank - 1, total - 1)];
+
+            return {
+                rank,
+                total,
+                pointsToNext: nextCouple ? (nextCouple.PROMEDIO - currentCouple.PROMEDIO) : 0,
+                pointsBehindLeader: leader ? (leader.PROMEDIO - currentCouple.PROMEDIO) : 0,
+                cutoffRank,
+                pointsToCutoff: currentCouple.PROMEDIO < cutoffCouple.PROMEDIO ? (cutoffCouple.PROMEDIO - currentCouple.PROMEDIO) : 0
+            };
+        }
+
+        function getMyBiases(couple) {
+            const biases = [];
+            Object.keys(state.benchmarks).forEach(judge => {
+                const b = getCoupleBias(couple, judge);
+                if (b === 'loved') biases.push(`❤️ ${t('lovedBy')} ${judge}`);
+                if (b === 'bombed') biases.push(`💣 ${t('bombedBy')} ${judge}`);
+            });
+            return biases;
+        }
+
+        function generateDancerSummary(couple, catData) {
+            const stats = computeRankAndCloseness(catData.scores, couple);
+            const validScores = getValidScores(couple);
+            const stdDev = calculateStdDev(validScores);
+            const biases = getMyBiases(couple);
+            
+            // Identify target judges for simulations
+            const scoreEntries = Object.entries(couple.scores).filter(([j, s]) => s !== null).sort((a, b) => a[1] - b[1]);
+            const worstJudge = scoreEntries.length > 0 ? scoreEntries[0][0] : null;
+            const bombedJudge = Object.keys(couple.scores).find(j => getCoupleBias(couple, j) === 'bombed');
+
+            let consistencyKey = 'consistencyPolarizing';
+            if (stdDev < 0.4) consistencyKey = 'consistencyVery';
+            else if (stdDev < 0.7) consistencyKey = 'consistencyFairly';
+            
+            // Verdict decision tree
+            let verdict = t('verdictDefault');
+            const bombs = biases.filter(b => b.includes('💣'));
+            
+            if (bombs.length === 1) {
+                // Simulate removing the bomb
+                const simulated = simulateAction('remove', couple, true);
+                const simStats = computeRankAndCloseness(catData.scores.map(c => c.Nº === couple.Nº ? simulated : c), simulated);
+                verdict = t('verdictOneBomb').replace('{rank}', getOrdinal(simStats.rank));
+            } else if (bombs.length > 1 && stdDev >= 0.7) {
+                verdict = t('verdictPolarizing');
+            } else if (biases.length === 0 && stdDev < 0.4 && stats.rank <= stats.cutoffRank) {
+                verdict = t('verdictStrong');
+            } else if (stdDev < 0.4 && stats.rank > stats.cutoffRank) {
+                verdict = t('verdictStyle');
+            }
+
+            const isRemoving = state.simulation && state.simulation.action === 'remove';
+            const isAveraging = state.simulation && state.simulation.action === 'average';
+
+            const showAverage = !!bombedJudge;
+            const showRemove = !!worstJudge && (worstJudge !== bombedJudge);
+            const gridCols = (showAverage && showRemove) ? 'grid-cols-2' : 'grid-cols-1';
+
+            return `
+                <div class="bg-zinc-900 border border-amber-400/50 rounded-2xl p-6 shadow-neon-amber/10">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-black text-amber-500 uppercase tracking-tight">${t('yourStory')} – ${t(state.category)}</h3>
+                        <div class="bg-amber-500 text-black px-3 py-1 rounded-full font-black text-xs">
+                            ${getOrdinal(stats.rank)} ${t('rankOf')} ${stats.total}
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-2 text-[10px] font-black uppercase tracking-widest">
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10 text-zinc-400">
+                                ${t(consistencyKey)}
+                            </span>
+                            ${biases.map(b => `
+                                <span class="px-3 py-1 ${b.includes('❤️') ? 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20' : 'bg-orange-500/10 text-orange-500 border-orange-500/20'} rounded-full border">
+                                    ${b}
+                                </span>
+                            `).join('')}
+                        </div>
+
+                        <p class="text-white text-sm leading-relaxed font-medium">
+                            ${verdict}
+                        </p>
+
+                        <div class="space-y-3 mt-6">
+                            ${showRemove ? `
+                            <div onclick="window.handleSimulate('remove')" class="flex items-center justify-between p-4 glass-light rounded-xl cursor-pointer active:scale-[0.98] transition-all group">
+                                <span class="text-[10px] font-black uppercase tracking-widest ${isRemoving ? 'text-rose-500' : 'text-zinc-400 group-hover:text-zinc-200'} transition-colors">
+                                    ✂️ ${t('whatIfRemoveWorst')}
+                                </span>
+                                <div class="w-10 h-5 rounded-full transition-all relative ${isRemoving ? 'bg-rose-600 shadow-neon-rose' : 'bg-zinc-800 border border-white/5'}">
+                                    <div class="w-3 h-3 bg-white rounded-full absolute top-1 transition-all ${isRemoving ? 'right-1' : 'left-1'}"></div>
+                                </div>
+                            </div>
+                            ` : ''}
+                            ${showAverage ? `
+                            <div onclick="window.handleSimulate('average')" class="flex items-center justify-between p-4 glass-light rounded-xl cursor-pointer active:scale-[0.98] transition-all group">
+                                <span class="text-[10px] font-black uppercase tracking-widest ${isAveraging ? 'text-rose-500' : 'text-zinc-400 group-hover:text-zinc-200'} transition-colors">
+                                    ⚖️ ${t('whatIfReplaceAverage')}
+                                </span>
+                                <div class="w-10 h-5 rounded-full transition-all relative ${isAveraging ? 'bg-rose-600 shadow-neon-rose' : 'bg-zinc-800 border border-white/5'}">
+                                    <div class="w-3 h-3 bg-white rounded-full absolute top-1 transition-all ${isAveraging ? 'right-1' : 'left-1'}"></div>
+                                </div>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.handleSimulate = (action) => {
+            if (state.simulation && state.simulation.action === action) {
+                window.undoSimulation();
+                return;
+            }
+            const currentCouple = state.simulation ? state.simulation.originalCouple : state.couple;
+            const simulated = simulateAction(action, currentCouple);
+            state.simulation = {
+                action,
+                originalCouple: currentCouple,
+                simulatedCouple: simulated
+            };
+            state.couple = simulated;
+            updateUI();
+        };
+
+        window.undoSimulation = () => {
+            if (state.simulation) {
+                state.couple = state.simulation.originalCouple;
+                state.simulation = null;
+                updateUI();
+            }
+        };
+
+        function simulateAction(action, couple, silent = false) {
+            const newCouple = JSON.parse(JSON.stringify(couple));
+            const scores = Object.entries(newCouple.scores).filter(([j, s]) => s !== null);
+            
+            if (action === 'remove') {
+                if (scores.length === 0) return newCouple;
+                scores.sort((a, b) => a[1] - b[1]);
+                const worstJudge = scores[0][0];
+                newCouple.scores[worstJudge] = null;
+            } else if (action === 'average') {
+                const bombed = Object.keys(newCouple.scores).find(j => getCoupleBias(newCouple, j) === 'bombed');
+                if (bombed) {
+                    const others = scores.filter(([j, s]) => j !== bombed).map(s => s[1]);
+                    if (others.length > 0) {
+                        newCouple.scores[bombed] = others.reduce((a, b) => a + b, 0) / others.length;
+                    }
+                } else {
+                    // Fallback to remove worst if no bomb
+                    return simulateAction('remove', couple, silent);
+                }
+            }
+
+            // Recalculate PROMEDIO
+            const newValid = getValidScores(newCouple);
+            newCouple.PROMEDIO = newValid.length > 0 ? (newValid.reduce((a, b) => a + b, 0) / newValid.length) : 0;
+            
+            return newCouple;
+        }
+
         function updateUI() {
             if (state.selectedCouples.length >= 2) {
                 renderComparison();
@@ -803,6 +1044,15 @@
         function renderSingleView() {
             if (!state.couple) return;
 
+            const catData = dataStore.getCurrentData().find(c => c.category === state.category);
+            
+            // If simulating, we need a scores list where the original couple is replaced by the simulated one
+            const scoresForRanking = state.simulation 
+                ? catData.scores.map(c => c.Nº === state.couple.Nº ? state.couple : c)
+                : catData.scores;
+            
+            const rankCloseness = computeRankAndCloseness(scoresForRanking, state.couple);
+
             comparisonBar.classList.add('hidden');
             radarCanvas.classList.remove('hidden');
             multiRadarGrid.classList.add('hidden');
@@ -810,16 +1060,61 @@
             
             coupleNumberEl.innerText = state.couple.Nº;
             coupleNamesEl.innerText = state.couple.Nombres;
-            couplePromedioEl.innerText = state.couple.PROMEDIO.toFixed(3);
-            couplePromedioEl.className = "text-4xl font-black text-amber-500 leading-none neon-text-amber";
             
+            if (state.simulation) {
+                const originalRank = computeRankAndCloseness(catData.scores, state.simulation.originalCouple).rank;
+                const diff = rankCloseness.rank - originalRank;
+                const jump = diff < 0 ? ` (+${Math.abs(diff)})` : (diff > 0 ? ` (${diff})` : '');
+                
+                couplePromedioEl.innerText = state.couple.PROMEDIO.toFixed(3);
+                couplePromedioEl.className = "text-4xl font-black text-emerald-500 leading-none neon-text-emerald";
+                
+                document.getElementById('promedio-label').innerText = `${t('simulatedRank')}: ${rankCloseness.rank}º${jump}`;
+                document.getElementById('promedio-label').className = "text-emerald-500 text-[10px] font-black uppercase tracking-tighter";
+                
+                document.getElementById('couple-rank-closeness').innerHTML = `
+                    <button onclick="window.undoSimulation()" class="bg-emerald-500/20 text-emerald-500 text-[10px] font-black px-3 py-1 rounded-full border border-emerald-500/30 flex items-center gap-2">
+                        <span>${t('undo')}</span>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    </button>
+                `;
+            } else {
+                couplePromedioEl.innerText = state.couple.PROMEDIO.toFixed(3);
+                couplePromedioEl.className = "text-4xl font-black text-amber-500 leading-none neon-text-amber";
+                document.getElementById('promedio-label').innerText = t('final_average');
+                document.getElementById('promedio-label').className = "text-zinc-500 text-[10px] font-bold uppercase tracking-tighter";
+
+                const cutoffText = rankCloseness.pointsToCutoff > 0 
+                    ? `<span class="text-zinc-500">·</span> <span class="text-rose-500">-${rankCloseness.pointsToCutoff.toFixed(3)} ${t('pointsToCutoff')}</span>`
+                    : '';
+
+                document.getElementById('couple-rank-closeness').innerHTML = `
+                    <span class="text-amber-500 text-xs font-black">${rankCloseness.rank}º / ${rankCloseness.total}</span>
+                    <span class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
+                        ${rankCloseness.pointsBehindLeader > 0 ? `-${rankCloseness.pointsBehindLeader.toFixed(3)} ${t('pointsToLeader')}` : 'LEADER'}
+                        ${cutoffText}
+                    </span>
+                `;
+            }
+
             document.querySelector('#couple-card p').innerHTML = `
                 <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
                 ${t('selected_couple')}
             `;
-            document.querySelector('#couple-card .flex-col span').innerText = t('final_average');
             
             renderCoupleStats(state.couple);
+            
+            // Render Insights Card
+            const insightsContainer = document.getElementById('insights-container');
+            if (state.simulation) {
+                insightsContainer.innerHTML = ''; // Hide insights during simulation? Spec says "Simulated rank banner"
+                // Actually spec says: "Show a temporary 'Simulated rank: 7th (+3 positions)' banner with undo button"
+                // I put it in the header. Let's keep the insights card but maybe highlight it?
+                // The spec says "Simulation state is temporary and clear on category/couple change".
+                // Let's re-render the insights card but keep it simple.
+            }
+            insightsContainer.innerHTML = generateDancerSummary(state.simulation ? state.simulation.originalCouple : state.couple, catData);
+            
             renderRadar();
             renderTable();
             renderJudges();
@@ -1001,6 +1296,9 @@
             destroyAllCharts();
             comparisonBar.classList.remove('hidden');
             document.getElementById('couple-stats').classList.add('hidden');
+            document.getElementById('insights-container').innerHTML = '';
+            document.getElementById('couple-rank-closeness').innerHTML = '';
+            
             renderComparisonPills();
             renderComparisonLegend();
 
@@ -1011,7 +1309,9 @@
                 <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                 ${t('comparison_mode')}
             `;
-            document.querySelector('#couple-card .flex-col span').innerText = t('avg_range');
+            
+            document.getElementById('promedio-label').innerText = t('avg_range');
+            document.getElementById('promedio-label').className = "text-zinc-500 text-[10px] font-bold uppercase tracking-tighter";
             
             const averages = state.selectedCouples.map(c => c.PROMEDIO);
             const minAvg = Math.min(...averages).toFixed(3);
@@ -1038,15 +1338,19 @@
         }
 
         function renderComparisonPills() {
-            comparisonPills.innerHTML = state.selectedCouples.map((c, i) => `
-                <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
-                    <span class="w-2 h-2 rounded-full" style="background-color: ${getCoupleColor(i)}"></span>
-                    <span class="text-[10px] font-black text-white truncate max-w-[100px]">${c.Nombres}</span>
-                    <button onclick="removeFromComparison(${c.Nº})" class="text-zinc-500 hover:text-rose-500 transition-colors">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    </button>
-                </div>
-            `).join('');
+            const catData = dataStore.getCurrentData().find(c => c.category === state.category);
+            comparisonPills.innerHTML = state.selectedCouples.map((c, i) => {
+                const rank = computeRankAndCloseness(catData.scores, c).rank;
+                return `
+                    <div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
+                        <span class="w-2 h-2 rounded-full" style="background-color: ${getCoupleColor(i)}"></span>
+                        <span class="text-[10px] font-black text-white truncate max-w-[100px]">${rank}º ${c.Nombres}</span>
+                        <button onclick="removeFromComparison(${c.Nº})" class="text-zinc-500 hover:text-rose-500 transition-colors">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        </button>
+                    </div>
+                `;
+            }).join('');
         }
 
         function renderComparisonLegend() {
@@ -1353,9 +1657,17 @@
                     ? `¡Mirá la comparación de ${names} en ${t(state.category)} en TANGO RADAR! 💃🕺`
                     : `Check out the comparison between ${names} in ${t(state.category)} at TANGO RADAR! 💃🕺`;
             } else {
+                const catData = dataStore.getCurrentData().find(c => c.category === state.category);
+                const stats = computeRankAndCloseness(catData.scores, state.couple);
                 text = state.lang === 'es' 
-                    ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${t(state.category)} en TANGO RADAR! 💃🕺`
-                    : `Check out the scores for ${state.couple.Nombres} in ${t(state.category)} at TANGO RADAR! 💃🕺`;
+                    ? `¡Mirá el análisis de ${state.couple.Nombres} (#${stats.rank}/${stats.total}) en ${t(state.category)} en TANGO RADAR! 💃🕺`
+                    : `Check out the analysis for ${state.couple.Nombres} (#${stats.rank}/${stats.total}) in ${t(state.category)} at TANGO RADAR! 💃🕺`;
+                
+                // Try to get verdict from insights
+                const verdictEl = document.querySelector('#insights-container p');
+                if (verdictEl) {
+                    text += `\n\n"${verdictEl.innerText.substring(0, 100)}..."`;
+                }
             }
             const url = window.location.href;
 
@@ -1965,7 +2277,11 @@
 
         window.selectCoupleByNumber = (num) => {
             const catData = dataStore.getCurrentData().find(c => c.category === state.category);
-            state.couple = catData.scores.find(c => c.Nº === num);
+            const newCouple = catData.scores.find(c => c.Nº === num);
+            if (state.couple && state.couple.Nº !== newCouple.Nº) {
+                state.simulation = null;
+            }
+            state.couple = newCouple;
             updateUI();
             closeModal();
         };

@@ -78,6 +78,16 @@ The app uses advanced statistical methods to identify unusual scoring patterns:
 
 These metrics help identify polarizing performances and unique judging perspectives.
 
+### Dancer Insights – How to read "Your Story"
+The **Your Story** card provides a plain-language summary of your performance:
+- **Rank & Closeness**: See your exact position and how many points separate you from the leader or the next couple.
+- **Consistency**: 
+    - *Very Consistent*: Most judges agreed on your score.
+    - *Fairly Consistent*: Normal variation among the panel.
+    - *Polarizing*: Strong disagreement (e.g., some 9s and some 6s).
+- **The Verdict**: A data-driven summary that explains if you were "unlucky" with a specific judge, if your style was polarizing, or if you had a clean, undisputed performance.
+- **What-if Simulator**: Test "what-if" scenarios, like removing your worst score or replacing a "bomb" with the panel average, to see how your rank would have changed.
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
