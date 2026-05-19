@@ -1,5 +1,5 @@
 # Technical Report: Statistical Extras & Outlier Highlighting
-**Project**: METRO RADAR (Metropolitano 2026)  
+**Project**: TANGO RADAR (Metropolitano 2026)  
 **Date**: May 15, 2026  
 **Status**: Implemented & Verified
 

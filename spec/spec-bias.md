@@ -7,7 +7,7 @@
 **Status:** Ready for coding agent / contributor to implement  
 
 ### 1. Objective
-Extend the existing METRO RADAR app to show, **for every judge**, two explicit lists of couples:
+Extend the existing TANGO RADAR app to show, **for every judge**, two explicit lists of couples:
 
 - **❤️ Loved couples** – couples the judge scored **unusually high** relative to their own scoring habits **and** unusually higher than the rest of the panel.
 - **💣 Bombed couples** – couples the judge scored **unusually low** relative to their own scoring habits **and** unusually lower than the rest of the panel.

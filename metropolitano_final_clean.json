@@ -11,10 +11,11 @@
           "CANCELA": 9.7,
           "BALMACEDA": 9.22,
           "RODRIGUEZ": 9.95,
-          "DE LA CRUZ": 9.33
+          "DE LA CRUZ": 9.33,
+          "ERMOCIDA": 10
         },
-        "PROMEDIO": 10,
-        "PUNTAJE": 68.02
+        "PUNTAJE": 68.02,
+        "PROMEDIO": 9.717
       },
       {
         "Nº": 148,
@@ -25,10 +26,11 @@
           "CANCELA": 8.35,
           "BALMACEDA": 9.8,
           "RODRIGUEZ": 9.9,
-          "DE LA CRUZ": 9.93
+          "DE LA CRUZ": 9.93,
+          "ERMOCIDA": 8.63
         },
-        "PROMEDIO": 8.63,
-        "PUNTAJE": 66.06
+        "PUNTAJE": 66.06,
+        "PROMEDIO": 9.437
       },
       {
         "Nº": 144,
@@ -39,10 +41,11 @@
           "CANCELA": 9.5,
           "BALMACEDA": 9,
           "RODRIGUEZ": 9.65,
-          "DE LA CRUZ": 8.75
+          "DE LA CRUZ": 8.75,
+          "ERMOCIDA": 9.69
         },
-        "PROMEDIO": 9.69,
-        "PUNTAJE": 65.59
+        "PUNTAJE": 65.59,
+        "PROMEDIO": 9.37
       },
       {
         "Nº": 141,
@@ -53,10 +56,11 @@
           "CANCELA": 8.7,
           "BALMACEDA": 9.44,
           "RODRIGUEZ": 9.3,
-          "DE LA CRUZ": 8.41
+          "DE LA CRUZ": 8.41,
+          "ERMOCIDA": 9.75
         },
-        "PROMEDIO": 9.75,
-        "PUNTAJE": 64.75
+        "PUNTAJE": 64.75,
+        "PROMEDIO": 9.25
       },
       {
         "Nº": 143,
@@ -67,10 +71,11 @@
           "CANCELA": 8.8,
           "BALMACEDA": 8.9,
           "RODRIGUEZ": 8.45,
-          "DE LA CRUZ": 9.48
+          "DE LA CRUZ": 9.48,
+          "ERMOCIDA": 9.78
         },
-        "PROMEDIO": 9.78,
-        "PUNTAJE": 64.56
+        "PUNTAJE": 64.56,
+        "PROMEDIO": 9.223
       },
       {
         "Nº": 145,
@@ -81,10 +86,11 @@
           "CANCELA": 9.65,
           "BALMACEDA": null,
           "RODRIGUEZ": 8.5,
-          "DE LA CRUZ": 9.01
+          "DE LA CRUZ": 9.01,
+          "ERMOCIDA": null
         },
-        "PROMEDIO": null,
-        "PUNTAJE": 45.86
+        "PUNTAJE": 45.86,
+        "PROMEDIO": 9.172
       },
       {
         "Nº": 147,
@@ -95,10 +101,11 @@
           "CANCELA": 8.2,
           "BALMACEDA": 9.26,
           "RODRIGUEZ": 9.87,
-          "DE LA CRUZ": 9.16
+          "DE LA CRUZ": 9.16,
+          "ERMOCIDA": 8.6
         },
-        "PROMEDIO": 8.6,
-        "PUNTAJE": 63.84
+        "PUNTAJE": 63.84,
+        "PROMEDIO": 9.12
       },
       {
         "Nº": 146,
@@ -109,10 +116,11 @@
           "CANCELA": 8.1,
           "BALMACEDA": 9.25,
           "RODRIGUEZ": 9.85,
-          "DE LA CRUZ": 9.57
+          "DE LA CRUZ": 9.57,
+          "ERMOCIDA": 8.5
         },
-        "PROMEDIO": 8.5,
-        "PUNTAJE": 63.56
+        "PUNTAJE": 63.56,
+        "PROMEDIO": 9.08
       },
       {
         "Nº": 142,
@@ -123,10 +131,11 @@
           "CANCELA": 8.4,
           "BALMACEDA": 9.1,
           "RODRIGUEZ": 8.9,
-          "DE LA CRUZ": 8.55
+          "DE LA CRUZ": 8.55,
+          "ERMOCIDA": 9.8
         },
-        "PROMEDIO": 9.8,
-        "PUNTAJE": 63.35
+        "PUNTAJE": 63.35,
+        "PROMEDIO": 9.05
       },
       {
         "Nº": 149,
@@ -137,10 +146,11 @@
           "CANCELA": 8.15,
           "BALMACEDA": 9.4,
           "RODRIGUEZ": 8.65,
-          "DE LA CRUZ": 8.3
+          "DE LA CRUZ": 8.3,
+          "ERMOCIDA": 8.65
         },
-        "PROMEDIO": 8.65,
-        "PUNTAJE": 61.8
+        "PUNTAJE": 61.8,
+        "PROMEDIO": 8.829
       }
     ]
   },
@@ -156,10 +166,11 @@
           "CANCELA": 9.65,
           "BALMACEDA": 9.45,
           "RODRIGUEZ": 9.87,
-          "DE LA CRUZ": 9.38
+          "DE LA CRUZ": 9.38,
+          "ERMOCIDA": 9.5
         },
-        "PROMEDIO": 9.5,
-        "PUNTAJE": 67.64
+        "PUNTAJE": 67.64,
+        "PROMEDIO": 9.663
       },
       {
         "Nº": 154,
@@ -170,10 +181,11 @@
           "CANCELA": 9.45,
           "BALMACEDA": 9.1,
           "RODRIGUEZ": 9.9,
-          "DE LA CRUZ": 9.38
+          "DE LA CRUZ": 9.38,
+          "ERMOCIDA": 9.8
         },
-        "PROMEDIO": 9.8,
-        "PUNTAJE": 67.38
+        "PUNTAJE": 67.38,
+        "PROMEDIO": 9.626
       },
       {
         "Nº": 157,
@@ -184,10 +196,11 @@
           "CANCELA": 9.55,
           "BALMACEDA": 9.3,
           "RODRIGUEZ": 9.83,
-          "DE LA CRUZ": 9.35
+          "DE LA CRUZ": 9.35,
+          "ERMOCIDA": 9.85
         },
-        "PROMEDIO": 9.85,
-        "PUNTAJE": 67.28
+        "PUNTAJE": 67.28,
+        "PROMEDIO": 9.611
       },
       {
         "Nº": 150,
@@ -198,10 +211,11 @@
           "CANCELA": 8.95,
           "BALMACEDA": 9.5,
           "RODRIGUEZ": 9.7,
-          "DE LA CRUZ": 9.86
+          "DE LA CRUZ": 9.86,
+          "ERMOCIDA": 10
         },
-        "PROMEDIO": 10,
-        "PUNTAJE": 67.21
+        "PUNTAJE": 67.21,
+        "PROMEDIO": 9.601
       },
       {
         "Nº": 156,
@@ -212,10 +226,11 @@
           "CANCELA": 9.2,
           "BALMACEDA": 9.7,
           "RODRIGUEZ": 9.75,
-          "DE LA CRUZ": 9.36
+          "DE LA CRUZ": 9.36,
+          "ERMOCIDA": 9.72
         },
-        "PROMEDIO": 9.72,
-        "PUNTAJE": 67.08
+        "PUNTAJE": 67.08,
+        "PROMEDIO": 9.583
       },
       {
         "Nº": 153,
@@ -226,10 +241,11 @@
           "CANCELA": 9.6,
           "BALMACEDA": 9.55,
           "RODRIGUEZ": 9.45,
-          "DE LA CRUZ": 9.36
+          "DE LA CRUZ": 9.36,
+          "ERMOCIDA": 9.85
         },
-        "PROMEDIO": 9.85,
-        "PUNTAJE": 67.01
+        "PUNTAJE": 67.01,
+        "PROMEDIO": 9.573
       },
       {
         "Nº": 155,
@@ -240,10 +256,11 @@
           "CANCELA": 9.35,
           "BALMACEDA": 9.3,
           "RODRIGUEZ": 9.45,
-          "DE LA CRUZ": 9.5
+          "DE LA CRUZ": 9.5,
+          "ERMOCIDA": 9.7
         },
-        "PROMEDIO": 9.7,
-        "PUNTAJE": 66.9
+        "PUNTAJE": 66.9,
+        "PROMEDIO": 9.557
       },
       {
         "Nº": 159,
@@ -254,10 +271,11 @@
           "CANCELA": 8.8,
           "BALMACEDA": null,
           "RODRIGUEZ": 9.68,
-          "DE LA CRUZ": 9.2
+          "DE LA CRUZ": 9.2,
+          "ERMOCIDA": 9
         },
-        "PROMEDIO": 9,
-        "PUNTAJE": 56.28
+        "PUNTAJE": 56.28,
+        "PROMEDIO": 9.38
       },
       {
         "Nº": 158,
@@ -268,10 +286,11 @@
           "CANCELA": 8.75,
           "BALMACEDA": 9.33,
           "RODRIGUEZ": 9.95,
-          "DE LA CRUZ": 9.96
+          "DE LA CRUZ": 9.96,
+          "ERMOCIDA": 9.02
         },
-        "PROMEDIO": 9.02,
-        "PUNTAJE": 56.11
+        "PUNTAJE": 56.11,
+        "PROMEDIO": 9.352
       },
       {
         "Nº": 152,
@@ -282,10 +301,11 @@
           "CANCELA": 8.85,
           "BALMACEDA": null,
           "RODRIGUEZ": 9.85,
-          "DE LA CRUZ": null
+          "DE LA CRUZ": null,
+          "ERMOCIDA": 9.7
         },
-        "PROMEDIO": 9.7,
-        "PUNTAJE": 46.3
+        "PUNTAJE": 46.3,
+        "PROMEDIO": 9.26
       }
     ]
   },
@@ -301,10 +321,11 @@
           "CANCELA": 9.4,
           "BALMACEDA": 9.9,
           "RODRIGUEZ": 9.7,
-          "DE LA CRUZ": 9.4
+          "DE LA CRUZ": 9.4,
+          "ERMOCIDA": 9.7
         },
-        "PROMEDIO": 9.7,
-        "PUNTAJE": 67.25
+        "PUNTAJE": 67.25,
+        "PROMEDIO": 9.607
       },
       {
         "Nº": 177,
@@ -315,10 +336,11 @@
           "CANCELA": 9.3,
           "BALMACEDA": 9.3,
           "RODRIGUEZ": 9.75,
-          "DE LA CRUZ": 9.83
+          "DE LA CRUZ": 9.83,
+          "ERMOCIDA": 9.48
         },
-        "PROMEDIO": 9.48,
-        "PUNTAJE": 66.96
+        "PUNTAJE": 66.96,
+        "PROMEDIO": 9.566
       },
       {
         "Nº": 173,
@@ -329,10 +351,11 @@
           "CANCELA": 9.55,
           "BALMACEDA": 9.4,
           "RODRIGUEZ": 9.87,
-          "DE LA CRUZ": 9.8
+          "DE LA CRUZ": 9.8,
+          "ERMOCIDA": 9.38
         },
-        "PROMEDIO": 9.38,
-        "PUNTAJE": 66.9
+        "PUNTAJE": 66.9,
+        "PROMEDIO": 9.557
       },
       {
         "Nº": 170,
@@ -343,10 +366,11 @@
           "CANCELA": 8.95,
           "BALMACEDA": 9.15,
           "RODRIGUEZ": 9.98,
-          "DE LA CRUZ": 9.88
+          "DE LA CRUZ": 9.88,
+          "ERMOCIDA": 9.4
         },
-        "PROMEDIO": 9.4,
-        "PUNTAJE": 57.31
+        "PUNTAJE": 57.31,
+        "PROMEDIO": 9.552
       },
       {
         "Nº": 176,
@@ -357,10 +381,11 @@
           "CANCELA": 9.45,
           "BALMACEDA": 9.6,
           "RODRIGUEZ": 9.77,
-          "DE LA CRUZ": 9.38
+          "DE LA CRUZ": 9.38,
+          "ERMOCIDA": 9.36
         },
-        "PROMEDIO": 9.36,
-        "PUNTAJE": 66.51
+        "PUNTAJE": 66.51,
+        "PROMEDIO": 9.501
       },
       {
         "Nº": 178,
@@ -371,10 +396,11 @@
           "CANCELA": 8.9,
           "BALMACEDA": null,
           "RODRIGUEZ": 9.5,
-          "DE LA CRUZ": 9.83
+          "DE LA CRUZ": 9.83,
+          "ERMOCIDA": 9.6
         },
-        "PROMEDIO": 9.6,
-        "PUNTAJE": 56.78
+        "PUNTAJE": 56.78,
+        "PROMEDIO": 9.463
       },
       {
         "Nº": 172,
@@ -385,10 +411,11 @@
           "CANCELA": 8.85,
           "BALMACEDA": 9.7,
           "RODRIGUEZ": 9.35,
-          "DE LA CRUZ": 9.42
+          "DE LA CRUZ": 9.42,
+          "ERMOCIDA": 9.96
         },
-        "PROMEDIO": 9.96,
-        "PUNTAJE": 66.08
+        "PUNTAJE": 66.08,
+        "PROMEDIO": 9.44
       },
       {
         "Nº": 175,
@@ -399,10 +426,11 @@
           "CANCELA": 8.8,
           "BALMACEDA": 9.44,
           "RODRIGUEZ": 9.95,
-          "DE LA CRUZ": 9.45
+          "DE LA CRUZ": 9.45,
+          "ERMOCIDA": 9.35
         },
-        "PROMEDIO": 9.35,
-        "PUNTAJE": 66.08
+        "PUNTAJE": 66.08,
+        "PROMEDIO": 9.44
       },
       {
         "Nº": 174,
@@ -413,10 +441,11 @@
           "CANCELA": 8.75,
           "BALMACEDA": 9.3,
           "RODRIGUEZ": 9.45,
-          "DE LA CRUZ": 9.15
+          "DE LA CRUZ": 9.15,
+          "ERMOCIDA": 9.6
         },
-        "PROMEDIO": 9.6,
-        "PUNTAJE": 65.5
+        "PUNTAJE": 65.5,
+        "PROMEDIO": 9.357
       },
       {
         "Nº": 179,
@@ -427,10 +456,11 @@
           "CANCELA": 9.35,
           "BALMACEDA": 9.1,
           "RODRIGUEZ": 9.6,
-          "DE LA CRUZ": 9.12
+          "DE LA CRUZ": 9.12,
+          "ERMOCIDA": 8.8
         },
-        "PROMEDIO": 8.8,
-        "PUNTAJE": 64.62
+        "PUNTAJE": 64.62,
+        "PROMEDIO": 9.231
       },
       {
         "Nº": 161,
@@ -441,10 +471,11 @@
           "CANCELA": 9.4,
           "BALMACEDA": 9.55,
           "RODRIGUEZ": 9.95,
-          "DE LA CRUZ": 9.85
+          "DE LA CRUZ": 9.85,
+          "ERMOCIDA": 9.96
         },
-        "PROMEDIO": 9.96,
-        "PUNTAJE": 67.76
+        "PUNTAJE": 67.76,
+        "PROMEDIO": 9.68
       },
       {
         "Nº": 164,
@@ -455,10 +486,11 @@
           "CANCELA": 9.15,
           "BALMACEDA": 9.38,
           "RODRIGUEZ": 9.98,
-          "DE LA CRUZ": 9.5
+          "DE LA CRUZ": 9.5,
+          "ERMOCIDA": 9.97
         },
-        "PROMEDIO": 9.97,
-        "PUNTAJE": 67.13
+        "PUNTAJE": 67.13,
+        "PROMEDIO": 9.59
       },
       {
         "Nº": 166,
@@ -469,10 +501,11 @@
           "CANCELA": 8.95,
           "BALMACEDA": 9.75,
           "RODRIGUEZ": 9.87,
-          "DE LA CRUZ": 9.58
+          "DE LA CRUZ": 9.58,
+          "ERMOCIDA": 9.2
         },
-        "PROMEDIO": 9.2,
-        "PUNTAJE": 66.65
+        "PUNTAJE": 66.65,
+        "PROMEDIO": 9.521
       },
       {
         "Nº": 163,
@@ -483,10 +516,11 @@
           "CANCELA": 8.85,
           "BALMACEDA": 9.47,
           "RODRIGUEZ": 9.55,
-          "DE LA CRUZ": 9.62
+          "DE LA CRUZ": 9.62,
+          "ERMOCIDA": 9.5
         },
-        "PROMEDIO": 9.5,
-        "PUNTAJE": 66.64
+        "PUNTAJE": 66.64,
+        "PROMEDIO": 9.52
       },
       {
         "Nº": 162,
@@ -497,10 +531,11 @@
           "CANCELA": 8.7,
           "BALMACEDA": 9.48,
           "RODRIGUEZ": 9.9,
-          "DE LA CRUZ": 9.75
+          "DE LA CRUZ": 9.75,
+          "ERMOCIDA": 9.3
         },
-        "PROMEDIO": 9.3,
-        "PUNTAJE": 66.63
+        "PUNTAJE": 66.63,
+        "PROMEDIO": 9.519
       },
       {
         "Nº": 165,
@@ -511,10 +546,11 @@
           "CANCELA": 8.9,
           "BALMACEDA": 9.52,
           "RODRIGUEZ": 9.6,
-          "DE LA CRUZ": 9.4
+          "DE LA CRUZ": 9.4,
+          "ERMOCIDA": 9.7
         },
-        "PROMEDIO": 9.7,
-        "PUNTAJE": 66.61
+        "PUNTAJE": 66.61,
+        "PROMEDIO": 9.516
       },
       {
         "Nº": 168,
@@ -525,10 +561,11 @@
           "CANCELA": 9.1,
           "BALMACEDA": 9.35,
           "RODRIGUEZ": 9.4,
-          "DE LA CRUZ": 9.62
+          "DE LA CRUZ": 9.62,
+          "ERMOCIDA": 9.1
         },
-        "PROMEDIO": 9.1,
-        "PUNTAJE": 56.17
+        "PUNTAJE": 56.17,
+        "PROMEDIO": 9.362
       },
       {
         "Nº": 167,
@@ -539,10 +576,11 @@
           "CANCELA": 8.6,
           "BALMACEDA": 9.4,
           "RODRIGUEZ": 9.45,
-          "DE LA CRUZ": 9.73
+          "DE LA CRUZ": 9.73,
+          "ERMOCIDA": 9.15
         },
-        "PROMEDIO": 9.15,
-        "PUNTAJE": 65.28
+        "PUNTAJE": 65.28,
+        "PROMEDIO": 9.326
       },
       {
         "Nº": 160,
@@ -553,10 +591,11 @@
           "CANCELA": 9.3,
           "BALMACEDA": 9.3,
           "RODRIGUEZ": 9.5,
-          "DE LA CRUZ": 9.2
+          "DE LA CRUZ": 9.2,
+          "ERMOCIDA": 9.5
         },
-        "PROMEDIO": 9.5,
-        "PUNTAJE": 65.25
+        "PUNTAJE": 65.25,
+        "PROMEDIO": 9.321
       },
       {
         "Nº": 169,
@@ -567,10 +606,11 @@
           "CANCELA": 8.8,
           "BALMACEDA": 9.4,
           "RODRIGUEZ": 9.75,
-          "DE LA CRUZ": 9.45
+          "DE LA CRUZ": 9.45,
+          "ERMOCIDA": 9
         },
-        "PROMEDIO": 9,
-        "PUNTAJE": 65.2
+        "PUNTAJE": 65.2,
+        "PROMEDIO": 9.314
       },
       {
         "Nº": 178,
@@ -581,10 +621,11 @@
           "CANCELA": 9.7,
           "BALMACEDA": null,
           "RODRIGUEZ": 9.7,
-          "DE LA CRUZ": 9.69
+          "DE LA CRUZ": 9.69,
+          "ERMOCIDA": 9.8
         },
-        "PROMEDIO": 9.8,
-        "PUNTAJE": 58.74
+        "PUNTAJE": 58.74,
+        "PROMEDIO": 9.79
       },
       {
         "Nº": 154,
@@ -595,10 +636,11 @@
           "CANCELA": 9.2,
           "BALMACEDA": 9.5,
           "RODRIGUEZ": 9.93,
-          "DE LA CRUZ": 9.73
+          "DE LA CRUZ": 9.73,
+          "ERMOCIDA": 9.59
         },
-        "PROMEDIO": 9.59,
-        "PUNTAJE": 67.74
+        "PUNTAJE": 67.74,
+        "PROMEDIO": 9.677
       },
       {
         "Nº": 175,
@@ -609,10 +651,11 @@
           "CANCELA": 9.65,
           "BALMACEDA": 9.35,
           "RODRIGUEZ": 9.95,
-          "DE LA CRUZ": 9.86
+          "DE LA CRUZ": 9.86,
+          "ERMOCIDA": 9.7
         },
-        "PROMEDIO": 9.7,
-        "PUNTAJE": 67.66
+        "PUNTAJE": 67.66,
+        "PROMEDIO": 9.666
       },
       {
         "Nº": 151,
@@ -623,10 +666,11 @@
           "CANCELA": 9.35,
           "BALMACEDA": 9.62,
           "RODRIGUEZ": 9.75,
-          "DE LA CRUZ": 9.44
+          "DE LA CRUZ": 9.44,
+          "ERMOCIDA": 9.65
         },
-        "PROMEDIO": 9.65,
-        "PUNTAJE": 67.36
+        "PUNTAJE": 67.36,
+        "PROMEDIO": 9.623
       },
       {
         "Nº": 155,
@@ -637,10 +681,11 @@
           "CANCELA": 9.25,
           "BALMACEDA": 9.69,
           "RODRIGUEZ": 9.5,
-          "DE LA CRUZ": 9.68
+          "DE LA CRUZ": 9.68,
+          "ERMOCIDA": 9.6
         },
-        "PROMEDIO": 9.6,
-        "PUNTAJE": 67.32
+        "PUNTAJE": 67.32,
+        "PROMEDIO": 9.617
       },
       {
         "Nº": 180,
@@ -651,10 +696,11 @@
           "CANCELA": 9.45,
           "BALMACEDA": 9.2,
           "RODRIGUEZ": 9.8,
-          "DE LA CRUZ": 9.8
+          "DE LA CRUZ": 9.8,
+          "ERMOCIDA": "Abtencion"
         },
-        "PROMEDIO": "Abtencion",
-        "PUNTAJE": 57.0
+        "PUNTAJE": 57.0,
+        "PROMEDIO": 9.5
       },
       {
         "Nº": 156,
@@ -665,10 +711,11 @@
           "CANCELA": 9.1,
           "BALMACEDA": 9.7,
           "RODRIGUEZ": 9.9,
-          "DE LA CRUZ": 9.25
+          "DE LA CRUZ": 9.25,
+          "ERMOCIDA": 9.61
         },
-        "PROMEDIO": 9.61,
-        "PUNTAJE": 66.26
+        "PUNTAJE": 66.26,
+        "PROMEDIO": 9.466
       },
       {
         "Nº": 181,
@@ -679,10 +726,11 @@
           "CANCELA": 8.7,
           "BALMACEDA": 9.25,
           "RODRIGUEZ": 9.45,
-          "DE LA CRUZ": 9.49
+          "DE LA CRUZ": 9.49,
+          "ERMOCIDA": 10
         },
-        "PROMEDIO": 10,
-        "PUNTAJE": 66.24
+        "PUNTAJE": 66.24,
+        "PROMEDIO": 9.463
       },
       {
         "Nº": 140,
@@ -693,10 +741,11 @@
           "CANCELA": 8.6,
           "BALMACEDA": 9.6,
           "RODRIGUEZ": 9.98,
-          "DE LA CRUZ": 9.38
+          "DE LA CRUZ": 9.38,
+          "ERMOCIDA": 9.59
         },
-        "PROMEDIO": 9.59,
-        "PUNTAJE": 65.8
+        "PUNTAJE": 65.8,
+        "PROMEDIO": 9.4
       },
       {
         "Nº": 182,
@@ -707,10 +756,11 @@
           "CANCELA": 8.95,
           "BALMACEDA": 9.68,
           "RODRIGUEZ": 9.35,
-          "DE LA CRUZ": 9.32
+          "DE LA CRUZ": 9.32,
+          "ERMOCIDA": 9.4
         },
-        "PROMEDIO": 9.4,
-        "PUNTAJE": 65.45
+        "PUNTAJE": 65.45,
+        "PROMEDIO": 9.35
       }
     ]
   },
@@ -726,10 +776,11 @@
           "CANCELA": 9.35,
           "BALMACEDA": 9.65,
           "RODRIGUEZ": 9.78,
-          "DE LA CRUZ": 9.79
+          "DE LA CRUZ": 9.79,
+          "ERMOCIDA": 9.9
         },
-        "PROMEDIO": 9.9,
-        "PUNTAJE": 68.31
+        "PUNTAJE": 68.31,
+        "PROMEDIO": 9.759
       },
       {
         "Nº": 175,
@@ -740,10 +791,11 @@
           "CANCELA": 9.3,
           "BALMACEDA": 9.7,
           "RODRIGUEZ": 9.85,
-          "DE LA CRUZ": 9.79
+          "DE LA CRUZ": 9.79,
+          "ERMOCIDA": 9.38
         },
-        "PROMEDIO": 9.38,
-        "PUNTAJE": 67.62
+        "PUNTAJE": 67.62,
+        "PROMEDIO": 9.66
       },
       {
         "Nº": 178,
@@ -754,10 +806,11 @@
           "CANCELA": 9.45,
           "BALMACEDA": null,
           "RODRIGUEZ": 9.9,
-          "DE LA CRUZ": 9.56
+          "DE LA CRUZ": 9.56,
+          "ERMOCIDA": 9.95
         },
-        "PROMEDIO": 9.95,
-        "PUNTAJE": 57.66
+        "PUNTAJE": 57.66,
+        "PROMEDIO": 9.61
       },
       {
         "Nº": 157,
@@ -768,10 +821,11 @@
           "CANCELA": 9.2,
           "BALMACEDA": 9.35,
           "RODRIGUEZ": 9.95,
-          "DE LA CRUZ": 9.75
+          "DE LA CRUZ": 9.75,
+          "ERMOCIDA": 9.86
         },
-        "PROMEDIO": 9.86,
-        "PUNTAJE": 67.11
+        "PUNTAJE": 67.11,
+        "PROMEDIO": 9.587
       },
       {
         "Nº": 153,
@@ -782,10 +836,11 @@
           "CANCELA": 9.1,
           "BALMACEDA": 9.28,
           "RODRIGUEZ": 9.7,
-          "DE LA CRUZ": 9.89
+          "DE LA CRUZ": 9.89,
+          "ERMOCIDA": 9.85
         },
-        "PROMEDIO": 9.85,
-        "PUNTAJE": 66.97
+        "PUNTAJE": 66.97,
+        "PROMEDIO": 9.567
       },
       {
         "Nº": 155,
@@ -796,10 +851,11 @@
           "CANCELA": 9.25,
           "BALMACEDA": 9.8,
           "RODRIGUEZ": 9.5,
-          "DE LA CRUZ": 9.58
+          "DE LA CRUZ": 9.58,
+          "ERMOCIDA": 9.5
         },
-        "PROMEDIO": 9.5,
-        "PUNTAJE": 66.83
+        "PUNTAJE": 66.83,
+        "PROMEDIO": 9.547
       },
       {
         "Nº": 158,
@@ -810,10 +866,11 @@
           "CANCELA": 8.85,
           "BALMACEDA": 9.42,
           "RODRIGUEZ": 9.93,
-          "DE LA CRUZ": 9.35
+          "DE LA CRUZ": 9.35,
+          "ERMOCIDA": 9.45
         },
-        "PROMEDIO": 9.45,
-        "PUNTAJE": 56.75
+        "PUNTAJE": 56.75,
+        "PROMEDIO": 9.458
       },
       {
         "Nº": 150,
@@ -824,10 +881,11 @@
           "CANCELA": 8.8,
           "BALMACEDA": 9.5,
           "RODRIGUEZ": 9.89,
-          "DE LA CRUZ": 9.8
+          "DE LA CRUZ": 9.8,
+          "ERMOCIDA": 9.4
         },
-        "PROMEDIO": 9.4,
-        "PUNTAJE": 66.09
+        "PUNTAJE": 66.09,
+        "PROMEDIO": 9.441
       },
       {
         "Nº": 180,
@@ -838,10 +896,11 @@
           "CANCELA": 8.9,
           "BALMACEDA": 9.43,
           "RODRIGUEZ": 9.75,
-          "DE LA CRUZ": 9.25
+          "DE LA CRUZ": 9.25,
+          "ERMOCIDA": null
         },
-        "PROMEDIO": null,
-        "PUNTAJE": 56.08
+        "PUNTAJE": 56.08,
+        "PROMEDIO": 9.347
       },
       {
         "Nº": 163,
@@ -852,10 +911,11 @@
           "CANCELA": 8.75,
           "BALMACEDA": 9.5,
           "RODRIGUEZ": 9.35,
-          "DE LA CRUZ": 9.18
+          "DE LA CRUZ": 9.18,
+          "ERMOCIDA": 9.35
         },
-        "PROMEDIO": 9.35,
-        "PUNTAJE": 64.83
+        "PUNTAJE": 64.83,
+        "PROMEDIO": 9.261
       }
     ]
   }

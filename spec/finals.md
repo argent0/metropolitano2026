@@ -1,4 +1,4 @@
-**Specification for METRO RADAR – Multi-Round Support (Semifinals + Finals)**
+**Specification for TANGO RADAR – Multi-Round Support (Semifinals + Finals)**
 
 ### 1. Objective
 Extend the existing single-page static web app (`index.html`) so it can display **both** Semifinals and Finals data.  

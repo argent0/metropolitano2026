@@ -27,9 +27,9 @@ The dedicated "Share Radar Chart" button can remain unchanged (or be kept as a f
 - No breaking changes to any other functionality.
 - Maintain exact same error handling (`AbortError` silent, others logged).
 - Filename should be descriptive and consistent with `shareChart()`:
-  - Overlay: `metro-comparison-123-456.png`
-  - Side-by-side: `metro-comparison-side-by-side.png`
-  - Single: `metro-radar-123.png`
+  - Overlay: `tango-comparison-123-456.png`
+  - Side-by-side: `tango-comparison-side-by-side.png`
+  - Single: `tango-radar-123.png`
 
 ### 4. Acceptance Criteria
 1. Clicking **Share View** (top button or couple button) now shares **image + text + URL** on supported browsers (Android Chrome, Safari, etc.).
@@ -52,12 +52,12 @@ async function shareView() {
     if (state.selectedCouples.length >= 2) {
         const names = state.selectedCouples.map(c => c.Nombres).join(' vs ');
         text = state.lang === 'es'
-            ? `¡Mirá la comparación de ${names} en ${state.category} en METRO RADAR! 💃🕺`
-            : `Check out the comparison between ${names} in ${state.category} at METRO RADAR! 💃🕺`;
+            ? `¡Mirá la comparación de ${names} en ${state.category} en TANGO RADAR! 💃🕺`
+            : `Check out the comparison between ${names} in ${state.category} at TANGO RADAR! 💃🕺`;
     } else {
         text = state.lang === 'es' 
-            ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${state.category} en METRO RADAR! 💃🕺`
-            : `Check out the scores for ${state.couple.Nombres} in ${state.category} at METRO RADAR! 💃🕺`;
+            ? `¡Mirá los puntajes de ${state.couple.Nombres} en ${state.category} en TANGO RADAR! 💃🕺`
+            : `Check out the scores for ${state.couple.Nombres} in ${state.category} at TANGO RADAR! 💃🕺`;
     }
     const url = window.location.href;
 
@@ -78,11 +78,11 @@ async function shareView() {
             const blob = await (await fetch(dataUrl)).blob();
             let filename;
             if (state.comparisonMode === 'overlay') {
-                filename = `metro-comparison-${state.selectedCouples.map(c => c.Nº).join('-')}.png`;
+                filename = `tango-comparison-${state.selectedCouples.map(c => c.Nº).join('-')}.png`;
             } else if (state.comparisonMode === 'side-by-side') {
-                filename = `metro-comparison-side-by-side.png`;
+                filename = `tango-comparison-side-by-side.png`;
             } else {
-                filename = `metro-radar-${state.couple?.Nº || 'view'}.png`;
+                filename = `tango-radar-${state.couple?.Nº || 'view'}.png`;
             }
             imageFile = new File([blob], filename, { type: 'image/png' });
         }
@@ -94,7 +94,7 @@ async function shareView() {
     if (navigator.share) {
         try {
             const shareData = {
-                title: 'METRO RADAR',
+                title: 'TANGO RADAR',
                 text: text,
                 url: url
             };

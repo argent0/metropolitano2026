@@ -1,7 +1,7 @@
 # Implementation Report: Multi-Round Support (Semifinals + Finals)
 
 ## 1. Objective
-Successfully extended **METRO RADAR** to support multiple rounds of competition (Semifinals and Finals) within the same single-page application. The implementation ensures that the Finals data is presented as the primary, default view while allowing users to explore the history of the Semifinals.
+Successfully extended **TANGO RADAR** to support multiple rounds of competition (Semifinals and Finals) within the same single-page application. The implementation ensures that the Finals data is presented as the primary, default view while allowing users to explore the history of the Semifinals.
 
 ## 2. Technical Architectural Changes
 
@@ -24,7 +24,7 @@ Successfully extended **METRO RADAR** to support multiple rounds of competition 
     - **SEMIFINALS**: Highlighted with a neutral/silver accent (`bg-zinc-100`).
 
 ### 3.2 Visual Context
-- **Round Badge**: A dynamic badge was added to the header next to the "METRO RADAR" title.
+- **Round Badge**: A dynamic badge was added to the header next to the "TANGO RADAR" title.
 - **Automatic Transitions**: Switching rounds automatically:
     1. Re-populates the category tab bar.
     2. Switches to the default category for that round.

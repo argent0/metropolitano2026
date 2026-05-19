@@ -47,7 +47,7 @@ metropolitano-viz/
 **UI Layout (Portrait Mobile)**  
 
 **1. Sticky Top Header (always visible)**  
-- Left: Logo text “**METRO RADAR**” in bold rose-600 + tiny gold accent line  
+- Left: Logo text “**TANGO RADAR**” in bold rose-600 + tiny gold accent line  
 - Center: Current Category name (large, clickable to open category picker)  
 - Right: Settings gear icon (opens modal)
 

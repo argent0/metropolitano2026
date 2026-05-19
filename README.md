@@ -1,4 +1,4 @@
-# METRO RADAR 🌹
+# TANGO RADAR 🌹
 ### Metropolitano 2026 Semifinals Visualizer
 
 A sleek, mobile-first data visualization tool for the Metropolitano 2026 Tango Semifinals. This tool turns raw judge scores into interactive "Spider Web" (Radar) charts and judge distribution histograms, designed specifically for the tango community.
