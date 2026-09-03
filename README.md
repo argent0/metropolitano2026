@@ -48,8 +48,27 @@ Since this is a fully static project, there is no installation required.
 
 ```text
 metropolitano2026/
-├── index.html                           # Main application
-├── metropolitano_semifinal_clean.json   # Source data
+├── index.html                           # App shell (markup only)
+├── css/
+│   └── styles.css                       # Custom styles (Tailwind is loaded via CDN)
+├── js/                                  # App logic, loaded as plain <script> tags (no build step)
+│   ├── i18n.js                          # Translations + t()
+│   ├── state.js                         # Tournament config, scoring rules, app state
+│   ├── app-core.js                      # Init, tournament/round/category switching
+│   ├── stats.js                         # Judge benchmarks, median/stddev/consensus, bias math
+│   ├── insights.js                      # "Your Story" summary + what-if simulator
+│   ├── app-render.js                    # Main single-couple view rendering
+│   ├── comparison.js                    # Multi-couple compare (overlay / side-by-side)
+│   ├── router.js                        # URL <-> state sync (deep linking)
+│   ├── share.js                         # Share sheet / image export
+│   ├── app-tabs.js                      # Benchmark + tab switching
+│   ├── charts.js                        # Radar, judge cards, bias tab rendering
+│   ├── modals.js                        # Bottom-sheet modals (couple/category pickers, settings)
+│   └── main.js                          # Bootstraps the app (calls init())
+├── metropolitano_semifinal_clean.json   # Metropolitano source data
+├── metropolitano_final_clean.json
+├── mundial_semifinal_clean.json         # Mundial de Tango source data
+├── mundial_final_clean.json
 ├── reports/
 │   ├── first-version.md                 # Technical implementation report
 │   └── comparison-view.md               # Multi-couple comparison implementation
