@@ -72,9 +72,12 @@
 
             const isRemoving = state.simulation && state.simulation.action === 'remove';
             const isAveraging = state.simulation && state.simulation.action === 'average';
+            const isEliminating = state.simulation && state.simulation.action === 'eliminate';
+            const eliminatedJudges = isEliminating ? state.simulation.judges : [];
 
             const showAverage = !!bombedJudge;
             const showRemove = !!worstJudge && (worstJudge !== bombedJudge);
+            const judgeNames = Object.keys(couple.scores);
             const gridCols = (showAverage && showRemove) ? 'grid-cols-2' : 'grid-cols-1';
 
             return `
@@ -124,6 +127,31 @@
                             </div>
                             ` : ''}
                         </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/5">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="text-[10px] font-black uppercase tracking-widest text-zinc-400">
+                                    🚫 ${t('whatIfEliminateJudges')}
+                                </span>
+                                ${isEliminating ? `
+                                <button onclick="window.undoSimulation()" class="text-[9px] font-black uppercase tracking-widest text-rose-500">
+                                    ${t('undo')}
+                                </button>
+                                ` : ''}
+                            </div>
+                            <p class="text-[10px] text-zinc-500 mb-3">${t('eliminateJudgesHint')}</p>
+                            <div class="flex flex-wrap gap-2">
+                                ${judgeNames.map(judge => {
+                                    const isElim = eliminatedJudges.includes(judge);
+                                    const safeJudge = judge.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                                    return `
+                                        <button onclick="window.toggleEliminateJudge('${safeJudge}')" class="text-[10px] font-black px-3 py-2 rounded-full border transition-all active:scale-95 ${isElim ? 'bg-rose-600 text-white border-rose-600 shadow-neon-rose' : 'bg-zinc-900 text-zinc-400 border-white/10 hover:border-white/20'}">
+                                            ${isElim ? '✕ ' : ''}${judge}
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -153,10 +181,40 @@
             }
         };
 
-        function simulateAction(action, couple, silent = false) {
+        /**
+         * Toggles a single judge in/out of the active "eliminate judges" simulation.
+         * Unlike handleSimulate (a single on/off toggle), this accumulates a set of
+         * judges across repeated clicks, always starting from the true original couple.
+         */
+        window.toggleEliminateJudge = (judge) => {
+            const wasEliminating = state.simulation && state.simulation.action === 'eliminate';
+            const baseCouple = state.simulation ? state.simulation.originalCouple : state.couple;
+            const currentJudges = wasEliminating ? state.simulation.judges : [];
+
+            const newJudges = currentJudges.includes(judge)
+                ? currentJudges.filter(j => j !== judge)
+                : [...currentJudges, judge];
+
+            if (newJudges.length === 0) {
+                window.undoSimulation();
+                return;
+            }
+
+            const simulated = simulateAction('eliminate', baseCouple, false, newJudges);
+            state.simulation = {
+                action: 'eliminate',
+                judges: newJudges,
+                originalCouple: baseCouple,
+                simulatedCouple: simulated
+            };
+            state.couple = simulated;
+            updateUI();
+        };
+
+        function simulateAction(action, couple, silent = false, eliminatedJudges = null) {
             const newCouple = JSON.parse(JSON.stringify(couple));
             const scores = Object.entries(newCouple.scores).filter(([j, s]) => s !== null);
-            
+
             if (action === 'remove') {
                 if (scores.length === 0) return newCouple;
                 scores.sort((a, b) => a[1] - b[1]);
@@ -173,6 +231,10 @@
                     // Fallback to remove worst if no bomb
                     return simulateAction('remove', couple, silent);
                 }
+            } else if (action === 'eliminate') {
+                (eliminatedJudges || []).forEach(judge => {
+                    if (judge in newCouple.scores) newCouple.scores[judge] = null;
+                });
             }
 
             // Recalculate PROMEDIO using the current tournament's official scoring rule
