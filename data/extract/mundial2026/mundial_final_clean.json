@@ -1,0 +1,1042 @@
+[
+  {
+    "category": "TANGO PISTA FINAL",
+    "scores": [
+      {
+        "Nº": 460,
+        "Nombres": "Lucas Gauto - Naima Gerasopoulou",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 9.8,
+          "Andrés Cejas": 9.37,
+          "Sabrina Veliz": 9.89,
+          "Daniel Nacucchio": 9.86,
+          "Graciela Gonzalez": 9.8,
+          "Fernando Carrasco": 9.99,
+          "Josefina Bermudez": 9.94
+        },
+        "PROMEDIO": 9.858
+      },
+      {
+        "Nº": 91,
+        "Nombres": "Rodrigo Nicolas Palacios - Indira Hiayes",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 9.4,
+          "Andrés Cejas": 8.95,
+          "Sabrina Veliz": 9.9,
+          "Daniel Nacucchio": 9.8,
+          "Graciela Gonzalez": 9.95,
+          "Fernando Carrasco": 9.98,
+          "Josefina Bermudez": 9.93
+        },
+        "PROMEDIO": 9.796
+      },
+      {
+        "Nº": 139,
+        "Nombres": "London - Sol",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 9.37,
+          "Andrés Cejas": 9.58,
+          "Sabrina Veliz": 9.68,
+          "Daniel Nacucchio": 9.78,
+          "Graciela Gonzalez": 9.68,
+          "Fernando Carrasco": 9.97,
+          "Josefina Bermudez": 9.81
+        },
+        "PROMEDIO": 9.706
+      },
+      {
+        "Nº": 1,
+        "Nombres": "Erik Deslarmes - Nadia Aguilar",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 9.73,
+          "Andrés Cejas": 9.4,
+          "Sabrina Veliz": 9.35,
+          "Daniel Nacucchio": 9.87,
+          "Graciela Gonzalez": 8.1,
+          "Fernando Carrasco": 9.85,
+          "Josefina Bermudez": 9.91
+        },
+        "PROMEDIO": 9.64
+      },
+      {
+        "Nº": 545,
+        "Nombres": "Leonardo Pankow - Valentina Massari",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 9.35,
+          "Andrés Cejas": 9.6,
+          "Sabrina Veliz": 9.6,
+          "Daniel Nacucchio": 9.75,
+          "Graciela Gonzalez": 9.65,
+          "Fernando Carrasco": 9.6,
+          "Josefina Bermudez": 9.89
+        },
+        "PROMEDIO": 9.64
+      },
+      {
+        "Nº": 424,
+        "Nombres": "Juan David Vargas - Ornella Simonetto",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 9.82,
+          "Andrés Cejas": 8.78,
+          "Sabrina Veliz": 9.75,
+          "Daniel Nacucchio": 9.8,
+          "Graciela Gonzalez": 8.6,
+          "Fernando Carrasco": 9.95,
+          "Josefina Bermudez": 9.87
+        },
+        "PROMEDIO": 9.604
+      },
+      {
+        "Nº": 273,
+        "Nombres": "Gustavo Chaile - Mayela Aponte",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 9.73,
+          "Andrés Cejas": 9.2,
+          "Sabrina Veliz": 9.65,
+          "Daniel Nacucchio": 9.7,
+          "Graciela Gonzalez": 9.75,
+          "Fernando Carrasco": 9.55,
+          "Josefina Bermudez": 9.35
+        },
+        "PROMEDIO": 9.596
+      },
+      {
+        "Nº": 675,
+        "Nombres": "Artem Luchin - Polina Luchina",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 8.35,
+          "Andrés Cejas": 9.02,
+          "Sabrina Veliz": 9.7,
+          "Daniel Nacucchio": 9.82,
+          "Graciela Gonzalez": 9.63,
+          "Fernando Carrasco": 9.85,
+          "Josefina Bermudez": 9.75
+        },
+        "PROMEDIO": 9.584
+      },
+      {
+        "Nº": 141,
+        "Nombres": "Cristian Lopez - Naoko Tsutsumizaki",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 8.98,
+          "Andrés Cejas": 9.18,
+          "Sabrina Veliz": 9.58,
+          "Daniel Nacucchio": 9.88,
+          "Graciela Gonzalez": 8.5,
+          "Fernando Carrasco": 9.98,
+          "Josefina Bermudez": 9.89
+        },
+        "PROMEDIO": 9.502
+      },
+      {
+        "Nº": 440,
+        "Nombres": "Stanislav Fursov - Ekaterina Simonova",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 8.26,
+          "Andrés Cejas": 9.5,
+          "Sabrina Veliz": 9.47,
+          "Daniel Nacucchio": 9.87,
+          "Graciela Gonzalez": 8.7,
+          "Fernando Carrasco": 9.75,
+          "Josefina Bermudez": 9.8
+        },
+        "PROMEDIO": 9.444
+      },
+      {
+        "Nº": 703,
+        "Nombres": "Lucas Martin - Victoria Pesci",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 9.43,
+          "Andrés Cejas": 9.36,
+          "Sabrina Veliz": 9.15,
+          "Daniel Nacucchio": 9.81,
+          "Graciela Gonzalez": 8.6,
+          "Fernando Carrasco": 9.74,
+          "Josefina Bermudez": 9.45
+        },
+        "PROMEDIO": 9.426
+      },
+      {
+        "Nº": 386,
+        "Nombres": "Matteo Antonietti - Añes Arredondo",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 8.72,
+          "Andrés Cejas": 9.29,
+          "Sabrina Veliz": 9.48,
+          "Daniel Nacucchio": 9.29,
+          "Graciela Gonzalez": 9.66,
+          "Fernando Carrasco": 9.7,
+          "Josefina Bermudez": 9.4
+        },
+        "PROMEDIO": 9.424
+      },
+      {
+        "Nº": 714,
+        "Nombres": "Rodrigo Videla - Marina Teves",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 8.81,
+          "Andrés Cejas": 7.9,
+          "Sabrina Veliz": 9.25,
+          "Daniel Nacucchio": 9.85,
+          "Graciela Gonzalez": 9.6,
+          "Fernando Carrasco": 9.78,
+          "Josefina Bermudez": 9.65
+        },
+        "PROMEDIO": 9.418
+      },
+      {
+        "Nº": 690,
+        "Nombres": "Ezequiel Núñez - Haruna Izutani",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 9.81,
+          "Andrés Cejas": 8.73,
+          "Sabrina Veliz": 9.5,
+          "Daniel Nacucchio": 9.83,
+          "Graciela Gonzalez": 8.65,
+          "Fernando Carrasco": 9.1,
+          "Josefina Bermudez": 9.89
+        },
+        "PROMEDIO": 9.394
+      },
+      {
+        "Nº": 133,
+        "Nombres": "Alexander Moncada Rojas - Martina Waldman",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 8.71,
+          "Andrés Cejas": 9.19,
+          "Sabrina Veliz": 9.45,
+          "Daniel Nacucchio": 9.81,
+          "Graciela Gonzalez": 8.1,
+          "Fernando Carrasco": 9.8,
+          "Josefina Bermudez": 9.75
+        },
+        "PROMEDIO": 9.38
+      },
+      {
+        "Nº": 712,
+        "Nombres": "Juan Ignacio Braida - Natasha Kaliszuk Lee",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 9.71,
+          "Andrés Cejas": 9.28,
+          "Sabrina Veliz": 9.45,
+          "Daniel Nacucchio": 9.73,
+          "Graciela Gonzalez": 8.7,
+          "Fernando Carrasco": 8.3,
+          "Josefina Bermudez": 9.9
+        },
+        "PROMEDIO": 9.374
+      },
+      {
+        "Nº": 335,
+        "Nombres": "Dmitrii Liferov - Dana Son",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 8.64,
+          "Andrés Cejas": 9.31,
+          "Sabrina Veliz": 9.5,
+          "Daniel Nacucchio": 9.2,
+          "Graciela Gonzalez": 9.65,
+          "Fernando Carrasco": 9.8,
+          "Josefina Bermudez": 9.15
+        },
+        "PROMEDIO": 9.362
+      },
+      {
+        "Nº": 166,
+        "Nombres": "Ariel Taritolay - Laura Casco Zorzon",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 9.42,
+          "Andrés Cejas": 9.08,
+          "Sabrina Veliz": 9.65,
+          "Daniel Nacucchio": 9.25,
+          "Graciela Gonzalez": 8.1,
+          "Fernando Carrasco": 9.9,
+          "Josefina Bermudez": 9.4
+        },
+        "PROMEDIO": 9.36
+      },
+      {
+        "Nº": 248,
+        "Nombres": "Ivan Franco - Magali Tokian",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 9.32,
+          "Andrés Cejas": 9.34,
+          "Sabrina Veliz": 9.53,
+          "Daniel Nacucchio": 8.89,
+          "Graciela Gonzalez": 8.45,
+          "Fernando Carrasco": 9.85,
+          "Josefina Bermudez": 9.67
+        },
+        "PROMEDIO": 9.35
+      },
+      {
+        "Nº": 145,
+        "Nombres": "Marcelo Javier Torres - Francisca Alarcon Irrazabal",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 9.43,
+          "Andrés Cejas": 9.25,
+          "Sabrina Veliz": 8.85,
+          "Daniel Nacucchio": 9.7,
+          "Graciela Gonzalez": 8.4,
+          "Fernando Carrasco": 9.6,
+          "Josefina Bermudez": 9.55
+        },
+        "PROMEDIO": 9.336
+      },
+      {
+        "Nº": 719,
+        "Nombres": "Matias Gutierrez - Aldana Belen Figueroa",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 9.83,
+          "Andrés Cejas": 9.05,
+          "Sabrina Veliz": 8.99,
+          "Daniel Nacucchio": 9.3,
+          "Graciela Gonzalez": 8.15,
+          "Fernando Carrasco": 9.75,
+          "Josefina Bermudez": 9.55
+        },
+        "PROMEDIO": 9.328
+      },
+      {
+        "Nº": 447,
+        "Nombres": "Valentin Bobkov - Katerina Tsybrova",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 8.66,
+          "Andrés Cejas": 9.07,
+          "Sabrina Veliz": 9.35,
+          "Daniel Nacucchio": 9.18,
+          "Graciela Gonzalez": 9.05,
+          "Fernando Carrasco": 9.55,
+          "Josefina Bermudez": 9.6
+        },
+        "PROMEDIO": 9.24
+      },
+      {
+        "Nº": 120,
+        "Nombres": "Andrei Panferov - Ekaterina Petrova",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 8.76,
+          "Andrés Cejas": 9.03,
+          "Sabrina Veliz": 9.4,
+          "Daniel Nacucchio": 9.29,
+          "Graciela Gonzalez": 8.5,
+          "Fernando Carrasco": 9.68,
+          "Josefina Bermudez": 9.6
+        },
+        "PROMEDIO": 9.216
+      },
+      {
+        "Nº": 208,
+        "Nombres": "Facundo Barrionuevo - Agustina Juanbelz",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 8.41,
+          "Andrés Cejas": 9.29,
+          "Sabrina Veliz": 9.1,
+          "Daniel Nacucchio": 9.19,
+          "Graciela Gonzalez": 9.7,
+          "Fernando Carrasco": 9.2,
+          "Josefina Bermudez": 9.15
+        },
+        "PROMEDIO": 9.186
+      },
+      {
+        "Nº": 572,
+        "Nombres": "Carlos Estigarribia - Letizia Messina",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 8.54,
+          "Andrés Cejas": 9.14,
+          "Sabrina Veliz": 9.48,
+          "Daniel Nacucchio": 9.31,
+          "Graciela Gonzalez": 8.4,
+          "Fernando Carrasco": 9.67,
+          "Josefina Bermudez": 9.25
+        },
+        "PROMEDIO": 9.144
+      },
+      {
+        "Nº": 211,
+        "Nombres": "Eric Dinzel - Flavia Kohut",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 9.28,
+          "Andrés Cejas": 9.28,
+          "Sabrina Veliz": 9.65,
+          "Daniel Nacucchio": 9.05,
+          "Graciela Gonzalez": 8.9,
+          "Fernando Carrasco": 9.1,
+          "Josefina Bermudez": 8.99
+        },
+        "PROMEDIO": 9.14
+      },
+      {
+        "Nº": 293,
+        "Nombres": "Hernan Rodriguez - Maria Florencia Labiano",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 8.82,
+          "Andrés Cejas": 8.85,
+          "Sabrina Veliz": 8.83,
+          "Daniel Nacucchio": 9.6,
+          "Graciela Gonzalez": 9.85,
+          "Fernando Carrasco": 9.4,
+          "Josefina Bermudez": 8.85
+        },
+        "PROMEDIO": 9.106
+      },
+      {
+        "Nº": 244,
+        "Nombres": "Alejandro Ferreyra - Fernanda Grosso",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 8.45,
+          "Andrés Cejas": 9.43,
+          "Sabrina Veliz": 8.93,
+          "Daniel Nacucchio": 9.69,
+          "Graciela Gonzalez": 8.15,
+          "Fernando Carrasco": 9.78,
+          "Josefina Bermudez": 8.99
+        },
+        "PROMEDIO": 9.098
+      },
+      {
+        "Nº": 715,
+        "Nombres": "Juan Fernando Cabral - Laura Cecilia Castiñeiras",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 8.72,
+          "Andrés Cejas": 9.14,
+          "Sabrina Veliz": 8.95,
+          "Daniel Nacucchio": 8.8,
+          "Graciela Gonzalez": 8.2,
+          "Fernando Carrasco": 9.6,
+          "Josefina Bermudez": 9.7
+        },
+        "PROMEDIO": 9.042
+      },
+      {
+        "Nº": 347,
+        "Nombres": "Lucio Galván - Sol Alzarán",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 8.53,
+          "Andrés Cejas": 8.99,
+          "Sabrina Veliz": 8.7,
+          "Daniel Nacucchio": 9.22,
+          "Graciela Gonzalez": 8.05,
+          "Fernando Carrasco": 9.88,
+          "Josefina Bermudez": 9.7
+        },
+        "PROMEDIO": 9.028
+      },
+      {
+        "Nº": 718,
+        "Nombres": "Aldo Adrian Romero - Marcela Pilatti",
+        "RONDA": 5,
+        "scores": {
+          "Inés Muzzopappa": 9.12,
+          "Andrés Cejas": 8.92,
+          "Sabrina Veliz": 8.85,
+          "Daniel Nacucchio": 8.99,
+          "Graciela Gonzalez": 9.64,
+          "Fernando Carrasco": 9.25,
+          "Josefina Bermudez": 8.85
+        },
+        "PROMEDIO": 9.026
+      },
+      {
+        "Nº": 5,
+        "Nombres": "Ferrol Matthew Poluan - Muliany Rambe",
+        "RONDA": 4,
+        "scores": {
+          "Inés Muzzopappa": 8.32,
+          "Andrés Cejas": 8.88,
+          "Sabrina Veliz": 8.95,
+          "Daniel Nacucchio": 9.15,
+          "Graciela Gonzalez": 8.85,
+          "Fernando Carrasco": 9.55,
+          "Josefina Bermudez": 9.2
+        },
+        "PROMEDIO": 9.006
+      },
+      {
+        "Nº": 159,
+        "Nombres": "Cristian Correa - Miriam Copello",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 8.95,
+          "Andrés Cejas": 8.9,
+          "Sabrina Veliz": 8.95,
+          "Daniel Nacucchio": 9.2,
+          "Graciela Gonzalez": 8.05,
+          "Fernando Carrasco": 9.5,
+          "Josefina Bermudez": 8.9
+        },
+        "PROMEDIO": 8.98
+      },
+      {
+        "Nº": 95,
+        "Nombres": "Jesus Luis Paez - Iara Duarte",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 8.74,
+          "Andrés Cejas": 8.7,
+          "Sabrina Veliz": 8.65,
+          "Daniel Nacucchio": 9.2,
+          "Graciela Gonzalez": 8.55,
+          "Fernando Carrasco": 9.69,
+          "Josefina Bermudez": 9.6
+        },
+        "PROMEDIO": 8.978
+      },
+      {
+        "Nº": 700,
+        "Nombres": "Adrien Bariki Alaoui - Iro Davlanti Lo",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 8.81,
+          "Andrés Cejas": 8.8,
+          "Sabrina Veliz": 9.15,
+          "Daniel Nacucchio": 8.9,
+          "Graciela Gonzalez": 8.05,
+          "Fernando Carrasco": 9.8,
+          "Josefina Bermudez": 8.9
+        },
+        "PROMEDIO": 8.912
+      },
+      {
+        "Nº": 452,
+        "Nombres": "Diego Ezequiel Pérez - María Soledad Cantarini",
+        "RONDA": 3,
+        "scores": {
+          "Inés Muzzopappa": 8.62,
+          "Andrés Cejas": 8.68,
+          "Sabrina Veliz": 8.83,
+          "Daniel Nacucchio": 9.36,
+          "Graciela Gonzalez": 8.7,
+          "Fernando Carrasco": 9.63,
+          "Josefina Bermudez": 8.95
+        },
+        "PROMEDIO": 8.904
+      },
+      {
+        "Nº": 720,
+        "Nombres": "Damian Mechura - Veronica Vazquez",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 8.64,
+          "Andrés Cejas": 8.75,
+          "Sabrina Veliz": 8.99,
+          "Daniel Nacucchio": 8.98,
+          "Graciela Gonzalez": 8.15,
+          "Fernando Carrasco": 9.65,
+          "Josefina Bermudez": 9.1
+        },
+        "PROMEDIO": 8.892
+      },
+      {
+        "Nº": 692,
+        "Nombres": "Ruslan Bektimirov - Iullia Osina",
+        "RONDA": 1,
+        "scores": {
+          "Inés Muzzopappa": 9.1,
+          "Andrés Cejas": 8.0,
+          "Sabrina Veliz": 8.8,
+          "Daniel Nacucchio": 9.1,
+          "Graciela Gonzalez": 8.29,
+          "Fernando Carrasco": 8.8,
+          "Josefina Bermudez": 8.6
+        },
+        "PROMEDIO": 8.718
+      },
+      {
+        "Nº": 390,
+        "Nombres": "Maxi Copello - Karu Terenzio",
+        "RONDA": 2,
+        "scores": {
+          "Inés Muzzopappa": 8.12,
+          "Andrés Cejas": 8.95,
+          "Sabrina Veliz": 9.3,
+          "Daniel Nacucchio": 8.7,
+          "Graciela Gonzalez": 7.8,
+          "Fernando Carrasco": 8.9,
+          "Josefina Bermudez": 8.8
+        },
+        "PROMEDIO": 8.694
+      }
+    ]
+  },
+  {
+    "category": "TANGO PISTA FINAL SENIOR",
+    "scores": [
+      {
+        "Nº": 718,
+        "Nombres": "Aldo Adrian Romero - Marcela Pilatti",
+        "scores": {
+          "Inés Muzzopappa": 9.75,
+          "Andrés Cejas": 9.4,
+          "Sabrina Veliz": 9.83,
+          "Daniel Nacucchio": 9.87,
+          "Graciela Gonzalez": 9.2,
+          "Fernando Carrasco": 9.75,
+          "Josefina Bermudez Avila": 9.8
+        },
+        "PROMEDIO": 9.706
+      },
+      {
+        "Nº": 684,
+        "Nombres": "Marcela Mansilla - Orlando Nieto",
+        "scores": {
+          "Inés Muzzopappa": 9.6,
+          "Andrés Cejas": 9.15,
+          "Sabrina Veliz": 9.74,
+          "Daniel Nacucchio": 8.55,
+          "Graciela Gonzalez": 9.1,
+          "Fernando Carrasco": 9.68,
+          "Josefina Bermudez Avila": 9.85
+        },
+        "PROMEDIO": 9.454
+      },
+      {
+        "Nº": 708,
+        "Nombres": "Alfredo Ricardo Encina - Ana Luisa Difrancisco",
+        "scores": {
+          "Inés Muzzopappa": 9.53,
+          "Andrés Cejas": 8.75,
+          "Sabrina Veliz": 8.8,
+          "Daniel Nacucchio": 9.79,
+          "Graciela Gonzalez": 9.05,
+          "Fernando Carrasco": 9.8,
+          "Josefina Bermudez Avila": 9.75
+        },
+        "PROMEDIO": 9.384
+      },
+      {
+        "Nº": 707,
+        "Nombres": "Edgardo \"patita\" Palleyro - Maria Rosa Corsisky",
+        "scores": {
+          "Inés Muzzopappa": 9.43,
+          "Andrés Cejas": 9.05,
+          "Sabrina Veliz": 8.95,
+          "Daniel Nacucchio": 8.72,
+          "Graciela Gonzalez": 8.9,
+          "Fernando Carrasco": 9.66,
+          "Josefina Bermudez Avila": 8.9
+        },
+        "PROMEDIO": 9.046
+      },
+      {
+        "Nº": 400,
+        "Nombres": "Hyoung Wook Chang - Eun Young Lee",
+        "scores": {
+          "Inés Muzzopappa": 8.58,
+          "Andrés Cejas": 8.8,
+          "Sabrina Veliz": 9.5,
+          "Daniel Nacucchio": 9.67,
+          "Graciela Gonzalez": 8.3,
+          "Fernando Carrasco": 9.58,
+          "Josefina Bermudez Avila": 8.75
+        },
+        "PROMEDIO": 9.042
+      },
+      {
+        "Nº": 711,
+        "Nombres": "Alejandro Montes de Oca - Liliana Beatriz del Valle",
+        "scores": {
+          "Inés Muzzopappa": 8.62,
+          "Andrés Cejas": 9.3,
+          "Sabrina Veliz": 8.85,
+          "Daniel Nacucchio": 9.76,
+          "Graciela Gonzalez": 8.25,
+          "Fernando Carrasco": 9.55,
+          "Josefina Bermudez Avila": 8.85
+        },
+        "PROMEDIO": 9.034
+      },
+      {
+        "Nº": 51,
+        "Nombres": "Marcelo Sassi - Ines Correa",
+        "scores": {
+          "Inés Muzzopappa": 8.73,
+          "Andrés Cejas": 8.7,
+          "Sabrina Veliz": 9.75,
+          "Daniel Nacucchio": 8.59,
+          "Graciela Gonzalez": 9.05,
+          "Fernando Carrasco": 9.55,
+          "Josefina Bermudez Avila": 9.0
+        },
+        "PROMEDIO": 9.006
+      },
+      {
+        "Nº": 348,
+        "Nombres": "Leonardo Durso - Fabiana Portas",
+        "scores": {
+          "Inés Muzzopappa": 8.7,
+          "Andrés Cejas": 7.9,
+          "Sabrina Veliz": 9.4,
+          "Daniel Nacucchio": 8.6,
+          "Graciela Gonzalez": 8.1,
+          "Fernando Carrasco": 9.57,
+          "Josefina Bermudez Avila": 9.45
+        },
+        "PROMEDIO": 8.85
+      },
+      {
+        "Nº": 710,
+        "Nombres": "Claudio Marcelo Orso - Flor Martinez",
+        "scores": {
+          "Inés Muzzopappa": 8.69,
+          "Andrés Cejas": 7.9,
+          "Sabrina Veliz": 8.7,
+          "Daniel Nacucchio": 9.3,
+          "Graciela Gonzalez": 8.05,
+          "Fernando Carrasco": 9.56,
+          "Josefina Bermudez Avila": 9.0
+        },
+        "PROMEDIO": 8.748
+      },
+      {
+        "Nº": 148,
+        "Nombres": "Elías Ramon Abdala - Maria Silvina del Bosque",
+        "scores": {
+          "Inés Muzzopappa": 8.61,
+          "Andrés Cejas": 7.4,
+          "Sabrina Veliz": 8.85,
+          "Daniel Nacucchio": 8.61,
+          "Graciela Gonzalez": 8.15,
+          "Fernando Carrasco": 9.7,
+          "Josefina Bermudez Avila": 8.75
+        },
+        "PROMEDIO": 8.594
+      }
+    ]
+  },
+  {
+    "category": "TANGO ESCENARIO FINAL",
+    "scores": [
+      {
+        "Nº": 547,
+        "Nombres": "Nicolas Schell - Nair Schinca",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.9,
+          "Verónica Gardella": 10.0,
+          "Juan Paulo Horvath": 9.8,
+          "Claudia Códega": 9.49,
+          "Gisela Galeassi": 9.65,
+          "Mario Morales": 9.7,
+          "Pablo Verón": 9.63
+        },
+        "PROMEDIO": 9.736
+      },
+      {
+        "Nº": 586,
+        "Nombres": "Diego Ortega - Aldana Silveyra",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.8,
+          "Verónica Gardella": 9.8,
+          "Juan Paulo Horvath": 9.69,
+          "Claudia Códega": 9.0,
+          "Gisela Galeassi": 9.97,
+          "Mario Morales": 9.6,
+          "Pablo Verón": 9.6
+        },
+        "PROMEDIO": 9.698
+      },
+      {
+        "Nº": 365,
+        "Nombres": "Facundo Cabral - Mara Navarro",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.81,
+          "Verónica Gardella": 9.7,
+          "Juan Paulo Horvath": 9.82,
+          "Claudia Códega": 9.43,
+          "Gisela Galeassi": 9.95,
+          "Mario Morales": 9.6,
+          "Pablo Verón": 9.3
+        },
+        "PROMEDIO": 9.672
+      },
+      {
+        "Nº": 717,
+        "Nombres": "Federico Ibañez - Nuria Lazo",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.75,
+          "Verónica Gardella": 9.5,
+          "Juan Paulo Horvath": 9.68,
+          "Claudia Códega": 9.01,
+          "Gisela Galeassi": 9.73,
+          "Mario Morales": 9.6,
+          "Pablo Verón": 9.93
+        },
+        "PROMEDIO": 9.652
+      },
+      {
+        "Nº": 554,
+        "Nombres": "Ariel Leguizamon - Yesica Esquivel",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.72,
+          "Verónica Gardella": 9.75,
+          "Juan Paulo Horvath": 9.67,
+          "Claudia Códega": 9.1,
+          "Gisela Galeassi": 9.35,
+          "Mario Morales": 9.31,
+          "Pablo Verón": 9.9
+        },
+        "PROMEDIO": 9.56
+      },
+      {
+        "Nº": 284,
+        "Nombres": "Julio José Seffino - Aldana Belén Tade",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.7,
+          "Verónica Gardella": 9.9,
+          "Juan Paulo Horvath": 9.6,
+          "Claudia Códega": 9.15,
+          "Gisela Galeassi": 9.42,
+          "Mario Morales": 9.3,
+          "Pablo Verón": 9.75
+        },
+        "PROMEDIO": 9.554
+      },
+      {
+        "Nº": 513,
+        "Nombres": "Facundo Vilches - Irina Cristoff Veleff",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.8,
+          "Verónica Gardella": 9.4,
+          "Juan Paulo Horvath": 9.66,
+          "Claudia Códega": 9.03,
+          "Gisela Galeassi": 9.28,
+          "Mario Morales": 9.35,
+          "Pablo Verón": 9.8
+        },
+        "PROMEDIO": 9.498
+      },
+      {
+        "Nº": 117,
+        "Nombres": "Lisandro Eberle - Guadalupe Ponzelli",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.65,
+          "Verónica Gardella": 9.3,
+          "Juan Paulo Horvath": 9.65,
+          "Claudia Códega": 9.02,
+          "Gisela Galeassi": 9.6,
+          "Mario Morales": 9.4,
+          "Pablo Verón": 9.45
+        },
+        "PROMEDIO": 9.48
+      },
+      {
+        "Nº": 462,
+        "Nombres": "Lautaro Levato - Milagros Quintana",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.66,
+          "Verónica Gardella": 9.4,
+          "Juan Paulo Horvath": 9.71,
+          "Claudia Códega": 9.22,
+          "Gisela Galeassi": 9.41,
+          "Mario Morales": 9.4,
+          "Pablo Verón": 9.3
+        },
+        "PROMEDIO": 9.434
+      },
+      {
+        "Nº": 477,
+        "Nombres": "Franco Cocheret - Juliana Mansilla",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.43,
+          "Verónica Gardella": 9.2,
+          "Juan Paulo Horvath": 9.4,
+          "Claudia Códega": 9.01,
+          "Gisela Galeassi": 9.28,
+          "Mario Morales": 9.38,
+          "Pablo Verón": 9.35
+        },
+        "PROMEDIO": 9.322
+      },
+      {
+        "Nº": 448,
+        "Nombres": "Jorge Calabrigo - Tiziana Silva",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.45,
+          "Verónica Gardella": 8.5,
+          "Juan Paulo Horvath": 9.72,
+          "Claudia Códega": 9.2,
+          "Gisela Galeassi": 9.64,
+          "Mario Morales": 9.3,
+          "Pablo Verón": 9.0
+        },
+        "PROMEDIO": 9.318
+      },
+      {
+        "Nº": 79,
+        "Nombres": "Juan Cupini - Erica Rossi",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.65,
+          "Verónica Gardella": 9.0,
+          "Juan Paulo Horvath": 9.65,
+          "Claudia Códega": 9.11,
+          "Gisela Galeassi": 9.32,
+          "Mario Morales": 9.3,
+          "Pablo Verón": 9.2
+        },
+        "PROMEDIO": 9.316
+      },
+      {
+        "Nº": 509,
+        "Nombres": "Lucas Guevara - Daniela Bravo",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.53,
+          "Verónica Gardella": 9.45,
+          "Juan Paulo Horvath": 8.99,
+          "Claudia Códega": 9.02,
+          "Gisela Galeassi": 9.3,
+          "Mario Morales": 9.29,
+          "Pablo Verón": 9.5
+        },
+        "PROMEDIO": 9.312
+      },
+      {
+        "Nº": 92,
+        "Nombres": "Carlos Cisneros - Juan Segui",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.55,
+          "Verónica Gardella": 9.0,
+          "Juan Paulo Horvath": 9.63,
+          "Claudia Códega": 8.9,
+          "Gisela Galeassi": 9.55,
+          "Mario Morales": 9.28,
+          "Pablo Verón": 8.5
+        },
+        "PROMEDIO": 9.256
+      },
+      {
+        "Nº": 471,
+        "Nombres": "Franco Rubén Sosa - Romina Moreno Guzmán",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.5,
+          "Verónica Gardella": 9.1,
+          "Juan Paulo Horvath": 9.65,
+          "Claudia Códega": 8.72,
+          "Gisela Galeassi": 9.11,
+          "Mario Morales": 9.26,
+          "Pablo Verón": 9.2
+        },
+        "PROMEDIO": 9.234
+      },
+      {
+        "Nº": 453,
+        "Nombres": "Fabrizio Muñoz Lopez - Federica Tobares",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.15,
+          "Verónica Gardella": 8.8,
+          "Juan Paulo Horvath": 9.55,
+          "Claudia Códega": 8.99,
+          "Gisela Galeassi": 9.15,
+          "Mario Morales": 9.3,
+          "Pablo Verón": 9.56
+        },
+        "PROMEDIO": 9.228
+      },
+      {
+        "Nº": 436,
+        "Nombres": "Nelson Nahuel Leiva - Evangelina Soledad Martinez",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 9.4,
+          "Verónica Gardella": 8.85,
+          "Juan Paulo Horvath": 9.22,
+          "Claudia Códega": 8.98,
+          "Gisela Galeassi": 9.2,
+          "Mario Morales": 9.26,
+          "Pablo Verón": 9.9
+        },
+        "PROMEDIO": 9.212
+      },
+      {
+        "Nº": 481,
+        "Nombres": "Ulises García - Florencia Campo",
+        "RONDA": 1,
+        "scores": {
+          "Jonathan Spitell": 9.1,
+          "Verónica Gardella": 8.9,
+          "Juan Paulo Horvath": 9.15,
+          "Claudia Códega": 8.9,
+          "Gisela Galeassi": 8.75,
+          "Mario Morales": 9.27,
+          "Pablo Verón": 9.2
+        },
+        "PROMEDIO": 9.05
+      },
+      {
+        "Nº": 701,
+        "Nombres": "Sebastian Avendaño - Tania Gutierrez",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 8.95,
+          "Verónica Gardella": 8.1,
+          "Juan Paulo Horvath": 8.65,
+          "Claudia Códega": 9.01,
+          "Gisela Galeassi": 8.88,
+          "Mario Morales": 9.27,
+          "Pablo Verón": 8.9
+        },
+        "PROMEDIO": 8.878
+      },
+      {
+        "Nº": 691,
+        "Nombres": "Leandro Matias Robledo - Makiko Minato",
+        "RONDA": 2,
+        "scores": {
+          "Jonathan Spitell": 8.5,
+          "Verónica Gardella": 8.0,
+          "Juan Paulo Horvath": 8.53,
+          "Claudia Códega": 8.74,
+          "Gisela Galeassi": 8.7,
+          "Mario Morales": 9.28,
+          "Pablo Verón": 9.6
+        },
+        "PROMEDIO": 8.75
+      }
+    ]
+  }
+]

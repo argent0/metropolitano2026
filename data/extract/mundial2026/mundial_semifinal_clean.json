@@ -1,0 +1,2998 @@
+[
+  {
+    "category": "TANGO PISTA SEMIFINAL",
+    "scores": [
+      {
+        "Nº": 460,
+        "Nombres": "Lucas Gauto - Naima Gerasopoulou",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 8.78,
+          "Cynthia Palacios": 9.0,
+          "Fabián Peralta": 8.88,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.7,
+          "Inés Bogado": 8.56
+        },
+        "PROMEDIO": 8.84
+      },
+      {
+        "Nº": 91,
+        "Nombres": "Rodrigo Nicolas Palacios - Indira Hiayes",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 8.66,
+          "Cynthia Palacios": 8.7,
+          "Fabián Peralta": 8.9,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.7,
+          "Inés Bogado": 8.55
+        },
+        "PROMEDIO": 8.74
+      },
+      {
+        "Nº": 712,
+        "Nombres": "Juan Ignacio Braida - Natasha Kaliszuk Lee",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 8.78,
+          "Cynthia Palacios": 8.62,
+          "Fabián Peralta": 8.85,
+          "Cristina Sosa": 8.96,
+          "Andrés Laza Moreno": 8.59,
+          "Inés Bogado": 8.51
+        },
+        "PROMEDIO": 8.71
+      },
+      {
+        "Nº": 665,
+        "Nombres": "Sebastian Acosta - Laura DAnna",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.79,
+          "Cynthia Palacios": 8.47,
+          "Fabián Peralta": 8.95,
+          "Cristina Sosa": 8.92,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.47
+        },
+        "PROMEDIO": 8.695
+      },
+      {
+        "Nº": 440,
+        "Nombres": "Stanislav Fursov - Ekaterina Simonova",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 8.64,
+          "Cynthia Palacios": 8.9,
+          "Fabián Peralta": 8.75,
+          "Cristina Sosa": 8.85,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.49
+        },
+        "PROMEDIO": 8.683
+      },
+      {
+        "Nº": 424,
+        "Nombres": "Juan David Vargas - Ornella Simonetto",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 7.91,
+          "Cynthia Palacios": 8.6,
+          "Fabián Peralta": 8.85,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.5
+        },
+        "PROMEDIO": 8.638
+      },
+      {
+        "Nº": 1,
+        "Nombres": "Erik Deslarmes - Nadia Aguilar",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 8.21,
+          "Cynthia Palacios": 8.47,
+          "Fabián Peralta": 8.9,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.47,
+          "Inés Bogado": 8.46
+        },
+        "PROMEDIO": 8.575
+      },
+      {
+        "Nº": 545,
+        "Nombres": "Leonardo Pankow - Valentina Massari",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 8.14,
+          "Cynthia Palacios": 8.55,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.48
+        },
+        "PROMEDIO": 8.558
+      },
+      {
+        "Nº": 141,
+        "Nombres": "Cristian Lopez - Naoko Tsutsumizaki",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 8.7,
+          "Cynthia Palacios": 8.4,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.49,
+          "Inés Bogado": 8.33
+        },
+        "PROMEDIO": 8.548
+      },
+      {
+        "Nº": 120,
+        "Nombres": "Andrei Panferov - Ekaterina Petrova",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 8.61,
+          "Cynthia Palacios": 8.05,
+          "Fabián Peralta": 8.65,
+          "Cristina Sosa": 8.61,
+          "Andrés Laza Moreno": 8.58,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.53
+      },
+      {
+        "Nº": 335,
+        "Nombres": "Dmitrii Liferov - Dana Son",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 8.59,
+          "Cynthia Palacios": 8.5,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 9.0,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 8.47
+        },
+        "PROMEDIO": 8.528
+      },
+      {
+        "Nº": 139,
+        "Nombres": "London - Sol",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.02,
+          "Cynthia Palacios": 8.45,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.8,
+          "Andrés Laza Moreno": 8.62,
+          "Inés Bogado": 8.51
+        },
+        "PROMEDIO": 8.52
+      },
+      {
+        "Nº": 675,
+        "Nombres": "Artem Luchin - Polina Luchina",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 8.61,
+          "Cynthia Palacios": 8.38,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.48,
+          "Inés Bogado": 8.42
+        },
+        "PROMEDIO": 8.498
+      },
+      {
+        "Nº": 244,
+        "Nombres": "Alejandro Ferreyra - Fernanda Grosso",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 8.7,
+          "Cynthia Palacios": 8.02,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.65,
+          "Andrés Laza Moreno": 8.47,
+          "Inés Bogado": 8.37
+        },
+        "PROMEDIO": 8.498
+      },
+      {
+        "Nº": 347,
+        "Nombres": "Lucio Galván - Sol Alzarán",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 8.36,
+          "Cynthia Palacios": 8.37,
+          "Fabián Peralta": 8.75,
+          "Cristina Sosa": 8.69,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.43
+        },
+        "PROMEDIO": 8.478
+      },
+      {
+        "Nº": 447,
+        "Nombres": "Valentin Bobkov - Katerina Tsybrova",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 8.46,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 8.65,
+          "Cristina Sosa": 8.75,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.35
+        },
+        "PROMEDIO": 8.473
+      },
+      {
+        "Nº": 386,
+        "Nombres": "Matteo Antonietti - Añes Arredondo",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 8.1,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 8.8,
+          "Cristina Sosa": 8.62,
+          "Andrés Laza Moreno": 8.57,
+          "Inés Bogado": 8.38
+        },
+        "PROMEDIO": 8.468
+      },
+      {
+        "Nº": 133,
+        "Nombres": "Alexander Moncada Rojas - Martina Waldman",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.46,
+          "Cynthia Palacios": 8.27,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 8.85,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.3
+        },
+        "PROMEDIO": 8.448
+      },
+      {
+        "Nº": 145,
+        "Nombres": "Marcelo Javier Torres - Francisca Alarcon Irrazabal",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 8.61,
+          "Cynthia Palacios": 8.4,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.9,
+          "Andrés Laza Moreno": 8.52,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.445
+      },
+      {
+        "Nº": 715,
+        "Nombres": "Juan Fernando Cabral - Laura Cecilia Castiñeiras",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 7.49,
+          "Cynthia Palacios": 8.42,
+          "Fabián Peralta": 8.55,
+          "Cristina Sosa": 8.63,
+          "Andrés Laza Moreno": 8.48,
+          "Inés Bogado": 8.3
+        },
+        "PROMEDIO": 8.438
+      },
+      {
+        "Nº": 572,
+        "Nombres": "Carlos Estigarribia - Letizia Messina",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 7.65,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.75,
+          "Cristina Sosa": 8.65,
+          "Andrés Laza Moreno": 8.52,
+          "Inés Bogado": 8.36
+        },
+        "PROMEDIO": 8.42
+      },
+      {
+        "Nº": 211,
+        "Nombres": "Eric Dinzel - Flavia Kohut",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.66,
+          "Cynthia Palacios": 8.18,
+          "Fabián Peralta": 8.55,
+          "Cristina Sosa": 8.51,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.17
+        },
+        "PROMEDIO": 8.415
+      },
+      {
+        "Nº": 159,
+        "Nombres": "Cristian Correa - Miriam Copello",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 8.46,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.55,
+          "Cristina Sosa": 8.85,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.23
+        },
+        "PROMEDIO": 8.413
+      },
+      {
+        "Nº": 166,
+        "Nombres": "Ariel Taritolay - Laura Casco Zorzon",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 7.69,
+          "Cynthia Palacios": 8.25,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.79,
+          "Andrés Laza Moreno": 8.52,
+          "Inés Bogado": 8.38
+        },
+        "PROMEDIO": 8.413
+      },
+      {
+        "Nº": 95,
+        "Nombres": "Jesus Luis Paez - Iara Duarte",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 7.93,
+          "Cynthia Palacios": 8.33,
+          "Fabián Peralta": 8.55,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.408
+      },
+      {
+        "Nº": 293,
+        "Nombres": "Hernan Rodriguez - Maria Florencia Labiano",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 7.47,
+          "Cynthia Palacios": 8.25,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.395
+      },
+      {
+        "Nº": 208,
+        "Nombres": "Facundo Barrionuevo - Agustina Juanbelz",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.7,
+          "Cristina Sosa": 8.58,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 8.395
+      },
+      {
+        "Nº": 390,
+        "Nombres": "Maxi Copello - Karu Terenzio",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.41,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 8.47,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.29
+        },
+        "PROMEDIO": 8.395
+      },
+      {
+        "Nº": 703,
+        "Nombres": "Lucas Martin - Victoria Pesci",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 7.51,
+          "Cynthia Palacios": 8.43,
+          "Fabián Peralta": 8.35,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.5,
+          "Inés Bogado": 8.3
+        },
+        "PROMEDIO": 8.395
+      },
+      {
+        "Nº": 714,
+        "Nombres": "Rodrigo Videla - Marina Teves",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 8.2,
+          "Cynthia Palacios": 8.28,
+          "Fabián Peralta": 8.35,
+          "Cristina Sosa": 8.8,
+          "Andrés Laza Moreno": 8.61,
+          "Inés Bogado": 8.34
+        },
+        "PROMEDIO": 8.395
+      },
+      {
+        "Nº": 273,
+        "Nombres": "Gustavo Chaile - Mayela Aponte",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 7.76,
+          "Cynthia Palacios": 8.4,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.95,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.42
+        },
+        "PROMEDIO": 8.388
+      },
+      {
+        "Nº": 720,
+        "Nombres": "Damian Mechura - Veronica Vazquez",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 8.57,
+          "Cynthia Palacios": 8.23,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.46,
+          "Inés Bogado": 8.22
+        },
+        "PROMEDIO": 8.378
+      },
+      {
+        "Nº": 248,
+        "Nombres": "Ivan Franco - Magali Tokian",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 7.02,
+          "Cynthia Palacios": 8.48,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.51,
+          "Andrés Laza Moreno": 8.49,
+          "Inés Bogado": 8.38
+        },
+        "PROMEDIO": 8.375
+      },
+      {
+        "Nº": 5,
+        "Nombres": "Ferrol Matthew Poluan - Muliany Rambe",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 8.14,
+          "Cynthia Palacios": 8.18,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.62,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.37
+      },
+      {
+        "Nº": 692,
+        "Nombres": "Ruslan Bektimirov - Iullia Osina",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 8.41,
+          "Cynthia Palacios": 8.28,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.56,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.365
+      },
+      {
+        "Nº": 452,
+        "Nombres": "Diego Ezequiel Pérez - María Soledad Cantarini",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 7.59,
+          "Cynthia Palacios": 8.25,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.52,
+          "Inés Bogado": 8.4
+        },
+        "PROMEDIO": 8.355
+      },
+      {
+        "Nº": 677,
+        "Nombres": "Nahuel Aragón Diani - Evelyn Ponce",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 8.28,
+          "Fabián Peralta": 8.2,
+          "Cristina Sosa": 8.52,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.49
+        },
+        "PROMEDIO": 8.345
+      },
+      {
+        "Nº": 23,
+        "Nombres": "Luciano Mario Navoni - Maria Celeste Cimino",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.95,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.27
+        },
+        "PROMEDIO": 8.345
+      },
+      {
+        "Nº": 254,
+        "Nombres": "Sergei Kurkatov - Ksenia Rubina",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 8.57,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.25,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.37
+        },
+        "PROMEDIO": 8.343
+      },
+      {
+        "Nº": 393,
+        "Nombres": "Norair Arakelian - Sofia Seminskaia",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 7.6,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.33
+        },
+        "PROMEDIO": 8.338
+      },
+      {
+        "Nº": 342,
+        "Nombres": "Ramiro Nicolas Almiron - Laly Torres",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 8.1,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 8.95,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 8.09
+        },
+        "PROMEDIO": 8.338
+      },
+      {
+        "Nº": 79,
+        "Nombres": "Juan Cupini - Erica Rossi",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 8.09,
+          "Cynthia Palacios": 8.26,
+          "Fabián Peralta": 8.4,
+          "Cristina Sosa": 8.55,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.333
+      },
+      {
+        "Nº": 315,
+        "Nombres": "Maximiliano Astorga - Fernanda Valenzuela",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 8.15,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 8.6,
+          "Cristina Sosa": 8.51,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.328
+      },
+      {
+        "Nº": 66,
+        "Nombres": "Camilo Bernal Varela - Mayi Yepes Arboleda",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 8.16,
+          "Cynthia Palacios": 8.28,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.7,
+          "Andrés Laza Moreno": 8.5,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.32
+      },
+      {
+        "Nº": 69,
+        "Nombres": "Dmitrii Kuznetsov - Olga Nikolaeva",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 8.3,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.52,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.27
+        },
+        "PROMEDIO": 8.318
+      },
+      {
+        "Nº": 552,
+        "Nombres": "Mariano Serrudo - Müge Üner",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.03,
+          "Cynthia Palacios": 8.12,
+          "Fabián Peralta": 8.55,
+          "Cristina Sosa": 8.52,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.318
+      },
+      {
+        "Nº": 259,
+        "Nombres": "Agustin Rojas - Mara Oviedo",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 8.1,
+          "Cynthia Palacios": 8.35,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.7,
+          "Andrés Laza Moreno": 8.5,
+          "Inés Bogado": 8.3
+        },
+        "PROMEDIO": 8.313
+      },
+      {
+        "Nº": 451,
+        "Nombres": "Héctor Abel Colque - Magdalena del Milagro Yrahola",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 7.53,
+          "Cynthia Palacios": 8.16,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.63,
+          "Andrés Laza Moreno": 8.59,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.313
+      },
+      {
+        "Nº": 585,
+        "Nombres": "Otto Honeker - Magdalena Tarasova",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 8.77,
+          "Cynthia Palacios": 7.94,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.35,
+          "Andrés Laza Moreno": 8.53,
+          "Inés Bogado": 8.24
+        },
+        "PROMEDIO": 8.305
+      },
+      {
+        "Nº": 116,
+        "Nombres": "Ariel Manzanares - Analia Laura Alfaro",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 8.15,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.2,
+          "Cristina Sosa": 8.95,
+          "Andrés Laza Moreno": 8.53,
+          "Inés Bogado": 8.29
+        },
+        "PROMEDIO": 8.305
+      },
+      {
+        "Nº": 469,
+        "Nombres": "Krishna Olmedo - Johanna Aranda",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 8.12,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.58,
+          "Andrés Laza Moreno": 8.15,
+          "Inés Bogado": 8.37
+        },
+        "PROMEDIO": 8.305
+      },
+      {
+        "Nº": 104,
+        "Nombres": "Ezequiel Mendoza - Magdalena Myszka",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.86,
+          "Cynthia Palacios": 8.5,
+          "Fabián Peralta": 7.75,
+          "Cristina Sosa": 8.57,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.4
+        },
+        "PROMEDIO": 8.303
+      },
+      {
+        "Nº": 541,
+        "Nombres": "Ramiro Perez Caricchio - Iara Deluchi",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 7.7,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.45,
+          "Cristina Sosa": 8.5,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.16
+        },
+        "PROMEDIO": 8.303
+      },
+      {
+        "Nº": 696,
+        "Nombres": "Kelvin Cal - Camila Rocha",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 7.84,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.15
+        },
+        "PROMEDIO": 8.298
+      },
+      {
+        "Nº": 684,
+        "Nombres": "Marcela Mansilla - Orlando Nieto",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 7.63,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.3,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.26
+        },
+        "PROMEDIO": 8.298
+      },
+      {
+        "Nº": 573,
+        "Nombres": "Claudio Peralta - Maria Marinova",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.9,
+          "Cynthia Palacios": 8.33,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.32,
+          "Inés Bogado": 8.38
+        },
+        "PROMEDIO": 8.295
+      },
+      {
+        "Nº": 713,
+        "Nombres": "Juan Manuel Rosales - Liza Rosales",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 8.2,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.52,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.293
+      },
+      {
+        "Nº": 542,
+        "Nombres": "Andrea Vighi - Chiara Benati",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.27,
+          "Cynthia Palacios": 8.33,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.41,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.3
+        },
+        "PROMEDIO": 8.285
+      },
+      {
+        "Nº": 565,
+        "Nombres": "Jakub Grzybek - Patrycja Cisowska-Grzybek",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 8.7,
+          "Cynthia Palacios": 8.05,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.285
+      },
+      {
+        "Nº": 70,
+        "Nombres": "Artem Irzhevskii - Lili Gorgodze",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 7.59,
+          "Cynthia Palacios": 8.18,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.59,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.26
+        },
+        "PROMEDIO": 8.285
+      },
+      {
+        "Nº": 676,
+        "Nombres": "Sergiy Podbolotnyy - Olena Sergiienko",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 8.04,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.56,
+          "Andrés Laza Moreno": 8.53,
+          "Inés Bogado": 8.24
+        },
+        "PROMEDIO": 8.28
+      },
+      {
+        "Nº": 236,
+        "Nombres": "Lucas Nicolas Cartagena - Lucila Diaz Colodrero",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 7.6,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.35,
+          "Cristina Sosa": 8.43,
+          "Andrés Laza Moreno": 8.44,
+          "Inés Bogado": 8.14
+        },
+        "PROMEDIO": 8.28
+      },
+      {
+        "Nº": 204,
+        "Nombres": "Damián Esell - Noelia Soldera",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 7.31,
+          "Cynthia Palacios": 8.11,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.53,
+          "Andrés Laza Moreno": 8.44,
+          "Inés Bogado": 8.07
+        },
+        "PROMEDIO": 8.28
+      },
+      {
+        "Nº": 370,
+        "Nombres": "Darío Cieri - Rocío de la Torre",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 8.44,
+          "Cynthia Palacios": 8.17,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.42,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.1
+        },
+        "PROMEDIO": 8.278
+      },
+      {
+        "Nº": 149,
+        "Nombres": "Gabriel Salvi - Carolina Leonardelli",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.81,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.41,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.23
+        },
+        "PROMEDIO": 8.273
+      },
+      {
+        "Nº": 26,
+        "Nombres": "Diego Churquina - Paula Pandol",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 8.0,
+          "Cynthia Palacios": 7.98,
+          "Fabián Peralta": 8.53,
+          "Cristina Sosa": 8.4,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.16
+        },
+        "PROMEDIO": 8.273
+      },
+      {
+        "Nº": 657,
+        "Nombres": "Julio Azorin - Belén Valdez",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 7.48,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.265
+      },
+      {
+        "Nº": 701,
+        "Nombres": "Sebastian Avendaño - Tania Gutierrez",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 8.18,
+          "Cynthia Palacios": 8.22,
+          "Fabián Peralta": 7.5,
+          "Cristina Sosa": 8.55,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.16
+        },
+        "PROMEDIO": 8.253
+      },
+      {
+        "Nº": 301,
+        "Nombres": "Juan Pablo Valdebenito - Rosario Belén Gimenez",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 7.79,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.51,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.1
+        },
+        "PROMEDIO": 8.248
+      },
+      {
+        "Nº": 329,
+        "Nombres": "Giuliano Calvimonte - Roxane Camargo",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 8.1,
+          "Cynthia Palacios": 8.18,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.38,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.245
+      },
+      {
+        "Nº": 107,
+        "Nombres": "Valentín Arias Delgado - Diana Paola Franco Durango",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.41,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 7.98,
+          "Cristina Sosa": 8.55,
+          "Andrés Laza Moreno": 8.5,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.24
+      },
+      {
+        "Nº": 462,
+        "Nombres": "Lautaro Levato - Milagros Quintana",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 7.68,
+          "Cynthia Palacios": 8.05,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.4,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.26
+        },
+        "PROMEDIO": 8.24
+      },
+      {
+        "Nº": 162,
+        "Nombres": "Joel Maximiliano Tempestti - Águeda Jimena Mansilla",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 7.31,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.52,
+          "Andrés Laza Moreno": 8.49,
+          "Inés Bogado": 8.32
+        },
+        "PROMEDIO": 8.24
+      },
+      {
+        "Nº": 228,
+        "Nombres": "Gonzalo Angeles - Nathalia Peña Muñoz",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 7.98,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.24
+        },
+        "PROMEDIO": 8.238
+      },
+      {
+        "Nº": 332,
+        "Nombres": "Kirill Pokorskii - Muzhgan Yusifova",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 7.31,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.238
+      },
+      {
+        "Nº": 103,
+        "Nombres": "Jorge Carlos López - Lali Victoria",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 8.38,
+          "Cynthia Palacios": 7.98,
+          "Fabián Peralta": 7.75,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.15
+        },
+        "PROMEDIO": 8.235
+      },
+      {
+        "Nº": 431,
+        "Nombres": "Andrei Bogdanov - Maria Korsakova",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 8.12,
+          "Cynthia Palacios": 8.18,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.45,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.22
+        },
+        "PROMEDIO": 8.235
+      },
+      {
+        "Nº": 519,
+        "Nombres": "Sebastian Fernandez - Anastasiia Rudiak",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 8.5,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.4,
+          "Andrés Laza Moreno": 8.0,
+          "Inés Bogado": 8.36
+        },
+        "PROMEDIO": 8.23
+      },
+      {
+        "Nº": 647,
+        "Nombres": "Andres Gonzalez Ballesteros - Sara Gòmez Quiroz",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 7.69,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.19
+        },
+        "PROMEDIO": 8.22
+      },
+      {
+        "Nº": 389,
+        "Nombres": "Alejandro Lazzaro - Gabriela Gallese",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 7.37,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.2,
+          "Cristina Sosa": 8.7,
+          "Andrés Laza Moreno": 8.38,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.208
+      },
+      {
+        "Nº": 670,
+        "Nombres": "Leonel Herrera - Aldana Mileva",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 8.02,
+          "Cynthia Palacios": 8.25,
+          "Fabián Peralta": 7.3,
+          "Cristina Sosa": 8.41,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.15
+        },
+        "PROMEDIO": 8.205
+      },
+      {
+        "Nº": 29,
+        "Nombres": "Juan Ignacio Etcheverry - Veronica Bachini",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 7.44,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.62,
+          "Andrés Laza Moreno": 8.59,
+          "Inés Bogado": 8.22
+        },
+        "PROMEDIO": 8.203
+      },
+      {
+        "Nº": 277,
+        "Nombres": "Eduardo Roman - Tamara Borda",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 7.61,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 8.25,
+          "Cristina Sosa": 8.35,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.1
+        },
+        "PROMEDIO": 8.2
+      },
+      {
+        "Nº": 31,
+        "Nombres": "Vadim Kaitukov - Olga Mokrushina",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 7.88,
+          "Cynthia Palacios": 8.22,
+          "Fabián Peralta": 7.7,
+          "Cristina Sosa": 8.45,
+          "Andrés Laza Moreno": 8.49,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.2
+      },
+      {
+        "Nº": 157,
+        "Nombres": "Jared Ramos - Rocío Selesán",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 7.39,
+          "Cynthia Palacios": 8.21,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.36,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 8.27
+        },
+        "PROMEDIO": 8.198
+      },
+      {
+        "Nº": 711,
+        "Nombres": "Alejandro Montes de Oca - Liliana Beatriz del Valle",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 8.12,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.23,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.195
+      },
+      {
+        "Nº": 678,
+        "Nombres": "Francis Damian Aguilar - Sophie Sperling",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.81,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.5,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.38
+        },
+        "PROMEDIO": 8.193
+      },
+      {
+        "Nº": 693,
+        "Nombres": "David Ezequiel Chartoriski - Yelena Odintsova",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 8.02,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.47,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.29
+        },
+        "PROMEDIO": 8.19
+      },
+      {
+        "Nº": 169,
+        "Nombres": "Martin Cayesse - Mauge Corna",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.71,
+          "Cynthia Palacios": 8.05,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.25,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.3
+        },
+        "PROMEDIO": 8.188
+      },
+      {
+        "Nº": 533,
+        "Nombres": "Wonjun Seol - Hari Seo",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 7.21,
+          "Cynthia Palacios": 8.3,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.51,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.183
+      },
+      {
+        "Nº": 422,
+        "Nombres": "Songyan Li - Yushan Pan",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 8.11,
+          "Cynthia Palacios": 7.92,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.16,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.16
+        },
+        "PROMEDIO": 8.183
+      },
+      {
+        "Nº": 400,
+        "Nombres": "Hyoung Wook Chang - Eun Young Lee",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 8.0,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 8.2,
+          "Cristina Sosa": 8.18,
+          "Andrés Laza Moreno": 8.3,
+          "Inés Bogado": 8.24
+        },
+        "PROMEDIO": 8.18
+      },
+      {
+        "Nº": 381,
+        "Nombres": "Agustin Gutiérrez - Luz Mariel Mamani",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 8.3,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.45,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.12
+        },
+        "PROMEDIO": 8.18
+      },
+      {
+        "Nº": 276,
+        "Nombres": "Matias Cabezuelo - Nicole Mazza",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 7.61,
+          "Cynthia Palacios": 8.03,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.48,
+          "Inés Bogado": 8.19
+        },
+        "PROMEDIO": 8.175
+      },
+      {
+        "Nº": 518,
+        "Nombres": "Federico Carrizo - Jesica Gomez",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 7.59,
+          "Cynthia Palacios": 8.03,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.58,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.173
+      },
+      {
+        "Nº": 330,
+        "Nombres": "Carlos Flores - Marcia Martinucci",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 7.9,
+          "Cynthia Palacios": 8.05,
+          "Fabián Peralta": 7.99,
+          "Cristina Sosa": 8.59,
+          "Andrés Laza Moreno": 8.37,
+          "Inés Bogado": 8.26
+        },
+        "PROMEDIO": 8.168
+      },
+      {
+        "Nº": 348,
+        "Nombres": "Leonardo Durso - Fabiana Portas",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 8.12,
+          "Cynthia Palacios": 7.85,
+          "Fabián Peralta": 8.4,
+          "Cristina Sosa": 8.19,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 7.96
+        },
+        "PROMEDIO": 8.168
+      },
+      {
+        "Nº": 192,
+        "Nombres": "Dennis Cante - Tanya Spektor",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 8.31,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 7.98,
+          "Cristina Sosa": 8.35,
+          "Andrés Laza Moreno": 8.49,
+          "Inés Bogado": 7.98
+        },
+        "PROMEDIO": 8.16
+      },
+      {
+        "Nº": 148,
+        "Nombres": "Elías Ramon Abdala - Maria Silvina del Bosque",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 7.93,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 7.35,
+          "Andrés Laza Moreno": 8.59,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.155
+      },
+      {
+        "Nº": 685,
+        "Nombres": "Luis Angel Rojas - Ingrid Iregui",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 7.71,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.24
+        },
+        "PROMEDIO": 8.15
+      },
+      {
+        "Nº": 689,
+        "Nombres": "Emmanuel David Avendaño - Marina Machado Riquelme",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.38,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.14
+      },
+      {
+        "Nº": 710,
+        "Nombres": "Claudio Marcelo Orso - Flor Martinez",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 8.03,
+          "Cynthia Palacios": 7.97,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 7.34,
+          "Andrés Laza Moreno": 8.54,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.138
+      },
+      {
+        "Nº": 600,
+        "Nombres": "Diego Martín Valero - Delfina Pissani",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.56,
+          "Cynthia Palacios": 8.27,
+          "Fabián Peralta": 7.5,
+          "Cristina Sosa": 8.6,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.133
+      },
+      {
+        "Nº": 54,
+        "Nombres": "Severin Fraser - Nana Urigaeva",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 7.08,
+          "Cynthia Palacios": 8.27,
+          "Fabián Peralta": 7.7,
+          "Cristina Sosa": 8.28,
+          "Andrés Laza Moreno": 8.32,
+          "Inés Bogado": 8.27
+        },
+        "PROMEDIO": 8.13
+      },
+      {
+        "Nº": 246,
+        "Nombres": "Abel Matias Cejas - Jorgelina Cañadas",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 7.71,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.25,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.27
+        },
+        "PROMEDIO": 8.13
+      },
+      {
+        "Nº": 698,
+        "Nombres": "Carlos Rodriguez - Brigita Rodriguez",
+        "RONDA": 11,
+        "scores": {
+          "Leandro Oliver": 7.62,
+          "Cynthia Palacios": 8.07,
+          "Fabián Peralta": 7.7,
+          "Cristina Sosa": 8.56,
+          "Andrés Laza Moreno": 8.46,
+          "Inés Bogado": 8.27
+        },
+        "PROMEDIO": 8.125
+      },
+      {
+        "Nº": 368,
+        "Nombres": "Raúl Moure - Antonela Méndez",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 7.8,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.4,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.19
+        },
+        "PROMEDIO": 8.123
+      },
+      {
+        "Nº": 260,
+        "Nombres": "Nahuel Esteban Mansilla - Maria Tatiana Bernacki",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 7.95,
+          "Cynthia Palacios": 8.03,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.22,
+          "Andrés Laza Moreno": 8.38,
+          "Inés Bogado": 8.29
+        },
+        "PROMEDIO": 8.123
+      },
+      {
+        "Nº": 708,
+        "Nombres": "Alfredo Ricardo Encina - Ana Luisa Difrancisco",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 7.99,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 7.38,
+          "Andrés Laza Moreno": 8.56,
+          "Inés Bogado": 8.15
+        },
+        "PROMEDIO": 8.123
+      },
+      {
+        "Nº": 660,
+        "Nombres": "Sandson Júnior - Mariane Ribeiro",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 7.6,
+          "Cynthia Palacios": 7.98,
+          "Fabián Peralta": 7.85,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.118
+      },
+      {
+        "Nº": 489,
+        "Nombres": "Jhony Blandón - Viviana Salazar Loaiza",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 8.2,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.06,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.09
+        },
+        "PROMEDIO": 8.113
+      },
+      {
+        "Nº": 522,
+        "Nombres": "Joel De La O Arredondo - Veronica Peinado Flores",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 8.1,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.5,
+          "Cristina Sosa": 8.22,
+          "Andrés Laza Moreno": 8.7,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.113
+      },
+      {
+        "Nº": 580,
+        "Nombres": "Alberto Leis - Morena Ortega",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 8.03,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.4,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 8.06
+        },
+        "PROMEDIO": 8.108
+      },
+      {
+        "Nº": 707,
+        "Nombres": "Edgardo \"patita\" Palleyro - Maria Rosa Corsisky",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 7.7,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.25,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.17
+        },
+        "PROMEDIO": 8.105
+      },
+      {
+        "Nº": 694,
+        "Nombres": "Ilyas Baiguzhin - Diana Tleuliyeva",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 7.54,
+          "Cynthia Palacios": 8.17,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 8.5,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 8.1
+      },
+      {
+        "Nº": 441,
+        "Nombres": "Ariel Giordanengo - Elise Barbot",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.1,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.5,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.05
+        },
+        "PROMEDIO": 8.088
+      },
+      {
+        "Nº": 227,
+        "Nombres": "Fernando de Campos - Debora Ambrosano",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 8.15,
+          "Cynthia Palacios": 7.75,
+          "Fabián Peralta": 7.5,
+          "Cristina Sosa": 8.51,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.0
+        },
+        "PROMEDIO": 8.083
+      },
+      {
+        "Nº": 427,
+        "Nombres": "Raphaël Le Vanic - Solène Pucheu",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 7.29,
+          "Cynthia Palacios": 8.12,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 8.42,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 8.08
+      },
+      {
+        "Nº": 337,
+        "Nombres": "Vinicius Osterne - Gabriela Fernández",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 7.12,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.2,
+          "Cristina Sosa": 8.29,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 7.92
+        },
+        "PROMEDIO": 8.078
+      },
+      {
+        "Nº": 250,
+        "Nombres": "Vicente Albarengo - Florencia Marioni Alustiza",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 7.75,
+          "Cristina Sosa": 8.42,
+          "Andrés Laza Moreno": 8.02,
+          "Inés Bogado": 8.17
+        },
+        "PROMEDIO": 8.075
+      },
+      {
+        "Nº": 311,
+        "Nombres": "Nicolas Cot - Julieta Victoria Alao",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 8.04,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.43,
+          "Andrés Laza Moreno": 7.99,
+          "Inés Bogado": 8.12
+        },
+        "PROMEDIO": 8.075
+      },
+      {
+        "Nº": 682,
+        "Nombres": "Jorge Andres Padilla Mayo - Ana Zoraida Gomez Diaz",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.26,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 7.85,
+          "Cristina Sosa": 8.19,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.11
+        },
+        "PROMEDIO": 8.063
+      },
+      {
+        "Nº": 379,
+        "Nombres": "Federico Antonio Frete - Laura Ayelen Grimaldi",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 7.3,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.2,
+          "Inés Bogado": 8.04
+        },
+        "PROMEDIO": 8.063
+      },
+      {
+        "Nº": 51,
+        "Nombres": "Marcelo Sassi - Ines Correa",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 7.4,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.27,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.08
+        },
+        "PROMEDIO": 8.063
+      },
+      {
+        "Nº": 185,
+        "Nombres": "Jhonatan Lopez - Augusto Giraldo",
+        "RONDA": 5,
+        "scores": {
+          "Leandro Oliver": 7.76,
+          "Cynthia Palacios": 7.79,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 8.3,
+          "Inés Bogado": 7.99
+        },
+        "PROMEDIO": 8.058
+      },
+      {
+        "Nº": 187,
+        "Nombres": "Marini Nicolas - Vivian Yeh",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.81,
+          "Cynthia Palacios": 7.77,
+          "Fabián Peralta": 7.8,
+          "Cristina Sosa": 8.48,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.22
+        },
+        "PROMEDIO": 8.058
+      },
+      {
+        "Nº": 118,
+        "Nombres": "Benjamin Grisoni - Zamira Rose",
+        "RONDA": 7,
+        "scores": {
+          "Leandro Oliver": 7.12,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.053
+      },
+      {
+        "Nº": 702,
+        "Nombres": "Cristian Quevedo - Mariel Quintana Grasso",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 7.39,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 8.1,
+          "Andrés Laza Moreno": 8.27,
+          "Inés Bogado": 8.04
+        },
+        "PROMEDIO": 8.053
+      },
+      {
+        "Nº": 35,
+        "Nombres": "Alejandro Beron - Kelly Lettieri",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 7.42,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.65,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.48,
+          "Inés Bogado": 8.12
+        },
+        "PROMEDIO": 8.05
+      },
+      {
+        "Nº": 176,
+        "Nombres": "Ricardo Albornoz - Daniela Inglese",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 7.73,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.49,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 7.78
+        },
+        "PROMEDIO": 8.05
+      },
+      {
+        "Nº": 524,
+        "Nombres": "Matías Iván Persico - Valentina Noelia Medina",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 7.81,
+          "Cynthia Palacios": 7.87,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.52,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.03
+        },
+        "PROMEDIO": 8.05
+      },
+      {
+        "Nº": 263,
+        "Nombres": "Lucas Robañera - becky Navarro",
+        "RONDA": 8,
+        "scores": {
+          "Leandro Oliver": 7.93,
+          "Cynthia Palacios": 8.22,
+          "Fabián Peralta": 8.05,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 7.93,
+          "Inés Bogado": 7.9
+        },
+        "PROMEDIO": 8.033
+      },
+      {
+        "Nº": 151,
+        "Nombres": "Mario Sergio - Vanessa Jardim",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 7.5,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 7.8,
+          "Cristina Sosa": 8.1,
+          "Andrés Laza Moreno": 8.37,
+          "Inés Bogado": 8.1
+        },
+        "PROMEDIO": 8.025
+      },
+      {
+        "Nº": 153,
+        "Nombres": "Rommel Oramas - Utha Callen",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 8.0,
+          "Cynthia Palacios": 7.75,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.26,
+          "Andrés Laza Moreno": 7.99,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.018
+      },
+      {
+        "Nº": 264,
+        "Nombres": "Miguel García - Sandra Martínez",
+        "RONDA": 10,
+        "scores": {
+          "Leandro Oliver": 7.39,
+          "Cynthia Palacios": 7.88,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 8.39,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 8.018
+      },
+      {
+        "Nº": 709,
+        "Nombres": "Laurence Martin - Sergio Sottile",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 8.02,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 7.34,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 7.9
+        },
+        "PROMEDIO": 8.018
+      },
+      {
+        "Nº": 683,
+        "Nombres": "Esteban Adrian De Gregorio - Angela Romina Cides",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 7.87,
+          "Cynthia Palacios": 7.7,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.4,
+          "Andrés Laza Moreno": 8.25,
+          "Inés Bogado": 7.99
+        },
+        "PROMEDIO": 8.015
+      },
+      {
+        "Nº": 534,
+        "Nombres": "Jacek Binkowski - Teresa Binkowska",
+        "RONDA": 12,
+        "scores": {
+          "Leandro Oliver": 7.71,
+          "Cynthia Palacios": 7.85,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.0,
+          "Andrés Laza Moreno": 8.41,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 8.0
+      },
+      {
+        "Nº": 75,
+        "Nombres": "Emile Roméo Gayoso - Sophie Cellarius",
+        "RONDA": 6,
+        "scores": {
+          "Leandro Oliver": 7.21,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 7.8,
+          "Cristina Sosa": 8.36,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.02
+        },
+        "PROMEDIO": 7.995
+      },
+      {
+        "Nº": 405,
+        "Nombres": "Carlos Martin Rodriguez - Maria Rosalia Pereyra",
+        "RONDA": 9,
+        "scores": {
+          "Leandro Oliver": 7.41,
+          "Cynthia Palacios": 8.02,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.23,
+          "Andrés Laza Moreno": 8.0,
+          "Inés Bogado": 7.97
+        },
+        "PROMEDIO": 7.985
+      },
+      {
+        "Nº": 671,
+        "Nombres": "Ke Meng Dang - Zhen Yu Zhou",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.0,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 8.3,
+          "Andrés Laza Moreno": 8.38,
+          "Inés Bogado": 8.12
+        },
+        "PROMEDIO": 7.98
+      },
+      {
+        "Nº": 142,
+        "Nombres": "Navir Salas Morales - Monica Sant`Anna Furtado",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 7.51,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.24,
+          "Andrés Laza Moreno": 8.5,
+          "Inés Bogado": 7.96
+        },
+        "PROMEDIO": 7.975
+      },
+      {
+        "Nº": 423,
+        "Nombres": "Francisco Coria - Yael Nahir",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.06,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 7.65,
+          "Cristina Sosa": 8.24,
+          "Andrés Laza Moreno": 7.92,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 7.975
+      },
+      {
+        "Nº": 102,
+        "Nombres": "Emiliano Mamani - Lucia Pertierra",
+        "RONDA": 16,
+        "scores": {
+          "Leandro Oliver": 7.7,
+          "Cynthia Palacios": 7.82,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 8.0,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.05
+        },
+        "PROMEDIO": 7.968
+      },
+      {
+        "Nº": 300,
+        "Nombres": "Waldemar Guillermo Sasso - Myriam del Valle Gamietea",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 7.98,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 7.35,
+          "Andrés Laza Moreno": 8.52,
+          "Inés Bogado": 7.89
+        },
+        "PROMEDIO": 7.968
+      },
+      {
+        "Nº": 372,
+        "Nombres": "Marcos Guzman - Diana Mancilla",
+        "RONDA": 13,
+        "scores": {
+          "Leandro Oliver": 7.66,
+          "Cynthia Palacios": 7.87,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 7.95,
+          "Andrés Laza Moreno": 8.39,
+          "Inés Bogado": 7.95
+        },
+        "PROMEDIO": 7.943
+      },
+      {
+        "Nº": 308,
+        "Nombres": "Vadim Cheremnykh - Anna Shakirova",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 7.81,
+          "Cynthia Palacios": 7.98,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 7.7,
+          "Andrés Laza Moreno": 8.2,
+          "Inés Bogado": 7.85
+        },
+        "PROMEDIO": 7.935
+      },
+      {
+        "Nº": 418,
+        "Nombres": "Pablo Oscar Pacheco - María Eugenia Asnicar",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 7.73,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 7.35,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 7.933
+      },
+      {
+        "Nº": 229,
+        "Nombres": "Alberto Re - María Susana Eguaburo",
+        "RONDA": 14,
+        "scores": {
+          "Leandro Oliver": 7.36,
+          "Cynthia Palacios": 7.7,
+          "Fabián Peralta": 7.8,
+          "Cristina Sosa": 8.0,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.22
+        },
+        "PROMEDIO": 7.93
+      },
+      {
+        "Nº": 257,
+        "Nombres": "Humberto Morales - Claudia Sanese",
+        "RONDA": 17,
+        "scores": {
+          "Leandro Oliver": 7.51,
+          "Cynthia Palacios": 7.7,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 7.29,
+          "Andrés Laza Moreno": 8.57,
+          "Inés Bogado": 8.0
+        },
+        "PROMEDIO": 7.928
+      },
+      {
+        "Nº": 177,
+        "Nombres": "Alexander Komogortsev - Kristina Komogortseva",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 7.75,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 7.9,
+          "Andrés Laza Moreno": 8.29,
+          "Inés Bogado": 7.58
+        },
+        "PROMEDIO": 7.888
+      },
+      {
+        "Nº": 575,
+        "Nombres": "Yecid Murillo - Piera Primiterra",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 7.31,
+          "Cynthia Palacios": 7.85,
+          "Fabián Peralta": 7.5,
+          "Cristina Sosa": 8.12,
+          "Andrés Laza Moreno": 8.0,
+          "Inés Bogado": 8.07
+        },
+        "PROMEDIO": 7.855
+      },
+      {
+        "Nº": 196,
+        "Nombres": "Franco Andrada - Estela Guo",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.11,
+          "Cynthia Palacios": 8.12,
+          "Fabián Peralta": 7.15,
+          "Cristina Sosa": 8.15,
+          "Andrés Laza Moreno": 8.3,
+          "Inés Bogado": 7.99
+        },
+        "PROMEDIO": 7.853
+      },
+      {
+        "Nº": 498,
+        "Nombres": "Brian Nahuel Gomez - Camila Jacqueline Reynoso",
+        "RONDA": 15,
+        "scores": {
+          "Leandro Oliver": 7.61,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 7.6,
+          "Cristina Sosa": 7.89,
+          "Andrés Laza Moreno": 8.35,
+          "Inés Bogado": 8.1
+        },
+        "PROMEDIO": 7.85
+      },
+      {
+        "Nº": 292,
+        "Nombres": "Víctor Martín González - Natali Claveriz",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 7.3,
+          "Cynthia Palacios": 7.83,
+          "Fabián Peralta": 7.3,
+          "Cristina Sosa": 8.18,
+          "Andrés Laza Moreno": 8.15,
+          "Inés Bogado": 7.99
+        },
+        "PROMEDIO": 7.818
+      },
+      {
+        "Nº": 125,
+        "Nombres": "Michael Bizquiazzo - Natalia Pintos",
+        "RONDA": 2,
+        "scores": {
+          "Leandro Oliver": 7.12,
+          "Cynthia Palacios": 7.78,
+          "Fabián Peralta": 7.0,
+          "Cristina Sosa": 8.19,
+          "Andrés Laza Moreno": 8.29,
+          "Inés Bogado": 8.1
+        },
+        "PROMEDIO": 7.798
+      },
+      {
+        "Nº": 278,
+        "Nombres": "Diego Pichimil - Marina Millalen",
+        "RONDA": 4,
+        "scores": {
+          "Leandro Oliver": 7.4,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 7.0,
+          "Cristina Sosa": 8.05,
+          "Andrés Laza Moreno": 8.0,
+          "Inés Bogado": 7.92
+        },
+        "PROMEDIO": 7.78
+      },
+      {
+        "Nº": 529,
+        "Nombres": "Gabriel Tolaba - Yanina Ceballo Hoyos",
+        "RONDA": 1,
+        "scores": {
+          "Leandro Oliver": 7.27,
+          "Cynthia Palacios": 7.7,
+          "Fabián Peralta": 7.5,
+          "Cristina Sosa": 7.8,
+          "Andrés Laza Moreno": 7.9,
+          "Inés Bogado": 8.0
+        },
+        "PROMEDIO": 7.725
+      },
+      {
+        "Nº": 673,
+        "Nombres": "Enzo Kina - Juliana Luizao",
+        "RONDA": 3,
+        "scores": {
+          "Leandro Oliver": 7.21,
+          "Cynthia Palacios": 7.73,
+          "Fabián Peralta": 7.3,
+          "Cristina Sosa": 7.95,
+          "Andrés Laza Moreno": 8.34,
+          "Inés Bogado": 7.87
+        },
+        "PROMEDIO": 7.713
+      }
+    ]
+  },
+  {
+    "category": "TANGO PISTA SEMIFINAL SENIOR",
+    "scores": [
+      {
+        "Nº": 684,
+        "Nombres": "Marcela Mansilla - Orlando Nieto",
+        "scores": {
+          "Leandro Oliver": 7.63,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 8.3,
+          "Andrés Laza Moreno": 8.43,
+          "Inés Bogado": 8.26
+        },
+        "PROMEDIO": 8.298
+      },
+      {
+        "Nº": 711,
+        "Nombres": "Alejandro Montes de Oca - Liliana Beatriz del Valle",
+        "scores": {
+          "Leandro Oliver": 8.12,
+          "Cynthia Palacios": 8.0,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 8.23,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 8.28
+        },
+        "PROMEDIO": 8.195
+      },
+      {
+        "Nº": 400,
+        "Nombres": "Hyoung Wook Chang - Eun Young Lee",
+        "scores": {
+          "Leandro Oliver": 8.0,
+          "Cynthia Palacios": 8.1,
+          "Fabián Peralta": 8.2,
+          "Cristina Sosa": 8.18,
+          "Andrés Laza Moreno": 8.3,
+          "Inés Bogado": 8.24
+        },
+        "PROMEDIO": 8.18
+      },
+      {
+        "Nº": 348,
+        "Nombres": "Leonardo Durso - Fabiana Portas",
+        "scores": {
+          "Leandro Oliver": 8.12,
+          "Cynthia Palacios": 7.85,
+          "Fabián Peralta": 8.4,
+          "Cristina Sosa": 8.19,
+          "Andrés Laza Moreno": 8.42,
+          "Inés Bogado": 7.96
+        },
+        "PROMEDIO": 8.168
+      },
+      {
+        "Nº": 148,
+        "Nombres": "Elías Ramon Abdala - Maria Silvina del Bosque",
+        "scores": {
+          "Leandro Oliver": 8.01,
+          "Cynthia Palacios": 7.93,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 7.35,
+          "Andrés Laza Moreno": 8.59,
+          "Inés Bogado": 8.18
+        },
+        "PROMEDIO": 8.155
+      },
+      {
+        "Nº": 710,
+        "Nombres": "Claudio Marcelo Orso - Flor Martinez",
+        "scores": {
+          "Leandro Oliver": 8.03,
+          "Cynthia Palacios": 7.97,
+          "Fabián Peralta": 8.3,
+          "Cristina Sosa": 7.34,
+          "Andrés Laza Moreno": 8.54,
+          "Inés Bogado": 8.25
+        },
+        "PROMEDIO": 8.138
+      },
+      {
+        "Nº": 708,
+        "Nombres": "Alfredo Ricardo Encina - Ana Luisa Difrancisco",
+        "scores": {
+          "Leandro Oliver": 7.99,
+          "Cynthia Palacios": 8.2,
+          "Fabián Peralta": 8.15,
+          "Cristina Sosa": 7.38,
+          "Andrés Laza Moreno": 8.56,
+          "Inés Bogado": 8.15
+        },
+        "PROMEDIO": 8.123
+      },
+      {
+        "Nº": 707,
+        "Nombres": "Edgardo \"patita\" Palleyro - Maria Rosa Corsisky",
+        "scores": {
+          "Leandro Oliver": 7.7,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 8.25,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.17
+        },
+        "PROMEDIO": 8.105
+      },
+      {
+        "Nº": 51,
+        "Nombres": "Marcelo Sassi - Ines Correa",
+        "scores": {
+          "Leandro Oliver": 7.4,
+          "Cynthia Palacios": 7.95,
+          "Fabián Peralta": 7.95,
+          "Cristina Sosa": 8.27,
+          "Andrés Laza Moreno": 8.4,
+          "Inés Bogado": 8.08
+        },
+        "PROMEDIO": 8.063
+      },
+      {
+        "Nº": 709,
+        "Nombres": "Laurence Martin - Sergio Sottile",
+        "scores": {
+          "Leandro Oliver": 8.02,
+          "Cynthia Palacios": 8.15,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 7.34,
+          "Andrés Laza Moreno": 8.55,
+          "Inés Bogado": 7.9
+        },
+        "PROMEDIO": 8.018
+      },
+      {
+        "Nº": 142,
+        "Nombres": "Navir Salas Morales - Monica Sant`Anna Furtado",
+        "scores": {
+          "Leandro Oliver": 7.51,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 7.9,
+          "Cristina Sosa": 8.24,
+          "Andrés Laza Moreno": 8.5,
+          "Inés Bogado": 7.96
+        },
+        "PROMEDIO": 7.975
+      },
+      {
+        "Nº": 300,
+        "Nombres": "Waldemar Guillermo Sasso - Myriam del Valle Gamietea",
+        "scores": {
+          "Leandro Oliver": 7.98,
+          "Cynthia Palacios": 7.9,
+          "Fabián Peralta": 8.1,
+          "Cristina Sosa": 7.35,
+          "Andrés Laza Moreno": 8.52,
+          "Inés Bogado": 7.89
+        },
+        "PROMEDIO": 7.968
+      },
+      {
+        "Nº": 418,
+        "Nombres": "Pablo Oscar Pacheco - María Eugenia Asnicar",
+        "scores": {
+          "Leandro Oliver": 7.73,
+          "Cynthia Palacios": 7.8,
+          "Fabián Peralta": 8.0,
+          "Cristina Sosa": 7.35,
+          "Andrés Laza Moreno": 8.6,
+          "Inés Bogado": 8.2
+        },
+        "PROMEDIO": 7.933
+      },
+      {
+        "Nº": 229,
+        "Nombres": "Alberto Re - María Susana Eguaburo",
+        "scores": {
+          "Leandro Oliver": 7.36,
+          "Cynthia Palacios": 7.7,
+          "Fabián Peralta": 7.8,
+          "Cristina Sosa": 8.0,
+          "Andrés Laza Moreno": 8.45,
+          "Inés Bogado": 8.22
+        },
+        "PROMEDIO": 7.93
+      },
+      {
+        "Nº": 257,
+        "Nombres": "Humberto Morales - Claudia Sanese",
+        "scores": {
+          "Leandro Oliver": 7.51,
+          "Cynthia Palacios": 7.7,
+          "Fabián Peralta": 8.5,
+          "Cristina Sosa": 7.29,
+          "Andrés Laza Moreno": 8.57,
+          "Inés Bogado": 8.0
+        },
+        "PROMEDIO": 7.928
+      }
+    ]
+  },
+  {
+    "category": "TANGO ESCENARIO SEMIFINAL",
+    "scores": [
+      {
+        "Nº": 586,
+        "Nombres": "Diego Ortega - Aldana Silveyra",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.95,
+          "Julián Sancehz": 8.95,
+          "Vanesa Villalba": 9.0,
+          "Germán Cornejo": 8.95,
+          "Guillermina Quiroga": 7.95,
+          "Ricardo Astrada": 9.0
+        },
+        "PROMEDIO": 8.963
+      },
+      {
+        "Nº": 547,
+        "Nombres": "Nicolas Schell - Nair Schinca",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.95,
+          "Julián Sancehz": 8.75,
+          "Vanesa Villalba": 8.95,
+          "Germán Cornejo": 8.85,
+          "Guillermina Quiroga": 8.57,
+          "Ricardo Astrada": 8.99
+        },
+        "PROMEDIO": 8.875
+      },
+      {
+        "Nº": 365,
+        "Nombres": "Facundo Cabral - Mara Navarro",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.94,
+          "Julián Sancehz": 8.7,
+          "Vanesa Villalba": 9.0,
+          "Germán Cornejo": 8.8,
+          "Guillermina Quiroga": 7.3,
+          "Ricardo Astrada": 9.0
+        },
+        "PROMEDIO": 8.86
+      },
+      {
+        "Nº": 448,
+        "Nombres": "Jorge Calabrigo - Tiziana Silva",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.93,
+          "Julián Sancehz": 8.3,
+          "Vanesa Villalba": 8.95,
+          "Germán Cornejo": 8.74,
+          "Guillermina Quiroga": 7.9,
+          "Ricardo Astrada": 9.0
+        },
+        "PROMEDIO": 8.73
+      },
+      {
+        "Nº": 453,
+        "Nombres": "Fabrizio Muñoz Lopez - Federica Tobares",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.77,
+          "Julián Sancehz": 8.7,
+          "Vanesa Villalba": 8.75,
+          "Germán Cornejo": 8.55,
+          "Guillermina Quiroga": 8.55,
+          "Ricardo Astrada": 8.98
+        },
+        "PROMEDIO": 8.693
+      },
+      {
+        "Nº": 513,
+        "Nombres": "Facundo Vilches - Irina Cristoff Veleff",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.86,
+          "Julián Sancehz": 8.65,
+          "Vanesa Villalba": 8.48,
+          "Germán Cornejo": 8.19,
+          "Guillermina Quiroga": 8.6,
+          "Ricardo Astrada": 8.98
+        },
+        "PROMEDIO": 8.648
+      },
+      {
+        "Nº": 471,
+        "Nombres": "Franco Rubén Sosa - Romina Moreno Guzmán",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.77,
+          "Julián Sancehz": 8.41,
+          "Vanesa Villalba": 8.6,
+          "Germán Cornejo": 8.75,
+          "Guillermina Quiroga": 6.7,
+          "Ricardo Astrada": 9.0
+        },
+        "PROMEDIO": 8.633
+      },
+      {
+        "Nº": 92,
+        "Nombres": "Carlos Cisneros - Juan Segui",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.69,
+          "Julián Sancehz": 8.5,
+          "Vanesa Villalba": 8.9,
+          "Germán Cornejo": 8.3,
+          "Guillermina Quiroga": 7.53,
+          "Ricardo Astrada": 8.98
+        },
+        "PROMEDIO": 8.598
+      },
+      {
+        "Nº": 462,
+        "Nombres": "Lautaro Levato - Milagros Quintana",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.94,
+          "Julián Sancehz": 8.35,
+          "Vanesa Villalba": 8.38,
+          "Germán Cornejo": 8.4,
+          "Guillermina Quiroga": 8.65,
+          "Ricardo Astrada": 8.99
+        },
+        "PROMEDIO": 8.593
+      },
+      {
+        "Nº": 117,
+        "Nombres": "Lisandro Eberle - Guadalupe Ponzelli",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.67,
+          "Julián Sancehz": 8.15,
+          "Vanesa Villalba": 8.9,
+          "Germán Cornejo": 8.6,
+          "Guillermina Quiroga": 8.0,
+          "Ricardo Astrada": 8.98
+        },
+        "PROMEDIO": 8.58
+      },
+      {
+        "Nº": 554,
+        "Nombres": "Ariel Leguizamon - Yesica Esquivel",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.78,
+          "Julián Sancehz": 7.7,
+          "Vanesa Villalba": 8.5,
+          "Germán Cornejo": 8.35,
+          "Guillermina Quiroga": 8.3,
+          "Ricardo Astrada": 8.99
+        },
+        "PROMEDIO": 8.483
+      },
+      {
+        "Nº": 477,
+        "Nombres": "Franco Cocheret - Juliana Mansilla",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.55,
+          "Julián Sancehz": 8.5,
+          "Vanesa Villalba": 8.71,
+          "Germán Cornejo": 8.37,
+          "Guillermina Quiroga": 7.45,
+          "Ricardo Astrada": 8.2
+        },
+        "PROMEDIO": 8.405
+      },
+      {
+        "Nº": 284,
+        "Nombres": "Julio José Seffino - Aldana Belén Tade",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.62,
+          "Julián Sancehz": 8.3,
+          "Vanesa Villalba": 8.32,
+          "Germán Cornejo": 8.33,
+          "Guillermina Quiroga": 8.15,
+          "Ricardo Astrada": 8.99
+        },
+        "PROMEDIO": 8.393
+      },
+      {
+        "Nº": 79,
+        "Nombres": "Juan Cupini - Erica Rossi",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.57,
+          "Julián Sancehz": 8.0,
+          "Vanesa Villalba": 8.42,
+          "Germán Cornejo": 8.5,
+          "Guillermina Quiroga": 8.05,
+          "Ricardo Astrada": 8.9
+        },
+        "PROMEDIO": 8.385
+      },
+      {
+        "Nº": 436,
+        "Nombres": "Nelson Nahuel Leiva - Evangelina Soledad Martinez",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.7,
+          "Julián Sancehz": 8.25,
+          "Vanesa Villalba": 8.42,
+          "Germán Cornejo": 8.0,
+          "Guillermina Quiroga": 7.8,
+          "Ricardo Astrada": 8.9
+        },
+        "PROMEDIO": 8.343
+      },
+      {
+        "Nº": 481,
+        "Nombres": "Ulises García - Florencia Campo",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.56,
+          "Julián Sancehz": 8.45,
+          "Vanesa Villalba": 8.32,
+          "Germán Cornejo": 7.79,
+          "Guillermina Quiroga": 8.5,
+          "Ricardo Astrada": 8.1
+        },
+        "PROMEDIO": 8.343
+      },
+      {
+        "Nº": 509,
+        "Nombres": "Lucas Guevara - Daniela Bravo",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.5,
+          "Julián Sancehz": 8.15,
+          "Vanesa Villalba": 8.35,
+          "Germán Cornejo": 8.2,
+          "Guillermina Quiroga": 7.5,
+          "Ricardo Astrada": 8.9
+        },
+        "PROMEDIO": 8.3
+      },
+      {
+        "Nº": 516,
+        "Nombres": "Federico Paleo - Luciana Francheli",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.55,
+          "Julián Sancehz": 8.0,
+          "Vanesa Villalba": 8.25,
+          "Germán Cornejo": 8.36,
+          "Guillermina Quiroga": 7.5,
+          "Ricardo Astrada": 8.7
+        },
+        "PROMEDIO": 8.29
+      },
+      {
+        "Nº": 440,
+        "Nombres": "Stanislav Fursov - Ekaterina Simonova",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.7,
+          "Julián Sancehz": 8.25,
+          "Vanesa Villalba": 7.95,
+          "Germán Cornejo": 8.15,
+          "Guillermina Quiroga": 7.18,
+          "Ricardo Astrada": 8.98
+        },
+        "PROMEDIO": 8.263
+      },
+      {
+        "Nº": 715,
+        "Nombres": "Juan Fernando Cabral - Laura Cecilia Castiñeiras",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.35,
+          "Julián Sancehz": 7.81,
+          "Vanesa Villalba": 8.35,
+          "Germán Cornejo": 8.68,
+          "Guillermina Quiroga": 8.25,
+          "Ricardo Astrada": 8.0
+        },
+        "PROMEDIO": 8.238
+      },
+      {
+        "Nº": 521,
+        "Nombres": "Sebastian Fernandez - Mariia Marinova",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.95,
+          "Julián Sancehz": 7.85,
+          "Vanesa Villalba": 7.4,
+          "Germán Cornejo": 8.65,
+          "Guillermina Quiroga": 7.4,
+          "Ricardo Astrada": 8.97
+        },
+        "PROMEDIO": 8.213
+      },
+      {
+        "Nº": 3,
+        "Nombres": "Jesus Taborda - Carla Dominguez",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.8,
+          "Julián Sancehz": 8.1,
+          "Vanesa Villalba": 8.75,
+          "Germán Cornejo": 8.1,
+          "Guillermina Quiroga": 7.28,
+          "Ricardo Astrada": 7.8
+        },
+        "PROMEDIO": 8.188
+      },
+      {
+        "Nº": 678,
+        "Nombres": "Francis Damian Aguilar - Sophie Sperling",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.75,
+          "Julián Sancehz": 8.2,
+          "Vanesa Villalba": 8.5,
+          "Germán Cornejo": 8.5,
+          "Guillermina Quiroga": 7.5,
+          "Ricardo Astrada": 7.0
+        },
+        "PROMEDIO": 8.175
+      },
+      {
+        "Nº": 342,
+        "Nombres": "Ramiro Nicolas Almiron - Laly Torres",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.69,
+          "Julián Sancehz": 7.7,
+          "Vanesa Villalba": 8.68,
+          "Germán Cornejo": 8.36,
+          "Guillermina Quiroga": 7.65,
+          "Ricardo Astrada": 7.88
+        },
+        "PROMEDIO": 8.155
+      },
+      {
+        "Nº": 406,
+        "Nombres": "Adriel Cristhian Bournissen - María Soledad Mallo",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.2,
+          "Julián Sancehz": 7.85,
+          "Vanesa Villalba": 8.1,
+          "Germán Cornejo": 8.18,
+          "Guillermina Quiroga": 8.3,
+          "Ricardo Astrada": 7.95
+        },
+        "PROMEDIO": 8.108
+      },
+      {
+        "Nº": 682,
+        "Nombres": "Jorge Andres Padilla Mayo - Ana Zoraida Gomez Diaz",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.35,
+          "Julián Sancehz": 7.8,
+          "Vanesa Villalba": 8.15,
+          "Germán Cornejo": 8.47,
+          "Guillermina Quiroga": 8.1,
+          "Ricardo Astrada": 7.1
+        },
+        "PROMEDIO": 8.1
+      },
+      {
+        "Nº": 493,
+        "Nombres": "Ivan Vivas - Camila Pina",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.55,
+          "Julián Sancehz": 8.27,
+          "Vanesa Villalba": 8.15,
+          "Germán Cornejo": 8.34,
+          "Guillermina Quiroga": 7.55,
+          "Ricardo Astrada": 7.5
+        },
+        "PROMEDIO": 8.078
+      },
+      {
+        "Nº": 133,
+        "Nombres": "Alexander Moncada Rojas - Martina Waldman",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.47,
+          "Julián Sancehz": 7.9,
+          "Vanesa Villalba": 8.25,
+          "Germán Cornejo": 8.1,
+          "Guillermina Quiroga": 7.2,
+          "Ricardo Astrada": 7.9
+        },
+        "PROMEDIO": 8.038
+      },
+      {
+        "Nº": 141,
+        "Nombres": "Cristian Lopez - Naoko Tsutsumizaki",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.1,
+          "Julián Sancehz": 7.9,
+          "Vanesa Villalba": 8.05,
+          "Germán Cornejo": 8.1,
+          "Guillermina Quiroga": 7.05,
+          "Ricardo Astrada": 7.95
+        },
+        "PROMEDIO": 8.0
+      },
+      {
+        "Nº": 149,
+        "Nombres": "Gabriel Salvi - Carolina Leonardelli",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.35,
+          "Julián Sancehz": 7.55,
+          "Vanesa Villalba": 8.3,
+          "Germán Cornejo": 7.75,
+          "Guillermina Quiroga": 7.7,
+          "Ricardo Astrada": 8.2
+        },
+        "PROMEDIO": 7.988
+      },
+      {
+        "Nº": 693,
+        "Nombres": "David Ezequiel Chartoriski - Yelena Odintsova",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.15,
+          "Julián Sancehz": 7.87,
+          "Vanesa Villalba": 8.35,
+          "Germán Cornejo": 7.85,
+          "Guillermina Quiroga": 7.35,
+          "Ricardo Astrada": 7.8
+        },
+        "PROMEDIO": 7.918
+      },
+      {
+        "Nº": 594,
+        "Nombres": "Sebastian Acosta - Kathia Cabral",
+        "RONDA": 3,
+        "scores": {
+          "Natalia Turelli": 8.45,
+          "Julián Sancehz": 7.75,
+          "Vanesa Villalba": 8.05,
+          "Germán Cornejo": 8.18,
+          "Guillermina Quiroga": 7.53,
+          "Ricardo Astrada": 7.2
+        },
+        "PROMEDIO": 7.878
+      },
+      {
+        "Nº": 95,
+        "Nombres": "Jesus Luis Paez - Iara Duarte",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.5,
+          "Julián Sancehz": 8.0,
+          "Vanesa Villalba": 7.6,
+          "Germán Cornejo": 7.79,
+          "Guillermina Quiroga": 7.0,
+          "Ricardo Astrada": 7.9
+        },
+        "PROMEDIO": 7.823
+      },
+      {
+        "Nº": 590,
+        "Nombres": "Federico Leonardo Luna - Aldana Jimenez",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.15,
+          "Julián Sancehz": 7.72,
+          "Vanesa Villalba": 7.7,
+          "Germán Cornejo": 7.8,
+          "Guillermina Quiroga": 7.65,
+          "Ricardo Astrada": 7.88
+        },
+        "PROMEDIO": 7.775
+      },
+      {
+        "Nº": 107,
+        "Nombres": "Valentín Arias Delgado - Diana Paola Franco Durango",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.2,
+          "Julián Sancehz": 7.8,
+          "Vanesa Villalba": 7.75,
+          "Germán Cornejo": 7.7,
+          "Guillermina Quiroga": 6.25,
+          "Ricardo Astrada": 7.8
+        },
+        "PROMEDIO": 7.763
+      },
+      {
+        "Nº": 49,
+        "Nombres": "Hernan David Lopez - Camila Ayelen Luna",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.3,
+          "Julián Sancehz": 7.87,
+          "Vanesa Villalba": 7.6,
+          "Germán Cornejo": 7.78,
+          "Guillermina Quiroga": 7.68,
+          "Ricardo Astrada": 6.9
+        },
+        "PROMEDIO": 7.733
+      },
+      {
+        "Nº": 249,
+        "Nombres": "Matías Gabriel Casali - María Sol Menescardi",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.25,
+          "Julián Sancehz": 7.61,
+          "Vanesa Villalba": 7.67,
+          "Germán Cornejo": 7.5,
+          "Guillermina Quiroga": 7.55,
+          "Ricardo Astrada": 8.0
+        },
+        "PROMEDIO": 7.708
+      },
+      {
+        "Nº": 403,
+        "Nombres": "Franco Emanuel Palleiro - Oriana Abril Herenu",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.75,
+          "Julián Sancehz": 7.81,
+          "Vanesa Villalba": 7.51,
+          "Germán Cornejo": 7.6,
+          "Guillermina Quiroga": 7.3,
+          "Ricardo Astrada": 6.7
+        },
+        "PROMEDIO": 7.555
+      },
+      {
+        "Nº": 177,
+        "Nombres": "Alexander Komogortsev - Kristina Komogortseva",
+        "RONDA": 2,
+        "scores": {
+          "Natalia Turelli": 8.75,
+          "Julián Sancehz": 7.64,
+          "Vanesa Villalba": 7.43,
+          "Germán Cornejo": 8.05,
+          "Guillermina Quiroga": 7.0,
+          "Ricardo Astrada": 6.5
+        },
+        "PROMEDIO": 7.53
+      },
+      {
+        "Nº": 277,
+        "Nombres": "Eduardo Roman - Tamara Borda",
+        "RONDA": 1,
+        "scores": {
+          "Natalia Turelli": 8.74,
+          "Julián Sancehz": 7.35,
+          "Vanesa Villalba": 7.62,
+          "Germán Cornejo": 7.8,
+          "Guillermina Quiroga": 7.25,
+          "Ricardo Astrada": 6.7
+        },
+        "PROMEDIO": 7.505
+      }
+    ]
+  }
+]
